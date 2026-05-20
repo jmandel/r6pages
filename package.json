@@ -1,0 +1,20 @@
+{
+  "name": "r6htmlpages-viewer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:data": "bun run scripts/build-data.ts",
+    "dev": "bun run scripts/build-data.ts && bun --hot --port 3001 index.html",
+    "build": "bun run scripts/build-data.ts && rm -rf dist && bun build index.html --outdir=dist",
+    "build:static": "rm -rf dist && bun build index.html --outdir=dist"
+  },
+  "dependencies": {
+    "marked": "^14.1.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  }
+}

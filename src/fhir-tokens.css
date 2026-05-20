@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --flame-red: #EC2028;
+  --flame-red-deep: #B81820;
+  --flame-red-dark: #8A1118;
+  --flame-orange: #F09225;
+  --flame-yellow: #FFD400;
+  --ink: #14110F;
+  --ink-2: #3A332E;
+  --ink-3: #6B635C;
+  --ink-4: #9C948C;
+  --rule: #E5DFD8;
+  --rule-strong: #C9BFB4;
+  --paper: #FFFFFF;
+  --paper-2: #FAF7F2;
+  --paper-3: #F2EDE5;
+  --note-info-bg: #FFF8E0;
+  --note-info-border: #E8C547;
+  --note-warn-bg: #FDECEC;
+  --note-warn-border: #EC2028;
+  --note-ok-bg: #E7F4EC;
+  --note-ok-border: #2F8A4F;
+  --note-tip-bg: #EAF1FB;
+  --note-tip-border: #2E5DA8;
+  --link: #1F4DA1;
+  --link-hover: #EC2028;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+  --lh-base: 1.55;
+  --shadow-1: 0 1px 0 rgba(20,17,15,0.04), 0 1px 2px rgba(20,17,15,0.06);
+}
