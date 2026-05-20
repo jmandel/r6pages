@@ -1,0 +1,219 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.183Z",
+  "sourceActionFilesGlob": "todo/actions/comparison-v2.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "comparison-v2",
+      "actionFilePath": "todo/actions/comparison-v2.md",
+      "researchFilePath": "todo/research/comparison-v2.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings, both from later page-specific Jira QA that still matches the R6 ballot4 source. The R4-to-R6 diff itself is mostly editorial/template churn, and the `delete indicator` semantic clarification appears consistent with its Jira rationale.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "comparison-v2-E-001",
+          "localId": "E-001",
+          "pageLabel": "comparison-v2",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html",
+          "title": "Incomplete-content markers and stale future/STU wording remain",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html",
+              "lineRange": {
+                "start": 78,
+                "end": 83
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html",
+              "lineRange": {
+                "start": 121,
+                "end": 125
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "comparison-v2 action file",
+              "filePath": "todo/actions/comparison-v2.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:78-83`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:121-125`, `FHIR-55090`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "comparison-v2 research appendix",
+              "filePath": "todo/research/comparison-v2.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:78-83",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html",
+              "lineRange": {
+                "start": 78,
+                "end": 83
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:121-125",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html",
+              "lineRange": {
+                "start": 121,
+                "end": 125
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-55090",
+              "label": "FHIR-55090",
+              "url": "https://jira.hl7.org/browse/FHIR-55090",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-55090` flags `future versions` and `Todo`; the current source still says handling rules \"will be developed during the STU period\" and still has `<!-- Todo: Link -->` where \"FHIR extension registry\" should likely link somewhere.",
+            "analysis": "E-001: Incomplete-content markers and stale future/STU wording remain\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:78-83`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:121-125`, `FHIR-55090`\n\nProblem: `FHIR-55090` flags `future versions` and `Todo`; the current source still says handling rules \"will be developed during the STU period\" and still has `<!-- Todo: Link -->` where \"FHIR extension registry\" should likely link somewhere.\n\nWhy it matters: The page presents stale forward-looking guidance in an R6 ballot source and leaves a source-level incomplete-link marker in user guidance about finding extensions.\n\nRecommended next step: Triage `FHIR-55090`; replace the STU/future wording with current compatibility guidance, and either link the extension registry using the existing registry link pattern or remove the TODO marker.",
+            "whyItMatters": "The page presents stale forward-looking guidance in an R6 ballot source and leaves a source-level incomplete-link marker in user guidance about finding extensions.",
+            "recommendedNextStep": "Triage `FHIR-55090`; replace the STU/future wording with current compatibility guidance, and either link the extension registry using the existing registry link pattern or remove the TODO marker.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:78-83",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:121-125",
+              "FHIR-55090"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "- Confluence minutes for 2020-01-13 say `Lloyd: Using \"data type\" Will auto approve`; the later source commit applies the opposite spelling (`datatype`). Because the committed change is broad and the Jira is Published, this was treated as a historical caveat rather than a page-specific actionable mismatch."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.182Z",
+          "status": "open"
+        },
+        {
+          "id": "comparison-v2-E-002",
+          "localId": "E-002",
+          "pageLabel": "comparison-v2",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html",
+          "title": "Page-specific contraction cleanup remains unapplied",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html",
+              "lineRange": {
+                "start": 177,
+                "end": 177
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "comparison-v2 action file",
+              "filePath": "todo/actions/comparison-v2.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:177`, `FHIR-55089`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "comparison-v2 research appendix",
+              "filePath": "todo/research/comparison-v2.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:177",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html",
+              "lineRange": {
+                "start": 177,
+                "end": 177
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-55089",
+              "label": "FHIR-55089",
+              "url": "https://jira.hl7.org/browse/FHIR-55089",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-55089` specifically flags `doesn't`, and the current source still contains it.",
+            "analysis": "E-002: Page-specific contraction cleanup remains unapplied\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:177`, `FHIR-55089`\n\nProblem: `FHIR-55089` specifically flags `doesn't`, and the current source still contains it.\n\nWhy it matters: Low-severity style/QA inconsistency remains on a page already flagged by Jira.\n\nRecommended next step: Triage `FHIR-55089`; replace `doesn't` with `does not` and consider checking nearby contractions for consistency.",
+            "whyItMatters": "Low-severity style/QA inconsistency remains on a page already flagged by Jira.",
+            "recommendedNextStep": "Triage `FHIR-55089`; replace `doesn't` with `does not` and consider checking nearby contractions for consistency.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v2.html:177",
+              "FHIR-55089"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "- Confluence minutes for 2020-01-13 say `Lloyd: Using \"data type\" Will auto approve`; the later source commit applies the opposite spelling (`datatype`). Because the committed change is broad and the Jira is Published, this was treated as a historical caveat rather than a page-specific actionable mismatch."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.183Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 2,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

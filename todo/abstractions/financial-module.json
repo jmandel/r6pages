@@ -1,0 +1,308 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.235Z",
+  "sourceActionFilesGlob": "todo/actions/financial-module.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "financial-module",
+      "actionFilePath": "todo/actions/financial-module.md",
+      "researchFilePath": "todo/research/financial-module.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings: one glossary consistency concern introduced without a clear rationale, plus two reader-facing editorial/staleness issues in newly added or carried-forward text.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "financial-module-H-001",
+          "localId": "H-001",
+          "pageLabel": "financial-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html",
+          "title": "Insurer/Payer/Payor glossary rows are no longer aligned",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html",
+              "lineRange": {
+                "start": 152,
+                "end": 163
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "financial-module action file",
+              "filePath": "todo/actions/financial-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:152-163`; commit `720258c80a99566e1259c4c1a1dcacd8fbc5abbf`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "financial-module research appendix",
+              "filePath": "todo/research/financial-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:152-163",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html",
+              "lineRange": {
+                "start": 152,
+                "end": 163
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "720258c80a99566e1259c4c1a1dcacd8fbc5abbf",
+              "label": "720258c80a99566e1259c4c1a1dcacd8fbc5abbf",
+              "url": "https://github.com/HL7/fhir/commit/720258c80a99566e1259c4c1a1dcacd8fbc5abbf",
+              "commitHash": "720258c80a99566e1259c4c1a1dcacd8fbc5abbf",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the `Insurer` row now defines \"payer\" using a detailed transaction-processing definition and US Realm payer ID examples, while adjacent `Payer` and `Payor` rows remain generic \"A public or private insurer\" despite being listed as aliases.",
+            "analysis": "H-001: Insurer/Payer/Payor glossary rows are no longer aligned\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:152-163`; commit `720258c80a99566e1259c4c1a1dcacd8fbc5abbf`\n\nProblem: the `Insurer` row now defines \"payer\" using a detailed transaction-processing definition and US Realm payer ID examples, while adjacent `Payer` and `Payor` rows remain generic \"A public or private insurer\" despite being listed as aliases.\n\nWhy it matters: readers can reasonably infer that Insurer, Payer, and Payor are interchangeable, but the table gives only one alias the detailed definition and leaves the other rows semantically weaker.\n\nRecommended next step: ask FM to decide whether the detailed definition belongs under `Payer`, should be copied/harmonized across all three alias rows, or should cite its source and scope.\n\nOverlooked/newly noticed context: H-001, E-001, and E-002 are current-page problems noticed during full-page review rather than clear mismatches with a formal Jira decision.",
+            "whyItMatters": "readers can reasonably infer that Insurer, Payer, and Payor are interchangeable, but the table gives only one alias the detailed definition and leaves the other rows semantically weaker.",
+            "recommendedNextStep": "ask FM to decide whether the detailed definition belongs under `Payer`, should be copied/harmonized across all three alias rows, or should cite its source and scope.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:152-163",
+              "720258c80a99566e1259c4c1a1dcacd8fbc5abbf"
+            ],
+            "limitations": [
+              "- Caveats: some FTS commands fail or misparse unquoted hyphenated Jira keys such as `FHIR-40659`; quoted retry/snapshot commands were used where needed. Several page-specific content commits have no issue key in the commit subject, so rationale is inferred from text history and Jira phrase matches rather than from explicit commit metadata.",
+              "- Zulip searches run for quoted Jira keys and changed phrases. Relevant rationale was not found; failed unquoted key searches are noted because FTS interpreted hyphenated keys incorrectly."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.234Z",
+          "status": "open"
+        },
+        {
+          "id": "financial-module-E-001",
+          "localId": "E-001",
+          "pageLabel": "financial-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html",
+          "title": "Added 3-tier and tax sections contain typo/wording defects",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html",
+              "lineRange": {
+                "start": 464,
+                "end": 482
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "financial-module action file",
+              "filePath": "todo/actions/financial-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:464-482` and `:495-498`; commits `f32e28bfd05e47a8bcfdd86277cb75f032e9185e`, `75e9d09e288b16ae6531e19fbaffff9380ebf942`; Jira `FHIR-29689`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "financial-module research appendix",
+              "filePath": "todo/research/financial-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:464-482",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html",
+              "lineRange": {
+                "start": 464,
+                "end": 482
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-29689",
+              "label": "FHIR-29689",
+              "url": "https://jira.hl7.org/browse/FHIR-29689",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "f32e28bfd05e47a8bcfdd86277cb75f032e9185e",
+              "label": "f32e28bfd05e47a8bcfdd86277cb75f032e9185e",
+              "url": "https://github.com/HL7/fhir/commit/f32e28bfd05e47a8bcfdd86277cb75f032e9185e",
+              "commitHash": "f32e28bfd05e47a8bcfdd86277cb75f032e9185e",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "75e9d09e288b16ae6531e19fbaffff9380ebf942",
+              "label": "75e9d09e288b16ae6531e19fbaffff9380ebf942",
+              "url": "https://github.com/HL7/fhir/commit/75e9d09e288b16ae6531e19fbaffff9380ebf942",
+              "commitHash": "75e9d09e288b16ae6531e19fbaffff9380ebf942",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "visible defects include \"current only\", \"unlimited numer\", \"unlimited number or .details\", \"strictures\", \"` ,item.detail`\", and \"breakdown\" where \"break down\" is intended.",
+            "analysis": "E-001: Added 3-tier and tax sections contain typo/wording defects\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:464-482` and `:495-498`; commits `f32e28bfd05e47a8bcfdd86277cb75f032e9185e`, `75e9d09e288b16ae6531e19fbaffff9380ebf942`; Jira `FHIR-29689`\n\nProblem: visible defects include \"current only\", \"unlimited numer\", \"unlimited number or .details\", \"strictures\", \"` ,item.detail`\", and \"breakdown\" where \"break down\" is intended.\n\nWhy it matters: these are in newly added explanatory sections that implementers may read for line-item/tax semantics.\n\nRecommended next step: make an editorial cleanup Jira or patch that preserves the intended 3-tier and tax formulas while fixing the wording.\n\nOverlooked/newly noticed context: H-001, E-001, and E-002 are current-page problems noticed during full-page review rather than clear mismatches with a formal Jira decision.",
+            "whyItMatters": "these are in newly added explanatory sections that implementers may read for line-item/tax semantics.",
+            "recommendedNextStep": "make an editorial cleanup Jira or patch that preserves the intended 3-tier and tax formulas while fixing the wording.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:464-482",
+              ":495-498",
+              "f32e28bfd05e47a8bcfdd86277cb75f032e9185e",
+              "75e9d09e288b16ae6531e19fbaffff9380ebf942",
+              "FHIR-29689"
+            ],
+            "limitations": [
+              "- Caveats: some FTS commands fail or misparse unquoted hyphenated Jira keys such as `FHIR-40659`; quoted retry/snapshot commands were used where needed. Several page-specific content commits have no issue key in the commit subject, so rationale is inferred from text history and Jira phrase matches rather than from explicit commit metadata.",
+              "- Zulip searches run for quoted Jira keys and changed phrases. Relevant rationale was not found; failed unquoted key searches are noted because FTS interpreted hyphenated keys incorrectly."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.235Z",
+          "status": "open"
+        },
+        {
+          "id": "financial-module-E-002",
+          "localId": "E-002",
+          "pageLabel": "financial-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html",
+          "title": "Roadmap text appears R5/R6-stale in the R6 ballot4 page",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html",
+              "lineRange": {
+                "start": 512,
+                "end": 525
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "financial-module action file",
+              "filePath": "todo/actions/financial-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:512-525`; Jira `FHIR-40659`; commit `8306797af543e39f16c15b5007bae264b076f29f`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "financial-module research appendix",
+              "filePath": "todo/research/financial-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:512-525",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html",
+              "lineRange": {
+                "start": 512,
+                "end": 525
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-40659",
+              "label": "FHIR-40659",
+              "url": "https://jira.hl7.org/browse/FHIR-40659",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "8306797af543e39f16c15b5007bae264b076f29f",
+              "label": "8306797af543e39f16c15b5007bae264b076f29f",
+              "url": "https://github.com/HL7/fhir/commit/8306797af543e39f16c15b5007bae264b076f29f",
+              "commitHash": "8306797af543e39f16c15b5007bae264b076f29f",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-40659` intentionally applied R5 roadmap text, but the R6 ballot4 page still says FM \"has been focusing for R5\" and will work in \"preparation to Release 6\".",
+            "analysis": "E-002: Roadmap text appears R5/R6-stale in the R6 ballot4 page\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:512-525`; Jira `FHIR-40659`; commit `8306797af543e39f16c15b5007bae264b076f29f`\n\nProblem: `FHIR-40659` intentionally applied R5 roadmap text, but the R6 ballot4 page still says FM \"has been focusing for R5\" and will work in \"preparation to Release 6\".\n\nWhy it matters: even if acceptable during R6 balloting, the roadmap can read stale or historically ambiguous on an R6 page.\n\nRecommended next step: have FM review before publication and either update the roadmap for the current/future release or explicitly frame the R5 sentence as historical context.\n\nOverlooked/newly noticed context: H-001, E-001, and E-002 are current-page problems noticed during full-page review rather than clear mismatches with a formal Jira decision.",
+            "whyItMatters": "even if acceptable during R6 balloting, the roadmap can read stale or historically ambiguous on an R6 page.",
+            "recommendedNextStep": "have FM review before publication and either update the roadmap for the current/future release or explicitly frame the R5 sentence as historical context.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/financial-module.html:512-525",
+              "FHIR-40659",
+              "8306797af543e39f16c15b5007bae264b076f29f"
+            ],
+            "limitations": [
+              "- Caveats: some FTS commands fail or misparse unquoted hyphenated Jira keys such as `FHIR-40659`; quoted retry/snapshot commands were used where needed. Several page-specific content commits have no issue key in the commit subject, so rationale is inferred from text history and Jira phrase matches rather than from explicit commit metadata.",
+              "- Zulip searches run for quoted Jira keys and changed phrases. Relevant rationale was not found; failed unquoted key searches are noted because FTS interpreted hyphenated keys incorrectly."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.235Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 2,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

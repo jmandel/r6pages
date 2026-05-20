@@ -49,8 +49,6 @@ export interface ActionableFinding {
   kind?: FindingKind;
   priority?: FindingPriority;
   category?: string;
-  actionabilityTriggers?: string[];
-  changeClassifications?: string[];
   sourceLocations?: SourceLocation[];
   evidence?: EvidenceReference[];
   narrative?: FindingNarrative;

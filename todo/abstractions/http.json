@@ -1,0 +1,587 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.249Z",
+  "sourceActionFilesGlob": "todo/actions/http.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "http",
+      "actionFilePath": "todo/actions/http.md",
+      "researchFilePath": "todo/research/http.md",
+      "status": "has-findings",
+      "summary": "The page has 5 actionable findings. The main risk is that a few current R6 reader-facing statements are stale or internally inconsistent: the fhirVersion table still presents R5 as current, the summary table gives wrong conditional endpoint paths, and one Jira-approved capabilities sentence was only partially applied.",
+      "findingCount": 5,
+      "findings": [
+        {
+          "id": "http-H-001",
+          "localId": "H-001",
+          "pageLabel": "http",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html",
+          "title": "R6 page still lists R5 as \"this version\" in the fhirVersion table",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html",
+              "lineRange": {
+                "start": 482,
+                "end": 528
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "http action file",
+              "filePath": "todo/actions/http.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html:482-528`; especially line 514. Related Jira: `FHIR-31715`, `FHIR-35172`, `FHIR-47208`, `FHIR-47216`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "http research appendix",
+              "filePath": "todo/research/http.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html:482-528",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html",
+              "lineRange": {
+                "start": 482,
+                "end": 528
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-31715",
+              "label": "FHIR-31715",
+              "url": "https://jira.hl7.org/browse/FHIR-31715",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-35172",
+              "label": "FHIR-35172",
+              "url": "https://jira.hl7.org/browse/FHIR-35172",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-47208",
+              "label": "FHIR-47208",
+              "url": "https://jira.hl7.org/browse/FHIR-47208",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-47216",
+              "label": "FHIR-47216",
+              "url": "https://jira.hl7.org/browse/FHIR-47216",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the R6 ballot4 HTTP page's FHIR Version Parameter table stops at R5 and labels R5 as \"this version\"; no R6/6.0 row appears.",
+            "analysis": "H-001: R6 page still lists R5 as \"this version\" in the fhirVersion table\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html:482-528`; especially line 514. Related Jira: `FHIR-31715`, `FHIR-35172`, `FHIR-47208`, `FHIR-47216`.\n\nProblem: the R6 ballot4 HTTP page's FHIR Version Parameter table stops at R5 and labels R5 as \"this version\"; no R6/6.0 row appears.\n\nWhy it matters: this table defines values for the `fhirVersion` MIME-type parameter, so stale current-version guidance can mislead version negotiation and conformance documentation.\n\nRecommended next step: update the HTTP fhirVersion table for R6, or replace the hand-maintained list with a shared/generated version table so the HTTP page stays aligned with version-management pages.\n\nOverlooked/newly noticed context: - `H-001`: the R6 HTTP page still has an R5-only fhirVersion table.",
+            "whyItMatters": "this table defines values for the `fhirVersion` MIME-type parameter, so stale current-version guidance can mislead version negotiation and conformance documentation.",
+            "recommendedNextStep": "update the HTTP fhirVersion table for R6, or replace the hand-maintained list with a shared/generated version table so the HTTP page stays aligned with version-management pages.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html:482-528",
+              "FHIR-31715",
+              "FHIR-35172",
+              "FHIR-47208",
+              "FHIR-47216"
+            ],
+            "limitations": [
+              "- Caveats: the commit history has many editorial/mechanical changes, so community search was bounded to distinctive page changes and actionable/current defects. Initial Zulip FTS searches for unquoted keys failed because hyphenated keys were parsed incorrectly; they were retried with quoted keys."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.246Z",
+          "status": "open"
+        },
+        {
+          "id": "http-H-002",
+          "localId": "H-002",
+          "pageLabel": "http",
+          "pagePath": "source/http.html",
+          "title": "Summary table paths contradict conditional update and conditional patch definitions",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 851,
+                "end": 851
+              }
+            },
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 981,
+                "end": 981
+              }
+            },
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 2469,
+                "end": 2469
+              }
+            },
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 2471,
+                "end": 2471
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "http action file",
+              "filePath": "todo/actions/http.md",
+              "confidence": "high",
+              "quote": "body definitions at `source/http.html:851` and `source/http.html:981`; summary rows at `source/http.html:2469` and `source/http.html:2471`; `FHIR-49646`; commits `c2724e8a568d816e87921a1f278bb7e42f771d77` and `68075d29992110bcc0fa953b73b2390595467f1c`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "http research appendix",
+              "filePath": "todo/research/http.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:851",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 851,
+                "end": 851
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:981",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 981,
+                "end": 981
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:2469",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 2469,
+                "end": 2469
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:2471",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 2471,
+                "end": 2471
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-49646",
+              "label": "FHIR-49646",
+              "url": "https://jira.hl7.org/browse/FHIR-49646",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "c2724e8a568d816e87921a1f278bb7e42f771d77",
+              "label": "c2724e8a568d816e87921a1f278bb7e42f771d77",
+              "url": "https://github.com/HL7/fhir/commit/c2724e8a568d816e87921a1f278bb7e42f771d77",
+              "commitHash": "c2724e8a568d816e87921a1f278bb7e42f771d77",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "68075d29992110bcc0fa953b73b2390595467f1c",
+              "label": "68075d29992110bcc0fa953b73b2390595467f1c",
+              "url": "https://github.com/HL7/fhir/commit/68075d29992110bcc0fa953b73b2390595467f1c",
+              "commitHash": "68075d29992110bcc0fa953b73b2390595467f1c",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the body defines conditional update/patch as `PUT/PATCH [base]/[type]?[search parameters]`, but the summary table says `update-conditional` and `patch-conditional` use `/[type]/[id]?`.",
+            "analysis": "H-002: Summary table paths contradict conditional update and conditional patch definitions\n\nEvidence: body definitions at `source/http.html:851` and `source/http.html:981`; summary rows at `source/http.html:2469` and `source/http.html:2471`; `FHIR-49646`; commits `c2724e8a568d816e87921a1f278bb7e42f771d77` and `68075d29992110bcc0fa953b73b2390595467f1c`.\n\nProblem: the body defines conditional update/patch as `PUT/PATCH [base]/[type]?[search parameters]`, but the summary table says `update-conditional` and `patch-conditional` use `/[type]/[id]?`.\n\nWhy it matters: endpoint shape is implementer-facing conformance guidance; including `[id]` changes the interaction from conditional-by-search to instance-targeted.\n\nRecommended next step: change both summary rows to `/[type]?` (or an equivalent notation with search parameters) and cross-check all conditional interaction rows against their body sections.\n\nIntent-vs-implementation context: - `H-002`: `FHIR-49646` and the current body text identify the conditional patch URL as `[base]/[type]?[search parameters]`, but the summary table still shows `/[type]/[id]?`.",
+            "whyItMatters": "endpoint shape is implementer-facing conformance guidance; including `[id]` changes the interaction from conditional-by-search to instance-targeted.",
+            "recommendedNextStep": "change both summary rows to `/[type]?` (or an equivalent notation with search parameters) and cross-check all conditional interaction rows against their body sections.",
+            "rawEvidenceQuotes": [
+              "source/http.html:851",
+              "source/http.html:981",
+              "source/http.html:2469",
+              "source/http.html:2471",
+              "FHIR-49646",
+              "c2724e8a568d816e87921a1f278bb7e42f771d77",
+              "68075d29992110bcc0fa953b73b2390595467f1c"
+            ],
+            "limitations": [
+              "- Caveats: the commit history has many editorial/mechanical changes, so community search was bounded to distinctive page changes and actionable/current defects. Initial Zulip FTS searches for unquoted keys failed because hyphenated keys were parsed incorrectly; they were retried with quoted keys."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.247Z",
+          "status": "open"
+        },
+        {
+          "id": "http-H-003",
+          "localId": "H-003",
+          "pageLabel": "http",
+          "pagePath": "source/http.html",
+          "title": "FHIR-40496 capabilities wording was not fully applied",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 1664,
+                "end": 1672
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "http action file",
+              "filePath": "todo/actions/http.md",
+              "confidence": "high",
+              "quote": "current source `source/http.html:1664-1672`; Jira `FHIR-40496` resolution says the 404 sentence should end \"not supported on the nominated service URL\"; commit `08e2ca9544ccdc4e19a042aa50bc35239a927da0`; Confluence page 288072268."
+            },
+            {
+              "type": "research-appendix",
+              "label": "http research appendix",
+              "filePath": "todo/research/http.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:1664-1672",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 1664,
+                "end": 1672
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-40496",
+              "label": "FHIR-40496",
+              "url": "https://jira.hl7.org/browse/FHIR-40496",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "08e2ca9544ccdc4e19a042aa50bc35239a927da0",
+              "label": "08e2ca9544ccdc4e19a042aa50bc35239a927da0",
+              "url": "https://github.com/HL7/fhir/commit/08e2ca9544ccdc4e19a042aa50bc35239a927da0",
+              "commitHash": "08e2ca9544ccdc4e19a042aa50bc35239a927da0",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "current source `source/http.html:1664-1672`; Jira `FHIR-40496` resolution says the 404 sentence should end \"not supported on the nominated service URL\"; commit `08e2ca9544ccdc4e19a042aa50bc35239a927da0`; Confluence page 288072268.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the current page leaves the sentence dangling: \"FHIR (or the specified version) is not supported on the\".",
+            "analysis": "H-003: FHIR-40496 capabilities wording was not fully applied\n\nEvidence: current source `source/http.html:1664-1672`; Jira `FHIR-40496` resolution says the 404 sentence should end \"not supported on the nominated service URL\"; commit `08e2ca9544ccdc4e19a042aa50bc35239a927da0`; Confluence page 288072268.\n\nProblem: the current page leaves the sentence dangling: \"FHIR (or the specified version) is not supported on the\".\n\nWhy it matters: this is a visible incomplete normative-adjacent statement in the capabilities interaction, and it does not match the approved Jira resolution.\n\nRecommended next step: complete the sentence per the Jira resolution and verify the surrounding ETag/fhirVersion paragraph order still reads correctly.\n\nIntent-vs-implementation context: - `H-003`: `FHIR-40496`'s approved sentence was not fully applied; the current capabilities paragraph is incomplete.",
+            "whyItMatters": "this is a visible incomplete normative-adjacent statement in the capabilities interaction, and it does not match the approved Jira resolution.",
+            "recommendedNextStep": "complete the sentence per the Jira resolution and verify the surrounding ETag/fhirVersion paragraph order still reads correctly.",
+            "rawEvidenceQuotes": [
+              "not supported on the nominated service URL",
+              "source/http.html:1664-1672",
+              "FHIR-40496",
+              "08e2ca9544ccdc4e19a042aa50bc35239a927da0"
+            ],
+            "limitations": [
+              "- Caveats: the commit history has many editorial/mechanical changes, so community search was bounded to distinctive page changes and actionable/current defects. Initial Zulip FTS searches for unquoted keys failed because hyphenated keys were parsed incorrectly; they were retried with quoted keys."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.248Z",
+          "status": "open"
+        },
+        {
+          "id": "http-E-001",
+          "localId": "E-001",
+          "pageLabel": "http",
+          "pagePath": "source/http.html",
+          "title": "Several concrete markup/text defects remain in reader-facing examples and tables",
+          "kind": "E",
+          "priority": "P3",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 174,
+                "end": 174
+              }
+            },
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 358,
+                "end": 358
+              }
+            },
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 1859,
+                "end": 1859
+              }
+            },
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 2479,
+                "end": 2480
+              }
+            },
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 2529,
+                "end": 2529
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "http action file",
+              "filePath": "todo/actions/http.md",
+              "confidence": "high",
+              "quote": "`source/http.html:174` (`[base]/type]`), `source/http.html:358` (`RFC-7231 section 37.1.2` label for section 7.1.2 link), `source/http.html:1859` stray `:`, `source/http.html:2479-2480` nested/empty `<code>` tags, `source/http.html:2529` dagger marker outside the table cell."
+            },
+            {
+              "type": "research-appendix",
+              "label": "http research appendix",
+              "filePath": "todo/research/http.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:174",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 174,
+                "end": 174
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:358",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 358,
+                "end": 358
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:1859",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 1859,
+                "end": 1859
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:2479-2480",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 2479,
+                "end": 2480
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:2529",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 2529,
+                "end": 2529
+              },
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "these are concrete source defects, not historical context: they either render oddly or show incorrect labels/examples.",
+            "analysis": "E-001: Several concrete markup/text defects remain in reader-facing examples and tables\n\nEvidence: `source/http.html:174` (`[base]/type]`), `source/http.html:358` (`RFC-7231 section 37.1.2` label for section 7.1.2 link), `source/http.html:1859` stray `:`, `source/http.html:2479-2480` nested/empty `<code>` tags, `source/http.html:2529` dagger marker outside the table cell.\n\nProblem: these are concrete source defects, not historical context: they either render oddly or show incorrect labels/examples.\n\nWhy it matters: the HTTP page is normative and heavily used; small rendering/example defects reduce trust and can confuse readers around exact URL or RFC references.\n\nRecommended next step: fix these markup/text defects in one editorial pass and run the normal HTML/publisher QA used for the spec.\n\nOverlooked/newly noticed context: - `E-001`: concrete rendering/text defects in examples and summary tables.",
+            "whyItMatters": "the HTTP page is normative and heavily used; small rendering/example defects reduce trust and can confuse readers around exact URL or RFC references.",
+            "recommendedNextStep": "fix these markup/text defects in one editorial pass and run the normal HTML/publisher QA used for the spec.",
+            "rawEvidenceQuotes": [
+              "source/http.html:174",
+              "[base]/type]",
+              "source/http.html:358",
+              "RFC-7231 section 37.1.2",
+              "source/http.html:1859",
+              "source/http.html:2479-2480",
+              "<code>",
+              "source/http.html:2529"
+            ],
+            "limitations": [
+              "- Caveats: the commit history has many editorial/mechanical changes, so community search was bounded to distinctive page changes and actionable/current defects. Initial Zulip FTS searches for unquoted keys failed because hyphenated keys were parsed incorrectly; they were retried with quoted keys."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.249Z",
+          "status": "open"
+        },
+        {
+          "id": "http-E-002",
+          "localId": "E-002",
+          "pageLabel": "http",
+          "pagePath": "source/http.html",
+          "title": "Conditional create/delete fallback text names the wrong interaction",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 1148,
+                "end": 1150
+              }
+            },
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 1360,
+                "end": 1362
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "http action file",
+              "filePath": "todo/actions/http.md",
+              "confidence": "high",
+              "quote": "conditional delete text at `source/http.html:1148-1150`; conditional create text at `source/http.html:1360-1362`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "http research appendix",
+              "filePath": "todo/research/http.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:1148-1150",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 1148,
+                "end": 1150
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:1360-1362",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 1360,
+                "end": 1362
+              },
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "both sections say servers that do not support \"the conditional update\" should return 400, even though the sections are about conditional delete and conditional create.",
+            "analysis": "E-002: Conditional create/delete fallback text names the wrong interaction\n\nEvidence: conditional delete text at `source/http.html:1148-1150`; conditional create text at `source/http.html:1360-1362`.\n\nProblem: both sections say servers that do not support \"the conditional update\" should return 400, even though the sections are about conditional delete and conditional create.\n\nWhy it matters: it is copy-paste wording in conformance-adjacent guidance and can make readers wonder whether the fallback rule applies to the interaction being described.\n\nRecommended next step: change the copied phrase to \"conditional delete\" and \"conditional create\" respectively, or use a generic \"the conditional interaction\" phrase consistently.\n\nOverlooked/newly noticed context: - `E-002`: copied conditional-create/delete text still says \"conditional update.\"",
+            "whyItMatters": "it is copy-paste wording in conformance-adjacent guidance and can make readers wonder whether the fallback rule applies to the interaction being described.",
+            "recommendedNextStep": "change the copied phrase to \"conditional delete\" and \"conditional create\" respectively, or use a generic \"the conditional interaction\" phrase consistently.",
+            "rawEvidenceQuotes": [
+              "source/http.html:1148-1150",
+              "source/http.html:1360-1362"
+            ],
+            "limitations": [
+              "- Caveats: the commit history has many editorial/mechanical changes, so community search was bounded to distinctive page changes and actionable/current defects. Initial Zulip FTS searches for unquoted keys failed because hyphenated keys were parsed incorrectly; they were retried with quoted keys."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.249Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 5,
+    "byPriority": {
+      "P0": 0,
+      "P1": 2,
+      "P2": 1,
+      "P3": 2
+    },
+    "byKind": {
+      "H": 3,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 2,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

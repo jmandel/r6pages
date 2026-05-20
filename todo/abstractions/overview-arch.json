@@ -1,0 +1,317 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.288Z",
+  "sourceActionFilesGlob": "todo/actions/overview-arch.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "overview-arch",
+      "actionFilePath": "todo/actions/overview-arch.md",
+      "researchFilePath": "todo/research/overview-arch.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings: one broken/still-unresolved Linkage external reference, one tracked spelling regression, and one pre-existing source title metadata mismatch.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "overview-arch-H-001",
+          "localId": "H-001",
+          "pageLabel": "overview-arch",
+          "pagePath": "source/overview-arch.html",
+          "title": "Linkage points to an unavailable incubator page",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/overview-arch.html",
+              "lineRange": {
+                "start": 429,
+                "end": 429
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "overview-arch action file",
+              "filePath": "todo/actions/overview-arch.md",
+              "confidence": "high",
+              "quote": "`source/overview-arch.html:429`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; `FHIR-53725`; Zulip `#implementers > Linking to Additional Resources`; Confluence page `413248899`; `curl` returned 404 for `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "overview-arch research appendix",
+              "filePath": "todo/research/overview-arch.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/overview-arch.html:429",
+              "filePath": "source/overview-arch.html",
+              "lineRange": {
+                "start": 429,
+                "end": 429
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53725",
+              "label": "FHIR-53725",
+              "url": "https://jira.hl7.org/browse/FHIR-53725",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "label": "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "url": "https://github.com/HL7/fhir/commit/fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "commitHash": "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`",
+              "url": "https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`source/overview-arch.html:429`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; `FHIR-53725`; Zulip `#implementers > Linking to Additional Resources`; Confluence page `413248899`; `curl` returned 404 for `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`source/overview-arch.html:429`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; `FHIR-53725`; Zulip `#implementers > Linking to Additional Resources`; Confluence page `413248899`; `curl` returned 404 for `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The page now tells readers the Linkage resource can help with reference ambiguity, but links to a PC incubator URL that is not live.",
+            "analysis": "H-001: Linkage points to an unavailable incubator page\n\nEvidence: `source/overview-arch.html:429`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; `FHIR-53725`; Zulip `#implementers > Linking to Additional Resources`; Confluence page `413248899`; `curl` returned 404 for `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`.\n\nProblem: The page now tells readers the Linkage resource can help with reference ambiguity, but links to a PC incubator URL that is not live.\n\nWhy it matters: Readers cannot reach the referenced guidance, and Linkage is no longer a core R6 resource.\n\nRecommended next step: Track this page with the additional-resources/PC-incubator work; either publish/version-pin a live Linkage target or revise/remove the sentence until the incubator content is available.",
+            "whyItMatters": "Readers cannot reach the referenced guidance, and Linkage is no longer a core R6 resource.",
+            "recommendedNextStep": "Track this page with the additional-resources/PC-incubator work; either publish/version-pin a live Linkage target or revise/remove the sentence until the incubator content is available.",
+            "rawEvidenceQuotes": [
+              "source/overview-arch.html:429",
+              "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "FHIR-53725",
+              "#implementers > Linking to Additional Resources",
+              "413248899",
+              "curl",
+              "https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html"
+            ],
+            "limitations": [
+              "- Caveats: no direct Zulip hits were found for `FHIR-25431`, `FHIR-44047`, `FHIR-48660`, `FHIR-50596`, or `FHIR-55117`. Some unescaped hyphen FTS attempts (`pc-incubator`, `overview-arch`) failed in Jira/Zulip FTS and were rerun with safer quoted/simplified terms. The Linkage-related Jira/Zulip/Confluence evidence post-dates the R6 ballot4 source commit, so it is later reassessment evidence, not original implementation intent. The source `settitle` mismatch was not visible in the fetched R6 ballot4 rendered `<title>`, so it is source metadata cleanup rather than a proven live browser-title defect.",
+              "- `FHIR-44047` — “Incorrect punctuation of exempli gtatia and id est (e.g., & i.e.,) throughout.” Snapshot: Resolved - change required, Persuasive, R6 ballot issue, related pages “many.” Commit `887bc2383...` applies an `e.g.,` correction in this page. Confluence page `234784975` records “will fix.” Caveat: the local Jira snapshot status is not Applied/Published even though this page has a source commit."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.287Z",
+          "status": "open"
+        },
+        {
+          "id": "overview-arch-E-001",
+          "localId": "E-001",
+          "pageLabel": "overview-arch",
+          "pagePath": "source/overview-arch.html",
+          "title": "managable` typo remains on this page",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/overview-arch.html",
+              "lineRange": {
+                "start": 230,
+                "end": 230
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "overview-arch action file",
+              "filePath": "todo/actions/overview-arch.md",
+              "confidence": "high",
+              "quote": "`source/overview-arch.html:230`; commit `60e98c41f6c5fab597bbdb8d7ec41898ca4ec777`; `FHIR-55117`; related persuasive typo issue `FHIR-50596`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "overview-arch research appendix",
+              "filePath": "todo/research/overview-arch.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/overview-arch.html:230",
+              "filePath": "source/overview-arch.html",
+              "lineRange": {
+                "start": 230,
+                "end": 230
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-55117",
+              "label": "FHIR-55117",
+              "url": "https://jira.hl7.org/browse/FHIR-55117",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-50596",
+              "label": "FHIR-50596",
+              "url": "https://jira.hl7.org/browse/FHIR-50596",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "60e98c41f6c5fab597bbdb8d7ec41898ca4ec777",
+              "label": "60e98c41f6c5fab597bbdb8d7ec41898ca4ec777",
+              "url": "https://github.com/HL7/fhir/commit/60e98c41f6c5fab597bbdb8d7ec41898ca4ec777",
+              "commitHash": "60e98c41f6c5fab597bbdb8d7ec41898ca4ec777",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Current text says “smaller, more managable sub-domains.”",
+            "analysis": "E-001: managable` typo remains on this page\n\nEvidence: `source/overview-arch.html:230`; commit `60e98c41f6c5fab597bbdb8d7ec41898ca4ec777`; `FHIR-55117`; related persuasive typo issue `FHIR-50596`.\n\nProblem: Current text says “smaller, more managable sub-domains.”\n\nWhy it matters: Visible spelling error in an overview page.\n\nRecommended next step: Apply `FHIR-55117` by changing `managable` to `manageable`.",
+            "whyItMatters": "Visible spelling error in an overview page.",
+            "recommendedNextStep": "Apply `FHIR-55117` by changing `managable` to `manageable`.",
+            "rawEvidenceQuotes": [
+              "source/overview-arch.html:230",
+              "60e98c41f6c5fab597bbdb8d7ec41898ca4ec777",
+              "FHIR-55117",
+              "FHIR-50596"
+            ],
+            "limitations": [
+              "- Caveats: no direct Zulip hits were found for `FHIR-25431`, `FHIR-44047`, `FHIR-48660`, `FHIR-50596`, or `FHIR-55117`. Some unescaped hyphen FTS attempts (`pc-incubator`, `overview-arch`) failed in Jira/Zulip FTS and were rerun with safer quoted/simplified terms. The Linkage-related Jira/Zulip/Confluence evidence post-dates the R6 ballot4 source commit, so it is later reassessment evidence, not original implementation intent. The source `settitle` mismatch was not visible in the fetched R6 ballot4 rendered `<title>`, so it is source metadata cleanup rather than a proven live browser-title defect.",
+              "- `FHIR-44047` — “Incorrect punctuation of exempli gtatia and id est (e.g., & i.e.,) throughout.” Snapshot: Resolved - change required, Persuasive, R6 ballot issue, related pages “many.” Commit `887bc2383...` applies an `e.g.,` correction in this page. Confluence page `234784975` records “will fix.” Caveat: the local Jira snapshot status is not Applied/Published even though this page has a source commit."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.287Z",
+          "status": "open"
+        },
+        {
+          "id": "overview-arch-E-002",
+          "localId": "E-002",
+          "pageLabel": "overview-arch",
+          "pagePath": "source/overview-arch.html",
+          "title": "Source page title metadata says Developers, not Architects",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/overview-arch.html",
+              "lineRange": {
+                "start": 3,
+                "end": 3
+              }
+            },
+            {
+              "filePath": "source/overview-arch.html",
+              "lineRange": {
+                "start": 16,
+                "end": 16
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "overview-arch action file",
+              "filePath": "todo/actions/overview-arch.md",
+              "confidence": "high",
+              "quote": "`source/overview-arch.html:3` says `[%settitle FHIR Overview - Developers%]`; `source/overview-arch.html:16` says `FHIR Overview - Architects`; title mismatch dates to existing blame `16b77d47f2a`. The fetched R6 ballot4 rendered page title is `Overview-arch - FHIR v6.0.0-ballot4`, so this was not proven to be the live browser title."
+            },
+            {
+              "type": "research-appendix",
+              "label": "overview-arch research appendix",
+              "filePath": "todo/research/overview-arch.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/overview-arch.html:3",
+              "filePath": "source/overview-arch.html",
+              "lineRange": {
+                "start": 3,
+                "end": 3
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/overview-arch.html:16",
+              "filePath": "source/overview-arch.html",
+              "lineRange": {
+                "start": 16,
+                "end": 16
+              },
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "The source title directive is stale/mismatched for the architects overview.",
+            "analysis": "E-002: Source page title metadata says Developers, not Architects\n\nEvidence: `source/overview-arch.html:3` says `[%settitle FHIR Overview - Developers%]`; `source/overview-arch.html:16` says `FHIR Overview - Architects`; title mismatch dates to existing blame `16b77d47f2a`. The fetched R6 ballot4 rendered page title is `Overview-arch - FHIR v6.0.0-ballot4`, so this was not proven to be the live browser title.\n\nProblem: The source title directive is stale/mismatched for the architects overview.\n\nWhy it matters: If the source title macro is used by any publication, navigation, or search pipeline, the page can be mislabeled; even if currently unused, the source metadata is misleading.\n\nRecommended next step: Verify whether `[%settitle ...%]` is still consumed for this page and either set it to `FHIR Overview - Architects` or remove/ignore it consistently.",
+            "whyItMatters": "If the source title macro is used by any publication, navigation, or search pipeline, the page can be mislabeled; even if currently unused, the source metadata is misleading.",
+            "recommendedNextStep": "Verify whether `[%settitle ...%]` is still consumed for this page and either set it to `FHIR Overview - Architects` or remove/ignore it consistently.",
+            "rawEvidenceQuotes": [
+              "source/overview-arch.html:3",
+              "[%settitle FHIR Overview - Developers%]",
+              "source/overview-arch.html:16",
+              "FHIR Overview - Architects",
+              "16b77d47f2a",
+              "Overview-arch - FHIR v6.0.0-ballot4"
+            ],
+            "limitations": [
+              "- Caveats: no direct Zulip hits were found for `FHIR-25431`, `FHIR-44047`, `FHIR-48660`, `FHIR-50596`, or `FHIR-55117`. Some unescaped hyphen FTS attempts (`pc-incubator`, `overview-arch`) failed in Jira/Zulip FTS and were rerun with safer quoted/simplified terms. The Linkage-related Jira/Zulip/Confluence evidence post-dates the R6 ballot4 source commit, so it is later reassessment evidence, not original implementation intent. The source `settitle` mismatch was not visible in the fetched R6 ballot4 rendered `<title>`, so it is source metadata cleanup rather than a proven live browser-title defect.",
+              "- `FHIR-44047` — “Incorrect punctuation of exempli gtatia and id est (e.g., & i.e.,) throughout.” Snapshot: Resolved - change required, Persuasive, R6 ballot issue, related pages “many.” Commit `887bc2383...` applies an `e.g.,` correction in this page. Confluence page `234784975` records “will fix.” Caveat: the local Jira snapshot status is not Applied/Published even though this page has a source commit."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.288Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 2
+    },
+    "byKind": {
+      "H": 1,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 2,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

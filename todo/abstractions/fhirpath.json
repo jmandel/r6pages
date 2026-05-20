@@ -1,0 +1,503 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.233Z",
+  "sourceActionFilesGlob": "todo/actions/fhirpath.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "fhirpath",
+      "actionFilePath": "todo/actions/fhirpath.md",
+      "researchFilePath": "todo/research/fhirpath.md",
+      "status": "has-findings",
+      "summary": "The page has 5 actionable findings. The main risk is that some newly applied FHIRPath text and examples are reader-facing but either contradict tracked workgroup intent or contain concrete example/navigation defects.",
+      "findingCount": 5,
+      "findings": [
+        {
+          "id": "fhirpath-H-001",
+          "localId": "H-001",
+          "pageLabel": "fhirpath",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+          "title": "Resource.id example is opposite to the FHIR-44817 resolution",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 177,
+                "end": 181
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "fhirpath action file",
+              "filePath": "todo/actions/fhirpath.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:177-181`; commit `415c4e014bc12bc9f0724783f92d17f1e267bbe3`; `FHIR-44817`; Zulip `#fhirpath > Is a resource id a String?`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "fhirpath research appendix",
+              "filePath": "todo/research/fhirpath.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:177-181",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 177,
+                "end": 181
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-44817",
+              "label": "FHIR-44817",
+              "url": "https://jira.hl7.org/browse/FHIR-44817",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "415c4e014bc12bc9f0724783f92d17f1e267bbe3",
+              "label": "415c4e014bc12bc9f0724783f92d17f1e267bbe3",
+              "url": "https://github.com/HL7/fhir/commit/415c4e014bc12bc9f0724783f92d17f1e267bbe3",
+              "commitHash": "415c4e014bc12bc9f0724783f92d17f1e267bbe3",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:177-181`; commit `415c4e014bc12bc9f0724783f92d17f1e267bbe3`; `FHIR-44817`; Zulip `#fhirpath > Is a resource id a String?`\n- Priority: P1\n- Category: intent-mismatch\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:177-181`; commit `415c4e014bc12bc9f0724783f92d17f1e267bbe3`; `FHIR-44817`; Zulip `#fhirpath > Is a resource id a String?`\n- Problem: The current page says `Patient.id is System.String` and `(Patient.id is FHIR.id).not`, but `FHIR-44817` resolved to make clear that `Patient.id` is `FHIR.id` and not `System.String`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The current page says `Patient.id is System.String` and `(Patient.id is FHIR.id).not`, but `FHIR-44817` resolved to make clear that `Patient.id` is `FHIR.id` and not `System.String`. The later Zulip discussion also says `Patient.id is System.String = false`.",
+            "analysis": "H-001: Resource.id example is opposite to the FHIR-44817 resolution\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:177-181`; commit `415c4e014bc12bc9f0724783f92d17f1e267bbe3`; `FHIR-44817`; Zulip `#fhirpath > Is a resource id a String?`\n\nProblem: The current page says `Patient.id is System.String` and `(Patient.id is FHIR.id).not`, but `FHIR-44817` resolved to make clear that `Patient.id` is `FHIR.id` and not `System.String`. The later Zulip discussion also says `Patient.id is System.String = false`.\n\nWhy it matters: This is a substantive FHIRPath type-semantics example; implementers could copy the opposite behavior from the formal page.\n\nRecommended next step: Replace the example with text/examples that assert Resource.id is `FHIR.id` and not `System.String`, and confirm the exact FHIRPath syntax/casing before applying.\n\nIntent-vs-implementation context: H-001 is the only clear mismatch found: current Resource.id example text contradicts `FHIR-44817` resolution and later Zulip clarification.",
+            "whyItMatters": "This is a substantive FHIRPath type-semantics example; implementers could copy the opposite behavior from the formal page.",
+            "recommendedNextStep": "Replace the example with text/examples that assert Resource.id is `FHIR.id` and not `System.String`, and confirm the exact FHIRPath syntax/casing before applying.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:177-181",
+              "415c4e014bc12bc9f0724783f92d17f1e267bbe3",
+              "FHIR-44817",
+              "#fhirpath > Is a resource id a String?"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "- References `FHIR-42983`; minutes say the FHIRPath page's `slice()` definition was unclear, discuss whether scope is entire resource or element, and record Persuasive with Modification vote 9-0-0."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.231Z",
+          "status": "open"
+        },
+        {
+          "id": "fhirpath-E-001",
+          "localId": "E-001",
+          "pageLabel": "fhirpath",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+          "title": "Duplicate `fn-subsumes` anchor breaks unambiguous navigation",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 432,
+                "end": 432
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "fhirpath action file",
+              "filePath": "todo/actions/fhirpath.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:432` and `:975`; commits `bbae11ecde825fc92830d70f058016af01bcf34e` and `cdd704b3ec17142987b573e46db611f925aa1bf8`; `FHIR-45455`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "fhirpath research appendix",
+              "filePath": "todo/research/fhirpath.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:432",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 432,
+                "end": 432
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-45455",
+              "label": "FHIR-45455",
+              "url": "https://jira.hl7.org/browse/FHIR-45455",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "bbae11ecde825fc92830d70f058016af01bcf34e",
+              "label": "bbae11ecde825fc92830d70f058016af01bcf34e",
+              "url": "https://github.com/HL7/fhir/commit/bbae11ecde825fc92830d70f058016af01bcf34e",
+              "commitHash": "bbae11ecde825fc92830d70f058016af01bcf34e",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "cdd704b3ec17142987b573e46db611f925aa1bf8",
+              "label": "cdd704b3ec17142987b573e46db611f925aa1bf8",
+              "url": "https://github.com/HL7/fhir/commit/cdd704b3ec17142987b573e46db611f925aa1bf8",
+              "commitHash": "cdd704b3ec17142987b573e46db611f925aa1bf8",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The FHIR-specific `subsumes()` function and `%terminologies.subsumes()` both use `name=\"fn-subsumes\"`.",
+            "analysis": "E-001: Duplicate `fn-subsumes` anchor breaks unambiguous navigation\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:432` and `:975`; commits `bbae11ecde825fc92830d70f058016af01bcf34e` and `cdd704b3ec17142987b573e46db611f925aa1bf8`; `FHIR-45455`\n\nProblem: The FHIR-specific `subsumes()` function and `%terminologies.subsumes()` both use `name=\"fn-subsumes\"`.\n\nWhy it matters: `FHIR-45455` specifically added anchors for function navigation; a duplicate anchor can send links to the wrong function.\n\nRecommended next step: Give the terminology API anchor a distinct name such as `fn-terminologies-subsumes` and update any generated links if needed.\n\nOverlooked/newly noticed context: E-001 through E-004 are concrete current-page problems found during the full-page read; searches did not find Jira/Zulip issues already tracking the duplicate anchor, Type Factory copy defects, or invalid `Observation.value.ofType(canonical)` example.",
+            "whyItMatters": "`FHIR-45455` specifically added anchors for function navigation; a duplicate anchor can send links to the wrong function.",
+            "recommendedNextStep": "Give the terminology API anchor a distinct name such as `fn-terminologies-subsumes` and update any generated links if needed.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:432",
+              ":975",
+              "bbae11ecde825fc92830d70f058016af01bcf34e",
+              "cdd704b3ec17142987b573e46db611f925aa1bf8",
+              "FHIR-45455"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "- References `FHIR-42983`; minutes say the FHIRPath page's `slice()` definition was unclear, discuss whether scope is entire resource or element, and record Persuasive with Modification vote 9-0-0."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.231Z",
+          "status": "open"
+        },
+        {
+          "id": "fhirpath-E-002",
+          "localId": "E-002",
+          "pageLabel": "fhirpath",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+          "title": "Type Factory examples include concrete invalid or misleading copy",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 650,
+                "end": 650
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "fhirpath action file",
+              "filePath": "todo/actions/fhirpath.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:650`, `:689`, `:736`, `:805`, `:826`; `FHIR-20846`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "fhirpath research appendix",
+              "filePath": "todo/research/fhirpath.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:650",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 650,
+                "end": 650
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-20846",
+              "label": "FHIR-20846",
+              "url": "https://jira.hl7.org/browse/FHIR-20846",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The Type Factory section says `HumanName.family` goes in `HumanName.system`, uses an email address as an Address city, has a broken `Coding` example quote, and includes `http:/` URLs in examples.",
+            "analysis": "E-002: Type Factory examples include concrete invalid or misleading copy\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:650`, `:689`, `:736`, `:805`, `:826`; `FHIR-20846`\n\nProblem: The Type Factory section says `HumanName.family` goes in `HumanName.system`, uses an email address as an Address city, has a broken `Coding` example quote, and includes `http:/` URLs in examples.\n\nWhy it matters: These are examples for a new API section; readers copying them will get invalid expressions or wrong property mappings.\n\nRecommended next step: Audit the Type Factory section and fix the examples/property descriptions together, ideally by checking example expressions with a FHIRPath/parser test.",
+            "whyItMatters": "These are examples for a new API section; readers copying them will get invalid expressions or wrong property mappings.",
+            "recommendedNextStep": "Audit the Type Factory section and fix the examples/property descriptions together, ideally by checking example expressions with a FHIRPath/parser test.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:650",
+              ":689",
+              ":736",
+              ":805",
+              ":826",
+              "FHIR-20846"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "- References `FHIR-42983`; minutes say the FHIRPath page's `slice()` definition was unclear, discuss whether scope is entire resource or element, and record Persuasive with Modification vote 9-0-0."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.232Z",
+          "status": "open"
+        },
+        {
+          "id": "fhirpath-E-003",
+          "localId": "E-003",
+          "pageLabel": "fhirpath",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+          "title": "Observation.value.ofType(canonical)` is not a valid Observation.value[x] example",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 346,
+                "end": 349
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/observation/structuredefinition-Observation.xml",
+              "lineRange": {
+                "start": 682,
+                "end": 728
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "fhirpath action file",
+              "filePath": "todo/actions/fhirpath.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:346-349`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/observation/structuredefinition-Observation.xml:682-728`; commit `8926ed304970e6e73500a1a66b0985fba92824ec`; `FHIR-45455`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "fhirpath research appendix",
+              "filePath": "todo/research/fhirpath.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:346-349",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 346,
+                "end": 349
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/observation/structuredefinition-Observation.xml:682-728",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/observation/structuredefinition-Observation.xml",
+              "lineRange": {
+                "start": 682,
+                "end": 728
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-45455",
+              "label": "FHIR-45455",
+              "url": "https://jira.hl7.org/browse/FHIR-45455",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "8926ed304970e6e73500a1a66b0985fba92824ec",
+              "label": "8926ed304970e6e73500a1a66b0985fba92824ec",
+              "url": "https://github.com/HL7/fhir/commit/8926ed304970e6e73500a1a66b0985fba92824ec",
+              "commitHash": "8926ed304970e6e73500a1a66b0985fba92824ec",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The added `ofType()` example uses `Observation.value.ofType(canonical)`, but `Observation.value[x]` does not include `canonical` among its allowed types.",
+            "analysis": "E-003: Observation.value.ofType(canonical)` is not a valid Observation.value[x] example\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:346-349`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/observation/structuredefinition-Observation.xml:682-728`; commit `8926ed304970e6e73500a1a66b0985fba92824ec`; `FHIR-45455`\n\nProblem: The added `ofType()` example uses `Observation.value.ofType(canonical)`, but `Observation.value[x]` does not include `canonical` among its allowed types.\n\nWhy it matters: The example is meant to demonstrate polymorphic type filtering; using a non-existent type for the chosen element undermines that guidance.\n\nRecommended next step: Replace it with a valid `Observation.value[x]` type example or use a different element that can actually be `canonical`.",
+            "whyItMatters": "The example is meant to demonstrate polymorphic type filtering; using a non-existent type for the chosen element undermines that guidance.",
+            "recommendedNextStep": "Replace it with a valid `Observation.value[x]` type example or use a different element that can actually be `canonical`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:346-349",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/observation/structuredefinition-Observation.xml:682-728",
+              "8926ed304970e6e73500a1a66b0985fba92824ec",
+              "FHIR-45455"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "- References `FHIR-42983`; minutes say the FHIRPath page's `slice()` definition was unclear, discuss whether scope is entire resource or element, and record Persuasive with Modification vote 9-0-0."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.233Z",
+          "status": "open"
+        },
+        {
+          "id": "fhirpath-E-004",
+          "localId": "E-004",
+          "pageLabel": "fhirpath",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+          "title": "General Service API text has stale copy/paste wording",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 1109,
+                "end": 1112
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "fhirpath action file",
+              "filePath": "todo/actions/fhirpath.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:1109-1112`, `:1168-1181`, `:1222-1256`; `FHIR-38872`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "fhirpath research appendix",
+              "filePath": "todo/research/fhirpath.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:1109-1112",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 1109,
+                "end": 1112
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-38872",
+              "label": "FHIR-38872",
+              "url": "https://jira.hl7.org/browse/FHIR-38872",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`%server.update` describes \"resource to create\" and \"create operation failed\"; `%server.capabilities` says `CapabilitiesStatement`; `%server.everything` and `%server.apply` both say \"Get a resource from the server.\"",
+            "analysis": "E-004: General Service API text has stale copy/paste wording\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:1109-1112`, `:1168-1181`, `:1222-1256`; `FHIR-38872`\n\nProblem: `%server.update` describes \"resource to create\" and \"create operation failed\"; `%server.capabilities` says `CapabilitiesStatement`; `%server.everything` and `%server.apply` both say \"Get a resource from the server.\"\n\nWhy it matters: These descriptions define the intended behavior of FHIRPath server interactions and can mislead implementers even if the signatures are correct.\n\nRecommended next step: Correct the operation-specific descriptions and resource name (`CapabilityStatement`) in one editorial pass.\n\nOverlooked/newly noticed context: E-001 through E-004 are concrete current-page problems found during the full-page read; searches did not find Jira/Zulip issues already tracking the duplicate anchor, Type Factory copy defects, or invalid `Observation.value.ofType(canonical)` example.",
+            "whyItMatters": "These descriptions define the intended behavior of FHIRPath server interactions and can mislead implementers even if the signatures are correct.",
+            "recommendedNextStep": "Correct the operation-specific descriptions and resource name (`CapabilityStatement`) in one editorial pass.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:1109-1112",
+              ":1168-1181",
+              ":1222-1256",
+              "FHIR-38872"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "- References `FHIR-42983`; minutes say the FHIRPath page's `slice()` definition was unclear, discuss whether scope is entire resource or element, and record Persuasive with Modification vote 9-0-0."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.233Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 5,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 4,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 4,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 3,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

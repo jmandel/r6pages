@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.349Z",
+  "sourceActionFilesGlob": "todo/actions/usecases.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "usecases",
+      "actionFilePath": "todo/actions/usecases.md",
+      "researchFilePath": "todo/research/usecases.md",
+      "status": "has-findings",
+      "summary": "One actionable finding: a resolved R6 Jira correction for this page is not present in the R6 ballot4 source, leaving a stale `(R5)` note on the current usecases page.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "usecases-E-001",
+          "localId": "E-001",
+          "pageLabel": "usecases",
+          "pagePath": "source/usecases.html",
+          "title": "Resolved `FHIR-44051` stale-R5 correction is not applied",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/usecases.html",
+              "lineRange": {
+                "start": 33,
+                "end": 34
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "usecases action file",
+              "filePath": "todo/actions/usecases.md",
+              "confidence": "high",
+              "quote": "Current `source/usecases.html:33-34` says consumer-centered data exchange work is expected in the next release `(R5)`. `FHIR-44051` resolves this exact R6 usecases issue as \"Update to R6.\" Commit `aab383f7800e` makes that change on branch `rhofstede-fixes-pharmacy`, but is not an ancestor of `5d67a34...`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "usecases research appendix",
+              "filePath": "todo/research/usecases.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/usecases.html:33-34",
+              "filePath": "source/usecases.html",
+              "lineRange": {
+                "start": 33,
+                "end": 34
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-44051",
+              "label": "FHIR-44051",
+              "url": "https://jira.hl7.org/browse/FHIR-44051",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "aab383f7800e",
+              "label": "aab383f7800e",
+              "url": "https://github.com/HL7/fhir/commit/aab383f7800e",
+              "commitHash": "aab383f7800e",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "R6 ballot4 still publishes the stale R5 note despite an accepted correction.",
+            "analysis": "E-001: Resolved `FHIR-44051` stale-R5 correction is not applied\n\nEvidence: Current `source/usecases.html:33-34` says consumer-centered data exchange work is expected in the next release `(R5)`. `FHIR-44051` resolves this exact R6 usecases issue as \"Update to R6.\" Commit `aab383f7800e` makes that change on branch `rhofstede-fixes-pharmacy`, but is not an ancestor of `5d67a34...`.\n\nProblem: R6 ballot4 still publishes the stale R5 note despite an accepted correction.\n\nWhy it matters: Readers see obsolete release guidance, and a resolved ballot correction appears lost before publication.\n\nRecommended next step: Apply or supersede `FHIR-44051` on the active R6 branch; decide whether the note should say R6, R6 final, R7, or be removed.\n\nIntent-vs-implementation context: - `FHIR-44051` says to update the PHR note from `(R5)` for R6, but current R6 ballot4 source still has `(R5)`. See E-001.\n\nOverlooked/newly noticed context: None found beyond E-001.",
+            "whyItMatters": "Readers see obsolete release guidance, and a resolved ballot correction appears lost before publication.",
+            "recommendedNextStep": "Apply or supersede `FHIR-44051` on the active R6 branch; decide whether the note should say R6, R6 final, R7, or be removed.",
+            "rawEvidenceQuotes": [
+              "Update to R6.",
+              "source/usecases.html:33-34",
+              "(R5)",
+              "FHIR-44051",
+              "aab383f7800e",
+              "rhofstede-fixes-pharmacy",
+              "5d67a34..."
+            ],
+            "limitations": [
+              "- Caveats: no full rendered-site build was run; external links added by the page were checked with `curl` only. Zulip issue-key FTS failed on hyphenated keys, so SQL `LIKE` checks were used. The local git mirror contains non-ancestor branches; branch-only hits are called out separately."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.349Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.196Z",
+  "sourceActionFilesGlob": "todo/actions/datatypes-examples.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "datatypes-examples",
+      "actionFilePath": "todo/actions/datatypes-examples.md",
+      "researchFilePath": "todo/research/datatypes-examples.md",
+      "status": "has-findings",
+      "summary": "The page has 4 actionable findings. The main risk is that several current R6 examples are not valid or are inconsistent with formal tracker decisions, so implementers copying examples may learn the wrong XML/JSON shape for current datatypes.",
+      "findingCount": 4,
+      "findings": [
+        {
+          "id": "datatypes-examples-H-001",
+          "localId": "H-001",
+          "pageLabel": "datatypes-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html",
+          "title": "SampledData XML example still uses retired `period",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html",
+              "lineRange": {
+                "start": 1151,
+                "end": 1177
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/sampleddata.xml",
+              "lineRange": {
+                "start": 877,
+                "end": 902
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "datatypes-examples action file",
+              "filePath": "todo/actions/datatypes-examples.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:1151-1177`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/sampleddata.xml:877-902`; `FHIR-25034`; `FHIR-35948`; commit `c27bdb7a6c4a63b716f83815a9096b413cf658a8`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "datatypes-examples research appendix",
+              "filePath": "todo/research/datatypes-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:1151-1177",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html",
+              "lineRange": {
+                "start": 1151,
+                "end": 1177
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/sampleddata.xml:877-902",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/sampleddata.xml",
+              "lineRange": {
+                "start": 877,
+                "end": 902
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-25034",
+              "label": "FHIR-25034",
+              "url": "https://jira.hl7.org/browse/FHIR-25034",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-35948",
+              "label": "FHIR-35948",
+              "url": "https://jira.hl7.org/browse/FHIR-35948",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "c27bdb7a6c4a63b716f83815a9096b413cf658a8",
+              "label": "c27bdb7a6c4a63b716f83815a9096b413cf658a8",
+              "url": "https://github.com/HL7/fhir/commit/c27bdb7a6c4a63b716f83815a9096b413cf658a8",
+              "commitHash": "c27bdb7a6c4a63b716f83815a9096b413cf658a8",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The SampledData XML example uses `<period value=\"2\"/>`, but the R6 datatype source defines `SampledData.interval` and a required `SampledData.intervalUnit`. The paired JSON was changed to `\"interval\" : \"2\"` in a QA commit, leaving XML and JSON inconsistent, and neither format shows `intervalUnit`.",
+            "analysis": "H-001: SampledData XML example still uses retired `period\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:1151-1177`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/sampleddata.xml:877-902`; `FHIR-25034`; `FHIR-35948`; commit `c27bdb7a6c4a63b716f83815a9096b413cf658a8`\n\nProblem: The SampledData XML example uses `<period value=\"2\"/>`, but the R6 datatype source defines `SampledData.interval` and a required `SampledData.intervalUnit`. The paired JSON was changed to `\"interval\" : \"2\"` in a QA commit, leaving XML and JSON inconsistent, and neither format shows `intervalUnit`.\n\nWhy it matters: The page currently shows an invalid/stale R6 XML element for a datatype that changed materially from R4/R5-era wording.\n\nRecommended next step: Change the XML example to use `interval`, add `intervalUnit` to both XML and JSON, and validate the SampledData example in both formats against the R6 definitions.\n\nIntent-vs-implementation context: `H-001`, `H-003`, and `H-004` are the material mismatches found: SampledData was only partially updated from `period` to `interval`, the Timing root-name fix from `FHIR-20670` was reverted, and a Zulip-noted bad HumanName extension URL remains present.",
+            "whyItMatters": "The page currently shows an invalid/stale R6 XML element for a datatype that changed materially from R4/R5-era wording.",
+            "recommendedNextStep": "Change the XML example to use `interval`, add `intervalUnit` to both XML and JSON, and validate the SampledData example in both formats against the R6 definitions.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:1151-1177",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/sampleddata.xml:877-902",
+              "FHIR-25034",
+              "FHIR-35948",
+              "c27bdb7a6c4a63b716f83815a9096b413cf658a8"
+            ],
+            "limitations": [
+              "- Important caveat: no Jira/Zulip/Confluence issue was found that specifically tracks the current page's broad JSON primitive typing problems or the current SampledData XML `period`/JSON `interval` mismatch on `datatypes-examples.html`; those are source-page findings from cross-checking current examples against current datatype/JSON rules."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.195Z",
+          "status": "open"
+        },
+        {
+          "id": "datatypes-examples-H-002",
+          "localId": "H-002",
+          "pageLabel": "datatypes-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/json.html",
+          "title": "Added JSON examples are not reliably valid FHIR JSON",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/json.html",
+              "lineRange": {
+                "start": 170,
+                "end": 173
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html",
+              "lineRange": {
+                "start": 545,
+                "end": 545
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "datatypes-examples action file",
+              "filePath": "todo/actions/datatypes-examples.md",
+              "confidence": "high",
+              "quote": "JSON primitive rules at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/json.html:170-173`; current examples at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:545`, `:746-771`, `:1174-1177`, `:2620-2623`, `:2129-2174`; commit `e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6`; `FHIR-19608`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "datatypes-examples research appendix",
+              "filePath": "todo/research/datatypes-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/json.html:170-173",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/json.html",
+              "lineRange": {
+                "start": 170,
+                "end": 173
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:545",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html",
+              "lineRange": {
+                "start": 545,
+                "end": 545
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-19608",
+              "label": "FHIR-19608",
+              "url": "https://jira.hl7.org/browse/FHIR-19608",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "label": "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "url": "https://github.com/HL7/fhir/commit/e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "commitHash": "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Many JSON examples quote primitives that should be JSON numbers/booleans, such as `userSelected : \"true\"`, Quantity `value : \"25\"`, SampledData `factor/dimensions` as strings, and Timing `frequency/period/count` as strings. One Address JSON example also changes codedString values from XML `US` to JSON `IN`.",
+            "analysis": "H-002: Added JSON examples are not reliably valid FHIR JSON\n\nEvidence: JSON primitive rules at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/json.html:170-173`; current examples at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:545`, `:746-771`, `:1174-1177`, `:2620-2623`, `:2129-2174`; commit `e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6`; `FHIR-19608`\n\nProblem: Many JSON examples quote primitives that should be JSON numbers/booleans, such as `userSelected : \"true\"`, Quantity `value : \"25\"`, SampledData `factor/dimensions` as strings, and Timing `frequency/period/count` as strings. One Address JSON example also changes codedString values from XML `US` to JSON `IN`.\n\nWhy it matters: The Jira intent was to add useful JSON examples, but these examples can mislead implementers about FHIR JSON primitive typing and extension value content.\n\nRecommended next step: Run a schema-aware audit of all JSON snippets added to this page and fix primitive JSON types and XML/JSON value mismatches, starting with the cited Quantity, SampledData, Timing, Coding, and Address examples.\n\nOverlooked/newly noticed context: `H-002` is the main newly noticed problem: the JSON expansion appears mechanical and should be validated as a set rather than fixing one line at a time.",
+            "whyItMatters": "The Jira intent was to add useful JSON examples, but these examples can mislead implementers about FHIR JSON primitive typing and extension value content.",
+            "recommendedNextStep": "Run a schema-aware audit of all JSON snippets added to this page and fix primitive JSON types and XML/JSON value mismatches, starting with the cited Quantity, SampledData, Timing, Coding, and Address examples.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/json.html:170-173",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:545",
+              ":746-771",
+              ":1174-1177",
+              ":2620-2623",
+              ":2129-2174",
+              "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "FHIR-19608"
+            ],
+            "limitations": [
+              "- Important caveat: no Jira/Zulip/Confluence issue was found that specifically tracks the current page's broad JSON primitive typing problems or the current SampledData XML `period`/JSON `interval` mismatch on `datatypes-examples.html`; those are source-page findings from cross-checking current examples against current datatype/JSON rules."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.195Z",
+          "status": "open"
+        },
+        {
+          "id": "datatypes-examples-H-003",
+          "localId": "H-003",
+          "pageLabel": "datatypes-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html",
+          "title": "Timing roots reverted after `FHIR-20670",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html",
+              "lineRange": {
+                "start": 2587,
+                "end": 2737
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "datatypes-examples action file",
+              "filePath": "todo/actions/datatypes-examples.md",
+              "confidence": "high",
+              "quote": "current examples at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:2587-2737`; `FHIR-20670`; fixing commit `b1a191ea63c373039d54c387aced8a9f11daea24`; regression commit `b9fd58139d35c8aa90083ae99a279c8a6d3dd854`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "datatypes-examples research appendix",
+              "filePath": "todo/research/datatypes-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:2587-2737",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html",
+              "lineRange": {
+                "start": 2587,
+                "end": 2737
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-20670",
+              "label": "FHIR-20670",
+              "url": "https://jira.hl7.org/browse/FHIR-20670",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "b1a191ea63c373039d54c387aced8a9f11daea24",
+              "label": "b1a191ea63c373039d54c387aced8a9f11daea24",
+              "url": "https://github.com/HL7/fhir/commit/b1a191ea63c373039d54c387aced8a9f11daea24",
+              "commitHash": "b1a191ea63c373039d54c387aced8a9f11daea24",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "b9fd58139d35c8aa90083ae99a279c8a6d3dd854",
+              "label": "b9fd58139d35c8aa90083ae99a279c8a6d3dd854",
+              "url": "https://github.com/HL7/fhir/commit/b9fd58139d35c8aa90083ae99a279c8a6d3dd854",
+              "commitHash": "b9fd58139d35c8aa90083ae99a279c8a6d3dd854",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-20670` explicitly resolved that Timing example roots should be changed from `<schedule>` to `<timing>` because `<schedule>` was confusing. The next page-specific commit reverted those roots, and current R6 examples still use `<schedule>`/`\"schedule\"`.",
+            "analysis": "H-003: Timing roots reverted after `FHIR-20670\n\nEvidence: current examples at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:2587-2737`; `FHIR-20670`; fixing commit `b1a191ea63c373039d54c387aced8a9f11daea24`; regression commit `b9fd58139d35c8aa90083ae99a279c8a6d3dd854`\n\nProblem: `FHIR-20670` explicitly resolved that Timing example roots should be changed from `<schedule>` to `<timing>` because `<schedule>` was confusing. The next page-specific commit reverted those roots, and current R6 examples still use `<schedule>`/`\"schedule\"`.\n\nWhy it matters: This is a formal tracker decision that appears to have been unintentionally undone, preserving the exact confusion the issue was meant to remove.\n\nRecommended next step: Restore `timing` as the example root names, or document why the work group intentionally chose to abandon the `FHIR-20670` resolution.\n\nIntent-vs-implementation context: `H-001`, `H-003`, and `H-004` are the material mismatches found: SampledData was only partially updated from `period` to `interval`, the Timing root-name fix from `FHIR-20670` was reverted, and a Zulip-noted bad HumanName extension URL remains present.",
+            "whyItMatters": "This is a formal tracker decision that appears to have been unintentionally undone, preserving the exact confusion the issue was meant to remove.",
+            "recommendedNextStep": "Restore `timing` as the example root names, or document why the work group intentionally chose to abandon the `FHIR-20670` resolution.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:2587-2737",
+              "FHIR-20670",
+              "b1a191ea63c373039d54c387aced8a9f11daea24",
+              "b9fd58139d35c8aa90083ae99a279c8a6d3dd854"
+            ],
+            "limitations": [
+              "- Important caveat: no Jira/Zulip/Confluence issue was found that specifically tracks the current page's broad JSON primitive typing problems or the current SampledData XML `period`/JSON `interval` mismatch on `datatypes-examples.html`; those are source-page findings from cross-checking current examples against current datatype/JSON rules."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.196Z",
+          "status": "open"
+        },
+        {
+          "id": "datatypes-examples-H-004",
+          "localId": "H-004",
+          "pageLabel": "datatypes-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html",
+          "title": "HumanName examples still use nonexistent middle-name extension URLs",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html",
+              "lineRange": {
+                "start": 1602,
+                "end": 1623
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "datatypes-examples action file",
+              "filePath": "todo/actions/datatypes-examples.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:1602-1623` and `:1641-1692`; Zulip `#nordics > Middle Name` (`bun run zulip:search snapshot nordics \"Middle Name\"`)"
+            },
+            {
+              "type": "research-appendix",
+              "label": "datatypes-examples research appendix",
+              "filePath": "todo/research/datatypes-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:1602-1623",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html",
+              "lineRange": {
+                "start": 1602,
+                "end": 1623
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier`",
+              "url": "http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier`",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier2`",
+              "url": "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier2`",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:1602-1623` and `:1641-1692`; Zulip `#nordics > Middle Name` (`bun run zulip:search snapshot nordics \"Middle Name\"`)\n- Priority: P2\n- Category: overlooked-problem\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:1602-1623` and `:1641-1692`; Zulip `#nordics > Middle Name` (`bun run zulip:search snapshot nordics \"Middle Name\"`)\n- Problem: Several Scandinavian HumanName examples still use `http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier` and `http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier2`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Several Scandinavian HumanName examples still use `http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier` and `http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier2`. The Zulip thread identified this exact extension as wrong/nonexistent and said it had been fixed, but the current page still contains it, including JSON copies.",
+            "analysis": "H-004: HumanName examples still use nonexistent middle-name extension URLs\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:1602-1623` and `:1641-1692`; Zulip `#nordics > Middle Name` (`bun run zulip:search snapshot nordics \"Middle Name\"`)\n\nProblem: Several Scandinavian HumanName examples still use `http://hl7.org/fhir/StructureDefinitioniso-20190#name-qualifier` and `http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifier2`. The Zulip thread identified this exact extension as wrong/nonexistent and said it had been fixed, but the current page still contains it, including JSON copies.\n\nWhy it matters: Canonical URLs in examples are likely to be copied. Nonexistent/obsolete extension URLs make the examples non-interoperable and undermine the HumanName guidance.\n\nRecommended next step: Replace these URLs with the correct current extension/code-system canonicals or remove/rewrite the affected examples if the Scandinavian middle-name modeling guidance has changed.\n\nIntent-vs-implementation context: `H-001`, `H-003`, and `H-004` are the material mismatches found: SampledData was only partially updated from `period` to `interval`, the Timing root-name fix from `FHIR-20670` was reverted, and a Zulip-noted bad HumanName extension URL remains present.",
+            "whyItMatters": "Canonical URLs in examples are likely to be copied. Nonexistent/obsolete extension URLs make the examples non-interoperable and undermine the HumanName guidance.",
+            "recommendedNextStep": "Replace these URLs with the correct current extension/code-system canonicals or remove/rewrite the affected examples if the Scandinavian middle-name modeling guidance has changed.",
+            "rawEvidenceQuotes": [
+              "Middle Name",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-examples.html:1602-1623",
+              ":1641-1692",
+              "#nordics > Middle Name",
+              "bun run zulip:search snapshot nordics \"Middle Name\""
+            ],
+            "limitations": [
+              "- Important caveat: no Jira/Zulip/Confluence issue was found that specifically tracks the current page's broad JSON primitive typing problems or the current SampledData XML `period`/JSON `interval` mismatch on `datatypes-examples.html`; those are source-page findings from cross-checking current examples against current datatype/JSON rules."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.196Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 4,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 3,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 4,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 2,
+      "intent-mismatch": 1,
+      "overlooked-problem": 1,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

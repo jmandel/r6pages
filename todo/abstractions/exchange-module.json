@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.223Z",
+  "sourceActionFilesGlob": "todo/actions/exchange-module.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "exchange-module",
+      "actionFilePath": "todo/actions/exchange-module.md",
+      "researchFilePath": "todo/research/exchange-module.md",
+      "status": "has-findings",
+      "summary": "2 findings: one substantive wording mismatch where Exchange-module subscription text missed the FHIR-47279 R6 fix, plus one low-priority rendering/editorial cleanup.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "exchange-module-H-001",
+          "localId": "H-001",
+          "pageLabel": "exchange-module",
+          "pagePath": "source/exchange-module.html",
+          "title": "Exchange module still uses subscription wording that FHIR-47279 removed elsewhere",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/exchange-module.html",
+              "lineRange": {
+                "start": 115,
+                "end": 119
+              }
+            },
+            {
+              "filePath": "source/subscriptions.html",
+              "lineRange": {
+                "start": 18,
+                "end": 20
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "exchange-module action file",
+              "filePath": "todo/actions/exchange-module.md",
+              "confidence": "high",
+              "quote": "`source/exchange-module.html:115-119` still says “establish proactive event notifications”; FHIR-47279 resolved that “proactive” was not the best word; commit `7b84f997...` changed `source/subscriptions.html:18-20` to “establish a request for event or change notifications”; PR #3967 included `source/subscriptions.html` but not `source/exchange-module.html`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "exchange-module research appendix",
+              "filePath": "todo/research/exchange-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/exchange-module.html:115-119",
+              "filePath": "source/exchange-module.html",
+              "lineRange": {
+                "start": 115,
+                "end": 119
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/subscriptions.html:18-20",
+              "filePath": "source/subscriptions.html",
+              "lineRange": {
+                "start": 18,
+                "end": 20
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-47279",
+              "label": "FHIR-47279",
+              "url": "https://jira.hl7.org/browse/FHIR-47279",
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "The Exchange module repeats the old subscription summary after the canonical Subscriptions page was corrected for R6.",
+            "analysis": "H-001: Exchange module still uses subscription wording that FHIR-47279 removed elsewhere\n\nEvidence: `source/exchange-module.html:115-119` still says “establish proactive event notifications”; FHIR-47279 resolved that “proactive” was not the best word; commit `7b84f997...` changed `source/subscriptions.html:18-20` to “establish a request for event or change notifications”; PR #3967 included `source/subscriptions.html` but not `source/exchange-module.html`.\n\nProblem: The Exchange module repeats the old subscription summary after the canonical Subscriptions page was corrected for R6.\n\nWhy it matters: Readers may see inconsistent guidance about whether subscriptions are “proactive,” despite a voted FHIR-I clarification.\n\nRecommended next step: Update the Exchange-module Subscriptions paragraph to align with the FHIR-47279 wording, or explicitly triage if FHIR-I intended different summary wording here.\n\nIntent-vs-implementation context: - H-001.",
+            "whyItMatters": "Readers may see inconsistent guidance about whether subscriptions are “proactive,” despite a voted FHIR-I clarification.",
+            "recommendedNextStep": "Update the Exchange-module Subscriptions paragraph to align with the FHIR-47279 wording, or explicitly triage if FHIR-I intended different summary wording here.",
+            "rawEvidenceQuotes": [
+              "establish proactive event notifications",
+              "proactive",
+              "establish a request for event or change notifications",
+              "source/exchange-module.html:115-119",
+              "7b84f997...",
+              "source/subscriptions.html:18-20",
+              "source/subscriptions.html",
+              "source/exchange-module.html"
+            ],
+            "limitations": [
+              "- Caveats: source files are not the rendered publication; some resource links such as `subscription.html` are generated artifacts and are not present as raw `source/*.html` files. No known Jira keys were supplied by the user. Some broad commits bundled unrelated issues, so causality is only asserted when Jira/Confluence/Zulip/source agree."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.222Z",
+          "status": "open"
+        },
+        {
+          "id": "exchange-module-E-002",
+          "localId": "E-002",
+          "pageLabel": "exchange-module",
+          "pagePath": "source/exchange-module.html",
+          "title": "Services/SOA line renders without a space before the parenthetical",
+          "kind": "E",
+          "priority": "P3",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/exchange-module.html",
+              "lineRange": {
+                "start": 97,
+                "end": 97
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "exchange-module action file",
+              "filePath": "todo/actions/exchange-module.md",
+              "confidence": "high",
+              "quote": "`source/exchange-module.html:97` contains `</a>(e.g., a SOA)`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "exchange-module research appendix",
+              "filePath": "todo/research/exchange-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/exchange-module.html:97",
+              "filePath": "source/exchange-module.html",
+              "lineRange": {
+                "start": 97,
+                "end": 97
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-44047",
+              "label": "FHIR-44047",
+              "url": "https://jira.hl7.org/browse/FHIR-44047",
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "Rendered text reads like `services framework(e.g., a SOA)`.",
+            "analysis": "E-002: Services/SOA line renders without a space before the parenthetical\n\nEvidence: `source/exchange-module.html:97` contains `</a>(e.g., a SOA)`.\n\nProblem: Rendered text reads like `services framework(e.g., a SOA)`.\n\nWhy it matters: Minor polish issue on a line already touched for FHIR-44047 punctuation cleanup.\n\nRecommended next step: Insert a space before the parenthetical: `</a> (e.g., a SOA)`.\n\nOverlooked/newly noticed context: - E-002.",
+            "whyItMatters": "Minor polish issue on a line already touched for FHIR-44047 punctuation cleanup.",
+            "recommendedNextStep": "Insert a space before the parenthetical: `</a> (e.g., a SOA)`.",
+            "rawEvidenceQuotes": [
+              "source/exchange-module.html:97",
+              "</a>(e.g., a SOA)"
+            ],
+            "limitations": [
+              "- Caveats: source files are not the rendered publication; some resource links such as `subscription.html` are generated artifacts and are not present as raw `source/*.html` files. No known Jira keys were supplied by the user. Some broad commits bundled unrelated issues, so causality is only asserted when Jira/Confluence/Zulip/source agree."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.223Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

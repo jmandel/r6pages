@@ -1,0 +1,324 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.354Z",
+  "sourceActionFilesGlob": "todo/actions/versions.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "versions",
+      "actionFilePath": "todo/actions/versions.md",
+      "researchFilePath": "todo/research/versions.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings. The main risk is that R6 ballot4 still gives R5/R6 cross-version extension guidance that conflicts with resolved Jira/workgroup intent, and its future-release section is already the subject of an R6 ballot negative.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "versions-H-001",
+          "localId": "H-001",
+          "pageLabel": "versions",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html",
+          "title": "Defining-version table still omits R6 and labels R5 as this version",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html",
+              "lineRange": {
+                "start": 650,
+                "end": 673
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "versions action file",
+              "filePath": "todo/actions/versions.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:650-673`; `FHIR-47208`; `FHIR-47216`; Confluence page `265492373`; commit `e89e89caca55b2ecdb1ba6820a95b94f9115d36a`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "versions research appendix",
+              "filePath": "todo/research/versions.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:650-673",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html",
+              "lineRange": {
+                "start": 650,
+                "end": 673
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-47208",
+              "label": "FHIR-47208",
+              "url": "https://jira.hl7.org/browse/FHIR-47208",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-47216",
+              "label": "FHIR-47216",
+              "url": "https://jira.hl7.org/browse/FHIR-47216",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "e89e89caca55b2ecdb1ba6820a95b94f9115d36a",
+              "label": "e89e89caca55b2ecdb1ba6820a95b94f9115d36a",
+              "url": "https://github.com/HL7/fhir/commit/e89e89caca55b2ecdb1ba6820a95b94f9115d36a",
+              "commitHash": "e89e89caca55b2ecdb1ba6820a95b94f9115d36a",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:650-673`; `FHIR-47208`; `FHIR-47216`; Confluence page `265492373`; commit `e89e89caca55b2ecdb1ba6820a95b94f9115d36a`\n- Priority: P1\n- Category: intent-mismatch\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:650-673`; `FHIR-47208`; `FHIR-47216`; Confluence page `265492373`; commit `e89e89caca55b2ecdb1ba6820a95b94f9115d36a`\n- Problem: The table defining valid `[defining_version]` values still stops at `FHIR R5 (this version)` / `5.0` on an R6 ballot page.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The table defining valid `[defining_version]` values still stops at `FHIR R5 (this version)` / `5.0` on an R6 ballot page. `FHIR-47208` says R6 is missing from this exact table, and `FHIR-47216` resolved that all tables should have R6 as well as R5.",
+            "analysis": "H-001: Defining-version table still omits R6 and labels R5 as this version\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:650-673`; `FHIR-47208`; `FHIR-47216`; Confluence page `265492373`; commit `e89e89caca55b2ecdb1ba6820a95b94f9115d36a`\n\nProblem: The table defining valid `[defining_version]` values still stops at `FHIR R5 (this version)` / `5.0` on an R6 ballot page. `FHIR-47208` says R6 is missing from this exact table, and `FHIR-47216` resolved that all tables should have R6 as well as R5.\n\nWhy it matters: Implementers constructing cross-version extension URLs for R6 elements may infer that R6 is not a valid defining version, or that R5 is the current page version.\n\nRecommended next step: Add an R6/`6.0` row marked as this version, update/remove the R5 \"(this version)\" label, and move `FHIR-47208`/`FHIR-47216` through applied/publication status after verifying all affected tables.\n\nIntent-vs-implementation context: H-001 and E-001 are the material mismatches. `FHIR-42924`/`FHIR-47216` called for R6 table updates, but the current defining-version table still lacks R6 and the package matrix contains a visible R5/R6 package-id mismatch.",
+            "whyItMatters": "Implementers constructing cross-version extension URLs for R6 elements may infer that R6 is not a valid defining version, or that R5 is the current page version.",
+            "recommendedNextStep": "Add an R6/`6.0` row marked as this version, update/remove the R5 \"(this version)\" label, and move `FHIR-47208`/`FHIR-47216` through applied/publication status after verifying all affected tables.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:650-673",
+              "FHIR-47208",
+              "FHIR-47216",
+              "265492373",
+              "e89e89caca55b2ecdb1ba6820a95b94f9115d36a"
+            ],
+            "limitations": [
+              "- Caveat: no source commit in the page history explicitly mentions `FHIR-47208` or `FHIR-47216`; the likely related implementation is `FHIR-42924`/PR 3967, but the current page still appears not to satisfy the R6-table part of those Jira dispositions.",
+              "| 2025-11-03 | `6d88889ec3eb977bf53d55346ddb9fa5267d61d9` | `FHIR-44052 Representation of Draft (FMM 0) is unclear and confusing` | semantic guidance | Changes \"Draft (0)\" to \"FMM 0\" |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.354Z",
+          "status": "open"
+        },
+        {
+          "id": "versions-E-001",
+          "localId": "E-001",
+          "pageLabel": "versions",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html",
+          "title": "R6 Extensions to R5 package cell displays the wrong package id",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html",
+              "lineRange": {
+                "start": 761,
+                "end": 767
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "versions action file",
+              "filePath": "todo/actions/versions.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:761-767`; `FHIR-42924`; commit `e89e89caca55b2ecdb1ba6820a95b94f9115d36a`; PR https://github.com/HL7/fhir/pull/3967"
+            },
+            {
+              "type": "research-appendix",
+              "label": "versions research appendix",
+              "filePath": "todo/research/versions.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:761-767",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html",
+              "lineRange": {
+                "start": 761,
+                "end": 767
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-42924",
+              "label": "FHIR-42924",
+              "url": "https://jira.hl7.org/browse/FHIR-42924",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "e89e89caca55b2ecdb1ba6820a95b94f9115d36a",
+              "label": "e89e89caca55b2ecdb1ba6820a95b94f9115d36a",
+              "url": "https://github.com/HL7/fhir/commit/e89e89caca55b2ecdb1ba6820a95b94f9115d36a",
+              "commitHash": "e89e89caca55b2ecdb1ba6820a95b94f9115d36a",
+              "confidence": "medium"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/3967",
+              "url": "https://github.com/HL7/fhir/pull/3967",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://hl7.org/fhir/uv/xver-r5.r6/`",
+              "url": "https://hl7.org/fhir/uv/xver-r5.r6/`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "In the R6 Extensions row, the R5 Package cell links to `https://hl7.org/fhir/uv/xver-r5.r6/` but displays `hl7.fhir.uv.xver-r6.r6`.",
+            "analysis": "E-001: R6 Extensions to R5 package cell displays the wrong package id\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:761-767`; `FHIR-42924`; commit `e89e89caca55b2ecdb1ba6820a95b94f9115d36a`; PR https://github.com/HL7/fhir/pull/3967\n\nProblem: In the R6 Extensions row, the R5 Package cell links to `https://hl7.org/fhir/uv/xver-r5.r6/` but displays `hl7.fhir.uv.xver-r6.r6`.\n\nWhy it matters: The visible package id contradicts the link and table position, making the package matrix unreliable for implementers.\n\nRecommended next step: Change the displayed text to match the intended package id (`hl7.fhir.uv.xver-r5.r6`) or correct both href and text if the naming convention is different.\n\nIntent-vs-implementation context: H-001 and E-001 are the material mismatches. `FHIR-42924`/`FHIR-47216` called for R6 table updates, but the current defining-version table still lacks R6 and the package matrix contains a visible R5/R6 package-id mismatch.",
+            "whyItMatters": "The visible package id contradicts the link and table position, making the package matrix unreliable for implementers.",
+            "recommendedNextStep": "Change the displayed text to match the intended package id (`hl7.fhir.uv.xver-r5.r6`) or correct both href and text if the naming convention is different.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:761-767",
+              "FHIR-42924",
+              "e89e89caca55b2ecdb1ba6820a95b94f9115d36a"
+            ],
+            "limitations": [
+              "- Caveat: no source commit in the page history explicitly mentions `FHIR-47208` or `FHIR-47216`; the likely related implementation is `FHIR-42924`/PR 3967, but the current page still appears not to satisfy the R6-table part of those Jira dispositions.",
+              "| 2025-11-03 | `6d88889ec3eb977bf53d55346ddb9fa5267d61d9` | `FHIR-44052 Representation of Draft (FMM 0) is unclear and confusing` | semantic guidance | Changes \"Draft (0)\" to \"FMM 0\" |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.354Z",
+          "status": "open"
+        },
+        {
+          "id": "versions-H-002",
+          "localId": "H-002",
+          "pageLabel": "versions",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html",
+          "title": "Future-release plans section is stale for R6",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html",
+              "lineRange": {
+                "start": 776,
+                "end": 817
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "versions action file",
+              "filePath": "todo/actions/versions.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:776-817`; `FHIR-54575`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "versions research appendix",
+              "filePath": "todo/research/versions.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:776-817",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html",
+              "lineRange": {
+                "start": 776,
+                "end": 817
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-54575",
+              "label": "FHIR-54575",
+              "url": "https://jira.hl7.org/browse/FHIR-54575",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The R6 ballot4 page still says \"HL7's general intent for the Release 6...\" and \"More information on plans for Release 5...\" in the future-release section. `FHIR-54575` is a submitted R6 ballot negative citing this stale Release 5 sentence.",
+            "analysis": "H-002: Future-release plans section is stale for R6\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:776-817`; `FHIR-54575`\n\nProblem: The R6 ballot4 page still says \"HL7's general intent for the Release 6...\" and \"More information on plans for Release 5...\" in the future-release section. `FHIR-54575` is a submitted R6 ballot negative citing this stale Release 5 sentence.\n\nWhy it matters: This page is intended to set implementer expectations for version evolution, so stale future-release guidance can mislead readers about post-R6 plans.\n\nRecommended next step: Triage `FHIR-54575` and update the section to current post-R6 planning guidance, or replace it with a link to an FMG-maintained planning page.\n\nOverlooked/newly noticed context: H-002 is the material newly noticed problem. Minor typos such as `this this`, `f-compat-cardianality`, and `This leads to URLs like following` are visible in the current page but were not elevated because stronger R5/R6 defects have direct Jira evidence.",
+            "whyItMatters": "This page is intended to set implementer expectations for version evolution, so stale future-release guidance can mislead readers about post-R6 plans.",
+            "recommendedNextStep": "Triage `FHIR-54575` and update the section to current post-R6 planning guidance, or replace it with a link to an FMG-maintained planning page.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/versions.html:776-817",
+              "FHIR-54575"
+            ],
+            "limitations": [
+              "- Caveat: no source commit in the page history explicitly mentions `FHIR-47208` or `FHIR-47216`; the likely related implementation is `FHIR-42924`/PR 3967, but the current page still appears not to satisfy the R6-table part of those Jira dispositions.",
+              "| 2025-11-03 | `6d88889ec3eb977bf53d55346ddb9fa5267d61d9` | `FHIR-44052 Representation of Draft (FMM 0) is unclear and confusing` | semantic guidance | Changes \"Draft (0)\" to \"FMM 0\" |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.354Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 1,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

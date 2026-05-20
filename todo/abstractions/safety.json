@@ -1,0 +1,462 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.311Z",
+  "sourceActionFilesGlob": "todo/actions/safety.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "safety",
+      "actionFilePath": "todo/actions/safety.md",
+      "researchFilePath": "todo/research/safety.md",
+      "status": "has-findings",
+      "summary": "The page has 4 actionable findings. The main risk is that the safety checklist changed substantially, but the formal CodeSystem and some Jira-approved wording were not kept aligned with the current page.",
+      "findingCount": 4,
+      "findings": [
+        {
+          "id": "safety-H-001",
+          "localId": "H-001",
+          "pageLabel": "safety",
+          "pagePath": "source/safety.html",
+          "title": "Safety CodeSystem is stale relative to the current checklist",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 40,
+                "end": 44
+              }
+            },
+            {
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 54,
+                "end": 109
+              }
+            },
+            {
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 170,
+                "end": 198
+              }
+            },
+            {
+              "filePath": "source/codesystem/codesystem-safety-entries.xml",
+              "lineRange": {
+                "start": 37,
+                "end": 200
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "safety action file",
+              "filePath": "todo/actions/safety.md",
+              "confidence": "high",
+              "quote": "`source/safety.html:40-44`, `source/safety.html:54-109`, `source/safety.html:170-198`, `source/codesystem/codesystem-safety-entries.xml:37-200`; Zulip `#implementers > Are search parameters like filters?` says `codesystem-safety-entries.html` was added for formal computability."
+            },
+            {
+              "type": "research-appendix",
+              "label": "safety research appendix",
+              "filePath": "todo/research/safety.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/safety.html:40-44",
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 40,
+                "end": 44
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/safety.html:54-109",
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 54,
+                "end": 109
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/safety.html:170-198",
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 170,
+                "end": 198
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/codesystem/codesystem-safety-entries.xml:37-200",
+              "filePath": "source/codesystem/codesystem-safety-entries.xml",
+              "lineRange": {
+                "start": 37,
+                "end": 200
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "other",
+              "label": "http://hl7.org/fhir/safety-entries#...`",
+              "url": "http://hl7.org/fhir/safety-entries#...`",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`source/safety.html:40-44`, `source/safety.html:54-109`, `source/safety.html:170-198`, `source/codesystem/codesystem-safety-entries.xml:37-200`; Zulip `#implementers > Are search parameters like filters?` says `codesystem-safety-entries.html` was added for formal computability.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page says the safety checklist is available as a CodeSystem for formal references, but the CodeSystem has 41 concepts while the page has 55 checklist items. Missing concepts include `implicitRules`, `search-param-names`, `search-pages-client`, `search-pages-server`, `subsetted`, narrative additions, `decimal`, and all decision-support items. Some existing definitions are also stale.",
+            "analysis": "H-001: Safety CodeSystem is stale relative to the current checklist\n\nEvidence: `source/safety.html:40-44`, `source/safety.html:54-109`, `source/safety.html:170-198`, `source/codesystem/codesystem-safety-entries.xml:37-200`; Zulip `#implementers > Are search parameters like filters?` says `codesystem-safety-entries.html` was added for formal computability.\n\nProblem: the page says the safety checklist is available as a CodeSystem for formal references, but the CodeSystem has 41 concepts while the page has 55 checklist items. Missing concepts include `implicitRules`, `search-param-names`, `search-pages-client`, `search-pages-server`, `subsetted`, narrative additions, `decimal`, and all decision-support items. Some existing definitions are also stale.\n\nWhy it matters: applications or registration processes using `http://hl7.org/fhir/safety-entries#...` cannot reliably cite current checklist items, and implementers may see different requirements in narrative vs machine-readable artifacts.\n\nRecommended next step: update `codesystem-safety-entries.xml` and any associated ValueSet/generated artifacts from the current checklist, or make the CodeSystem generated from the page so future checklist edits cannot drift.\n\nIntent-vs-implementation context: - H-001: current narrative checklist and formal CodeSystem artifact are inconsistent.",
+            "whyItMatters": "applications or registration processes using `http://hl7.org/fhir/safety-entries#...` cannot reliably cite current checklist items, and implementers may see different requirements in narrative vs machine-readable artifacts.",
+            "recommendedNextStep": "update `codesystem-safety-entries.xml` and any associated ValueSet/generated artifacts from the current checklist, or make the CodeSystem generated from the page so future checklist edits cannot drift.",
+            "rawEvidenceQuotes": [
+              "source/safety.html:40-44",
+              "source/safety.html:54-109",
+              "source/safety.html:170-198",
+              "source/codesystem/codesystem-safety-entries.xml:37-200",
+              "#implementers > Are search parameters like filters?",
+              "codesystem-safety-entries.html"
+            ],
+            "limitations": [
+              "- Initial `bun run zulip:search fts FHIR-XXXXX --limit 10` attempts failed on hyphenated keys with SQLite FTS parsing errors; this is noted as a search caveat."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.309Z",
+          "status": "open"
+        },
+        {
+          "id": "safety-H-002",
+          "localId": "H-002",
+          "pageLabel": "safety",
+          "pagePath": "source/safety.html",
+          "title": "FHIR-42989 was only partially applied",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 56,
+                "end": 58
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "safety action file",
+              "filePath": "todo/actions/safety.md",
+              "confidence": "high",
+              "quote": "`source/safety.html:56-58`; Jira `FHIR-42989`; Confluence page `227220068`; commit `e963b596c7ad3585b2285ac64ae7f8ee16a644ac`; PR `HL7/fhir#3920`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "safety research appendix",
+              "filePath": "todo/research/safety.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/safety.html:56-58",
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 56,
+                "end": 58
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-42989",
+              "label": "FHIR-42989",
+              "url": "https://jira.hl7.org/browse/FHIR-42989",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "e963b596c7ad3585b2285ac64ae7f8ee16a644ac",
+              "label": "e963b596c7ad3585b2285ac64ae7f8ee16a644ac",
+              "url": "https://github.com/HL7/fhir/commit/e963b596c7ad3585b2285ac64ae7f8ee16a644ac",
+              "commitHash": "e963b596c7ad3585b2285ac64ae7f8ee16a644ac",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`source/safety.html:56-58`; Jira `FHIR-42989`; Confluence page `227220068`; commit `e963b596c7ad3585b2285ac64ae7f8ee16a644ac`; PR `HL7/fhir#3920`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the approved disposition required updating the modifier item, updating the modifierExtension item, and adding implicitRules behavior guidance. The current page adds an implicitRules item, but leaves modifier/modifierExtension guidance essentially unchanged and uses different implicitRules wording.",
+            "analysis": "H-002: FHIR-42989 was only partially applied\n\nEvidence: `source/safety.html:56-58`; Jira `FHIR-42989`; Confluence page `227220068`; commit `e963b596c7ad3585b2285ac64ae7f8ee16a644ac`; PR `HL7/fhir#3920`.\n\nProblem: the approved disposition required updating the modifier item, updating the modifierExtension item, and adding implicitRules behavior guidance. The current page adds an implicitRules item, but leaves modifier/modifierExtension guidance essentially unchanged and uses different implicitRules wording.\n\nWhy it matters: implementers may not see the WG-approved guidance about behaving properly when encountering modifier elements, known/unknown modifier extensions, and unknown implicitRules values.\n\nRecommended next step: revise the three conformance checklist items to match the FHIR-42989 resolution and update the safety CodeSystem at the same time.\n\nIntent-vs-implementation context: - H-002: FHIR-42989 disposition not fully reflected in current conformance checklist.",
+            "whyItMatters": "implementers may not see the WG-approved guidance about behaving properly when encountering modifier elements, known/unknown modifier extensions, and unknown implicitRules values.",
+            "recommendedNextStep": "revise the three conformance checklist items to match the FHIR-42989 resolution and update the safety CodeSystem at the same time.",
+            "rawEvidenceQuotes": [
+              "source/safety.html:56-58",
+              "FHIR-42989",
+              "227220068",
+              "e963b596c7ad3585b2285ac64ae7f8ee16a644ac",
+              "HL7/fhir#3920"
+            ],
+            "limitations": [
+              "- Initial `bun run zulip:search fts FHIR-XXXXX --limit 10` attempts failed on hyphenated keys with SQLite FTS parsing errors; this is noted as a search caveat."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.310Z",
+          "status": "open"
+        },
+        {
+          "id": "safety-H-003",
+          "localId": "H-003",
+          "pageLabel": "safety",
+          "pagePath": "source/safety.html",
+          "title": "FHIR-34155 search guidance appears narrower than the approved intent",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 93,
+                "end": 93
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "safety action file",
+              "filePath": "todo/actions/safety.md",
+              "confidence": "high",
+              "quote": "`source/safety.html:93`; Jira `FHIR-34155`; commit `bacf6ea51e74b27baf81dad7a1e064fa6fee2f77`; PR `HL7/fhir#2243`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "safety research appendix",
+              "filePath": "todo/research/safety.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/safety.html:93",
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 93,
+                "end": 93
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-34155",
+              "label": "FHIR-34155",
+              "url": "https://jira.hl7.org/browse/FHIR-34155",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "bacf6ea51e74b27baf81dad7a1e064fa6fee2f77",
+              "label": "bacf6ea51e74b27baf81dad7a1e064fa6fee2f77",
+              "url": "https://github.com/HL7/fhir/commit/bacf6ea51e74b27baf81dad7a1e064fa6fee2f77",
+              "commitHash": "bacf6ea51e74b27baf81dad7a1e064fa6fee2f77",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Jira says clients must check the CapabilityStatement and SearchParameter definitions because identical search strings can mean different things on different servers. The current checklist item only says to check names of search parameters and operation definitions in the HTTP server's CapabilityStatement to see if they have been renamed.",
+            "analysis": "H-003: FHIR-34155 search guidance appears narrower than the approved intent\n\nEvidence: `source/safety.html:93`; Jira `FHIR-34155`; commit `bacf6ea51e74b27baf81dad7a1e064fa6fee2f77`; PR `HL7/fhir#2243`.\n\nProblem: Jira says clients must check the CapabilityStatement and SearchParameter definitions because identical search strings can mean different things on different servers. The current checklist item only says to check names of search parameters and operation definitions in the HTTP server's CapabilityStatement to see if they have been renamed.\n\nWhy it matters: checking names in CapabilityStatement may not catch semantic differences in SearchParameter definitions, which was the safety concern described in the Jira issue.\n\nRecommended next step: adjust the item to explicitly mention checking SearchParameter definitions/semantics, not just parameter names in CapabilityStatement.\n\nIntent-vs-implementation context: - H-003: FHIR-34155 SearchParameter definition intent not clearly reflected in current search checklist.",
+            "whyItMatters": "checking names in CapabilityStatement may not catch semantic differences in SearchParameter definitions, which was the safety concern described in the Jira issue.",
+            "recommendedNextStep": "adjust the item to explicitly mention checking SearchParameter definitions/semantics, not just parameter names in CapabilityStatement.",
+            "rawEvidenceQuotes": [
+              "source/safety.html:93",
+              "FHIR-34155",
+              "bacf6ea51e74b27baf81dad7a1e064fa6fee2f77",
+              "HL7/fhir#2243"
+            ],
+            "limitations": [
+              "- Initial `bun run zulip:search fts FHIR-XXXXX --limit 10` attempts failed on hyphenated keys with SQLite FTS parsing errors; this is noted as a search caveat."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.311Z",
+          "status": "open"
+        },
+        {
+          "id": "safety-E-001",
+          "localId": "E-001",
+          "pageLabel": "safety",
+          "pagePath": "source/safety.html",
+          "title": "Several current checklist anchors and narrative references are broken or misleading",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 109,
+                "end": 109
+              }
+            },
+            {
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 173,
+                "end": 180
+              }
+            },
+            {
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 186,
+                "end": 188
+              }
+            },
+            {
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 196,
+                "end": 198
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "safety action file",
+              "filePath": "todo/actions/safety.md",
+              "confidence": "high",
+              "quote": "`source/safety.html:109`, `source/safety.html:173-180`, `source/safety.html:186-188`, `source/safety.html:196-198`; Jira `FHIR-34041`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "safety research appendix",
+              "filePath": "todo/research/safety.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/safety.html:109",
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 109,
+                "end": 109
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/safety.html:173-180",
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 173,
+                "end": 180
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/safety.html:186-188",
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 186,
+                "end": 188
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/safety.html:196-198",
+              "filePath": "source/safety.html",
+              "lineRange": {
+                "start": 196,
+                "end": 198
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-34041",
+              "label": "FHIR-34041",
+              "url": "https://jira.hl7.org/browse/FHIR-34041",
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "`subsetted` anchors to `obs-focus`; all non-render narrative items anchor to `render-narratives`; `decimal` anchors to `use-provenance`; the narrative paragraph says \"With regard to #38\" even the current item is not #38; and the narrative item contains visible typos (\"safe failback\", \"do not recognized\", extra `)`).",
+            "analysis": "E-001: Several current checklist anchors and narrative references are broken or misleading\n\nEvidence: `source/safety.html:109`, `source/safety.html:173-180`, `source/safety.html:186-188`, `source/safety.html:196-198`; Jira `FHIR-34041`.\n\nProblem: `subsetted` anchors to `obs-focus`; all non-render narrative items anchor to `render-narratives`; `decimal` anchors to `use-provenance`; the narrative paragraph says \"With regard to #38\" even the current item is not #38; and the narrative item contains visible typos (\"safe failback\", \"do not recognized\", extra `)`).\n\nWhy it matters: formal fragment links and reader references point to the wrong checklist items, undermining the page's stated formal-reference use case.\n\nRecommended next step: make each anchor match its checklist code, replace numeric cross-reference with the item code/title or current number, and correct the narrative transcription typos.\n\nOverlooked/newly noticed context: - E-001: duplicate/wrong anchors, stale item number reference, and narrative typo/rendering defects are visible in the current page.",
+            "whyItMatters": "formal fragment links and reader references point to the wrong checklist items, undermining the page's stated formal-reference use case.",
+            "recommendedNextStep": "make each anchor match its checklist code, replace numeric cross-reference with the item code/title or current number, and correct the narrative transcription typos.",
+            "rawEvidenceQuotes": [
+              "source/safety.html:109",
+              "source/safety.html:173-180",
+              "source/safety.html:186-188",
+              "source/safety.html:196-198",
+              "FHIR-34041"
+            ],
+            "limitations": [
+              "- Initial `bun run zulip:search fts FHIR-XXXXX --limit 10` attempts failed on hyphenated keys with SQLite FTS parsing errors; this is noted as a search caveat."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.311Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 4,
+    "byPriority": {
+      "P0": 0,
+      "P1": 2,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 3,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 2,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

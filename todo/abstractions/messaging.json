@@ -1,0 +1,491 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.272Z",
+  "sourceActionFilesGlob": "todo/actions/messaging.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "messaging",
+      "actionFilePath": "todo/actions/messaging.md",
+      "researchFilePath": "todo/research/messaging.md",
+      "status": "has-findings",
+      "summary": "The page has 4 actionable findings. The main risk is that R6 ballot4 made normative messaging changes, but a few current statements/examples still conflict with the intended `Bundle.identifier` and graph-connected Bundle model or render as unfinished placeholder text.",
+      "findingCount": 4,
+      "findings": [
+        {
+          "id": "messaging-H-001",
+          "localId": "H-001",
+          "pageLabel": "messaging",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+          "title": "Bundle.identifier resend guidance is internally inconsistent",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 204,
+                "end": 209
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 237,
+                "end": 240
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "messaging action file",
+              "filePath": "todo/actions/messaging.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:204-209`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:237-240`, `FHIR-39096`, Zulip `fhir/infrastructure-wg > Proposal for message identifier issues`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "messaging research appendix",
+              "filePath": "todo/research/messaging.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:204-209",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 204,
+                "end": 209
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:237-240",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 237,
+                "end": 240
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-39096",
+              "label": "FHIR-39096",
+              "url": "https://jira.hl7.org/browse/FHIR-39096",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:204-209`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:237-240`, `FHIR-39096`, Zulip `fhir/infrastructure-wg > Proposal for message identifier issues`\n- Priority: P1\n- Category: spec-problem\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:204-209`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:237-240`, `FHIR-39096`, Zulip `fhir/infrastructure-wg > Proposal for message identifier issues`\n- Problem: The identifier section says each time a message is sent, `Bundle.identifier` should change, but the reliable-messaging table says consequence resends SHALL use the same `Bundle.identifier` and notification resends SHOULD use the same identifier.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The identifier section says each time a message is sent, `Bundle.identifier` should change, but the reliable-messaging table says consequence resends SHALL use the same `Bundle.identifier` and notification resends SHOULD use the same identifier.",
+            "analysis": "H-001: Bundle.identifier resend guidance is internally inconsistent\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:204-209`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:237-240`, `FHIR-39096`, Zulip `fhir/infrastructure-wg > Proposal for message identifier issues`\n\nProblem: The identifier section says each time a message is sent, `Bundle.identifier` should change, but the reliable-messaging table says consequence resends SHALL use the same `Bundle.identifier` and notification resends SHOULD use the same identifier.\n\nWhy it matters: Implementers could change identifiers for consequence resends, bypass duplicate-response caching, and risk duplicate business actions.\n\nRecommended next step: Clarify that `Bundle.identifier` changes for newly created/re-triggered message instances, while automated resends follow the category-specific reliable-messaging rules below.",
+            "whyItMatters": "Implementers could change identifiers for consequence resends, bypass duplicate-response caching, and risk duplicate business actions.",
+            "recommendedNextStep": "Clarify that `Bundle.identifier` changes for newly created/re-triggered message instances, while automated resends follow the category-specific reliable-messaging rules below.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:204-209",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:237-240",
+              "FHIR-39096",
+              "fhir/infrastructure-wg > Proposal for message identifier issues"
+            ],
+            "limitations": [
+              "- Caveats: Zulip searches for most individual Jira keys had no human-thread hits. Confluence exact-phrase searches for `\"fully-interconnected graph\"` and `\"Graph-connected Bundles\"` did not find minutes beyond Jira-linked pages. I did not rebuild/render the spec; rendering findings are based on the HTML source page and the source preprocessor context.",
+              "- `implementers > Search in Messaging` (snapshot command: `bun run zulip:search snapshot implementers \"Search in Messaging\"`, URL: https://chat.fhir.org/#narrow/stream/implementers/topic/Search%20in%20Messaging) is the origin discussion for `FHIR-36098`. Gino Canessa asked whether anyone used Search in Messaging and identified typed Parameter mapping limitations, including prefixes and modifiers.",
+              "| 2022-02-25/26 | Zulip | `implementers > Search in Messaging` | Gino identified search-via-messaging limitations. |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.270Z",
+          "status": "open"
+        },
+        {
+          "id": "messaging-H-002",
+          "localId": "H-002",
+          "pageLabel": "messaging",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+          "title": "Graph-connected Bundle rules contain stale narrower wording",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 37,
+                "end": 42
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 72,
+                "end": 75
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/bundle/bundle-notes.xml",
+              "lineRange": {
+                "start": 339,
+                "end": 347
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "messaging action file",
+              "filePath": "todo/actions/messaging.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:37-42`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:72-75`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/bundle/bundle-notes.xml:339-347`, `FHIR-23722`, `FHIR-43295`, `FHIR-45507`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "messaging research appendix",
+              "filePath": "todo/research/messaging.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:37-42",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 37,
+                "end": 42
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:72-75",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 72,
+                "end": 75
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/bundle/bundle-notes.xml:339-347",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/bundle/bundle-notes.xml",
+              "lineRange": {
+                "start": 339,
+                "end": 347
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-23722",
+              "label": "FHIR-23722",
+              "url": "https://jira.hl7.org/browse/FHIR-23722",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-43295",
+              "label": "FHIR-43295",
+              "url": "https://jira.hl7.org/browse/FHIR-43295",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-45507",
+              "label": "FHIR-45507",
+              "url": "https://jira.hl7.org/browse/FHIR-45507",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The top-of-page rule and Bundle notes allow a connected graph, including reverse/url/href-style connections, but the Basic Messaging Assumptions section still says the Bundle includes only resources referenced from the MessageHeader.",
+            "analysis": "H-002: Graph-connected Bundle rules contain stale narrower wording\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:37-42`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:72-75`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/bundle/bundle-notes.xml:339-347`, `FHIR-23722`, `FHIR-43295`, `FHIR-45507`\n\nProblem: The top-of-page rule and Bundle notes allow a connected graph, including reverse/url/href-style connections, but the Basic Messaging Assumptions section still says the Bundle includes only resources referenced from the MessageHeader.\n\nWhy it matters: The stale wording can be read as disallowing valid graph-connected message Bundles permitted by the newer rule.\n\nRecommended next step: Replace or remove the duplicate Basic Messaging sentence so it points to the graph-connected Bundle rule instead of restating a narrower \"referenced from it\" rule.",
+            "whyItMatters": "The stale wording can be read as disallowing valid graph-connected message Bundles permitted by the newer rule.",
+            "recommendedNextStep": "Replace or remove the duplicate Basic Messaging sentence so it points to the graph-connected Bundle rule instead of restating a narrower \"referenced from it\" rule.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:37-42",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:72-75",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/bundle/bundle-notes.xml:339-347",
+              "FHIR-23722",
+              "FHIR-43295",
+              "FHIR-45507"
+            ],
+            "limitations": [
+              "- Caveats: Zulip searches for most individual Jira keys had no human-thread hits. Confluence exact-phrase searches for `\"fully-interconnected graph\"` and `\"Graph-connected Bundles\"` did not find minutes beyond Jira-linked pages. I did not rebuild/render the spec; rendering findings are based on the HTML source page and the source preprocessor context.",
+              "- `implementers > Search in Messaging` (snapshot command: `bun run zulip:search snapshot implementers \"Search in Messaging\"`, URL: https://chat.fhir.org/#narrow/stream/implementers/topic/Search%20in%20Messaging) is the origin discussion for `FHIR-36098`. Gino Canessa asked whether anyone used Search in Messaging and identified typed Parameter mapping limitations, including prefixes and modifiers.",
+              "| 2022-02-25/26 | Zulip | `implementers > Search in Messaging` | Gino identified search-via-messaging limitations. |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.271Z",
+          "status": "open"
+        },
+        {
+          "id": "messaging-H-003",
+          "localId": "H-003",
+          "pageLabel": "messaging",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+          "title": "Operation example omits the required MessageHeader.focus link",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 462,
+                "end": 467
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 483,
+                "end": 518
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "messaging action file",
+              "filePath": "todo/actions/messaging.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:462-467`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:483-518`, `FHIR-37416`, commits `472644928c6d9df6d0cbc44736a1697fa8ef6ac2` and `307c3216b45f4fc4ba59d6026605cad823d47daf`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "messaging research appendix",
+              "filePath": "todo/research/messaging.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:462-467",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 462,
+                "end": 467
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:483-518",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 483,
+                "end": 518
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-37416",
+              "label": "FHIR-37416",
+              "url": "https://jira.hl7.org/browse/FHIR-37416",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "472644928c6d9df6d0cbc44736a1697fa8ef6ac2",
+              "label": "472644928c6d9df6d0cbc44736a1697fa8ef6ac2",
+              "url": "https://github.com/HL7/fhir/commit/472644928c6d9df6d0cbc44736a1697fa8ef6ac2",
+              "commitHash": "472644928c6d9df6d0cbc44736a1697fa8ef6ac2",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "307c3216b45f4fc4ba59d6026605cad823d47daf",
+              "label": "307c3216b45f4fc4ba59d6026605cad823d47daf",
+              "url": "https://github.com/HL7/fhir/commit/307c3216b45f4fc4ba59d6026605cad823d47daf",
+              "commitHash": "307c3216b45f4fc4ba59d6026605cad823d47daf",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "f4ef1eea5685",
+              "label": "f4ef1eea5685",
+              "url": "https://github.com/HL7/fhir/commit/f4ef1eea5685",
+              "commitHash": "f4ef1eea5685",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The operation instructions say `MessageHeader.focus` refers to a Parameters resource, but the active XML example includes a Parameters entry without any `focus` reference to it.",
+            "analysis": "H-003: Operation example omits the required MessageHeader.focus link\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:462-467`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:483-518`, `FHIR-37416`, commits `472644928c6d9df6d0cbc44736a1697fa8ef6ac2` and `307c3216b45f4fc4ba59d6026605cad823d47daf`\n\nProblem: The operation instructions say `MessageHeader.focus` refers to a Parameters resource, but the active XML example includes a Parameters entry without any `focus` reference to it.\n\nWhy it matters: The example contradicts the operation rule and leaves the Parameters resource unconnected under the page's graph-connected Bundle requirement.\n\nRecommended next step: Add a `MessageHeader.focus.reference` pointing to `urn:uuid:00213637-dc7c-40d2-a7de-f4ef1eea5685` in the operation example, and check any response/single-return examples for the same issue.",
+            "whyItMatters": "The example contradicts the operation rule and leaves the Parameters resource unconnected under the page's graph-connected Bundle requirement.",
+            "recommendedNextStep": "Add a `MessageHeader.focus.reference` pointing to `urn:uuid:00213637-dc7c-40d2-a7de-f4ef1eea5685` in the operation example, and check any response/single-return examples for the same issue.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:462-467",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:483-518",
+              "FHIR-37416",
+              "472644928c6d9df6d0cbc44736a1697fa8ef6ac2",
+              "307c3216b45f4fc4ba59d6026605cad823d47daf"
+            ],
+            "limitations": [
+              "- Caveats: Zulip searches for most individual Jira keys had no human-thread hits. Confluence exact-phrase searches for `\"fully-interconnected graph\"` and `\"Graph-connected Bundles\"` did not find minutes beyond Jira-linked pages. I did not rebuild/render the spec; rendering findings are based on the HTML source page and the source preprocessor context.",
+              "- `implementers > Search in Messaging` (snapshot command: `bun run zulip:search snapshot implementers \"Search in Messaging\"`, URL: https://chat.fhir.org/#narrow/stream/implementers/topic/Search%20in%20Messaging) is the origin discussion for `FHIR-36098`. Gino Canessa asked whether anyone used Search in Messaging and identified typed Parameter mapping limitations, including prefixes and modifiers.",
+              "| 2022-02-25/26 | Zulip | `implementers > Search in Messaging` | Gino identified search-via-messaging limitations. |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.271Z",
+          "status": "open"
+        },
+        {
+          "id": "messaging-E-001",
+          "localId": "E-001",
+          "pageLabel": "messaging",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+          "title": "Raw Markdown placeholder remains in HTML source",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 46,
+                "end": 46
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "messaging action file",
+              "filePath": "todo/actions/messaging.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:46`, `FHIR-45507`, commit `e3fe9fdef25099c995e905af26b84a15734f81c4`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "messaging research appendix",
+              "filePath": "todo/research/messaging.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:46",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html",
+              "lineRange": {
+                "start": 46,
+                "end": 46
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-45507",
+              "label": "FHIR-45507",
+              "url": "https://jira.hl7.org/browse/FHIR-45507",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "label": "e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "url": "https://github.com/HL7/fhir/commit/e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "commitHash": "e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The page contains `All message Bundles SHALL be a [fully-interconnected graph](link to above).` as raw text in an HTML source page.",
+            "analysis": "E-001: Raw Markdown placeholder remains in HTML source\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:46`, `FHIR-45507`, commit `e3fe9fdef25099c995e905af26b84a15734f81c4`\n\nProblem: The page contains `All message Bundles SHALL be a [fully-interconnected graph](link to above).` as raw text in an HTML source page.\n\nWhy it matters: The rendered page is likely to show an unfinished placeholder link in a normative sentence.\n\nRecommended next step: Replace it with HTML linking to `bundle.html#graphs`, or remove the duplicate sentence because the preceding list item already links to `Graph-connected Bundles`.",
+            "whyItMatters": "The rendered page is likely to show an unfinished placeholder link in a normative sentence.",
+            "recommendedNextStep": "Replace it with HTML linking to `bundle.html#graphs`, or remove the duplicate sentence because the preceding list item already links to `Graph-connected Bundles`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/messaging.html:46",
+              "FHIR-45507",
+              "e3fe9fdef25099c995e905af26b84a15734f81c4"
+            ],
+            "limitations": [
+              "- Caveats: Zulip searches for most individual Jira keys had no human-thread hits. Confluence exact-phrase searches for `\"fully-interconnected graph\"` and `\"Graph-connected Bundles\"` did not find minutes beyond Jira-linked pages. I did not rebuild/render the spec; rendering findings are based on the HTML source page and the source preprocessor context.",
+              "- `implementers > Search in Messaging` (snapshot command: `bun run zulip:search snapshot implementers \"Search in Messaging\"`, URL: https://chat.fhir.org/#narrow/stream/implementers/topic/Search%20in%20Messaging) is the origin discussion for `FHIR-36098`. Gino Canessa asked whether anyone used Search in Messaging and identified typed Parameter mapping limitations, including prefixes and modifiers.",
+              "| 2022-02-25/26 | Zulip | `implementers > Search in Messaging` | Gino identified search-via-messaging limitations. |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.272Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 4,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 3,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 3,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 3,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

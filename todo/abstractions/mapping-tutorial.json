@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.267Z",
+  "sourceActionFilesGlob": "todo/actions/mapping-tutorial.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "mapping-tutorial",
+      "actionFilePath": "todo/actions/mapping-tutorial.md",
+      "researchFilePath": "todo/research/mapping-tutorial.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings, mainly around invalid or misleading tutorial examples rather than normative requirements. The highest-risk issue is Step 14, where later Jira/Zulip evidence says the current example is misleading about inline resources vs references and should be clarified.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "mapping-tutorial-H-001",
+          "localId": "H-001",
+          "pageLabel": "mapping-tutorial",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html",
+          "title": "Step 14 is misleading about `ptr`, inline resources, and reference resolution",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html",
+              "lineRange": {
+                "start": 559,
+                "end": 559
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "mapping-tutorial action file",
+              "filePath": "todo/actions/mapping-tutorial.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:559`, commit `c372919350db4764cebd887053bd3bd567234faa`, `FHIR-17708`, `FHIR-50272`, Zulip `#FHIR Mapping Language > resolve() references within a Bundle`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "mapping-tutorial research appendix",
+              "filePath": "todo/research/mapping-tutorial.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:559",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html",
+              "lineRange": {
+                "start": 559,
+                "end": 559
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-17708",
+              "label": "FHIR-17708",
+              "url": "https://jira.hl7.org/browse/FHIR-17708",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-50272",
+              "label": "FHIR-50272",
+              "url": "https://jira.hl7.org/browse/FHIR-50272",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "c372919350db4764cebd887053bd3bd567234faa",
+              "label": "c372919350db4764cebd887053bd3bd567234faa",
+              "url": "https://github.com/HL7/fhir/commit/c372919350db4764cebd887053bd3bd567234faa",
+              "commitHash": "c372919350db4764cebd887053bd3bd567234faa",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:559`, commit `c372919350db4764cebd887053bd3bd567234faa`, `FHIR-17708`, `FHIR-50272`, Zulip `#FHIR Mapping Language > resolve() references within a Bundle`\n- Priority: P1\n- Category: spec-problem\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:559`, commit `c372919350db4764cebd887053bd3bd567234faa`, `FHIR-17708`, `FHIR-50272`, Zulip `#FHIR Mapping Language > resolve() references within a Bundle`\n- Problem: Step 14 says the map asks the host to find the structure identified by `src.ptr`, but the source structure declares `ptr : Resource(TLeft2)`, not `Reference(TLeft2)`, and the example aliases `src.ptr` directly.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Step 14 says the map asks the host to find the structure identified by `src.ptr`, but the source structure declares `ptr : Resource(TLeft2)`, not `Reference(TLeft2)`, and the example aliases `src.ptr` directly. Later discussion says this is misleading and should be renamed and/or split into direct-resource and reference-resolution examples.",
+            "analysis": "H-001: Step 14 is misleading about `ptr`, inline resources, and reference resolution\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:559`, commit `c372919350db4764cebd887053bd3bd567234faa`, `FHIR-17708`, `FHIR-50272`, Zulip `#FHIR Mapping Language > resolve() references within a Bundle`\n\nProblem: Step 14 says the map asks the host to find the structure identified by `src.ptr`, but the source structure declares `ptr : Resource(TLeft2)`, not `Reference(TLeft2)`, and the example aliases `src.ptr` directly. Later discussion says this is misleading and should be renamed and/or split into direct-resource and reference-resolution examples.\n\nWhy it matters: The tutorial can teach implementers that FML implicitly resolves references, or obscure when host/application resolution is required.\n\nRecommended next step: Revise Step 14 to clearly distinguish inline `Resource(TLeft2)` from `Reference(TLeft2)`, add a tested reference-resolution example if intended, and include complete FML syntax.",
+            "whyItMatters": "The tutorial can teach implementers that FML implicitly resolves references, or obscure when host/application resolution is required.",
+            "recommendedNextStep": "Revise Step 14 to clearly distinguish inline `Resource(TLeft2)` from `Reference(TLeft2)`, add a tested reference-resolution example if intended, and include complete FML syntax.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:559",
+              "c372919350db4764cebd887053bd3bd567234faa",
+              "FHIR-17708",
+              "FHIR-50272",
+              "#FHIR Mapping Language > resolve() references within a Bundle"
+            ],
+            "limitations": [
+              "- Caveats: direct rendered HTML was not built; this review is source-level. Initial unquoted Jira/Zulip FTS searches for hyphenated issue keys failed because FTS5 parsed the hyphen as an operator; quoted searches and direct snapshots were then used."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.266Z",
+          "status": "open"
+        },
+        {
+          "id": "mapping-tutorial-H-002",
+          "localId": "H-002",
+          "pageLabel": "mapping-tutorial",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html",
+          "title": "Step 4 conversion example uses an undefined variable",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html",
+              "lineRange": {
+                "start": 185,
+                "end": 185
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "mapping-tutorial action file",
+              "filePath": "todo/actions/mapping-tutorial.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:185`, commit `de492c1c3920677e9b7da8a17090407709934b7c`, `FHIR-28465`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "mapping-tutorial research appendix",
+              "filePath": "todo/research/mapping-tutorial.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:185",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html",
+              "lineRange": {
+                "start": 185,
+                "end": 185
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-28465",
+              "label": "FHIR-28465",
+              "url": "https://jira.hl7.org/browse/FHIR-28465",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "de492c1c3920677e9b7da8a17090407709934b7c",
+              "label": "de492c1c3920677e9b7da8a17090407709934b7c",
+              "url": "https://github.com/HL7/fhir/commit/de492c1c3920677e9b7da8a17090407709934b7c",
+              "commitHash": "de492c1c3920677e9b7da8a17090407709934b7c",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The third conversion rule uses `at1.convertsToInteger().not()` even though the source alias is `a`.",
+            "analysis": "H-002: Step 4 conversion example uses an undefined variable\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:185`, commit `de492c1c3920677e9b7da8a17090407709934b7c`, `FHIR-28465`\n\nProblem: The third conversion rule uses `at1.convertsToInteger().not()` even though the source alias is `a`.\n\nWhy it matters: Readers copying the tutorial get an invalid or non-working rule in the type-conversion section.\n\nRecommended next step: Change `at1.convertsToInteger().not()` to `a.convertsToInteger().not()` and validate the tutorial snippets.",
+            "whyItMatters": "Readers copying the tutorial get an invalid or non-working rule in the type-conversion section.",
+            "recommendedNextStep": "Change `at1.convertsToInteger().not()` to `a.convertsToInteger().not()` and validate the tutorial snippets.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:185",
+              "de492c1c3920677e9b7da8a17090407709934b7c",
+              "FHIR-28465"
+            ],
+            "limitations": [
+              "- Caveats: direct rendered HTML was not built; this review is source-level. Initial unquoted Jira/Zulip FTS searches for hyphenated issue keys failed because FTS5 parsed the hyphen as an operator; quoted searches and direct snapshots were then used."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.266Z",
+          "status": "open"
+        },
+        {
+          "id": "mapping-tutorial-E-001",
+          "localId": "E-001",
+          "pageLabel": "mapping-tutorial",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html",
+          "title": "R6 tutorial still describes linked maps as \"this version (R5)\"",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html",
+              "lineRange": {
+                "start": 592,
+                "end": 592
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/r4maps.html",
+              "lineRange": {
+                "start": 14,
+                "end": 14
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "mapping-tutorial action file",
+              "filePath": "todo/actions/mapping-tutorial.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:592`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/r4maps.html:14`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "mapping-tutorial research appendix",
+              "filePath": "todo/research/mapping-tutorial.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:592",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html",
+              "lineRange": {
+                "start": 592,
+                "end": 592
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/r4maps.html:14",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/r4maps.html",
+              "lineRange": {
+                "start": 14,
+                "end": 14
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The R6 ballot4 tutorial says the spec includes transforms between R4B and \"this version (R5)\", while the linked `r4maps.html` page is explicitly R4/R5 and says it has not been updated for R6.",
+            "analysis": "E-001: R6 tutorial still describes linked maps as \"this version (R5)\"\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:592`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/r4maps.html:14`\n\nProblem: The R6 ballot4 tutorial says the spec includes transforms between R4B and \"this version (R5)\", while the linked `r4maps.html` page is explicitly R4/R5 and says it has not been updated for R6.\n\nWhy it matters: R6 readers may think the linked maps are current R6 transforms.\n\nRecommended next step: Reword the paragraph to state that these are retained R4/R4B-to-R5 examples, or update the link/text when R6 transforms are available.",
+            "whyItMatters": "R6 readers may think the linked maps are current R6 transforms.",
+            "recommendedNextStep": "Reword the paragraph to state that these are retained R4/R4B-to-R5 examples, or update the link/text when R6 transforms are available.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/mapping-tutorial.html:592",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/r4maps.html:14"
+            ],
+            "limitations": [
+              "- Caveats: direct rendered HTML was not built; this review is source-level. Initial unquoted Jira/Zulip FTS searches for hyphenated issue keys failed because FTS5 parsed the hyphen as an operator; quoted searches and direct snapshots were then used."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.267Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 2,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

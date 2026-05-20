@@ -17108,7 +17108,7 @@ var import_react3 = __toESM(require_react(), 1);
 
 // data-bundle.ts
 var bundle = {
-  generatedAt: "2026-05-20T19:09:40.615Z",
+  generatedAt: "2026-05-20T19:24:43.444Z",
   sourceDir: "todo/abstractions",
   parseFailures: [],
   pageReviews: [
@@ -17213,13 +17213,13 @@ var bundle = {
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.212Z",
+          dateIdentified: "2026-05-20T19:24:43.113Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/administration-module.json",
-      _mtimeMs: 1779304180212
+      _mtimeMs: 1779305083113
     },
     {
       pageLabel: "async",
@@ -17329,7 +17329,7 @@ var bundle = {
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.222Z",
+          dateIdentified: "2026-05-20T19:24:43.127Z",
           status: "open"
         },
         {
@@ -17408,7 +17408,7 @@ var bundle = {
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.224Z",
+          dateIdentified: "2026-05-20T19:24:43.128Z",
           status: "open"
         },
         {
@@ -17494,13 +17494,13 @@ var bundle = {
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.225Z",
+          dateIdentified: "2026-05-20T19:24:43.129Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/async.json",
-      _mtimeMs: 1779304180222
+      _mtimeMs: 1779305083126
     },
     {
       pageLabel: "ballot-intro",
@@ -17606,7 +17606,7 @@ var bundle = {
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.228Z",
+          dateIdentified: "2026-05-20T19:24:43.135Z",
           status: "open"
         },
         {
@@ -17706,13 +17706,13 @@ var bundle = {
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.230Z",
+          dateIdentified: "2026-05-20T19:24:43.136Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/ballot-intro.json",
-      _mtimeMs: 1779304180228
+      _mtimeMs: 1779305083133
     },
     {
       pageLabel: "best-practices",
@@ -17725,7 +17725,7 @@ var bundle = {
       noFindingReason: "No actionable findings found. The R4 -> R6 ballot4 source-page changes are limited to template/status/metadata chrome; the substantive best-practices prose and generated-list placeholder are unchanged, and community evidence found no intent-vs-implementation mismatch for this page.",
       parseWarnings: [],
       _sourcePath: "todo/abstractions/best-practices.json",
-      _mtimeMs: 1779304180228
+      _mtimeMs: 1779305083133
     },
     {
       pageLabel: "cda-intro",
@@ -17822,7 +17822,7 @@ var bundle = {
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: true,
-          dateIdentified: "2026-05-20T19:09:40.233Z",
+          dateIdentified: "2026-05-20T19:24:43.140Z",
           status: "open"
         },
         {
@@ -17894,13 +17894,13 @@ var bundle = {
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.234Z",
+          dateIdentified: "2026-05-20T19:24:43.141Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/cda-intro.json",
-      _mtimeMs: 1779304180232
+      _mtimeMs: 1779305083136
     },
     {
       pageLabel: "change",
@@ -17965,13 +17965,13 @@ var bundle = {
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.236Z",
+          dateIdentified: "2026-05-20T19:24:43.143Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/change.json",
-      _mtimeMs: 1779304180235
+      _mtimeMs: 1779305083140
     },
     {
       pageLabel: "clinicalreasoning-cds-on-fhir",
@@ -18085,13 +18085,13 @@ var bundle = {
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.238Z",
+          dateIdentified: "2026-05-20T19:24:43.145Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/clinicalreasoning-cds-on-fhir.json",
-      _mtimeMs: 1779304180235
+      _mtimeMs: 1779305083143
     },
     {
       pageLabel: "clinicalreasoning-evidence-and-statistics",
@@ -18199,13 +18199,13 @@ var bundle = {
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.240Z",
+          dateIdentified: "2026-05-20T19:24:43.148Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/clinicalreasoning-evidence-and-statistics.json",
-      _mtimeMs: 1779304180238
+      _mtimeMs: 1779305083143
     },
     {
       pageLabel: "clinicalreasoning-knowledge-artifact-distribution",
@@ -18321,7 +18321,7 @@ var bundle = {
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.242Z",
+          dateIdentified: "2026-05-20T19:24:43.150Z",
           status: "open"
         },
         {
@@ -18420,13 +18420,13 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.243Z",
+          dateIdentified: "2026-05-20T19:24:43.151Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/clinicalreasoning-knowledge-artifact-distribution.json",
-      _mtimeMs: 1779304180242
+      _mtimeMs: 1779305083146
     },
     {
       pageLabel: "clinicalreasoning-knowledge-artifact-representation",
@@ -18520,7 +18520,7 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.245Z",
+          dateIdentified: "2026-05-20T19:24:43.154Z",
           status: "open"
         },
         {
@@ -18621,7 +18621,7 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.246Z",
+          dateIdentified: "2026-05-20T19:24:43.154Z",
           status: "open"
         },
         {
@@ -18699,7 +18699,7 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.247Z",
+          dateIdentified: "2026-05-20T19:24:43.155Z",
           status: "open"
         },
         {
@@ -18777,13 +18777,13 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.248Z",
+          dateIdentified: "2026-05-20T19:24:43.156Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/clinicalreasoning-knowledge-artifact-representation.json",
-      _mtimeMs: 1779304180248
+      _mtimeMs: 1779305083153
     },
     {
       pageLabel: "clinicalreasoning-module",
@@ -18883,7 +18883,7 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.251Z",
+          dateIdentified: "2026-05-20T19:24:43.159Z",
           status: "open"
         },
         {
@@ -18989,13 +18989,13 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.252Z",
+          dateIdentified: "2026-05-20T19:24:43.159Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/clinicalreasoning-module.json",
-      _mtimeMs: 1779304180252
+      _mtimeMs: 1779305083156
     },
     {
       pageLabel: "clinicalreasoning-quality-reporting",
@@ -19143,7 +19143,7 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.254Z",
+          dateIdentified: "2026-05-20T19:24:43.162Z",
           status: "open"
         },
         {
@@ -19281,7 +19281,7 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.255Z",
+          dateIdentified: "2026-05-20T19:24:43.163Z",
           status: "open"
         },
         {
@@ -19373,7 +19373,7 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.256Z",
+          dateIdentified: "2026-05-20T19:24:43.165Z",
           status: "open"
         },
         {
@@ -19453,13 +19453,13 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.257Z",
+          dateIdentified: "2026-05-20T19:24:43.165Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/clinicalreasoning-quality-reporting.json",
-      _mtimeMs: 1779304180255
+      _mtimeMs: 1779305083163
     },
     {
       pageLabel: "clinicalreasoning-topics-definitional-resources",
@@ -19586,7 +19586,7 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.259Z",
+          dateIdentified: "2026-05-20T19:24:43.167Z",
           status: "open"
         },
         {
@@ -19671,7 +19671,7 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.260Z",
+          dateIdentified: "2026-05-20T19:24:43.168Z",
           status: "open"
         },
         {
@@ -19755,13 +19755,13 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.261Z",
+          dateIdentified: "2026-05-20T19:24:43.168Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/clinicalreasoning-topics-definitional-resources.json",
-      _mtimeMs: 1779304180258
+      _mtimeMs: 1779305083166
     },
     {
       pageLabel: "clinicalreasoning-topics-supporting-documentation",
@@ -19870,13 +19870,13 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.262Z",
+          dateIdentified: "2026-05-20T19:24:43.171Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/clinicalreasoning-topics-supporting-documentation.json",
-      _mtimeMs: 1779304180262
+      _mtimeMs: 1779305083166
     },
     {
       pageLabel: "clinicalreasoning-topics-using-expressions",
@@ -19976,7 +19976,7 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.264Z",
+          dateIdentified: "2026-05-20T19:24:43.173Z",
           status: "open"
         },
         {
@@ -20092,7 +20092,7 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.266Z",
+          dateIdentified: "2026-05-20T19:24:43.175Z",
           status: "open"
         },
         {
@@ -20178,13 +20178,13 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.267Z",
+          dateIdentified: "2026-05-20T19:24:43.176Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/clinicalreasoning-topics-using-expressions.json",
-      _mtimeMs: 1779304180265
+      _mtimeMs: 1779305083173
     },
     {
       pageLabel: "clinicalsummary-module",
@@ -20286,13 +20286,13 @@ Overlooked/newly noticed context: H-001 is newly noticed inherited/stale text ra
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.269Z",
+          dateIdentified: "2026-05-20T19:24:43.178Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/clinicalsummary-module.json",
-      _mtimeMs: 1779304180268
+      _mtimeMs: 1779305083176
     },
     {
       pageLabel: "comparison",
@@ -20419,13 +20419,13 @@ Overlooked/newly noticed context: E-001 is visible in the current page and was n
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.275Z",
+          dateIdentified: "2026-05-20T19:24:43.186Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/comparison.json",
-      _mtimeMs: 1779304180275
+      _mtimeMs: 1779305083183
     },
     {
       pageLabel: "comparison-cda",
@@ -20516,13 +20516,13 @@ Overlooked/newly noticed context: E-001 is visible in the current page and was n
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.270Z",
+          dateIdentified: "2026-05-20T19:24:43.180Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/comparison-cda.json",
-      _mtimeMs: 1779304180268
+      _mtimeMs: 1779305083176
     },
     {
       pageLabel: "comparison-other",
@@ -20535,7 +20535,7 @@ Overlooked/newly noticed context: E-001 is visible in the current page and was n
       noFindingReason: "No actionable findings. The only substantive page change is the Jira-backed, FHIR-I-approved non-substantive clarification replacing obsolete CCOW-centered text with FHIRcast/CCOW-retirement guidance.",
       parseWarnings: [],
       _sourcePath: "todo/abstractions/comparison-other.json",
-      _mtimeMs: 1779304180268
+      _mtimeMs: 1779305083176
     },
     {
       pageLabel: "comparison-v2",
@@ -20638,7 +20638,7 @@ Overlooked/newly noticed context: E-001 is visible in the current page and was n
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.272Z",
+          dateIdentified: "2026-05-20T19:24:43.182Z",
           status: "open"
         },
         {
@@ -20716,13 +20716,13 @@ Overlooked/newly noticed context: E-001 is visible in the current page and was n
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.273Z",
+          dateIdentified: "2026-05-20T19:24:43.183Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/comparison-v2.json",
-      _mtimeMs: 1779304180272
+      _mtimeMs: 1779305083180
     },
     {
       pageLabel: "comparison-v3",
@@ -20832,13 +20832,13 @@ Overlooked/newly noticed context: E-001 is visible in the current page and was n
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.274Z",
+          dateIdentified: "2026-05-20T19:24:43.185Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/comparison-v3.json",
-      _mtimeMs: 1779304180272
+      _mtimeMs: 1779305083183
     },
     {
       pageLabel: "conformance-module",
@@ -20939,7 +20939,7 @@ Overlooked/newly noticed context: E-001 is visible in the current page and was n
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.277Z",
+          dateIdentified: "2026-05-20T19:24:43.188Z",
           status: "open"
         },
         {
@@ -21020,13 +21020,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.278Z",
+          dateIdentified: "2026-05-20T19:24:43.189Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/conformance-module.json",
-      _mtimeMs: 1779304180278
+      _mtimeMs: 1779305083186
     },
     {
       pageLabel: "conformance-rules",
@@ -21133,7 +21133,7 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.281Z",
+          dateIdentified: "2026-05-20T19:24:43.191Z",
           status: "open"
         },
         {
@@ -21248,13 +21248,13 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.282Z",
+          dateIdentified: "2026-05-20T19:24:43.192Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/conformance-rules.json",
-      _mtimeMs: 1779304180282
+      _mtimeMs: 1779305083190
     },
     {
       pageLabel: "credits",
@@ -21340,13 +21340,13 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.284Z",
+          dateIdentified: "2026-05-20T19:24:43.193Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/credits.json",
-      _mtimeMs: 1779304180282
+      _mtimeMs: 1779305083190
     },
     {
       pageLabel: "datatypes",
@@ -21447,7 +21447,7 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.294Z",
+          dateIdentified: "2026-05-20T19:24:43.200Z",
           status: "open"
         },
         {
@@ -21536,13 +21536,13 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.295Z",
+          dateIdentified: "2026-05-20T19:24:43.201Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/datatypes.json",
-      _mtimeMs: 1779304180292
+      _mtimeMs: 1779305083196
     },
     {
       pageLabel: "datatypes-examples",
@@ -21661,7 +21661,7 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.285Z",
+          dateIdentified: "2026-05-20T19:24:43.195Z",
           status: "open"
         },
         {
@@ -21769,7 +21769,7 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.287Z",
+          dateIdentified: "2026-05-20T19:24:43.195Z",
           status: "open"
         },
         {
@@ -21864,7 +21864,7 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.288Z",
+          dateIdentified: "2026-05-20T19:24:43.196Z",
           status: "open"
         },
         {
@@ -21955,13 +21955,13 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.289Z",
+          dateIdentified: "2026-05-20T19:24:43.196Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/datatypes-examples.json",
-      _mtimeMs: 1779304180288
+      _mtimeMs: 1779305083193
     },
     {
       pageLabel: "datatypes-mappings",
@@ -22057,7 +22057,7 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.291Z",
+          dateIdentified: "2026-05-20T19:24:43.198Z",
           status: "open"
         },
         {
@@ -22144,13 +22144,13 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.292Z",
+          dateIdentified: "2026-05-20T19:24:43.199Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/datatypes-mappings.json",
-      _mtimeMs: 1779304180292
+      _mtimeMs: 1779305083196
     },
     {
       pageLabel: "defining-extensions",
@@ -22257,7 +22257,7 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.297Z",
+          dateIdentified: "2026-05-20T19:24:43.202Z",
           status: "open"
         },
         {
@@ -22350,13 +22350,13 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.297Z",
+          dateIdentified: "2026-05-20T19:24:43.202Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/defining-extensions.json",
-      _mtimeMs: 1779304180295
+      _mtimeMs: 1779305083200
     },
     {
       pageLabel: "diagnostics-module",
@@ -22445,7 +22445,7 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.299Z",
+          dateIdentified: "2026-05-20T19:24:43.204Z",
           status: "open"
         },
         {
@@ -22511,13 +22511,13 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.300Z",
+          dateIdentified: "2026-05-20T19:24:43.204Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/diagnostics-module.json",
-      _mtimeMs: 1779304180298
+      _mtimeMs: 1779305083200
     },
     {
       pageLabel: "documents",
@@ -22650,7 +22650,7 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.302Z",
+          dateIdentified: "2026-05-20T19:24:43.205Z",
           status: "open"
         },
         {
@@ -22761,7 +22761,7 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.303Z",
+          dateIdentified: "2026-05-20T19:24:43.206Z",
           status: "open"
         },
         {
@@ -22835,13 +22835,13 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.304Z",
+          dateIdentified: "2026-05-20T19:24:43.207Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/documents.json",
-      _mtimeMs: 1779304180302
+      _mtimeMs: 1779305083203
     },
     {
       pageLabel: "dosage",
@@ -22983,7 +22983,7 @@ Intent-vs-implementation context: H-001 only.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.310Z",
+          dateIdentified: "2026-05-20T19:24:43.211Z",
           status: "open"
         },
         {
@@ -23065,7 +23065,7 @@ Recommended next step: Clarify whether "concurrent" means same step membership, 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.311Z",
+          dateIdentified: "2026-05-20T19:24:43.212Z",
           status: "open"
         },
         {
@@ -23175,7 +23175,7 @@ Recommended next step: Clarify whether "concurrent" means same step membership, 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.312Z",
+          dateIdentified: "2026-05-20T19:24:43.212Z",
           status: "open"
         },
         {
@@ -23300,13 +23300,13 @@ Recommended next step: Clarify whether "concurrent" means same step membership, 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.313Z",
+          dateIdentified: "2026-05-20T19:24:43.213Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/dosage.json",
-      _mtimeMs: 1779304180312
+      _mtimeMs: 1779305083210
     },
     {
       pageLabel: "dosage-examples",
@@ -23437,7 +23437,7 @@ Recommended next step: Clarify whether "concurrent" means same step membership, 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.306Z",
+          dateIdentified: "2026-05-20T19:24:43.209Z",
           status: "open"
         },
         {
@@ -23549,7 +23549,7 @@ Recommended next step: Clarify whether "concurrent" means same step membership, 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.307Z",
+          dateIdentified: "2026-05-20T19:24:43.209Z",
           status: "open"
         },
         {
@@ -23652,13 +23652,13 @@ Recommended next step: Clarify whether "concurrent" means same step membership, 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.308Z",
+          dateIdentified: "2026-05-20T19:24:43.210Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/dosage-examples.json",
-      _mtimeMs: 1779304180305
+      _mtimeMs: 1779305083206
     },
     {
       pageLabel: "downloads",
@@ -23771,7 +23771,7 @@ Recommended next step: Clarify whether "concurrent" means same step membership, 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.315Z",
+          dateIdentified: "2026-05-20T19:24:43.214Z",
           status: "open"
         },
         {
@@ -23858,13 +23858,13 @@ Recommended next step: Clarify whether "concurrent" means same step membership, 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.316Z",
+          dateIdentified: "2026-05-20T19:24:43.215Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/downloads.json",
-      _mtimeMs: 1779304180315
+      _mtimeMs: 1779305083210
     },
     {
       pageLabel: "ehr-fm",
@@ -23964,13 +23964,13 @@ Recommended next step: Clarify whether "concurrent" means same step membership, 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.318Z",
+          dateIdentified: "2026-05-20T19:24:43.216Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/ehr-fm.json",
-      _mtimeMs: 1779304180315
+      _mtimeMs: 1779305083213
     },
     {
       pageLabel: "elementdefinition",
@@ -24075,7 +24075,7 @@ Recommended next step: Clarify whether "concurrent" means same step membership, 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.322Z",
+          dateIdentified: "2026-05-20T19:24:43.219Z",
           status: "open"
         },
         {
@@ -24156,13 +24156,13 @@ Overlooked/newly noticed context: E-001 covers concrete current-page editorial d
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.323Z",
+          dateIdentified: "2026-05-20T19:24:43.220Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/elementdefinition.json",
-      _mtimeMs: 1779304180322
+      _mtimeMs: 1779305083216
     },
     {
       pageLabel: "elementdefinition-examples",
@@ -24273,13 +24273,13 @@ Overlooked/newly noticed context: E-001 covers concrete current-page editorial d
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.319Z",
+          dateIdentified: "2026-05-20T19:24:43.217Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/elementdefinition-examples.json",
-      _mtimeMs: 1779304180318
+      _mtimeMs: 1779305083213
     },
     {
       pageLabel: "elementdefinition-mappings",
@@ -24365,13 +24365,13 @@ Overlooked/newly noticed context: E-001 is a current-page editorial defect not t
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.320Z",
+          dateIdentified: "2026-05-20T19:24:43.218Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/elementdefinition-mappings.json",
-      _mtimeMs: 1779304180318
+      _mtimeMs: 1779305083213
     },
     {
       pageLabel: "exchange-module",
@@ -24470,7 +24470,7 @@ Overlooked/newly noticed context: E-001 is a current-page editorial defect not t
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.326Z",
+          dateIdentified: "2026-05-20T19:24:43.222Z",
           status: "open"
         },
         {
@@ -24549,13 +24549,13 @@ Overlooked/newly noticed context: - E-002.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.327Z",
+          dateIdentified: "2026-05-20T19:24:43.223Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/exchange-module.json",
-      _mtimeMs: 1779304180325
+      _mtimeMs: 1779305083220
     },
     {
       pageLabel: "extensibility",
@@ -24668,7 +24668,7 @@ Intent-vs-implementation context: H-001 and H-002.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.332Z",
+          dateIdentified: "2026-05-20T19:24:43.226Z",
           status: "open"
         },
         {
@@ -24747,7 +24747,7 @@ Intent-vs-implementation context: H-001 and H-002.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.333Z",
+          dateIdentified: "2026-05-20T19:24:43.227Z",
           status: "open"
         },
         {
@@ -24846,7 +24846,7 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.334Z",
+          dateIdentified: "2026-05-20T19:24:43.227Z",
           status: "open"
         },
         {
@@ -24915,13 +24915,13 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.335Z",
+          dateIdentified: "2026-05-20T19:24:43.227Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/extensibility.json",
-      _mtimeMs: 1779304180332
+      _mtimeMs: 1779305083223
     },
     {
       pageLabel: "extensibility-examples",
@@ -25044,7 +25044,7 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.329Z",
+          dateIdentified: "2026-05-20T19:24:43.224Z",
           status: "open"
         },
         {
@@ -25111,7 +25111,7 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.330Z",
+          dateIdentified: "2026-05-20T19:24:43.224Z",
           status: "open"
         },
         {
@@ -25176,13 +25176,13 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.330Z",
+          dateIdentified: "2026-05-20T19:24:43.225Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/extensibility-examples.json",
-      _mtimeMs: 1779304180328
+      _mtimeMs: 1779305083223
     },
     {
       pageLabel: "fhirpatch",
@@ -25311,7 +25311,7 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.337Z",
+          dateIdentified: "2026-05-20T19:24:43.229Z",
           status: "open"
         },
         {
@@ -25388,13 +25388,13 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.337Z",
+          dateIdentified: "2026-05-20T19:24:43.229Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/fhirpatch.json",
-      _mtimeMs: 1779304180335
+      _mtimeMs: 1779305083226
     },
     {
       pageLabel: "fhirpath",
@@ -25495,7 +25495,7 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.339Z",
+          dateIdentified: "2026-05-20T19:24:43.231Z",
           status: "open"
         },
         {
@@ -25592,7 +25592,7 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.340Z",
+          dateIdentified: "2026-05-20T19:24:43.231Z",
           status: "open"
         },
         {
@@ -25674,7 +25674,7 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.340Z",
+          dateIdentified: "2026-05-20T19:24:43.232Z",
           status: "open"
         },
         {
@@ -25779,7 +25779,7 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.341Z",
+          dateIdentified: "2026-05-20T19:24:43.233Z",
           status: "open"
         },
         {
@@ -25859,13 +25859,13 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.342Z",
+          dateIdentified: "2026-05-20T19:24:43.233Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/fhirpath.json",
-      _mtimeMs: 1779304180342
+      _mtimeMs: 1779305083230
     },
     {
       pageLabel: "financial-module",
@@ -25951,7 +25951,7 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.344Z",
+          dateIdentified: "2026-05-20T19:24:43.234Z",
           status: "open"
         },
         {
@@ -26048,7 +26048,7 @@ Overlooked/newly noticed context: E-001 and E-002.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.345Z",
+          dateIdentified: "2026-05-20T19:24:43.235Z",
           status: "open"
         },
         {
@@ -26145,13 +26145,13 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.345Z",
+          dateIdentified: "2026-05-20T19:24:43.235Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/financial-module.json",
-      _mtimeMs: 1779304180345
+      _mtimeMs: 1779305083233
     },
     {
       pageLabel: "formats",
@@ -26260,13 +26260,13 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.347Z",
+          dateIdentified: "2026-05-20T19:24:43.236Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/formats.json",
-      _mtimeMs: 1779304180345
+      _mtimeMs: 1779305083233
     },
     {
       pageLabel: "foundation-module",
@@ -26356,7 +26356,7 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.349Z",
+          dateIdentified: "2026-05-20T19:24:43.238Z",
           status: "open"
         },
         {
@@ -26448,13 +26448,13 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.350Z",
+          dateIdentified: "2026-05-20T19:24:43.239Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/foundation-module.json",
-      _mtimeMs: 1779304180348
+      _mtimeMs: 1779305083236
     },
     {
       pageLabel: "genomics",
@@ -26533,13 +26533,13 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.352Z",
+          dateIdentified: "2026-05-20T19:24:43.240Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/genomics.json",
-      _mtimeMs: 1779304180352
+      _mtimeMs: 1779305083236
     },
     {
       pageLabel: "graphql",
@@ -26633,7 +26633,7 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.353Z",
+          dateIdentified: "2026-05-20T19:24:43.241Z",
           status: "open"
         },
         {
@@ -26719,7 +26719,7 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.354Z",
+          dateIdentified: "2026-05-20T19:24:43.242Z",
           status: "open"
         },
         {
@@ -26833,13 +26833,13 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.355Z",
+          dateIdentified: "2026-05-20T19:24:43.242Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/graphql.json",
-      _mtimeMs: 1779304180355
+      _mtimeMs: 1779305083240
     },
     {
       pageLabel: "help",
@@ -26934,7 +26934,7 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.357Z",
+          dateIdentified: "2026-05-20T19:24:43.243Z",
           status: "open"
         },
         {
@@ -27008,13 +27008,13 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.357Z",
+          dateIdentified: "2026-05-20T19:24:43.243Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/help.json",
-      _mtimeMs: 1779304180355
+      _mtimeMs: 1779305083240
     },
     {
       pageLabel: "history",
@@ -27112,7 +27112,7 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.359Z",
+          dateIdentified: "2026-05-20T19:24:43.244Z",
           status: "open"
         },
         {
@@ -27197,13 +27197,13 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.360Z",
+          dateIdentified: "2026-05-20T19:24:43.245Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/history.json",
-      _mtimeMs: 1779304180358
+      _mtimeMs: 1779305083243
     },
     {
       pageLabel: "http",
@@ -27311,7 +27311,7 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.362Z",
+          dateIdentified: "2026-05-20T19:24:43.246Z",
           status: "open"
         },
         {
@@ -27452,7 +27452,7 @@ Overlooked/newly noticed context: H-001, E-001, and E-002 are current-page probl
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.363Z",
+          dateIdentified: "2026-05-20T19:24:43.247Z",
           status: "open"
         },
         {
@@ -27547,7 +27547,7 @@ Intent-vs-implementation context: - \`H-003\`: \`FHIR-40496\`'s approved sentenc
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.363Z",
+          dateIdentified: "2026-05-20T19:24:43.248Z",
           status: "open"
         },
         {
@@ -27683,7 +27683,7 @@ Intent-vs-implementation context: - \`H-003\`: \`FHIR-40496\`'s approved sentenc
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.364Z",
+          dateIdentified: "2026-05-20T19:24:43.249Z",
           status: "open"
         },
         {
@@ -27772,13 +27772,13 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.365Z",
+          dateIdentified: "2026-05-20T19:24:43.249Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/http.json",
-      _mtimeMs: 1779304180362
+      _mtimeMs: 1779305083246
     },
     {
       pageLabel: "identifier-registry",
@@ -27889,13 +27889,13 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.367Z",
+          dateIdentified: "2026-05-20T19:24:43.250Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/identifier-registry.json",
-      _mtimeMs: 1779304180365
+      _mtimeMs: 1779305083246
     },
     {
       pageLabel: "implsupport-module",
@@ -27908,7 +27908,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
       noFindingReason: "No actionable findings were found. The R4-to-R6 ballot4 changes are informative/navigation-oriented, and the potentially meaningful changes are supported by `FHIR-31735`/PR #2396 or by the 2025 Additional Resources and Testing IG discussions.",
       parseWarnings: [],
       _sourcePath: "todo/abstractions/implsupport-module.json",
-      _mtimeMs: 1779304180365
+      _mtimeMs: 1779305083246
     },
     {
       pageLabel: "integrated-examples",
@@ -28012,13 +28012,13 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.368Z",
+          dateIdentified: "2026-05-20T19:24:43.252Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/integrated-examples.json",
-      _mtimeMs: 1779304180368
+      _mtimeMs: 1779305083246
     },
     {
       pageLabel: "json",
@@ -28128,7 +28128,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.370Z",
+          dateIdentified: "2026-05-20T19:24:43.253Z",
           status: "open"
         },
         {
@@ -28240,7 +28240,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: true,
-          dateIdentified: "2026-05-20T19:09:40.372Z",
+          dateIdentified: "2026-05-20T19:24:43.253Z",
           status: "open"
         },
         {
@@ -28310,7 +28310,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.373Z",
+          dateIdentified: "2026-05-20T19:24:43.253Z",
           status: "open"
         },
         {
@@ -28397,13 +28397,13 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.374Z",
+          dateIdentified: "2026-05-20T19:24:43.254Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/json.json",
-      _mtimeMs: 1779304180372
+      _mtimeMs: 1779305083250
     },
     {
       pageLabel: "languages",
@@ -28520,13 +28520,13 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.377Z",
+          dateIdentified: "2026-05-20T19:24:43.255Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/languages.json",
-      _mtimeMs: 1779304180375
+      _mtimeMs: 1779305083253
     },
     {
       pageLabel: "license",
@@ -28628,7 +28628,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.379Z",
+          dateIdentified: "2026-05-20T19:24:43.256Z",
           status: "open"
         },
         {
@@ -28721,7 +28721,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.379Z",
+          dateIdentified: "2026-05-20T19:24:43.257Z",
           status: "open"
         },
         {
@@ -28810,13 +28810,13 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.380Z",
+          dateIdentified: "2026-05-20T19:24:43.258Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/license.json",
-      _mtimeMs: 1779304180378
+      _mtimeMs: 1779305083253
     },
     {
       pageLabel: "lifecycle",
@@ -29027,7 +29027,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.382Z",
+          dateIdentified: "2026-05-20T19:24:43.259Z",
           status: "open"
         },
         {
@@ -29116,13 +29116,13 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.383Z",
+          dateIdentified: "2026-05-20T19:24:43.259Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/lifecycle.json",
-      _mtimeMs: 1779304180382
+      _mtimeMs: 1779305083256
     },
     {
       pageLabel: "logical",
@@ -29208,7 +29208,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.384Z",
+          dateIdentified: "2026-05-20T19:24:43.261Z",
           status: "open"
         },
         {
@@ -29281,7 +29281,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.385Z",
+          dateIdentified: "2026-05-20T19:24:43.261Z",
           status: "open"
         },
         {
@@ -29354,13 +29354,13 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.386Z",
+          dateIdentified: "2026-05-20T19:24:43.261Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/logical.json",
-      _mtimeMs: 1779304180385
+      _mtimeMs: 1779305083256
     },
     {
       pageLabel: "managing",
@@ -29479,13 +29479,13 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.387Z",
+          dateIdentified: "2026-05-20T19:24:43.263Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/managing.json",
-      _mtimeMs: 1779304180385
+      _mtimeMs: 1779305083260
     },
     {
       pageLabel: "mapping-language",
@@ -29588,7 +29588,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.389Z",
+          dateIdentified: "2026-05-20T19:24:43.264Z",
           status: "open"
         },
         {
@@ -29693,7 +29693,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.390Z",
+          dateIdentified: "2026-05-20T19:24:43.264Z",
           status: "open"
         },
         {
@@ -29798,13 +29798,13 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.391Z",
+          dateIdentified: "2026-05-20T19:24:43.265Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/mapping-language.json",
-      _mtimeMs: 1779304180388
+      _mtimeMs: 1779305083260
     },
     {
       pageLabel: "mapping-tutorial",
@@ -29912,7 +29912,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.393Z",
+          dateIdentified: "2026-05-20T19:24:43.266Z",
           status: "open"
         },
         {
@@ -29998,7 +29998,7 @@ Overlooked/newly noticed context: - \`E-002\`: copied conditional-create/delete 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.394Z",
+          dateIdentified: "2026-05-20T19:24:43.266Z",
           status: "open"
         },
         {
@@ -30093,13 +30093,13 @@ Recommended next step: Reword the paragraph to state that these are retained R4/
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.394Z",
+          dateIdentified: "2026-05-20T19:24:43.267Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/mapping-tutorial.json",
-      _mtimeMs: 1779304180392
+      _mtimeMs: 1779305083263
     },
     {
       pageLabel: "mappings",
@@ -30112,7 +30112,7 @@ Recommended next step: Reword the paragraph to state that these are retained R4/
       noFindingReason: "No actionable findings found. The R4 to R6 ballot4 diff for `source/mappings.html` is limited to broad template/header metadata churn; the mapping guidance prose and mappings-table placeholder are unchanged, and community evidence did not reveal a missed formal decision or current contradiction.",
       parseWarnings: [],
       _sourcePath: "todo/abstractions/mappings.json",
-      _mtimeMs: 1779304180395
+      _mtimeMs: 1779305083263
     },
     {
       pageLabel: "medications-module",
@@ -30228,7 +30228,7 @@ Recommended next step: Reword the paragraph to state that these are retained R4/
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.398Z",
+          dateIdentified: "2026-05-20T19:24:43.268Z",
           status: "open"
         },
         {
@@ -30292,13 +30292,13 @@ Recommended next step: Reword the paragraph to state that these are retained R4/
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.399Z",
+          dateIdentified: "2026-05-20T19:24:43.269Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/medications-module.json",
-      _mtimeMs: 1779304180398
+      _mtimeMs: 1779305083266
     },
     {
       pageLabel: "messaging",
@@ -30409,7 +30409,7 @@ Recommended next step: Reword the paragraph to state that these are retained R4/
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.401Z",
+          dateIdentified: "2026-05-20T19:24:43.270Z",
           status: "open"
         },
         {
@@ -30540,7 +30540,7 @@ Recommended next step: Reword the paragraph to state that these are retained R4/
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.402Z",
+          dateIdentified: "2026-05-20T19:24:43.271Z",
           status: "open"
         },
         {
@@ -30663,7 +30663,7 @@ Recommended next step: Reword the paragraph to state that these are retained R4/
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.403Z",
+          dateIdentified: "2026-05-20T19:24:43.271Z",
           status: "open"
         },
         {
@@ -30751,13 +30751,13 @@ Recommended next step: Reword the paragraph to state that these are retained R4/
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.404Z",
+          dateIdentified: "2026-05-20T19:24:43.272Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/messaging.json",
-      _mtimeMs: 1779304180402
+      _mtimeMs: 1779305083270
     },
     {
       pageLabel: "metadatatypes",
@@ -30855,7 +30855,7 @@ Recommended next step: Reword the paragraph to state that these are retained R4/
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.405Z",
+          dateIdentified: "2026-05-20T19:24:43.273Z",
           status: "open"
         },
         {
@@ -30937,13 +30937,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.406Z",
+          dateIdentified: "2026-05-20T19:24:43.273Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/metadatatypes.json",
-      _mtimeMs: 1779304180405
+      _mtimeMs: 1779305083270
     },
     {
       pageLabel: "modules",
@@ -31041,7 +31041,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.407Z",
+          dateIdentified: "2026-05-20T19:24:43.275Z",
           status: "open"
         },
         {
@@ -31133,13 +31133,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.408Z",
+          dateIdentified: "2026-05-20T19:24:43.275Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/modules.json",
-      _mtimeMs: 1779304180405
+      _mtimeMs: 1779305083273
     },
     {
       pageLabel: "narrative",
@@ -31278,13 +31278,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.410Z",
+          dateIdentified: "2026-05-20T19:24:43.277Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/narrative.json",
-      _mtimeMs: 1779304180408
+      _mtimeMs: 1779305083273
     },
     {
       pageLabel: "nd-json",
@@ -31364,7 +31364,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.411Z",
+          dateIdentified: "2026-05-20T19:24:43.278Z",
           status: "open"
         },
         {
@@ -31428,7 +31428,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.412Z",
+          dateIdentified: "2026-05-20T19:24:43.279Z",
           status: "open"
         },
         {
@@ -31493,13 +31493,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: true,
-          dateIdentified: "2026-05-20T19:09:40.413Z",
+          dateIdentified: "2026-05-20T19:24:43.279Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/nd-json.json",
-      _mtimeMs: 1779304180412
+      _mtimeMs: 1779305083276
     },
     {
       pageLabel: "op-example-request",
@@ -31594,7 +31594,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.414Z",
+          dateIdentified: "2026-05-20T19:24:43.280Z",
           status: "open"
         },
         {
@@ -31697,13 +31697,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.415Z",
+          dateIdentified: "2026-05-20T19:24:43.280Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/op-example-request.json",
-      _mtimeMs: 1779304180415
+      _mtimeMs: 1779305083276
     },
     {
       pageLabel: "operations",
@@ -31814,7 +31814,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.417Z",
+          dateIdentified: "2026-05-20T19:24:43.282Z",
           status: "open"
         },
         {
@@ -31911,7 +31911,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.418Z",
+          dateIdentified: "2026-05-20T19:24:43.283Z",
           status: "open"
         },
         {
@@ -31998,7 +31998,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.419Z",
+          dateIdentified: "2026-05-20T19:24:43.284Z",
           status: "open"
         },
         {
@@ -32085,7 +32085,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.421Z",
+          dateIdentified: "2026-05-20T19:24:43.284Z",
           status: "open"
         },
         {
@@ -32180,13 +32180,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.422Z",
+          dateIdentified: "2026-05-20T19:24:43.285Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/operations.json",
-      _mtimeMs: 1779304180422
+      _mtimeMs: 1779305083280
     },
     {
       pageLabel: "operationslist",
@@ -32199,7 +32199,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
       noFindingReason: "No actionable findings were found. The only semantic page-level change, removing the Terminology Service `Maintaining a closure table` bullet, is consistent with the R6 source-wide removal of `$closure`/`$find-matches` and PR #3913's stated move of those operations to an incubator IG; no page-local inconsistency or intent mismatch was found.",
       parseWarnings: [],
       _sourcePath: "todo/abstractions/operationslist.json",
-      _mtimeMs: 1779304180422
+      _mtimeMs: 1779305083283
     },
     {
       pageLabel: "overview",
@@ -32348,41 +32348,374 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.426Z",
+          dateIdentified: "2026-05-20T19:24:43.293Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/overview.json",
-      _mtimeMs: 1779304180425
+      _mtimeMs: 1779305083290
     },
     {
       pageLabel: "overview-arch",
       actionFilePath: "todo/actions/overview-arch.md",
       researchFilePath: "todo/research/overview-arch.md",
-      status: "incomplete-or-unparseable",
+      status: "has-findings",
       summary: "The page has 3 actionable findings: one broken/still-unresolved Linkage external reference, one tracked spelling regression, and one pre-existing source title metadata mismatch.",
-      findingCount: 0,
-      findings: [],
-      noFindingReason: "The page has 3 actionable findings: one broken/still-unresolved Linkage external reference, one tracked spelling regression, and one pre-existing source title metadata mismatch.",
-      parseWarnings: [
-        "No H/E/G finding headings were found."
+      findingCount: 3,
+      findings: [
+        {
+          id: "overview-arch-H-001",
+          localId: "H-001",
+          pageLabel: "overview-arch",
+          pagePath: "source/overview-arch.html",
+          title: "Linkage points to an unavailable incubator page",
+          kind: "H",
+          priority: "P2",
+          category: "spec-problem",
+          sourceLocations: [
+            {
+              filePath: "source/overview-arch.html",
+              lineRange: {
+                start: 429,
+                end: 429
+              }
+            }
+          ],
+          evidence: [
+            {
+              type: "action-file",
+              label: "overview-arch action file",
+              filePath: "todo/actions/overview-arch.md",
+              confidence: "high",
+              quote: "`source/overview-arch.html:429`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; `FHIR-53725`; Zulip `#implementers > Linking to Additional Resources`; Confluence page `413248899`; `curl` returned 404 for `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`."
+            },
+            {
+              type: "research-appendix",
+              label: "overview-arch research appendix",
+              filePath: "todo/research/overview-arch.md",
+              confidence: "medium"
+            },
+            {
+              type: "source-line",
+              label: "source/overview-arch.html:429",
+              filePath: "source/overview-arch.html",
+              lineRange: {
+                start: 429,
+                end: 429
+              },
+              confidence: "high"
+            },
+            {
+              type: "jira",
+              id: "FHIR-53725",
+              label: "FHIR-53725",
+              url: "https://jira.hl7.org/browse/FHIR-53725",
+              confidence: "high"
+            },
+            {
+              type: "commit",
+              id: "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              label: "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              url: "https://github.com/HL7/fhir/commit/fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              commitHash: "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              confidence: "medium"
+            },
+            {
+              type: "other",
+              label: "https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`",
+              url: "https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`",
+              confidence: "medium"
+            },
+            {
+              type: "confluence",
+              label: "Confluence evidence mentioned in finding",
+              quote: "`source/overview-arch.html:429`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; `FHIR-53725`; Zulip `#implementers > Linking to Additional Resources`; Confluence page `413248899`; `curl` returned 404 for `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`.",
+              confidence: "medium"
+            },
+            {
+              type: "zulip",
+              label: "Zulip evidence mentioned in finding",
+              quote: "`source/overview-arch.html:429`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; `FHIR-53725`; Zulip `#implementers > Linking to Additional Resources`; Confluence page `413248899`; `curl` returned 404 for `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`.",
+              confidence: "medium"
+            }
+          ],
+          narrative: {
+            problem: "The page now tells readers the Linkage resource can help with reference ambiguity, but links to a PC incubator URL that is not live.",
+            analysis: "H-001: Linkage points to an unavailable incubator page\n\nEvidence: `source/overview-arch.html:429`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; `FHIR-53725`; Zulip `#implementers > Linking to Additional Resources`; Confluence page `413248899`; `curl` returned 404 for `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`.\n\nProblem: The page now tells readers the Linkage resource can help with reference ambiguity, but links to a PC incubator URL that is not live.\n\nWhy it matters: Readers cannot reach the referenced guidance, and Linkage is no longer a core R6 resource.\n\nRecommended next step: Track this page with the additional-resources/PC-incubator work; either publish/version-pin a live Linkage target or revise/remove the sentence until the incubator content is available.",
+            whyItMatters: "Readers cannot reach the referenced guidance, and Linkage is no longer a core R6 resource.",
+            recommendedNextStep: "Track this page with the additional-resources/PC-incubator work; either publish/version-pin a live Linkage target or revise/remove the sentence until the incubator content is available.",
+            rawEvidenceQuotes: [
+              "source/overview-arch.html:429",
+              "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "FHIR-53725",
+              "#implementers > Linking to Additional Resources",
+              "413248899",
+              "curl",
+              "https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html"
+            ],
+            limitations: [
+              "- Caveats: no direct Zulip hits were found for `FHIR-25431`, `FHIR-44047`, `FHIR-48660`, `FHIR-50596`, or `FHIR-55117`. Some unescaped hyphen FTS attempts (`pc-incubator`, `overview-arch`) failed in Jira/Zulip FTS and were rerun with safer quoted/simplified terms. The Linkage-related Jira/Zulip/Confluence evidence post-dates the R6 ballot4 source commit, so it is later reassessment evidence, not original implementation intent. The source `settitle` mismatch was not visible in the fetched R6 ballot4 rendered `<title>`, so it is source metadata cleanup rather than a proven live browser-title defect.",
+              "- `FHIR-44047` — “Incorrect punctuation of exempli gtatia and id est (e.g., & i.e.,) throughout.” Snapshot: Resolved - change required, Persuasive, R6 ballot issue, related pages “many.” Commit `887bc2383...` applies an `e.g.,` correction in this page. Confluence page `234784975` records “will fix.” Caveat: the local Jira snapshot status is not Applied/Published even though this page has a source commit."
+            ]
+          },
+          intentVsImplementationMismatch: false,
+          overlookedOrNewlyNoticedProblem: false,
+          evidenceGapBlocksDecision: false,
+          dateIdentified: "2026-05-20T19:24:43.287Z",
+          status: "open"
+        },
+        {
+          id: "overview-arch-E-001",
+          localId: "E-001",
+          pageLabel: "overview-arch",
+          pagePath: "source/overview-arch.html",
+          title: "managable` typo remains on this page",
+          kind: "E",
+          priority: "P3",
+          category: "editorial",
+          sourceLocations: [
+            {
+              filePath: "source/overview-arch.html",
+              lineRange: {
+                start: 230,
+                end: 230
+              }
+            }
+          ],
+          evidence: [
+            {
+              type: "action-file",
+              label: "overview-arch action file",
+              filePath: "todo/actions/overview-arch.md",
+              confidence: "high",
+              quote: "`source/overview-arch.html:230`; commit `60e98c41f6c5fab597bbdb8d7ec41898ca4ec777`; `FHIR-55117`; related persuasive typo issue `FHIR-50596`."
+            },
+            {
+              type: "research-appendix",
+              label: "overview-arch research appendix",
+              filePath: "todo/research/overview-arch.md",
+              confidence: "medium"
+            },
+            {
+              type: "source-line",
+              label: "source/overview-arch.html:230",
+              filePath: "source/overview-arch.html",
+              lineRange: {
+                start: 230,
+                end: 230
+              },
+              confidence: "high"
+            },
+            {
+              type: "jira",
+              id: "FHIR-55117",
+              label: "FHIR-55117",
+              url: "https://jira.hl7.org/browse/FHIR-55117",
+              confidence: "high"
+            },
+            {
+              type: "jira",
+              id: "FHIR-50596",
+              label: "FHIR-50596",
+              url: "https://jira.hl7.org/browse/FHIR-50596",
+              confidence: "high"
+            },
+            {
+              type: "commit",
+              id: "60e98c41f6c5fab597bbdb8d7ec41898ca4ec777",
+              label: "60e98c41f6c5fab597bbdb8d7ec41898ca4ec777",
+              url: "https://github.com/HL7/fhir/commit/60e98c41f6c5fab597bbdb8d7ec41898ca4ec777",
+              commitHash: "60e98c41f6c5fab597bbdb8d7ec41898ca4ec777",
+              confidence: "medium"
+            }
+          ],
+          narrative: {
+            problem: "Current text says “smaller, more managable sub-domains.”",
+            analysis: "E-001: managable` typo remains on this page\n\nEvidence: `source/overview-arch.html:230`; commit `60e98c41f6c5fab597bbdb8d7ec41898ca4ec777`; `FHIR-55117`; related persuasive typo issue `FHIR-50596`.\n\nProblem: Current text says “smaller, more managable sub-domains.”\n\nWhy it matters: Visible spelling error in an overview page.\n\nRecommended next step: Apply `FHIR-55117` by changing `managable` to `manageable`.",
+            whyItMatters: "Visible spelling error in an overview page.",
+            recommendedNextStep: "Apply `FHIR-55117` by changing `managable` to `manageable`.",
+            rawEvidenceQuotes: [
+              "source/overview-arch.html:230",
+              "60e98c41f6c5fab597bbdb8d7ec41898ca4ec777",
+              "FHIR-55117",
+              "FHIR-50596"
+            ],
+            limitations: [
+              "- Caveats: no direct Zulip hits were found for `FHIR-25431`, `FHIR-44047`, `FHIR-48660`, `FHIR-50596`, or `FHIR-55117`. Some unescaped hyphen FTS attempts (`pc-incubator`, `overview-arch`) failed in Jira/Zulip FTS and were rerun with safer quoted/simplified terms. The Linkage-related Jira/Zulip/Confluence evidence post-dates the R6 ballot4 source commit, so it is later reassessment evidence, not original implementation intent. The source `settitle` mismatch was not visible in the fetched R6 ballot4 rendered `<title>`, so it is source metadata cleanup rather than a proven live browser-title defect.",
+              "- `FHIR-44047` — “Incorrect punctuation of exempli gtatia and id est (e.g., & i.e.,) throughout.” Snapshot: Resolved - change required, Persuasive, R6 ballot issue, related pages “many.” Commit `887bc2383...` applies an `e.g.,` correction in this page. Confluence page `234784975` records “will fix.” Caveat: the local Jira snapshot status is not Applied/Published even though this page has a source commit."
+            ]
+          },
+          intentVsImplementationMismatch: false,
+          overlookedOrNewlyNoticedProblem: false,
+          evidenceGapBlocksDecision: false,
+          dateIdentified: "2026-05-20T19:24:43.287Z",
+          status: "open"
+        },
+        {
+          id: "overview-arch-E-002",
+          localId: "E-002",
+          pageLabel: "overview-arch",
+          pagePath: "source/overview-arch.html",
+          title: "Source page title metadata says Developers, not Architects",
+          kind: "E",
+          priority: "P3",
+          category: "editorial",
+          sourceLocations: [
+            {
+              filePath: "source/overview-arch.html",
+              lineRange: {
+                start: 3,
+                end: 3
+              }
+            },
+            {
+              filePath: "source/overview-arch.html",
+              lineRange: {
+                start: 16,
+                end: 16
+              }
+            }
+          ],
+          evidence: [
+            {
+              type: "action-file",
+              label: "overview-arch action file",
+              filePath: "todo/actions/overview-arch.md",
+              confidence: "high",
+              quote: "`source/overview-arch.html:3` says `[%settitle FHIR Overview - Developers%]`; `source/overview-arch.html:16` says `FHIR Overview - Architects`; title mismatch dates to existing blame `16b77d47f2a`. The fetched R6 ballot4 rendered page title is `Overview-arch - FHIR v6.0.0-ballot4`, so this was not proven to be the live browser title."
+            },
+            {
+              type: "research-appendix",
+              label: "overview-arch research appendix",
+              filePath: "todo/research/overview-arch.md",
+              confidence: "medium"
+            },
+            {
+              type: "source-line",
+              label: "source/overview-arch.html:3",
+              filePath: "source/overview-arch.html",
+              lineRange: {
+                start: 3,
+                end: 3
+              },
+              confidence: "high"
+            },
+            {
+              type: "source-line",
+              label: "source/overview-arch.html:16",
+              filePath: "source/overview-arch.html",
+              lineRange: {
+                start: 16,
+                end: 16
+              },
+              confidence: "high"
+            }
+          ],
+          narrative: {
+            problem: "The source title directive is stale/mismatched for the architects overview.",
+            analysis: "E-002: Source page title metadata says Developers, not Architects\n\nEvidence: `source/overview-arch.html:3` says `[%settitle FHIR Overview - Developers%]`; `source/overview-arch.html:16` says `FHIR Overview - Architects`; title mismatch dates to existing blame `16b77d47f2a`. The fetched R6 ballot4 rendered page title is `Overview-arch - FHIR v6.0.0-ballot4`, so this was not proven to be the live browser title.\n\nProblem: The source title directive is stale/mismatched for the architects overview.\n\nWhy it matters: If the source title macro is used by any publication, navigation, or search pipeline, the page can be mislabeled; even if currently unused, the source metadata is misleading.\n\nRecommended next step: Verify whether `[%settitle ...%]` is still consumed for this page and either set it to `FHIR Overview - Architects` or remove/ignore it consistently.",
+            whyItMatters: "If the source title macro is used by any publication, navigation, or search pipeline, the page can be mislabeled; even if currently unused, the source metadata is misleading.",
+            recommendedNextStep: "Verify whether `[%settitle ...%]` is still consumed for this page and either set it to `FHIR Overview - Architects` or remove/ignore it consistently.",
+            rawEvidenceQuotes: [
+              "source/overview-arch.html:3",
+              "[%settitle FHIR Overview - Developers%]",
+              "source/overview-arch.html:16",
+              "FHIR Overview - Architects",
+              "16b77d47f2a",
+              "Overview-arch - FHIR v6.0.0-ballot4"
+            ],
+            limitations: [
+              "- Caveats: no direct Zulip hits were found for `FHIR-25431`, `FHIR-44047`, `FHIR-48660`, `FHIR-50596`, or `FHIR-55117`. Some unescaped hyphen FTS attempts (`pc-incubator`, `overview-arch`) failed in Jira/Zulip FTS and were rerun with safer quoted/simplified terms. The Linkage-related Jira/Zulip/Confluence evidence post-dates the R6 ballot4 source commit, so it is later reassessment evidence, not original implementation intent. The source `settitle` mismatch was not visible in the fetched R6 ballot4 rendered `<title>`, so it is source metadata cleanup rather than a proven live browser-title defect.",
+              "- `FHIR-44047` — “Incorrect punctuation of exempli gtatia and id est (e.g., & i.e.,) throughout.” Snapshot: Resolved - change required, Persuasive, R6 ballot issue, related pages “many.” Commit `887bc2383...` applies an `e.g.,` correction in this page. Confluence page `234784975` records “will fix.” Caveat: the local Jira snapshot status is not Applied/Published even though this page has a source commit."
+            ]
+          },
+          intentVsImplementationMismatch: false,
+          overlookedOrNewlyNoticedProblem: false,
+          evidenceGapBlocksDecision: false,
+          dateIdentified: "2026-05-20T19:24:43.288Z",
+          status: "open"
+        }
       ],
+      parseWarnings: [],
       _sourcePath: "todo/abstractions/overview-arch.json",
-      _mtimeMs: 1779304180422
+      _mtimeMs: 1779305083283
     },
     {
       pageLabel: "overview-clinical",
       actionFilePath: "todo/actions/overview-clinical.md",
       researchFilePath: "todo/research/overview-clinical.md",
-      status: "no-actionable-findings",
+      status: "has-findings",
       summary: "Page has 1 actionable finding: a later unresolved page-specific Jira issue flags remaining contractions/abbreviation cleanup that the reviewed R6 ballot4 source still contains; no substantive R4->R6 clinical semantics mismatch was found.",
-      findingCount: 0,
-      findings: [],
-      noFindingReason: "Page has 1 actionable finding: a later unresolved page-specific Jira issue flags remaining contractions/abbreviation cleanup that the reviewed R6 ballot4 source still contains; no substantive R4->R6 clinical semantics mismatch was found.",
+      findingCount: 1,
+      findings: [
+        {
+          id: "overview-clinical-E-001",
+          localId: "E-001",
+          pageLabel: "overview-clinical",
+          pagePath: "source/overview-clinical.html",
+          title: "Remaining contractions flagged by unresolved page-specific Jira",
+          kind: "E",
+          priority: "P3",
+          category: "rendering",
+          sourceLocations: [
+            {
+              filePath: "source/overview-clinical.html"
+            }
+          ],
+          evidence: [
+            {
+              type: "action-file",
+              label: "overview-clinical action file",
+              filePath: "todo/actions/overview-clinical.md",
+              confidence: "high",
+              quote: "`FHIR-55118` (`Spelling/abbreviation issues on page: overview-clinical`) is Submitted/unresolved and specifically lists `\"doesn't\" \"they're\"`. The R6 ballot4 source still has `don't` at line 63, `doesn't` at lines 66 and 88, and `they're` at line 181, plus additional contractions such as `there's`, `that's`, `What's`, and `Don't`."
+            },
+            {
+              type: "research-appendix",
+              label: "overview-clinical research appendix",
+              filePath: "todo/research/overview-clinical.md",
+              confidence: "medium"
+            },
+            {
+              type: "jira",
+              id: "FHIR-55118",
+              label: "FHIR-55118",
+              url: "https://jira.hl7.org/browse/FHIR-55118",
+              confidence: "high"
+            }
+          ],
+          narrative: {
+            problem: "The page appears to retain the exact contraction cleanup called out by a later unresolved Jira issue. This was not introduced by the R4->R6 diff, but it remains in the current page after the e.g./i.e. editorial cleanup.",
+            analysis: "E-001: Remaining contractions flagged by unresolved page-specific Jira\n\nEvidence: `FHIR-55118` (`Spelling/abbreviation issues on page: overview-clinical`) is Submitted/unresolved and specifically lists `\"doesn't\" \"they're\"`. The R6 ballot4 source still has `don't` at line 63, `doesn't` at lines 66 and 88, and `they're` at line 181, plus additional contractions such as `there's`, `that's`, `What's`, and `Don't`.\n\nProblem: The page appears to retain the exact contraction cleanup called out by a later unresolved Jira issue. This was not introduced by the R4->R6 diff, but it remains in the current page after the e.g./i.e. editorial cleanup.\n\nWhy it matters: It is low-risk editorial debt, but page-specific and already tracked; leaving it unresolved can perpetuate known QA/ballot-comment noise.\n\nRecommended next step: Triage/apply `FHIR-55118` for `overview-clinical`: replace accepted contractions with spelled-out forms or explicitly close the issue if the WG decides the conversational style is intentional.\n\nOverlooked/newly noticed context: See E-001.",
+            whyItMatters: "It is low-risk editorial debt, but page-specific and already tracked; leaving it unresolved can perpetuate known QA/ballot-comment noise.",
+            recommendedNextStep: "Triage/apply `FHIR-55118` for `overview-clinical`: replace accepted contractions with spelled-out forms or explicitly close the issue if the WG decides the conversational style is intentional.",
+            rawEvidenceQuotes: [
+              "FHIR-55118",
+              "Spelling/abbreviation issues on page: overview-clinical",
+              `"doesn't" "they're"`,
+              "don't",
+              "doesn't",
+              "they're",
+              "there's",
+              "that's",
+              "What's",
+              "Don't"
+            ],
+            limitations: [
+              "- Caveats: community databases are local snapshots; Zulip/Jira FTS treats unquoted hyphenated Jira/page tokens as operators, so quoted FTS and SQL `LIKE` checks were used after one failed hyphenated search. No rendered build was run. Some `href` targets such as `observation.html` are generated publication pages rather than checked-in source files, so source-tree existence alone was not treated as link failure."
+            ]
+          },
+          intentVsImplementationMismatch: false,
+          overlookedOrNewlyNoticedProblem: true,
+          evidenceGapBlocksDecision: false,
+          dateIdentified: "2026-05-20T19:24:43.289Z",
+          status: "open"
+        }
+      ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/overview-clinical.json",
-      _mtimeMs: 1779304180422
+      _mtimeMs: 1779305083286
     },
     {
       pageLabel: "overview-dev",
@@ -32489,7 +32822,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.424Z",
+          dateIdentified: "2026-05-20T19:24:43.291Z",
           status: "open"
         },
         {
@@ -32585,13 +32918,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.425Z",
+          dateIdentified: "2026-05-20T19:24:43.291Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/overview-dev.json",
-      _mtimeMs: 1779304180422
+      _mtimeMs: 1779305083290
     },
     {
       pageLabel: "patterns",
@@ -32681,13 +33014,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.427Z",
+          dateIdentified: "2026-05-20T19:24:43.294Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/patterns.json",
-      _mtimeMs: 1779304180425
+      _mtimeMs: 1779305083290
     },
     {
       pageLabel: "profiling",
@@ -32802,7 +33135,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.431Z",
+          dateIdentified: "2026-05-20T19:24:43.297Z",
           status: "open"
         },
         {
@@ -32896,13 +33229,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.432Z",
+          dateIdentified: "2026-05-20T19:24:43.298Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/profiling.json",
-      _mtimeMs: 1779304180432
+      _mtimeMs: 1779305083293
     },
     {
       pageLabel: "profiling-examples",
@@ -33009,7 +33342,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.429Z",
+          dateIdentified: "2026-05-20T19:24:43.296Z",
           status: "open"
         },
         {
@@ -33080,13 +33413,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.429Z",
+          dateIdentified: "2026-05-20T19:24:43.296Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/profiling-examples.json",
-      _mtimeMs: 1779304180428
+      _mtimeMs: 1779305083293
     },
     {
       pageLabel: "pushpull",
@@ -33099,7 +33432,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
       noFindingReason: "1 actionable finding. The R4-to-R6 diff is almost entirely template/metadata churn; the only current page issue found is an unresolved Jira-tracked abbreviation/spelling correction.",
       parseWarnings: [],
       _sourcePath: "todo/abstractions/pushpull.json",
-      _mtimeMs: 1779304180432
+      _mtimeMs: 1779305083296
     },
     {
       pageLabel: "rdf",
@@ -33204,7 +33537,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.434Z",
+          dateIdentified: "2026-05-20T19:24:43.299Z",
           status: "open"
         },
         {
@@ -33300,7 +33633,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.435Z",
+          dateIdentified: "2026-05-20T19:24:43.300Z",
           status: "open"
         },
         {
@@ -33405,13 +33738,13 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.436Z",
+          dateIdentified: "2026-05-20T19:24:43.301Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/rdf.json",
-      _mtimeMs: 1779304180435
+      _mtimeMs: 1779305083296
     },
     {
       pageLabel: "references",
@@ -33510,7 +33843,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.437Z",
+          dateIdentified: "2026-05-20T19:24:43.302Z",
           status: "open"
         },
         {
@@ -33597,7 +33930,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.438Z",
+          dateIdentified: "2026-05-20T19:24:43.302Z",
           status: "open"
         },
         {
@@ -33689,7 +34022,7 @@ Overlooked/newly noticed context: E-001 and E-002 above.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.439Z",
+          dateIdentified: "2026-05-20T19:24:43.303Z",
           status: "open"
         },
         {
@@ -33774,7 +34107,7 @@ Recommended next step: correct the package-source URL, change "context of us" to
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.440Z",
+          dateIdentified: "2026-05-20T19:24:43.303Z",
           status: "open"
         },
         {
@@ -33863,13 +34196,13 @@ Recommended next step: correct the package-source URL, change "context of us" to
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.440Z",
+          dateIdentified: "2026-05-20T19:24:43.304Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/references.json",
-      _mtimeMs: 1779304180438
+      _mtimeMs: 1779305083300
     },
     {
       pageLabel: "resourceguide",
@@ -33972,7 +34305,7 @@ Recommended next step: correct the package-source URL, change "context of us" to
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.442Z",
+          dateIdentified: "2026-05-20T19:24:43.306Z",
           status: "open"
         },
         {
@@ -34048,13 +34381,13 @@ Recommended next step: correct the package-source URL, change "context of us" to
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.443Z",
+          dateIdentified: "2026-05-20T19:24:43.306Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/resourceguide.json",
-      _mtimeMs: 1779304180442
+      _mtimeMs: 1779305083303
     },
     {
       pageLabel: "resourcelist",
@@ -34171,13 +34504,13 @@ Recommended next step: correct the package-source URL, change "context of us" to
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.444Z",
+          dateIdentified: "2026-05-20T19:24:43.308Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/resourcelist.json",
-      _mtimeMs: 1779304180442
+      _mtimeMs: 1779305083303
     },
     {
       pageLabel: "safety",
@@ -34313,7 +34646,7 @@ Recommended next step: correct the package-source URL, change "context of us" to
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.446Z",
+          dateIdentified: "2026-05-20T19:24:43.309Z",
           status: "open"
         },
         {
@@ -34399,7 +34732,7 @@ Recommended next step: correct the package-source URL, change "context of us" to
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.446Z",
+          dateIdentified: "2026-05-20T19:24:43.310Z",
           status: "open"
         },
         {
@@ -34488,7 +34821,7 @@ Intent-vs-implementation context: - H-003: FHIR-34155 SearchParameter definition
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.447Z",
+          dateIdentified: "2026-05-20T19:24:43.311Z",
           status: "open"
         },
         {
@@ -34611,13 +34944,13 @@ Intent-vs-implementation context: - H-003: FHIR-34155 SearchParameter definition
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.448Z",
+          dateIdentified: "2026-05-20T19:24:43.311Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/safety.json",
-      _mtimeMs: 1779304180445
+      _mtimeMs: 1779305083310
     },
     {
       pageLabel: "search",
@@ -34728,7 +35061,7 @@ Intent-vs-implementation context: - H-003: FHIR-34155 SearchParameter definition
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.450Z",
+          dateIdentified: "2026-05-20T19:24:43.313Z",
           status: "open"
         },
         {
@@ -34784,13 +35117,13 @@ Intent-vs-implementation context: - H-003: FHIR-34155 SearchParameter definition
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.451Z",
+          dateIdentified: "2026-05-20T19:24:43.314Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/search.json",
-      _mtimeMs: 1779304180448
+      _mtimeMs: 1779305083310
     },
     {
       pageLabel: "search_filter",
@@ -34859,7 +35192,7 @@ Intent-vs-implementation context: - H-003: FHIR-34155 SearchParameter definition
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.452Z",
+          dateIdentified: "2026-05-20T19:24:43.315Z",
           status: "open"
         },
         {
@@ -34904,7 +35237,7 @@ Intent-vs-implementation context: - H-003: FHIR-34155 SearchParameter definition
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.453Z",
+          dateIdentified: "2026-05-20T19:24:43.315Z",
           status: "open"
         },
         {
@@ -34953,7 +35286,7 @@ Intent-vs-implementation context: - H-003: FHIR-34155 SearchParameter definition
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.453Z",
+          dateIdentified: "2026-05-20T19:24:43.316Z",
           status: "open"
         },
         {
@@ -35001,7 +35334,7 @@ Intent-vs-implementation context: - H-003: FHIR-34155 SearchParameter definition
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.454Z",
+          dateIdentified: "2026-05-20T19:24:43.316Z",
           status: "open"
         },
         {
@@ -35073,7 +35406,7 @@ Recommended next step: Verify with FHIR-I WG whether a specific Jira issue or WG
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: true,
-          dateIdentified: "2026-05-20T19:09:40.455Z",
+          dateIdentified: "2026-05-20T19:24:43.316Z",
           status: "open"
         }
       ],
@@ -35081,7 +35414,7 @@ Recommended next step: Verify with FHIR-I WG whether a specific Jira issue or WG
         "E-001: missing narrative.whyItMatters."
       ],
       _sourcePath: "todo/abstractions/search_filter.json",
-      _mtimeMs: 1779304180455
+      _mtimeMs: 1779305083313
     },
     {
       pageLabel: "secpriv-module",
@@ -35192,7 +35525,7 @@ Recommended next step: Verify with FHIR-I WG whether a specific Jira issue or WG
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.457Z",
+          dateIdentified: "2026-05-20T19:24:43.318Z",
           status: "open"
         },
         {
@@ -35262,7 +35595,7 @@ Recommended next step: Verify with FHIR-I WG whether a specific Jira issue or WG
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.457Z",
+          dateIdentified: "2026-05-20T19:24:43.318Z",
           status: "open"
         },
         {
@@ -35349,13 +35682,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.458Z",
+          dateIdentified: "2026-05-20T19:24:43.319Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/secpriv-module.json",
-      _mtimeMs: 1779304180455
+      _mtimeMs: 1779305083316
     },
     {
       pageLabel: "security",
@@ -35446,7 +35779,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.463Z",
+          dateIdentified: "2026-05-20T19:24:43.323Z",
           status: "open"
         },
         {
@@ -35546,7 +35879,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.464Z",
+          dateIdentified: "2026-05-20T19:24:43.323Z",
           status: "open"
         },
         {
@@ -35624,7 +35957,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.465Z",
+          dateIdentified: "2026-05-20T19:24:43.324Z",
           status: "open"
         },
         {
@@ -35710,7 +36043,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.466Z",
+          dateIdentified: "2026-05-20T19:24:43.324Z",
           status: "open"
         },
         {
@@ -35821,13 +36154,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.467Z",
+          dateIdentified: "2026-05-20T19:24:43.325Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/security.json",
-      _mtimeMs: 1779304180465
+      _mtimeMs: 1779305083323
     },
     {
       pageLabel: "security-labels",
@@ -35966,7 +36299,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.460Z",
+          dateIdentified: "2026-05-20T19:24:43.320Z",
           status: "open"
         },
         {
@@ -36074,7 +36407,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.461Z",
+          dateIdentified: "2026-05-20T19:24:43.321Z",
           status: "open"
         },
         {
@@ -36163,13 +36496,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.462Z",
+          dateIdentified: "2026-05-20T19:24:43.321Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/security-labels.json",
-      _mtimeMs: 1779304180462
+      _mtimeMs: 1779305083316
     },
     {
       pageLabel: "services",
@@ -36281,7 +36614,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.469Z",
+          dateIdentified: "2026-05-20T19:24:43.327Z",
           status: "open"
         },
         {
@@ -36347,13 +36680,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.470Z",
+          dateIdentified: "2026-05-20T19:24:43.327Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/services.json",
-      _mtimeMs: 1779304180468
+      _mtimeMs: 1779305083323
     },
     {
       pageLabel: "signatures",
@@ -36448,7 +36781,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.472Z",
+          dateIdentified: "2026-05-20T19:24:43.328Z",
           status: "open"
         },
         {
@@ -36545,7 +36878,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.473Z",
+          dateIdentified: "2026-05-20T19:24:43.329Z",
           status: "open"
         },
         {
@@ -36658,7 +36991,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.474Z",
+          dateIdentified: "2026-05-20T19:24:43.330Z",
           status: "open"
         },
         {
@@ -36765,13 +37098,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.475Z",
+          dateIdentified: "2026-05-20T19:24:43.331Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/signatures.json",
-      _mtimeMs: 1779304180472
+      _mtimeMs: 1779305083326
     },
     {
       pageLabel: "snomedct-usage",
@@ -36860,7 +37193,7 @@ Overlooked/newly noticed context: H-001 and E-001.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.477Z",
+          dateIdentified: "2026-05-20T19:24:43.332Z",
           status: "open"
         },
         {
@@ -36919,13 +37252,13 @@ Overlooked/newly noticed context: H-001 and E-001.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.478Z",
+          dateIdentified: "2026-05-20T19:24:43.333Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/snomedct-usage.json",
-      _mtimeMs: 1779304180475
+      _mtimeMs: 1779305083330
     },
     {
       pageLabel: "storage",
@@ -37043,7 +37376,7 @@ Overlooked/newly noticed context: H-001 and E-001.`,
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.479Z",
+          dateIdentified: "2026-05-20T19:24:43.334Z",
           status: "open"
         },
         {
@@ -37152,7 +37485,7 @@ Overlooked/newly noticed context: H-001 and E-001.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.480Z",
+          dateIdentified: "2026-05-20T19:24:43.335Z",
           status: "open"
         },
         {
@@ -37239,13 +37572,13 @@ Overlooked/newly noticed context: H-001 and E-001.`,
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.481Z",
+          dateIdentified: "2026-05-20T19:24:43.335Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/storage.json",
-      _mtimeMs: 1779304180478
+      _mtimeMs: 1779305083333
     },
     {
       pageLabel: "summary",
@@ -37358,13 +37691,13 @@ Overlooked/newly noticed context: E-001 is a concrete current-page issue that wa
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.482Z",
+          dateIdentified: "2026-05-20T19:24:43.336Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/summary.json",
-      _mtimeMs: 1779304180482
+      _mtimeMs: 1779305083333
     },
     {
       pageLabel: "terminologies",
@@ -37482,7 +37815,7 @@ Intent-vs-implementation context: H-001 and H-002 are the relevant mismatches fo
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.489Z",
+          dateIdentified: "2026-05-20T19:24:43.341Z",
           status: "open"
         },
         {
@@ -37593,7 +37926,7 @@ Intent-vs-implementation context: H-001 and H-002 are the relevant mismatches fo
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.490Z",
+          dateIdentified: "2026-05-20T19:24:43.342Z",
           status: "open"
         },
         {
@@ -37665,7 +37998,7 @@ Intent-vs-implementation context: H-001 and H-002 are the relevant mismatches fo
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.491Z",
+          dateIdentified: "2026-05-20T19:24:43.342Z",
           status: "open"
         },
         {
@@ -37747,13 +38080,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.492Z",
+          dateIdentified: "2026-05-20T19:24:43.343Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/terminologies.json",
-      _mtimeMs: 1779304180492
+      _mtimeMs: 1779305083340
     },
     {
       pageLabel: "terminologies-binding-examples",
@@ -37847,7 +38180,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.483Z",
+          dateIdentified: "2026-05-20T19:24:43.337Z",
           status: "open"
         },
         {
@@ -37912,13 +38245,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.484Z",
+          dateIdentified: "2026-05-20T19:24:43.338Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/terminologies-binding-examples.json",
-      _mtimeMs: 1779304180482
+      _mtimeMs: 1779305083333
     },
     {
       pageLabel: "terminologies-systems",
@@ -38027,7 +38360,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.486Z",
+          dateIdentified: "2026-05-20T19:24:43.339Z",
           status: "open"
         },
         {
@@ -38118,7 +38451,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.486Z",
+          dateIdentified: "2026-05-20T19:24:43.339Z",
           status: "open"
         },
         {
@@ -38204,13 +38537,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.487Z",
+          dateIdentified: "2026-05-20T19:24:43.340Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/terminologies-systems.json",
-      _mtimeMs: 1779304180485
+      _mtimeMs: 1779305083336
     },
     {
       pageLabel: "terminology-module",
@@ -38311,7 +38644,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.494Z",
+          dateIdentified: "2026-05-20T19:24:43.344Z",
           status: "open"
         },
         {
@@ -38402,7 +38735,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.495Z",
+          dateIdentified: "2026-05-20T19:24:43.344Z",
           status: "open"
         },
         {
@@ -38495,13 +38828,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.495Z",
+          dateIdentified: "2026-05-20T19:24:43.345Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/terminology-module.json",
-      _mtimeMs: 1779304180495
+      _mtimeMs: 1779305083343
     },
     {
       pageLabel: "terminology-service",
@@ -38640,7 +38973,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.497Z",
+          dateIdentified: "2026-05-20T19:24:43.346Z",
           status: "open"
         },
         {
@@ -38738,26 +39071,112 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.498Z",
+          dateIdentified: "2026-05-20T19:24:43.347Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/terminology-service.json",
-      _mtimeMs: 1779304180495
+      _mtimeMs: 1779305083343
     },
     {
       pageLabel: "updates",
       actionFilePath: "todo/actions/updates.md",
       researchFilePath: "todo/research/updates.md",
-      status: "no-actionable-findings",
+      status: "has-findings",
       summary: "Found 1 actionable finding: the R6 ballot4 `updates.html` page is labeled Informative while retaining uppercase conformance language, despite FHIR-I R6 minutes saying to move conformance language and make the page normative.",
-      findingCount: 0,
-      findings: [],
-      noFindingReason: "Found 1 actionable finding: the R6 ballot4 `updates.html` page is labeled Informative while retaining uppercase conformance language, despite FHIR-I R6 minutes saying to move conformance language and make the page normative.",
+      findingCount: 1,
+      findings: [
+        {
+          id: "updates-H-001",
+          localId: "H-001",
+          pageLabel: "updates",
+          pagePath: "source/updates.html",
+          title: "Informative page still contains normative SHOULD",
+          kind: "H",
+          priority: "P1",
+          category: "intent-mismatch",
+          sourceLocations: [
+            {
+              filePath: "source/updates.html",
+              lineRange: {
+                start: 12,
+                end: 12
+              }
+            },
+            {
+              filePath: "source/updates.html",
+              lineRange: {
+                start: 170,
+                end: 170
+              }
+            }
+          ],
+          evidence: [
+            {
+              type: "action-file",
+              label: "updates action file",
+              filePath: "todo/actions/updates.md",
+              confidence: "high",
+              quote: "`source/updates.html:12` marks the page `Standards Status: Informative`; `source/updates.html:170` says `the server SHOULD either...`; FHIRI WGM 202509 minutes for `updates.html` say `Move conformance language and make normative`; commit `270e0ceb` instead changed the page to Informative."
+            },
+            {
+              type: "research-appendix",
+              label: "updates research appendix",
+              filePath: "todo/research/updates.md",
+              confidence: "medium"
+            },
+            {
+              type: "source-line",
+              label: "source/updates.html:12",
+              filePath: "source/updates.html",
+              lineRange: {
+                start: 12,
+                end: 12
+              },
+              confidence: "high"
+            },
+            {
+              type: "source-line",
+              label: "source/updates.html:170",
+              filePath: "source/updates.html",
+              lineRange: {
+                start: 170,
+                end: 170
+              },
+              confidence: "high"
+            }
+          ],
+          narrative: {
+            problem: "Current source leaves a normative-style requirement on an Informative page, and appears not to apply the recorded R6 status decision.",
+            analysis: "H-001: Informative page still contains normative SHOULD\n\nEvidence: `source/updates.html:12` marks the page `Standards Status: Informative`; `source/updates.html:170` says `the server SHOULD either...`; FHIRI WGM 202509 minutes for `updates.html` say `Move conformance language and make normative`; commit `270e0ceb` instead changed the page to Informative.\n\nProblem: Current source leaves a normative-style requirement on an Informative page, and appears not to apply the recorded R6 status decision.\n\nWhy it matters: Readers and implementers may be unsure whether the ETag behavior is enforceable conformance guidance or only informative advice.\n\nRecommended next step: Ask FHIR-I to confirm intent; either make `updates.html` normative or move/reword the `SHOULD` into a normative page such as HTTP and leave only non-normative explanation here.\n\nIntent-vs-implementation context: H-001.",
+            whyItMatters: "Readers and implementers may be unsure whether the ETag behavior is enforceable conformance guidance or only informative advice.",
+            recommendedNextStep: "Ask FHIR-I to confirm intent; either make `updates.html` normative or move/reword the `SHOULD` into a normative page such as HTTP and leave only non-normative explanation here.",
+            rawEvidenceQuotes: [
+              "source/updates.html:12",
+              "Standards Status: Informative",
+              "source/updates.html:170",
+              "the server SHOULD either...",
+              "updates.html",
+              "Move conformance language and make normative",
+              "270e0ceb"
+            ],
+            limitations: [
+              "- Caveats: the review is source/history/community evidence only; it did not render the HTML. Confluence snapshot output was too large to keep whole in the terminal, so targeted SQL snippets from `plain_text` were used for the relevant locators. The default Zulip DB omits noisy notification streams. Some Jira issue states lag source application (for example `FHIR-44047` is still `Resolved - change required` in the local Jira snapshot despite a source commit and PR merge).",
+              "- Jira `FHIR-32757` says this language should be added to the updates page and points to Zulip de-containment discussion. The Zulip `de-containment` thread contains the same business-logic/uniqueness rationale from Grahame Grieve and caveats from Lloyd McKenzie and others.",
+              "- `#implementers > Security tags in a transaction` (2019-03-29 to 2019-04-18) is background for `FHIR-20874`: Lloyd says servers may ignore/alter bits and SHOULD warn if possible; later messages discuss OperationOutcome limitations. Jira resolved no change due burden/weak use case."
+            ]
+          },
+          intentVsImplementationMismatch: true,
+          overlookedOrNewlyNoticedProblem: false,
+          evidenceGapBlocksDecision: false,
+          dateIdentified: "2026-05-20T19:24:43.348Z",
+          status: "open"
+        }
+      ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/updates.json",
-      _mtimeMs: 1779304180495
+      _mtimeMs: 1779305083346
     },
     {
       pageLabel: "usecases",
@@ -38846,13 +39265,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.499Z",
+          dateIdentified: "2026-05-20T19:24:43.349Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/usecases.json",
-      _mtimeMs: 1779304180498
+      _mtimeMs: 1779305083346
     },
     {
       pageLabel: "validation",
@@ -38989,13 +39408,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.501Z",
+          dateIdentified: "2026-05-20T19:24:43.350Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/validation.json",
-      _mtimeMs: 1779304180498
+      _mtimeMs: 1779305083346
     },
     {
       pageLabel: "versioning",
@@ -39114,7 +39533,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.502Z",
+          dateIdentified: "2026-05-20T19:24:43.352Z",
           status: "open"
         },
         {
@@ -39200,13 +39619,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: true,
-          dateIdentified: "2026-05-20T19:09:40.503Z",
+          dateIdentified: "2026-05-20T19:24:43.352Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/versioning.json",
-      _mtimeMs: 1779304180502
+      _mtimeMs: 1779305083350
     },
     {
       pageLabel: "versions",
@@ -39315,7 +39734,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.505Z",
+          dateIdentified: "2026-05-20T19:24:43.354Z",
           status: "open"
         },
         {
@@ -39414,7 +39833,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.505Z",
+          dateIdentified: "2026-05-20T19:24:43.354Z",
           status: "open"
         },
         {
@@ -39492,13 +39911,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.506Z",
+          dateIdentified: "2026-05-20T19:24:43.354Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/versions.json",
-      _mtimeMs: 1779304180505
+      _mtimeMs: 1779305083350
     },
     {
       pageLabel: "workflow",
@@ -39593,7 +40012,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.515Z",
+          dateIdentified: "2026-05-20T19:24:43.362Z",
           status: "open"
         },
         {
@@ -39684,7 +40103,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.516Z",
+          dateIdentified: "2026-05-20T19:24:43.363Z",
           status: "open"
         },
         {
@@ -39779,13 +40198,13 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.517Z",
+          dateIdentified: "2026-05-20T19:24:43.363Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/workflow.json",
-      _mtimeMs: 1779304180515
+      _mtimeMs: 1779305083360
     },
     {
       pageLabel: "workflow-ad-hoc",
@@ -39894,7 +40313,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.508Z",
+          dateIdentified: "2026-05-20T19:24:43.356Z",
           status: "open"
         },
         {
@@ -39961,26 +40380,79 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.508Z",
+          dateIdentified: "2026-05-20T19:24:43.356Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/workflow-ad-hoc.json",
-      _mtimeMs: 1779304180508
+      _mtimeMs: 1779305083353
     },
     {
       pageLabel: "workflow-communications",
       actionFilePath: "todo/actions/workflow-communications.md",
       researchFilePath: "todo/research/workflow-communications.md",
-      status: "no-actionable-findings",
+      status: "has-findings",
       summary: "One actionable finding: the R6 ballot4 pattern list in `workflow-communications.html` reflects the intended Option I removal/renumbering, but the target `workflow-management.html` anchors/headings do not. This creates wrong or broken navigation and exposes obsolete workflow guidance.",
-      findingCount: 0,
-      findings: [],
-      noFindingReason: "One actionable finding: the R6 ballot4 pattern list in `workflow-communications.html` reflects the intended Option I removal/renumbering, but the target `workflow-management.html` anchors/headings do not. This creates wrong or broken navigation and exposes obsolete workflow guidance.",
+      findingCount: 1,
+      findings: [
+        {
+          id: "workflow-communications-H-001",
+          localId: "H-001",
+          pageLabel: "workflow-communications",
+          pagePath: "source/workflow-communications.html",
+          title: "Pattern list links I/J/K do not match workflow-management targets",
+          kind: "H",
+          priority: "P1",
+          category: "intent-mismatch",
+          sourceLocations: [
+            {
+              filePath: "source/workflow-communications.html"
+            }
+          ],
+          evidence: [
+            {
+              type: "action-file",
+              label: "workflow-communications action file",
+              filePath: "todo/actions/workflow-communications.md",
+              confidence: "high",
+              quote: "`workflow-communications.html` lines 561-573 list Option I = Messaging (`#optioni`), Option J = Service request (`#optionj`), and Option K = Combining (`#optionk`). Current `workflow-management.html` has duplicate `#optioni` anchors, no `#optionj`, `#optionk` = Service request, and `#optionl` = Combining. Commit `d6445217`/PR #3363 intended to remove old Option I and renumber later options."
+            },
+            {
+              type: "research-appendix",
+              label: "workflow-communications research appendix",
+              filePath: "todo/research/workflow-communications.md",
+              confidence: "medium"
+            }
+          ],
+          narrative: {
+            problem: "Following the communications-page list can land on the obsolete sub-Task Option I, a missing Option J anchor, or the wrong Option K content.",
+            analysis: "H-001: Pattern list links I/J/K do not match workflow-management targets\n\nEvidence: `workflow-communications.html` lines 561-573 list Option I = Messaging (`#optioni`), Option J = Service request (`#optionj`), and Option K = Combining (`#optionk`). Current `workflow-management.html` has duplicate `#optioni` anchors, no `#optionj`, `#optionk` = Service request, and `#optionl` = Combining. Commit `d6445217`/PR #3363 intended to remove old Option I and renumber later options.\n\nProblem: Following the communications-page list can land on the obsolete sub-Task Option I, a missing Option J anchor, or the wrong Option K content.\n\nWhy it matters: Implementers can be sent to the wrong workflow pattern, and the “remove option which abuses the meaning of Task” change is only partially realized.\n\nRecommended next step: Reconcile `workflow-management.html` with the `d6445217` intended state (remove old sub-Task Option I; unique `optioni/optionj/optionk` anchors for Messaging/Service/Combining), or explicitly revert the communications-page list if the WG decides to retain old I-L numbering. Also review external Workflow Pattern Examples links if renumbering is retained.\n\nIntent-vs-implementation context: H-001 covers the material mismatch found.\n\nOverlooked/newly noticed context: None found beyond H-001.",
+            whyItMatters: "Implementers can be sent to the wrong workflow pattern, and the “remove option which abuses the meaning of Task” change is only partially realized.",
+            recommendedNextStep: "Reconcile `workflow-management.html` with the `d6445217` intended state (remove old sub-Task Option I; unique `optioni/optionj/optionk` anchors for Messaging/Service/Combining), or explicitly revert the communications-page list if the WG decides to retain old I-L numbering. Also review external Workflow Pattern Examples links if renumbering is retained.",
+            rawEvidenceQuotes: [
+              "workflow-communications.html",
+              "#optioni",
+              "#optionj",
+              "#optionk",
+              "workflow-management.html",
+              "#optionl",
+              "d6445217"
+            ],
+            limitations: [
+              "- Caveats: Unquoted Zulip searches for hyphenated Jira keys failed with FTS parse errors; quoted key searches were rerun. One parallel Zulip snapshot hit `SQLITE_BUSY_RECOVERY` and was retried successfully. Jira `FHIR-46330` itself is about AppointmentResponse/Workflow mapping, while PR #3363 and the commit use that key for “remove option I”; causality for the workflow-option removal is therefore based on the implementation PR/commit, not the Jira description alone."
+            ]
+          },
+          intentVsImplementationMismatch: true,
+          overlookedOrNewlyNoticedProblem: true,
+          evidenceGapBlocksDecision: false,
+          dateIdentified: "2026-05-20T19:24:43.357Z",
+          status: "open"
+        }
+      ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/workflow-communications.json",
-      _mtimeMs: 1779304180508
+      _mtimeMs: 1779305083353
     },
     {
       pageLabel: "workflow-examples",
@@ -40081,7 +40553,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.510Z",
+          dateIdentified: "2026-05-20T19:24:43.358Z",
           status: "open"
         },
         {
@@ -40171,7 +40643,7 @@ Overlooked/newly noticed context: E-001 and E-002 are concrete current-page defe
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.511Z",
+          dateIdentified: "2026-05-20T19:24:43.359Z",
           status: "open"
         },
         {
@@ -40267,13 +40739,13 @@ Recommended next step: Editorially revise those sentences, e.g. clarify whether 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.511Z",
+          dateIdentified: "2026-05-20T19:24:43.359Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/workflow-examples.json",
-      _mtimeMs: 1779304180508
+      _mtimeMs: 1779305083356
     },
     {
       pageLabel: "workflow-management",
@@ -40376,13 +40848,13 @@ Recommended next step: Editorially revise those sentences, e.g. clarify whether 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.513Z",
+          dateIdentified: "2026-05-20T19:24:43.360Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/workflow-management.json",
-      _mtimeMs: 1779304180512
+      _mtimeMs: 1779305083356
     },
     {
       pageLabel: "workflow-module",
@@ -40467,13 +40939,13 @@ Recommended next step: Editorially revise those sentences, e.g. clarify whether 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.514Z",
+          dateIdentified: "2026-05-20T19:24:43.361Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/workflow-module.json",
-      _mtimeMs: 1779304180512
+      _mtimeMs: 1779305083356
     },
     {
       pageLabel: "xml",
@@ -40584,7 +41056,7 @@ Recommended next step: Editorially revise those sentences, e.g. clarify whether 
           intentVsImplementationMismatch: true,
           overlookedOrNewlyNoticedProblem: false,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.519Z",
+          dateIdentified: "2026-05-20T19:24:43.365Z",
           status: "open"
         },
         {
@@ -40656,44 +41128,43 @@ Recommended next step: Editorially revise those sentences, e.g. clarify whether 
           intentVsImplementationMismatch: false,
           overlookedOrNewlyNoticedProblem: true,
           evidenceGapBlocksDecision: false,
-          dateIdentified: "2026-05-20T19:09:40.520Z",
+          dateIdentified: "2026-05-20T19:24:43.365Z",
           status: "open"
         }
       ],
       parseWarnings: [],
       _sourcePath: "todo/abstractions/xml.json",
-      _mtimeMs: 1779304180518
+      _mtimeMs: 1779305083363
     }
   ],
   totals: {
     pagesReviewed: 111,
-    pagesWithFindings: 101,
-    pagesWithNoActionableFindings: 9,
-    incompleteOrUnparseable: 1,
-    findings: 234,
+    pagesWithFindings: 105,
+    pagesWithNoActionableFindings: 6,
+    incompleteOrUnparseable: 0,
+    findings: 240,
     byPriority: {
-      P2: 127,
-      P3: 59,
-      P1: 48
+      P2: 128,
+      P3: 62,
+      P1: 50
     },
     byKind: {
-      E: 117,
-      H: 113,
+      E: 120,
+      H: 116,
       G: 4
     },
     byCategory: {
-      editorial: 66,
-      "spec-problem": 44,
-      rendering: 44,
+      editorial: 68,
+      "spec-problem": 45,
+      rendering: 45,
       "overlooked-problem": 21,
       "evidence-gap": 5,
-      "intent-mismatch": 52,
+      "intent-mismatch": 54,
       other: 2
     },
     byStatus: {
-      "has-findings": 101,
-      "no-actionable-findings": 9,
-      "incomplete-or-unparseable": 1
+      "has-findings": 105,
+      "no-actionable-findings": 6
     }
   }
 };

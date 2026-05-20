@@ -1,0 +1,241 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.291Z",
+  "sourceActionFilesGlob": "todo/actions/overview-dev.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "overview-dev",
+      "actionFilePath": "todo/actions/overview-dev.md",
+      "researchFilePath": "todo/research/overview-dev.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings. The main risk is reader-facing REST examples that now mix `/base`, `f001`, and `347`, including examples that explicitly say URL IDs must match resource IDs while showing the opposite.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "overview-dev-E-001",
+          "localId": "E-001",
+          "pageLabel": "overview-dev",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html",
+          "title": "REST examples mix `/base`, `f001`, and `347",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html",
+              "lineRange": {
+                "start": 243,
+                "end": 269
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "overview-dev action file",
+              "filePath": "todo/actions/overview-dev.md",
+              "confidence": "high",
+              "quote": "current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html:243-269`, `:360-409`, `:514-540`, `:552-559`; commits `6eccb56d130bc6ae7f4dc255b1091a310f860ba9`, `ea971f96c13efe5478ed1fefffc845eeb80ed881`, `75eef0f2911084cd87c3e1326c0b0360df8c0a5c`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "overview-dev research appendix",
+              "filePath": "todo/research/overview-dev.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html:243-269",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html",
+              "lineRange": {
+                "start": 243,
+                "end": 269
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "6eccb56d130bc6ae7f4dc255b1091a310f860ba9",
+              "label": "6eccb56d130bc6ae7f4dc255b1091a310f860ba9",
+              "url": "https://github.com/HL7/fhir/commit/6eccb56d130bc6ae7f4dc255b1091a310f860ba9",
+              "commitHash": "6eccb56d130bc6ae7f4dc255b1091a310f860ba9",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "ea971f96c13efe5478ed1fefffc845eeb80ed881",
+              "label": "ea971f96c13efe5478ed1fefffc845eeb80ed881",
+              "url": "https://github.com/HL7/fhir/commit/ea971f96c13efe5478ed1fefffc845eeb80ed881",
+              "commitHash": "ea971f96c13efe5478ed1fefffc845eeb80ed881",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "75eef0f2911084cd87c3e1326c0b0360df8c0a5c",
+              "label": "75eef0f2911084cd87c3e1326c0b0360df8c0a5c",
+              "url": "https://github.com/HL7/fhir/commit/75eef0f2911084cd87c3e1326c0b0360df8c0a5c",
+              "commitHash": "75eef0f2911084cd87c3e1326c0b0360df8c0a5c",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the examples were partially normalized. The create request is `POST /base/Patient` but its note still labels `/Patient`. The read request is `GET /base/Patient/f001` while the note says the fetched id is `347`, and the read response body contains `<id value=\"347\"/>` despite the note saying the response id must match the read request. The update request is `PUT /base/Patient/f001` while the JSON body has `\"id\" : \"347\"` and the note says the URL/resource id is `\"347\"`.",
+            "analysis": "E-001: REST examples mix `/base`, `f001`, and `347\n\nEvidence: current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html:243-269`, `:360-409`, `:514-540`, `:552-559`; commits `6eccb56d130bc6ae7f4dc255b1091a310f860ba9`, `ea971f96c13efe5478ed1fefffc845eeb80ed881`, `75eef0f2911084cd87c3e1326c0b0360df8c0a5c`\n\nProblem: the examples were partially normalized. The create request is `POST /base/Patient` but its note still labels `/Patient`. The read request is `GET /base/Patient/f001` while the note says the fetched id is `347`, and the read response body contains `<id value=\"347\"/>` despite the note saying the response id must match the read request. The update request is `PUT /base/Patient/f001` while the JSON body has `\"id\" : \"347\"` and the note says the URL/resource id is `\"347\"`.\n\nWhy it matters: this developer overview teaches REST URL and resource identity basics. The current examples contradict the page's own rule that a resource id in the URL must match the id in the returned or updated resource.\n\nRecommended next step: normalize the whole create/read/update flow to one id and one base path, then update the explanatory notes and response `Location` headers to match.\n\nOverlooked/newly noticed context: See `E-001` and `E-002`.",
+            "whyItMatters": "this developer overview teaches REST URL and resource identity basics. The current examples contradict the page's own rule that a resource id in the URL must match the id in the returned or updated resource.",
+            "recommendedNextStep": "normalize the whole create/read/update flow to one id and one base path, then update the explanatory notes and response `Location` headers to match.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html:243-269",
+              ":360-409",
+              ":514-540",
+              ":552-559",
+              "6eccb56d130bc6ae7f4dc255b1091a310f860ba9",
+              "ea971f96c13efe5478ed1fefffc845eeb80ed881",
+              "75eef0f2911084cd87c3e1326c0b0360df8c0a5c"
+            ],
+            "limitations": [
+              "- Caveats: no PR numbers were discovered from local commit metadata or issue snapshots. No Jira/Zulip/Confluence evidence was found explaining the current `f001`/`347` example mismatch.",
+              "- Current caveat: the broader Patient JSON example still appears illustrative rather than strict JSON; for example, the `meta` object is not followed by a comma before `text`. This was already present in the old page and was not elevated to the action file because it was not introduced by the reviewed diff and the page contains several deliberately abbreviated examples."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.291Z",
+          "status": "open"
+        },
+        {
+          "id": "overview-dev-E-002",
+          "localId": "E-002",
+          "pageLabel": "overview-dev",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html",
+          "title": "Search response declares XML while showing JSON",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html",
+              "lineRange": {
+                "start": 447,
+                "end": 455
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/overview-dev.html",
+              "lineRange": {
+                "start": 448,
+                "end": 455
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "overview-dev action file",
+              "filePath": "todo/actions/overview-dev.md",
+              "confidence": "high",
+              "quote": "current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html:447-455`; old source lines `fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/overview-dev.html:448-455`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "overview-dev research appendix",
+              "filePath": "todo/research/overview-dev.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html:447-455",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html",
+              "lineRange": {
+                "start": 447,
+                "end": 455
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/overview-dev.html:448-455",
+              "filePath": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/overview-dev.html",
+              "lineRange": {
+                "start": 448,
+                "end": 455
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "0da2a0a84dc1",
+              "label": "0da2a0a84dc1",
+              "url": "https://github.com/HL7/fhir/commit/0da2a0a84dc1",
+              "commitHash": "0da2a0a84dc1",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the search response example uses `<pre class=\"json linecounter\">` and shows a JSON Bundle body, but the HTTP header says `Content-Type: application/fhir+xml`.",
+            "analysis": "E-002: Search response declares XML while showing JSON\n\nEvidence: current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html:447-455`; old source lines `fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/overview-dev.html:448-455`\n\nProblem: the search response example uses `<pre class=\"json linecounter\">` and shows a JSON Bundle body, but the HTTP header says `Content-Type: application/fhir+xml`.\n\nWhy it matters: the example is reader-facing and can confuse implementers about the expected response format.\n\nRecommended next step: change the header to `Content-Type: application/fhir+json`, or convert the example body/class to XML.\n\nOverlooked/newly noticed context: See `E-001` and `E-002`.",
+            "whyItMatters": "the example is reader-facing and can confuse implementers about the expected response format.",
+            "recommendedNextStep": "change the header to `Content-Type: application/fhir+json`, or convert the example body/class to XML.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview-dev.html:447-455",
+              "fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/overview-dev.html:448-455"
+            ],
+            "limitations": [
+              "- Caveats: no PR numbers were discovered from local commit metadata or issue snapshots. No Jira/Zulip/Confluence evidence was found explaining the current `f001`/`347` example mismatch.",
+              "- Current caveat: the broader Patient JSON example still appears illustrative rather than strict JSON; for example, the `meta` object is not followed by a comma before `text`. This was already present in the old page and was not elevated to the action file because it was not introduced by the reviewed diff and the page contains several deliberately abbreviated examples."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.291Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 2,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

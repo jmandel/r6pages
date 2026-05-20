@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.236Z",
+  "sourceActionFilesGlob": "todo/actions/formats.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "formats",
+      "actionFilePath": "todo/actions/formats.md",
+      "researchFilePath": "todo/research/formats.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: the current R6 ballot4 source still references an `NE` flag that is not defined in the flag key, and later FHIR-I/Jira evidence confirms this should be fixed in rendering.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "formats-E-001",
+          "localId": "E-001",
+          "pageLabel": "formats",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html",
+          "title": "NE` flag is referenced but not defined/displayed",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html",
+              "lineRange": {
+                "start": 139,
+                "end": 163
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "formats action file",
+              "filePath": "todo/actions/formats.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:139-163`; `080de8098cee5f70dc7e6bddab7e544c98da3e89`; `FHIR-50460`; Confluence page `453902815`; https://github.com/HL7/fhir-ig-publisher/issues/1293"
+            },
+            {
+              "type": "research-appendix",
+              "label": "formats research appendix",
+              "filePath": "todo/research/formats.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:139-163",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html",
+              "lineRange": {
+                "start": 139,
+                "end": 163
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-50460",
+              "label": "FHIR-50460",
+              "url": "https://jira.hl7.org/browse/FHIR-50460",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "080de8098cee5f70dc7e6bddab7e544c98da3e89",
+              "label": "080de8098cee5f70dc7e6bddab7e544c98da3e89",
+              "url": "https://github.com/HL7/fhir/commit/080de8098cee5f70dc7e6bddab7e544c98da3e89",
+              "commitHash": "080de8098cee5f70dc7e6bddab7e544c98da3e89",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://github.com/HL7/fhir-ig-publisher/issues/1293",
+              "url": "https://github.com/HL7/fhir-ig-publisher/issues/1293",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:139-163`; `080de8098cee5f70dc7e6bddab7e544c98da3e89`; `FHIR-50460`; Confluence page `453902815`; https://github.com/HL7/fhir-ig-publisher/issues/1293\n- Priority: P2\n- Category: rendering\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:139-163`; `080de8098cee5f70dc7e6bddab7e544c98da3e89`; `FHIR-50460`; Confluence page `453902815`; https://github.com/HL7/fhir-ig-publisher/issues/1293\n- Problem: The Key to Flags no longer defines `NE`, but the Notes still say extensions may appear \"except where the flag `NE` appears.\" R4 had the key entry, and `080de809...` removed it without removing the note.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The Key to Flags no longer defines `NE`, but the Notes still say extensions may appear \"except where the flag `NE` appears.\" R4 had the key entry, and `080de809...` removed it without removing the note.",
+            "analysis": "E-001: NE` flag is referenced but not defined/displayed\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:139-163`; `080de8098cee5f70dc7e6bddab7e544c98da3e89`; `FHIR-50460`; Confluence page `453902815`; https://github.com/HL7/fhir-ig-publisher/issues/1293\n\nProblem: The Key to Flags no longer defines `NE`, but the Notes still say extensions may appear \"except where the flag `NE` appears.\" R4 had the key entry, and `080de809...` removed it without removing the note.\n\nWhy it matters: Readers cannot tell which elements prohibit extensions/ids, and FHIR-I later resolved that this needs a rendering fix for cases such as `Element.id`, `Resource.id`, and `Extension.url`.\n\nRecommended next step: Apply `FHIR-50460`/IG Publisher `#1293` by rendering the `NE` flag for affected elements and ensuring the `formats.html` flag key defines it; otherwise remove the stale `NE` sentence.",
+            "whyItMatters": "Readers cannot tell which elements prohibit extensions/ids, and FHIR-I later resolved that this needs a rendering fix for cases such as `Element.id`, `Resource.id`, and `Extension.url`.",
+            "recommendedNextStep": "Apply `FHIR-50460`/IG Publisher `#1293` by rendering the `NE` flag for affected elements and ensuring the `formats.html` flag key defines it; otherwise remove the stale `NE` sentence.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:139-163",
+              "080de8098cee5f70dc7e6bddab7e544c98da3e89",
+              "FHIR-50460",
+              "453902815"
+            ],
+            "limitations": [
+              "- Important caveat: the current R6 ballot4 source predates later `FHIR-50460` resolution work. That later evidence is still relevant because it confirms a current page defect already noticed by FHIR-I.",
+              "- Failed search note: initial Zulip FTS searches for unquoted keys such as `FHIR-26932` failed because FTS parsed the hyphenated key as an expression; the searches were rerun with quoted FTS queries such as `bun run zulip:search fts \"\\\"FHIR-26932\\\"\" --limit 20`.",
+              "- `FHIR-21452` (Published, Persuasive): directly matches removal of the broken/unclear intro sentence \"Other representations are allowed...\" from R4. Snapshot: `bun run jira:search snapshot FHIR-21452`.",
+              "- 2022-08-31: `dfb978...` removes the unclear \"Other representations...\" sentence; `8592e120...` normalizes `datatype` wording."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.236Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

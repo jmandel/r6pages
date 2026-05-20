@@ -1,0 +1,197 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.338Z",
+  "sourceActionFilesGlob": "todo/actions/terminologies-binding-examples.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "terminologies-binding-examples",
+      "actionFilePath": "todo/actions/terminologies-binding-examples.md",
+      "researchFilePath": "todo/research/terminologies-binding-examples.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings: the new `FHIR-38967` examples contain a binding-strength contradiction/wording defects, and a later Vocab decision (`FHIR-54589`) calls for additional-binding examples that are absent from the R6 ballot4 page.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "terminologies-binding-examples-H-001",
+          "localId": "H-001",
+          "pageLabel": "terminologies-binding-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies-binding-examples.html",
+          "title": "Required-binding example text contradicts its own binding strength",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies-binding-examples.html",
+              "lineRange": {
+                "start": 58,
+                "end": 58
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "terminologies-binding-examples action file",
+              "filePath": "todo/actions/terminologies-binding-examples.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies-binding-examples.html:58`, same file lines 62-68, commit `c40179b5decbac4cfba23711fe59fda46454945e`, `FHIR-38967`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "terminologies-binding-examples research appendix",
+              "filePath": "todo/research/terminologies-binding-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies-binding-examples.html:58",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies-binding-examples.html",
+              "lineRange": {
+                "start": 58,
+                "end": 58
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-38967",
+              "label": "FHIR-38967",
+              "url": "https://jira.hl7.org/browse/FHIR-38967",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "c40179b5decbac4cfba23711fe59fda46454945e",
+              "label": "c40179b5decbac4cfba23711fe59fda46454945e",
+              "url": "https://github.com/HL7/fhir/commit/c40179b5decbac4cfba23711fe59fda46454945e",
+              "commitHash": "c40179b5decbac4cfba23711fe59fda46454945e",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The new Required `CodeableConcept` example says the profile binds `Condition.code` \"with an Extensible binding\", but the snippet immediately below says `\"strength\": \"required\"`. The same added section also has likely copy/edit defects: \"version specific finding\" at line 37 and `valueSetCanonical` in an ElementDefinition-like snippet while the preceding Required example uses `valueSet`.",
+            "analysis": "H-001: Required-binding example text contradicts its own binding strength\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies-binding-examples.html:58`, same file lines 62-68, commit `c40179b5decbac4cfba23711fe59fda46454945e`, `FHIR-38967`\n\nProblem: The new Required `CodeableConcept` example says the profile binds `Condition.code` \"with an Extensible binding\", but the snippet immediately below says `\"strength\": \"required\"`. The same added section also has likely copy/edit defects: \"version specific finding\" at line 37 and `valueSetCanonical` in an ElementDefinition-like snippet while the preceding Required example uses `valueSet`.\n\nWhy it matters: This page teaches binding-strength behavior; a Required example that labels itself Extensible can mislead readers about conformance expectations.\n\nRecommended next step: Review the `FHIR-38967` added section with Vocab and correct the label to Required, then clean up the nearby wording/snippet consistency.\n\nIntent-vs-implementation context: See H-001. No other R4 -> R6 intent mismatch was found for the page-specific commits.",
+            "whyItMatters": "This page teaches binding-strength behavior; a Required example that labels itself Extensible can mislead readers about conformance expectations.",
+            "recommendedNextStep": "Review the `FHIR-38967` added section with Vocab and correct the label to Required, then clean up the nearby wording/snippet consistency.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies-binding-examples.html:58",
+              "c40179b5decbac4cfba23711fe59fda46454945e",
+              "FHIR-38967"
+            ],
+            "limitations": [
+              "- Important caveats:",
+              "Failed or caveated searches:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.337Z",
+          "status": "open"
+        },
+        {
+          "id": "terminologies-binding-examples-H-002",
+          "localId": "H-002",
+          "pageLabel": "terminologies-binding-examples",
+          "pagePath": "source/terminologies-binding-examples.html",
+          "title": "Later Vocab decision asks for additional-binding examples not present here",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/terminologies-binding-examples.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "terminologies-binding-examples action file",
+              "filePath": "todo/actions/terminologies-binding-examples.md",
+              "confidence": "high",
+              "quote": "`FHIR-54589`, Confluence page `413042382` (\"Jan 2026 - HL7 WGM - Wednesday Q2 Minutes\"), and `rg -n \"additional binding|additional bindings|binding.additional\" .../source/terminologies-binding-examples.html` finding no additional-binding examples in the R6 ballot4 page"
+            },
+            {
+              "type": "research-appendix",
+              "label": "terminologies-binding-examples research appendix",
+              "filePath": "todo/research/terminologies-binding-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-54589",
+              "label": "FHIR-54589",
+              "url": "https://jira.hl7.org/browse/FHIR-54589",
+              "confidence": "high"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`FHIR-54589`, Confluence page `413042382` (\"Jan 2026 - HL7 WGM - Wednesday Q2 Minutes\"), and `rg -n \"additional binding|additional bindings|binding.additional\" .../source/terminologies-binding-examples.html` finding no additional-binding examples in the R6 ballot4 page\n- Priority: P2\n- Category: overlooked-problem\n- Evidence: `FHIR-54589`, Confluence page `413042382` (\"Jan 2026 - HL7 WGM - Wednesday Q2 Minutes\"), and `rg -n \"additional binding|additional bindings|binding.additional\" .../source/terminologies-binding-examples.html` finding no additional-binding examples in the R6 ballot4 page\n- Problem: The January 2026 Vocab discussion and `FHIR-54589` resolution say to add examples demonstrating additional bindings to the examples page, but this R6 ballot4 page has only Required, Extensible, Preferred, and Example binding examples.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The January 2026 Vocab discussion and `FHIR-54589` resolution say to add examples demonstrating additional bindings to the examples page, but this R6 ballot4 page has only Required, Extensible, Preferred, and Example binding examples.",
+            "analysis": "H-002: Later Vocab decision asks for additional-binding examples not present here\n\nEvidence: `FHIR-54589`, Confluence page `413042382` (\"Jan 2026 - HL7 WGM - Wednesday Q2 Minutes\"), and `rg -n \"additional binding|additional bindings|binding.additional\" .../source/terminologies-binding-examples.html` finding no additional-binding examples in the R6 ballot4 page\n\nProblem: The January 2026 Vocab discussion and `FHIR-54589` resolution say to add examples demonstrating additional bindings to the examples page, but this R6 ballot4 page has only Required, Extensible, Preferred, and Example binding examples.\n\nWhy it matters: Additional bindings have open implementation/validation questions; examples here are the natural reader path for clarifying allowed combinations and subset/non-subset behavior.\n\nRecommended next step: Track `FHIR-54589` application against this page and add an additional-bindings example section or cross-link once the terminology binding guidance text is updated.\n\nOverlooked/newly noticed context: See H-002. A minor typo in the new Example binding paragraph also remains at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies-binding-examples.html:368` (\"use or create their own codes for us\").",
+            "whyItMatters": "Additional bindings have open implementation/validation questions; examples here are the natural reader path for clarifying allowed combinations and subset/non-subset behavior.",
+            "recommendedNextStep": "Track `FHIR-54589` application against this page and add an additional-bindings example section or cross-link once the terminology binding guidance text is updated.",
+            "rawEvidenceQuotes": [
+              "Jan 2026 - HL7 WGM - Wednesday Q2 Minutes",
+              "additional binding|additional bindings|binding.additional",
+              "FHIR-54589",
+              "413042382",
+              "rg -n \"additional binding|additional bindings|binding.additional\" .../source/terminologies-binding-examples.html"
+            ],
+            "limitations": [
+              "- Important caveats:",
+              "Failed or caveated searches:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.338Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 1,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

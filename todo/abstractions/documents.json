@@ -1,0 +1,356 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.207Z",
+  "sourceActionFilesGlob": "todo/actions/documents.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "documents",
+      "actionFilePath": "todo/actions/documents.md",
+      "researchFilePath": "todo/research/documents.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings. The main risk is that two R6 semantic updates appear only partially reconciled with their formal Jira/history trail: document signatures now rely on a generic link despite later Provenance-vs-`Bundle.signature` changes, and the graph-connected Bundle requirement is less explicit on this page than the approved Jira wording and related Bundle notes.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "documents-H-001",
+          "localId": "H-001",
+          "pageLabel": "documents",
+          "pagePath": "source/documents.html",
+          "title": "Document signature text is underspecified after `Bundle.signature` deprecation",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/documents.html",
+              "lineRange": {
+                "start": 133,
+                "end": 135
+              }
+            },
+            {
+              "filePath": "source/signatures.html",
+              "lineRange": {
+                "start": 430,
+                "end": 455
+              }
+            },
+            {
+              "filePath": "source/bundle/structuredefinition-Bundle.xml",
+              "lineRange": {
+                "start": 657,
+                "end": 666
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "documents action file",
+              "filePath": "todo/actions/documents.md",
+              "confidence": "high",
+              "quote": "`source/documents.html:133-135`; commit `f06748cde92aa18ad0830b9f43fbc39639d38026`; `FHIR-46789` (`bun run jira:search snapshot FHIR-46789`); `source/signatures.html:430-455`; `source/bundle/structuredefinition-Bundle.xml:657-666`; Zulip `#IG creation > Signing Bundles`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "documents research appendix",
+              "filePath": "todo/research/documents.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/documents.html:133-135",
+              "filePath": "source/documents.html",
+              "lineRange": {
+                "start": 133,
+                "end": 135
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/signatures.html:430-455",
+              "filePath": "source/signatures.html",
+              "lineRange": {
+                "start": 430,
+                "end": 455
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/bundle/structuredefinition-Bundle.xml:657-666",
+              "filePath": "source/bundle/structuredefinition-Bundle.xml",
+              "lineRange": {
+                "start": 657,
+                "end": 666
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-46789",
+              "label": "FHIR-46789",
+              "url": "https://jira.hl7.org/browse/FHIR-46789",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "f06748cde92aa18ad0830b9f43fbc39639d38026",
+              "label": "f06748cde92aa18ad0830b9f43fbc39639d38026",
+              "url": "https://github.com/HL7/fhir/commit/f06748cde92aa18ad0830b9f43fbc39639d38026",
+              "commitHash": "f06748cde92aa18ad0830b9f43fbc39639d38026",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`source/documents.html:133-135`; commit `f06748cde92aa18ad0830b9f43fbc39639d38026`; `FHIR-46789` (`bun run jira:search snapshot FHIR-46789`); `source/signatures.html:430-455`; `source/bundle/structuredefinition-Bundle.xml:657-666`; Zulip `#IG creation > Signing Bundles`\n- Priority: P2\n- Category: intent-mismatch\n- Evidence: `source/documents.html:133-135`; commit `f06748cde92aa18ad0830b9f43fbc39639d38026`; `FHIR-46789` (`bun run jira:search snapshot FHIR-46789`); `source/signatures.html:430-455`; `source/bundle/structuredefinition-Bundle.xml:657-666`; Zulip `#IG creation > Signing Bundles`\n- Problem: `FHIR-46789` resolved to replace the document signature sentence with wording that explicitly used `Bundle.signature`, but the applied page only says signatures may use the rules on the digital signatures page.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-46789` resolved to replace the document signature sentence with wording that explicitly used `Bundle.signature`, but the applied page only says signatures may use the rules on the digital signatures page. Later R6 work deprecates `Bundle.signature` and says to use Provenance-based signatures, so the Jira resolution, current documents page, and current signature page are not obviously reconciled.",
+            "analysis": "H-001: Document signature text is underspecified after `Bundle.signature` deprecation\n\nEvidence: `source/documents.html:133-135`; commit `f06748cde92aa18ad0830b9f43fbc39639d38026`; `FHIR-46789` (`bun run jira:search snapshot FHIR-46789`); `source/signatures.html:430-455`; `source/bundle/structuredefinition-Bundle.xml:657-666`; Zulip `#IG creation > Signing Bundles`\n\nProblem: `FHIR-46789` resolved to replace the document signature sentence with wording that explicitly used `Bundle.signature`, but the applied page only says signatures may use the rules on the digital signatures page. Later R6 work deprecates `Bundle.signature` and says to use Provenance-based signatures, so the Jira resolution, current documents page, and current signature page are not obviously reconciled.\n\nWhy it matters: implementers trying to sign FHIR documents may not know from this page whether the intended mechanism is deprecated `Bundle.signature`, Provenance signatures, or another signature packaging approach.\n\nRecommended next step: update the documents page or Jira disposition trail to explicitly reconcile `FHIR-46789` with the R6 Provenance-signature decision, e.g., by saying document Bundle signatures use the Provenance-based rules on the digital signatures page and not `Bundle.signature`.\n\nIntent-vs-implementation context: See `H-001` and `H-002`.",
+            "whyItMatters": "implementers trying to sign FHIR documents may not know from this page whether the intended mechanism is deprecated `Bundle.signature`, Provenance signatures, or another signature packaging approach.",
+            "recommendedNextStep": "update the documents page or Jira disposition trail to explicitly reconcile `FHIR-46789` with the R6 Provenance-signature decision, e.g., by saying document Bundle signatures use the Provenance-based rules on the digital signatures page and not `Bundle.signature`.",
+            "rawEvidenceQuotes": [
+              "source/documents.html:133-135",
+              "f06748cde92aa18ad0830b9f43fbc39639d38026",
+              "FHIR-46789",
+              "bun run jira:search snapshot FHIR-46789",
+              "source/signatures.html:430-455",
+              "source/bundle/structuredefinition-Bundle.xml:657-666",
+              "#IG creation > Signing Bundles"
+            ],
+            "limitations": [
+              "- Caveats: I did not download or inspect the Word attachments on `FHIR-39121`; I relied on the Jira snapshot metadata/comments and the actual source patch. Zulip FTS found no direct hits for several issue-key-only searches, likely because Jira bot/noisy streams are not in the default Zulip DB; this is noted in the evidence log. Confluence snapshots normalize minutes into long lines, so exact line numbers inside minutes are less precise than source/Jira locators.",
+              "- `FHIR-15723` changed \"supporting evidence\" to \"supporting details\", strengthened secondary referenced-resource guidance from MAY/implementation choice to SHOULD, and added a contained-resources caveat (`documents.html:68-101`).",
+              "| `991b2cdaf0b31b7fc50153b930cd1c014e554f92` | 2022-08-25 | FHIR-15723 Problems with Documents guide | Substantive: supporting details, secondary references SHOULD, contained-resources caveat, attested-content clarification. |",
+              "| `8fb0ca1ee552beebcb26f6cdc433f62ea56f4a20` | 2023-02-15 | FHIR-38932 Unclear definition of framework | Semantic: uses `CapabilityStatement.document` for conformance assertion. |",
+              "- Later signature-related issues (`FHIR-50934`, `FHIR-51099`, `FHIR-51112`, `FHIR-51133`, `FHIR-52810` etc.) appear in Security/FHIR-I minutes and Zulip as part of the R6 signature overhaul. I did not snapshot each because they mostly concern `signatures.html`, but they support the caveat that the `FHIR-46789` literal `Bundle.signature` replacement was likely superseded by later signature-page work."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.205Z",
+          "status": "open"
+        },
+        {
+          "id": "documents-H-002",
+          "localId": "H-002",
+          "pageLabel": "documents",
+          "pagePath": "source/documents.html",
+          "title": "Graph-connected Bundle requirement is only partially applied on the documents page",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/documents.html",
+              "lineRange": {
+                "start": 103,
+                "end": 114
+              }
+            },
+            {
+              "filePath": "source/bundle/bundle-notes.xml",
+              "lineRange": {
+                "start": 336,
+                "end": 347
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "documents action file",
+              "filePath": "todo/actions/documents.md",
+              "confidence": "high",
+              "quote": "`source/documents.html:103-114`; `source/bundle/bundle-notes.xml:336-347`; commit `e3fe9fdef25099c995e905af26b84a15734f81c4`; `FHIR-45507` (`bun run jira:search snapshot FHIR-45507`); `FHIR-43295` (`bun run jira:search snapshot FHIR-43295`)"
+            },
+            {
+              "type": "research-appendix",
+              "label": "documents research appendix",
+              "filePath": "todo/research/documents.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/documents.html:103-114",
+              "filePath": "source/documents.html",
+              "lineRange": {
+                "start": 103,
+                "end": 114
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/bundle/bundle-notes.xml:336-347",
+              "filePath": "source/bundle/bundle-notes.xml",
+              "lineRange": {
+                "start": 336,
+                "end": 347
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-45507",
+              "label": "FHIR-45507",
+              "url": "https://jira.hl7.org/browse/FHIR-45507",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-43295",
+              "label": "FHIR-43295",
+              "url": "https://jira.hl7.org/browse/FHIR-43295",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "label": "e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "url": "https://github.com/HL7/fhir/commit/e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "commitHash": "e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-45507` says the documents page should point to the new Bundle notes with wording equivalent to \"All document Bundles SHALL be a fully-interconnected graph.\" The current page only adds \"See Graph-connected Bundles\" inside the supporting-information list item, while the related Bundle notes state the broader all-entries graph expectation.",
+            "analysis": "H-002: Graph-connected Bundle requirement is only partially applied on the documents page\n\nEvidence: `source/documents.html:103-114`; `source/bundle/bundle-notes.xml:336-347`; commit `e3fe9fdef25099c995e905af26b84a15734f81c4`; `FHIR-45507` (`bun run jira:search snapshot FHIR-45507`); `FHIR-43295` (`bun run jira:search snapshot FHIR-43295`)\n\nProblem: `FHIR-45507` says the documents page should point to the new Bundle notes with wording equivalent to \"All document Bundles SHALL be a fully-interconnected graph.\" The current page only adds \"See Graph-connected Bundles\" inside the supporting-information list item, while the related Bundle notes state the broader all-entries graph expectation.\n\nWhy it matters: readers may miss that graph-connectedness is a document-Bundle-level requirement, and it is unclear whether supporting collateral such as Binary stylesheet entries are part of the graph requirement or an exception.\n\nRecommended next step: make the documents page state the document-Bundle-level graph requirement explicitly, or clarify any intended exception for supporting collateral.\n\nIntent-vs-implementation context: See `H-001` and `H-002`.",
+            "whyItMatters": "readers may miss that graph-connectedness is a document-Bundle-level requirement, and it is unclear whether supporting collateral such as Binary stylesheet entries are part of the graph requirement or an exception.",
+            "recommendedNextStep": "make the documents page state the document-Bundle-level graph requirement explicitly, or clarify any intended exception for supporting collateral.",
+            "rawEvidenceQuotes": [
+              "source/documents.html:103-114",
+              "source/bundle/bundle-notes.xml:336-347",
+              "e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "FHIR-45507",
+              "bun run jira:search snapshot FHIR-45507",
+              "FHIR-43295",
+              "bun run jira:search snapshot FHIR-43295"
+            ],
+            "limitations": [
+              "- Why it matters: readers may miss that graph-connectedness is a document-Bundle-level requirement, and it is unclear whether supporting collateral such as Binary stylesheet entries are part of the graph requirement or an exception.",
+              "- Caveats: I did not download or inspect the Word attachments on `FHIR-39121`; I relied on the Jira snapshot metadata/comments and the actual source patch. Zulip FTS found no direct hits for several issue-key-only searches, likely because Jira bot/noisy streams are not in the default Zulip DB; this is noted in the evidence log. Confluence snapshots normalize minutes into long lines, so exact line numbers inside minutes are less precise than source/Jira locators.",
+              "- `FHIR-15723` changed \"supporting evidence\" to \"supporting details\", strengthened secondary referenced-resource guidance from MAY/implementation choice to SHOULD, and added a contained-resources caveat (`documents.html:68-101`).",
+              "| `991b2cdaf0b31b7fc50153b930cd1c014e554f92` | 2022-08-25 | FHIR-15723 Problems with Documents guide | Substantive: supporting details, secondary references SHOULD, contained-resources caveat, attested-content clarification. |",
+              "| `8fb0ca1ee552beebcb26f6cdc433f62ea56f4a20` | 2023-02-15 | FHIR-38932 Unclear definition of framework | Semantic: uses `CapabilityStatement.document` for conformance assertion. |",
+              "- Later signature-related issues (`FHIR-50934`, `FHIR-51099`, `FHIR-51112`, `FHIR-51133`, `FHIR-52810` etc.) appear in Security/FHIR-I minutes and Zulip as part of the R6 signature overhaul. I did not snapshot each because they mostly concern `signatures.html`, but they support the caveat that the `FHIR-46789` literal `Bundle.signature` replacement was likely superseded by later signature-page work."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.206Z",
+          "status": "open"
+        },
+        {
+          "id": "documents-E-001",
+          "localId": "E-001",
+          "pageLabel": "documents",
+          "pagePath": "source/documents.html",
+          "title": "Missing punctuation before \"See Graph-connected Bundles\"",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/documents.html",
+              "lineRange": {
+                "start": 110,
+                "end": 113
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "documents action file",
+              "filePath": "todo/actions/documents.md",
+              "confidence": "high",
+              "quote": "`source/documents.html:110-113`; commit `e3fe9fdef25099c995e905af26b84a15734f81c4`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "documents research appendix",
+              "filePath": "todo/research/documents.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/documents.html:110-113",
+              "filePath": "source/documents.html",
+              "lineRange": {
+                "start": 110,
+                "end": 113
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "label": "e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "url": "https://github.com/HL7/fhir/commit/e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "commitHash": "e3fe9fdef25099c995e905af26b84a15734f81c4",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The sentence currently reads as \"`... or a URI See Graph-connected Bundles ...`\" because there is no period or semicolon after the `URI` link.",
+            "analysis": "E-001: Missing punctuation before \"See Graph-connected Bundles\"\n\nEvidence: `source/documents.html:110-113`; commit `e3fe9fdef25099c995e905af26b84a15734f81c4`\n\nProblem: The sentence currently reads as \"`... or a URI See Graph-connected Bundles ...`\" because there is no period or semicolon after the `URI` link.\n\nWhy it matters: this is a reader-facing rendering/editing defect in a normative SHALL list item.\n\nRecommended next step: add punctuation when revising the graph-connected wording.\n\nOverlooked/newly noticed context: See `E-001`.",
+            "whyItMatters": "this is a reader-facing rendering/editing defect in a normative SHALL list item.",
+            "recommendedNextStep": "add punctuation when revising the graph-connected wording.",
+            "rawEvidenceQuotes": [
+              "source/documents.html:110-113",
+              "e3fe9fdef25099c995e905af26b84a15734f81c4"
+            ],
+            "limitations": [
+              "- Caveats: I did not download or inspect the Word attachments on `FHIR-39121`; I relied on the Jira snapshot metadata/comments and the actual source patch. Zulip FTS found no direct hits for several issue-key-only searches, likely because Jira bot/noisy streams are not in the default Zulip DB; this is noted in the evidence log. Confluence snapshots normalize minutes into long lines, so exact line numbers inside minutes are less precise than source/Jira locators.",
+              "- `FHIR-15723` changed \"supporting evidence\" to \"supporting details\", strengthened secondary referenced-resource guidance from MAY/implementation choice to SHOULD, and added a contained-resources caveat (`documents.html:68-101`).",
+              "| `991b2cdaf0b31b7fc50153b930cd1c014e554f92` | 2022-08-25 | FHIR-15723 Problems with Documents guide | Substantive: supporting details, secondary references SHOULD, contained-resources caveat, attested-content clarification. |",
+              "| `8fb0ca1ee552beebcb26f6cdc433f62ea56f4a20` | 2023-02-15 | FHIR-38932 Unclear definition of framework | Semantic: uses `CapabilityStatement.document` for conformance assertion. |",
+              "- Later signature-related issues (`FHIR-50934`, `FHIR-51099`, `FHIR-51112`, `FHIR-51133`, `FHIR-52810` etc.) appear in Security/FHIR-I minutes and Zulip as part of the R6 signature overhaul. I did not snapshot each because they mostly concern `signatures.html`, but they support the caveat that the `FHIR-46789` literal `Bundle.signature` replacement was likely superseded by later signature-page work."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.207Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 2,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

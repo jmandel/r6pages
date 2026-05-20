@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.218Z",
+  "sourceActionFilesGlob": "todo/actions/elementdefinition-mappings.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "elementdefinition-mappings",
+      "actionFilePath": "todo/actions/elementdefinition-mappings.md",
+      "researchFilePath": "todo/research/elementdefinition-mappings.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: a low-priority, concrete editorial typo in the current page. No substantive intent-vs-implementation mismatch was found for the R4 -> R6 ballot4 changes.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "elementdefinition-mappings-E-001",
+          "localId": "E-001",
+          "pageLabel": "elementdefinition-mappings",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-mappings.html",
+          "title": "\"principle differences\" should be \"principal differences\"",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-mappings.html",
+              "lineRange": {
+                "start": 60,
+                "end": 62
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "elementdefinition-mappings action file",
+              "filePath": "todo/actions/elementdefinition-mappings.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-mappings.html:60-62`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "elementdefinition-mappings research appendix",
+              "filePath": "todo/research/elementdefinition-mappings.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-mappings.html:60-62",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-mappings.html",
+              "lineRange": {
+                "start": 60,
+                "end": 62
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The ISO 11179 row says \"the principle differences are\"; in this context it should be \"the principal differences are.\"",
+            "analysis": "E-001: \"principle differences\" should be \"principal differences\"\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-mappings.html:60-62`\n\nProblem: The ISO 11179 row says \"the principle differences are\"; in this context it should be \"the principal differences are.\"\n\nWhy it matters: This is a visible reader-facing typo on an informative mapping page.\n\nRecommended next step: Change `principle differences` to `principal differences`.\n\nOverlooked/newly noticed context: E-001 is a current-page editorial defect not tied to the tracked R4 -> R6 changes.",
+            "whyItMatters": "This is a visible reader-facing typo on an informative mapping page.",
+            "recommendedNextStep": "Change `principle differences` to `principal differences`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-mappings.html:60-62"
+            ],
+            "limitations": [
+              "- Caveats: this review is of the HTML source page. The `<%dtmappings ElementDefinition%>` macro expansion was not generated/read here. The `FHIR-20502` implementation also changed `source/mappingSpaces.xml`, which was inspected only to understand the page commit's intent."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.218Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.279Z",
+  "sourceActionFilesGlob": "todo/actions/nd-json.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "nd-json",
+      "actionFilePath": "todo/actions/nd-json.md",
+      "researchFilePath": "todo/research/nd-json.md",
+      "status": "has-findings",
+      "summary": "Found 3 actionable findings: two reader-facing wording/conformance defects on the now-Normative page, plus one process/evidence gap around the R6 Normative status change.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "nd-json-E-001",
+          "localId": "E-001",
+          "pageLabel": "nd-json",
+          "pagePath": "source/nd-json.html",
+          "title": "Intro says NDJSON is a variant of itself",
+          "kind": "E",
+          "priority": "P3",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/nd-json.html",
+              "lineRange": {
+                "start": 20,
+                "end": 22
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "nd-json action file",
+              "filePath": "todo/actions/nd-json.md",
+              "confidence": "high",
+              "quote": "R6 `source/nd-json.html:20-22` says `NDJSON ... is a variant of the NDJSON format`. Commit `5ff951a...` introduced this while applying `FHIR-31425`, whose request was to use the term `NDJSON` consistently and link the NDJSON spec, not to change the base format from JSON to NDJSON."
+            },
+            {
+              "type": "research-appendix",
+              "label": "nd-json research appendix",
+              "filePath": "todo/research/nd-json.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/nd-json.html:20-22",
+              "filePath": "source/nd-json.html",
+              "lineRange": {
+                "start": 20,
+                "end": 22
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-31425",
+              "label": "FHIR-31425",
+              "url": "https://jira.hl7.org/browse/FHIR-31425",
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "The sentence is self-referential and obscures that NDJSON is a newline-delimited form/variant of JSON.",
+            "analysis": "E-001: Intro says NDJSON is a variant of itself\n\nEvidence: R6 `source/nd-json.html:20-22` says `NDJSON ... is a variant of the NDJSON format`. Commit `5ff951a...` introduced this while applying `FHIR-31425`, whose request was to use the term `NDJSON` consistently and link the NDJSON spec, not to change the base format from JSON to NDJSON.\n\nProblem: The sentence is self-referential and obscures that NDJSON is a newline-delimited form/variant of JSON.\n\nWhy it matters: This page is now marked Normative, so even small definitional wording errors can confuse implementers looking for the authoritative FHIR NDJSON definition.\n\nRecommended next step: Change the sentence to say NDJSON is a variant/profile of JSON for newline-delimited resource streams, while keeping the external NDJSON spec link.\n\nIntent-vs-implementation context: - E-001: `FHIR-31425` intended consistent `NDJSON` naming and an external spec link, but the applied wording says NDJSON is a variant of NDJSON rather than JSON.",
+            "whyItMatters": "This page is now marked Normative, so even small definitional wording errors can confuse implementers looking for the authoritative FHIR NDJSON definition.",
+            "recommendedNextStep": "Change the sentence to say NDJSON is a variant/profile of JSON for newline-delimited resource streams, while keeping the external NDJSON spec link.",
+            "rawEvidenceQuotes": [
+              "source/nd-json.html:20-22",
+              "NDJSON ... is a variant of the NDJSON format",
+              "5ff951a...",
+              "FHIR-31425",
+              "NDJSON"
+            ],
+            "limitations": [
+              "- Caveats: hyphenated FTS searches such as `nd-json` and unquoted Jira keys failed in Jira/Zulip/Confluence because FTS parsed `-` as an operator; corrected SQL `LIKE` searches were used. Confluence `normalized_text` was not a valid column; corrected to `plain_text`. PR searches by commit SHA can return branch-merge PRs; only PRs whose commit list/title matched the page commit are treated as relevant.",
+              "- Caveat/actionable defect: the implementation changed `is a variant of the JSON format` to `is a variant of the NDJSON format`, creating a self-referential sentence not requested by FHIR-31425."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.278Z",
+          "status": "open"
+        },
+        {
+          "id": "nd-json-H-002",
+          "localId": "H-002",
+          "pageLabel": "nd-json",
+          "pagePath": "source/nd-json.html",
+          "title": "Line separator wording is narrower than the linked NDJSON spec",
+          "kind": "H",
+          "priority": "P3",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/nd-json.html",
+              "lineRange": {
+                "start": 20,
+                "end": 24
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "nd-json action file",
+              "filePath": "todo/actions/nd-json.md",
+              "confidence": "high",
+              "quote": "R6 `source/nd-json.html:20-24` links to the NDJSON spec but says resources are separated by `a newline pair (characters 13 and 10)`. The linked NDJSON spec says each JSON text is followed by LF (`\\n`, 0x0A), CR (`\\r`, 0x0D) may precede it, and parsers must accept both LF and CRLF."
+            },
+            {
+              "type": "research-appendix",
+              "label": "nd-json research appendix",
+              "filePath": "todo/research/nd-json.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/nd-json.html:20-24",
+              "filePath": "source/nd-json.html",
+              "lineRange": {
+                "start": 20,
+                "end": 24
+              },
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "FHIR appears to require CRLF only, which is stricter than NDJSON and conflicts with the external spec it cites.",
+            "analysis": "H-002: Line separator wording is narrower than the linked NDJSON spec\n\nEvidence: R6 `source/nd-json.html:20-24` links to the NDJSON spec but says resources are separated by `a newline pair (characters 13 and 10)`. The linked NDJSON spec says each JSON text is followed by LF (`\\n`, 0x0A), CR (`\\r`, 0x0D) may precede it, and parsers must accept both LF and CRLF.\n\nProblem: FHIR appears to require CRLF only, which is stricter than NDJSON and conflicts with the external spec it cites.\n\nWhy it matters: LF-only NDJSON is common and valid NDJSON. A Normative FHIR page that appears to reject LF-only streams can cause avoidable interoperability and validation disagreements.\n\nRecommended next step: Clarify the separator as LF, optionally preceded by CR, e.g. `separated by a newline character (LF, 0x0A; CRLF is also accepted)`.\n\nOverlooked/newly noticed context: - H-002: Current line-separator wording conflicts with the linked NDJSON spec and is more important now that the page is Normative.",
+            "whyItMatters": "LF-only NDJSON is common and valid NDJSON. A Normative FHIR page that appears to reject LF-only streams can cause avoidable interoperability and validation disagreements.",
+            "recommendedNextStep": "Clarify the separator as LF, optionally preceded by CR, e.g. `separated by a newline character (LF, 0x0A; CRLF is also accepted)`.",
+            "rawEvidenceQuotes": [
+              "source/nd-json.html:20-24",
+              "a newline pair (characters 13 and 10)",
+              ", 0x0A), CR ("
+            ],
+            "limitations": [
+              "- Caveats: hyphenated FTS searches such as `nd-json` and unquoted Jira keys failed in Jira/Zulip/Confluence because FTS parsed `-` as an operator; corrected SQL `LIKE` searches were used. Confluence `normalized_text` was not a valid column; corrected to `plain_text`. PR searches by commit SHA can return branch-merge PRs; only PRs whose commit list/title matched the page commit are treated as relevant.",
+              "- Caveat/actionable defect: the implementation changed `is a variant of the JSON format` to `is a variant of the NDJSON format`, creating a self-referential sentence not requested by FHIR-31425."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.279Z",
+          "status": "open"
+        },
+        {
+          "id": "nd-json-G-003",
+          "localId": "G-003",
+          "pageLabel": "nd-json",
+          "pagePath": "source/nd-json.html",
+          "title": "Normative promotion lacks a page-specific rationale link",
+          "kind": "G",
+          "priority": "P3",
+          "category": "evidence-gap",
+          "sourceLocations": [
+            {
+              "filePath": "source/nd-json.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "nd-json action file",
+              "filePath": "todo/actions/nd-json.md",
+              "confidence": "high",
+              "quote": "`FHIR-16500` said the page should not be normative at that time; the 2022 Zulip `Status of ND-JSON` thread concluded Trial Use/FMM4; commit `270e0ceb...` later changed the page to `Normative` with no page-specific Jira key. 2025 FHIR-I WGM minutes say `JSON, NDJSON (already normative)`, but do not show the page-specific ballot/resolution trail."
+            },
+            {
+              "type": "research-appendix",
+              "label": "nd-json research appendix",
+              "filePath": "todo/research/nd-json.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-16500",
+              "label": "FHIR-16500",
+              "url": "https://jira.hl7.org/browse/FHIR-16500",
+              "confidence": "high"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`FHIR-16500` said the page should not be normative at that time; the 2022 Zulip `Status of ND-JSON` thread concluded Trial Use/FMM4; commit `270e0ceb...` later changed the page to `Normative` with no page-specific Jira key.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The standards-status change is substantive, but the trace from Trial Use/FMM4 to R6 Normative is not explicit in the page history.",
+            "analysis": "G-003: Normative promotion lacks a page-specific rationale link\n\nEvidence: `FHIR-16500` said the page should not be normative at that time; the 2022 Zulip `Status of ND-JSON` thread concluded Trial Use/FMM4; commit `270e0ceb...` later changed the page to `Normative` with no page-specific Jira key. 2025 FHIR-I WGM minutes say `JSON, NDJSON (already normative)`, but do not show the page-specific ballot/resolution trail.\n\nProblem: The standards-status change is substantive, but the trace from Trial Use/FMM4 to R6 Normative is not explicit in the page history.\n\nWhy it matters: If the promotion was intentional, implementers and reviewers need a clear decision record; if it was inherited from a broader status sweep, older contrary evidence could make the page status questionable.\n\nRecommended next step: Link or record the R6 normative approval rationale for NDJSON specifically; if none exists, ask FHIR-I to confirm the status before final publication.\n\nOverlooked/newly noticed context: - G-003: The R6 Normative status change has only broad minutes/PR context, not a page-specific Jira or resolution trail.",
+            "whyItMatters": "If the promotion was intentional, implementers and reviewers need a clear decision record; if it was inherited from a broader status sweep, older contrary evidence could make the page status questionable.",
+            "recommendedNextStep": "Link or record the R6 normative approval rationale for NDJSON specifically; if none exists, ask FHIR-I to confirm the status before final publication.",
+            "rawEvidenceQuotes": [
+              "FHIR-16500",
+              "Status of ND-JSON",
+              "270e0ceb...",
+              "Normative",
+              "JSON, NDJSON (already normative)"
+            ],
+            "limitations": [
+              "- Caveats: hyphenated FTS searches such as `nd-json` and unquoted Jira keys failed in Jira/Zulip/Confluence because FTS parsed `-` as an operator; corrected SQL `LIKE` searches were used. Confluence `normalized_text` was not a valid column; corrected to `plain_text`. PR searches by commit SHA can return branch-merge PRs; only PRs whose commit list/title matched the page commit are treated as relevant.",
+              "- Caveat/actionable defect: the implementation changed `is a variant of the JSON format` to `is a variant of the NDJSON format`, creating a self-referential sentence not requested by FHIR-31425."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": true,
+          "dateIdentified": "2026-05-20T19:24:43.279Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 3
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 1
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 1,
+      "other": 0
+    }
+  }
+}

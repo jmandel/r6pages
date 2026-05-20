@@ -1,0 +1,504 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.325Z",
+  "sourceActionFilesGlob": "todo/actions/security.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "security",
+      "actionFilePath": "todo/actions/security.md",
+      "researchFilePath": "todo/research/security.md",
+      "status": "has-findings",
+      "summary": "The page has 5 actionable findings. The main risk is that R6 ballot4 contains normative/security guidance that later Security WG Jira decisions and PR 4066 already revised, plus concrete navigation/link defects that affect readers of the current page.",
+      "findingCount": 5,
+      "findings": [
+        {
+          "id": "security-H-001",
+          "localId": "H-001",
+          "pageLabel": "security",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+          "title": "UDAP/Tiered OAuth SHOULD text was later judged too strong",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+              "lineRange": {
+                "start": 219,
+                "end": 221
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "security action file",
+              "filePath": "todo/actions/security.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:219-221`; `FHIR-53719` (`bun run jira:search snapshot FHIR-53719`); PR https://github.com/HL7/fhir/pull/4066."
+            },
+            {
+              "type": "research-appendix",
+              "label": "security research appendix",
+              "filePath": "todo/research/security.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:219-221",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+              "lineRange": {
+                "start": 219,
+                "end": 221
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53719",
+              "label": "FHIR-53719",
+              "url": "https://jira.hl7.org/browse/FHIR-53719",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/4066",
+              "url": "https://github.com/HL7/fhir/pull/4066",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "R6 ballot4 says UDAP Consumer-Facing/B2B, UDAP Registration and Discovery, and Tiered OAuth for User Authentication `SHOULD` be implemented. `FHIR-53719` says this is premature for the base spec, asks to move UDAP dynamic registration to MAY, and asks to remove Tiered OAuth.",
+            "analysis": "H-001: UDAP/Tiered OAuth SHOULD text was later judged too strong\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:219-221`; `FHIR-53719` (`bun run jira:search snapshot FHIR-53719`); PR https://github.com/HL7/fhir/pull/4066.\n\nProblem: R6 ballot4 says UDAP Consumer-Facing/B2B, UDAP Registration and Discovery, and Tiered OAuth for User Authentication `SHOULD` be implemented. `FHIR-53719` says this is premature for the base spec, asks to move UDAP dynamic registration to MAY, and asks to remove Tiered OAuth.\n\nWhy it matters: A SHOULD-level statement in a Normative page can be read as broad conformance guidance on par with TLS/NTP, even though the later ballot issue says adoption/infrastructure do not justify that strength.\n\nRecommended next step: Ensure the PR 4066/FHIR-53719 wording is included in the target publication and do not carry forward the ballot4 SHOULD language.\n\nIntent-vs-implementation context: - `H-001`, `H-002`, and `E-001` are already addressed by later Jira/PR evidence but remain present in the reviewed R6 ballot4 source.",
+            "whyItMatters": "A SHOULD-level statement in a Normative page can be read as broad conformance guidance on par with TLS/NTP, even though the later ballot issue says adoption/infrastructure do not justify that strength.",
+            "recommendedNextStep": "Ensure the PR 4066/FHIR-53719 wording is included in the target publication and do not carry forward the ballot4 SHOULD language.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:219-221",
+              "FHIR-53719",
+              "bun run jira:search snapshot FHIR-53719"
+            ],
+            "limitations": [
+              "- Important caveat: the review is of the R6 ballot4 source tree only. Several later Jira issues are already marked Applied and bundled in PR 4066 after ballot4; those later decisions are used as evidence that ballot4 text should not be treated as final."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.323Z",
+          "status": "open"
+        },
+        {
+          "id": "security-H-002",
+          "localId": "H-002",
+          "pageLabel": "security",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+          "title": "Mechanical normative-keyword conversions were later corrected",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+              "lineRange": {
+                "start": 28,
+                "end": 35
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "security action file",
+              "filePath": "todo/actions/security.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:28-35`; commit `87b00c9c0de977f8559e0f99694e8664e03a06cd`; `FHIR-53923`; `FHIR-53717`; PR https://github.com/HL7/fhir/pull/4066."
+            },
+            {
+              "type": "research-appendix",
+              "label": "security research appendix",
+              "filePath": "todo/research/security.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:28-35",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+              "lineRange": {
+                "start": 28,
+                "end": 35
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53923",
+              "label": "FHIR-53923",
+              "url": "https://jira.hl7.org/browse/FHIR-53923",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53717",
+              "label": "FHIR-53717",
+              "url": "https://jira.hl7.org/browse/FHIR-53717",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "87b00c9c0de977f8559e0f99694e8664e03a06cd",
+              "label": "87b00c9c0de977f8559e0f99694e8664e03a06cd",
+              "url": "https://github.com/HL7/fhir/commit/87b00c9c0de977f8559e0f99694e8664e03a06cd",
+              "commitHash": "87b00c9c0de977f8559e0f99694e8664e03a06cd",
+              "confidence": "medium"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/4066",
+              "url": "https://github.com/HL7/fhir/pull/4066",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Ballot4 contains uppercase `MAY` in descriptive or forward-looking text, including `FHIR MAY also define...` and `Not all the capabilities that FHIR enables MAY be appropriate or legal...`. Later Jira issues explicitly say these R4-to-R6 normative verb changes were not appropriate.",
+            "analysis": "H-002: Mechanical normative-keyword conversions were later corrected\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:28-35`; commit `87b00c9c0de977f8559e0f99694e8664e03a06cd`; `FHIR-53923`; `FHIR-53717`; PR https://github.com/HL7/fhir/pull/4066.\n\nProblem: Ballot4 contains uppercase `MAY` in descriptive or forward-looking text, including `FHIR MAY also define...` and `Not all the capabilities that FHIR enables MAY be appropriate or legal...`. Later Jira issues explicitly say these R4-to-R6 normative verb changes were not appropriate.\n\nWhy it matters: Uppercase RFC-style terms on a Normative page can create unintended conformance implications or confusing prose.\n\nRecommended next step: Apply the later Jira resolutions: remove the forward-looking `FHIR MAY also define...` sentence and replace the `MAY be appropriate/legal` wording per `FHIR-53923`.\n\nIntent-vs-implementation context: - `H-001`, `H-002`, and `E-001` are already addressed by later Jira/PR evidence but remain present in the reviewed R6 ballot4 source.",
+            "whyItMatters": "Uppercase RFC-style terms on a Normative page can create unintended conformance implications or confusing prose.",
+            "recommendedNextStep": "Apply the later Jira resolutions: remove the forward-looking `FHIR MAY also define...` sentence and replace the `MAY be appropriate/legal` wording per `FHIR-53923`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:28-35",
+              "87b00c9c0de977f8559e0f99694e8664e03a06cd",
+              "FHIR-53923",
+              "FHIR-53717"
+            ],
+            "limitations": [
+              "- Important caveat: the review is of the R6 ballot4 source tree only. Several later Jira issues are already marked Applied and bundled in PR 4066 after ballot4; those later decisions are used as evidence that ballot4 text should not be treated as final."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.323Z",
+          "status": "open"
+        },
+        {
+          "id": "security-H-003",
+          "localId": "H-003",
+          "pageLabel": "security",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+          "title": "Access-control deny audit SHALL is still too broad for all implementations",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+              "lineRange": {
+                "start": 298,
+                "end": 298
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "security action file",
+              "filePath": "todo/actions/security.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:298`; `FHIR-53381` (`bun run jira:search snapshot FHIR-53381`)."
+            },
+            {
+              "type": "research-appendix",
+              "label": "security research appendix",
+              "filePath": "todo/research/security.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:298",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+              "lineRange": {
+                "start": 298,
+                "end": 298
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53381",
+              "label": "FHIR-53381",
+              "url": "https://jira.hl7.org/browse/FHIR-53381",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Ballot4 says any denied access-control decision `SHALL` be recorded. `FHIR-53381` argues this would make systems without deny-audit logging non-conformant with FHIR and records a resolution to change the SHALL to SHOULD.",
+            "analysis": "H-003: Access-control deny audit SHALL is still too broad for all implementations\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:298`; `FHIR-53381` (`bun run jira:search snapshot FHIR-53381`).\n\nProblem: Ballot4 says any denied access-control decision `SHALL` be recorded. `FHIR-53381` argues this would make systems without deny-audit logging non-conformant with FHIR and records a resolution to change the SHALL to SHOULD.\n\nWhy it matters: The current wording turns a best practice into a universal conformance requirement.\n\nRecommended next step: Change `SHALL be recorded` to `SHOULD be recorded` or otherwise scope the requirement to systems/environments where audit logging is expected.\n\nIntent-vs-implementation context: - `H-003` has later Jira agreement to weaken the requirement, but it was not part of PR 4066 and remains a live item to triage/apply.",
+            "whyItMatters": "The current wording turns a best practice into a universal conformance requirement.",
+            "recommendedNextStep": "Change `SHALL be recorded` to `SHOULD be recorded` or otherwise scope the requirement to systems/environments where audit logging is expected.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:298",
+              "FHIR-53381",
+              "bun run jira:search snapshot FHIR-53381"
+            ],
+            "limitations": [
+              "- Important caveat: the review is of the R6 ballot4 source tree only. Several later Jira issues are already marked Applied and bundled in PR 4066 after ballot4; those later decisions are used as evidence that ballot4 text should not be treated as final."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.324Z",
+          "status": "open"
+        },
+        {
+          "id": "security-E-001",
+          "localId": "E-001",
+          "pageLabel": "security",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+          "title": "Summary links point to missing anchors",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+              "lineRange": {
+                "start": 37,
+                "end": 38
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "security action file",
+              "filePath": "todo/actions/security.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:37-38`; `rg` found no `name`/`id` anchors for `input` or `oauth`; `FHIR-56089`; PR https://github.com/HL7/fhir/pull/4066."
+            },
+            {
+              "type": "research-appendix",
+              "label": "security research appendix",
+              "filePath": "todo/research/security.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:37-38",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+              "lineRange": {
+                "start": 37,
+                "end": 38
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-56089",
+              "label": "FHIR-56089",
+              "url": "https://jira.hl7.org/browse/FHIR-56089",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/4066",
+              "url": "https://github.com/HL7/fhir/pull/4066",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`Input Validation` links to `#input` and `When using OAuth` links to `#oauth`, but neither anchor exists on the page.",
+            "analysis": "E-001: Summary links point to missing anchors\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:37-38`; `rg` found no `name`/`id` anchors for `input` or `oauth`; `FHIR-56089`; PR https://github.com/HL7/fhir/pull/4066.\n\nProblem: `Input Validation` links to `#input` and `When using OAuth` links to `#oauth`, but neither anchor exists on the page.\n\nWhy it matters: The checklist navigation is broken for readers and was already confirmed as a page issue.\n\nRecommended next step: Follow `FHIR-56089` and remove the hyperlinks, or add real sections/anchors if the content should become navigable.\n\nIntent-vs-implementation context: - `H-001`, `H-002`, and `E-001` are already addressed by later Jira/PR evidence but remain present in the reviewed R6 ballot4 source.",
+            "whyItMatters": "The checklist navigation is broken for readers and was already confirmed as a page issue.",
+            "recommendedNextStep": "Follow `FHIR-56089` and remove the hyperlinks, or add real sections/anchors if the content should become navigable.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:37-38",
+              " found no ",
+              " anchors for ",
+              " or ",
+              "FHIR-56089"
+            ],
+            "limitations": [
+              "- Important caveat: the review is of the R6 ballot4 source tree only. Several later Jira issues are already marked Applied and bundled in PR 4066 after ballot4; those later decisions are used as evidence that ballot4 text should not be treated as final."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.324Z",
+          "status": "open"
+        },
+        {
+          "id": "security-E-002",
+          "localId": "E-002",
+          "pageLabel": "security",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+          "title": "Cascaded Authorization report links are malformed",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+              "lineRange": {
+                "start": 326,
+                "end": 326
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "security action file",
+              "filePath": "todo/actions/security.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:326`; commits `c1269d57380bacb3d93666b626606e85aa7e4af0`, `bef66cb8437b636c1c08744188fd922e35632e7d`, `6712046fe2ed7241fb52f417642ab09f1527753e`; `FHIR-14081`; Confluence page `66931686`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "security research appendix",
+              "filePath": "todo/research/security.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:326",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html",
+              "lineRange": {
+                "start": 326,
+                "end": 326
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-14081",
+              "label": "FHIR-14081",
+              "url": "https://jira.hl7.org/browse/FHIR-14081",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "c1269d57380bacb3d93666b626606e85aa7e4af0",
+              "label": "c1269d57380bacb3d93666b626606e85aa7e4af0",
+              "url": "https://github.com/HL7/fhir/commit/c1269d57380bacb3d93666b626606e85aa7e4af0",
+              "commitHash": "c1269d57380bacb3d93666b626606e85aa7e4af0",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "bef66cb8437b636c1c08744188fd922e35632e7d",
+              "label": "bef66cb8437b636c1c08744188fd922e35632e7d",
+              "url": "https://github.com/HL7/fhir/commit/bef66cb8437b636c1c08744188fd922e35632e7d",
+              "commitHash": "bef66cb8437b636c1c08744188fd922e35632e7d",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "6712046fe2ed7241fb52f417642ab09f1527753e",
+              "label": "6712046fe2ed7241fb52f417642ab09f1527753e",
+              "url": "https://github.com/HL7/fhir/commit/6712046fe2ed7241fb52f417642ab09f1527753e",
+              "commitHash": "6712046fe2ed7241fb52f417642ab09f1527753e",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:326`; commits `c1269d57380bacb3d93666b626606e85aa7e4af0`, `bef66cb8437b636c1c08744188fd922e35632e7d`, `6712046fe2ed7241fb52f417642ab09f1527753e`; `FHIR-14081`; Confluence page `66931686`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Two Confluence `preview=` URLs contain malformed encodings such as `%266931686/66939023%2Cascaded...` and `%266931686/66939022%2Privacy...`, unlike the nearby correctly encoded UMA link.",
+            "analysis": "E-002: Cascaded Authorization report links are malformed\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:326`; commits `c1269d57380bacb3d93666b626606e85aa7e4af0`, `bef66cb8437b636c1c08744188fd922e35632e7d`, `6712046fe2ed7241fb52f417642ab09f1527753e`; `FHIR-14081`; Confluence page `66931686`.\n\nProblem: Two Confluence `preview=` URLs contain malformed encodings such as `%266931686/66939023%2Cascaded...` and `%266931686/66939022%2Privacy...`, unlike the nearby correctly encoded UMA link.\n\nWhy it matters: Readers may be unable to open the referenced Cascaded Authorization and Privacy Preserving Authorization reports.\n\nRecommended next step: Replace the two malformed URLs with valid Confluence attachment links or correctly encoded preview paths for attachments `66939023` and `66939022`.\n\nOverlooked/newly noticed context: - `E-002` appears to be a concrete link defect left by the 2022 GForge-to-Confluence link migration and follow-up URL encoding commits.",
+            "whyItMatters": "Readers may be unable to open the referenced Cascaded Authorization and Privacy Preserving Authorization reports.",
+            "recommendedNextStep": "Replace the two malformed URLs with valid Confluence attachment links or correctly encoded preview paths for attachments `66939023` and `66939022`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security.html:326",
+              "c1269d57380bacb3d93666b626606e85aa7e4af0",
+              "bef66cb8437b636c1c08744188fd922e35632e7d",
+              "6712046fe2ed7241fb52f417642ab09f1527753e",
+              "FHIR-14081",
+              "66931686"
+            ],
+            "limitations": [
+              "- Important caveat: the review is of the R6 ballot4 source tree only. Several later Jira issues are already marked Applied and bundled in PR 4066 after ballot4; those later decisions are used as evidence that ballot4 text should not be treated as final."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.325Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 5,
+    "byPriority": {
+      "P0": 0,
+      "P1": 2,
+      "P2": 3,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 3,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 2,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 2,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

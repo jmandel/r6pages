@@ -1,0 +1,216 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.327Z",
+  "sourceActionFilesGlob": "todo/actions/services.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "services",
+      "actionFilePath": "todo/actions/services.md",
+      "researchFilePath": "todo/research/services.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings: one status/conformance cleanup gap after the R6 Informative change, and one set of concrete pre-existing editorial defects noticed during the full-page read.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "services-H-001",
+          "localId": "H-001",
+          "pageLabel": "services",
+          "pagePath": "source/services.html",
+          "title": "Informative page still has uppercase MAY conformance language",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/services.html",
+              "lineRange": {
+                "start": 18,
+                "end": 18
+              }
+            },
+            {
+              "filePath": "source/services.html",
+              "lineRange": {
+                "start": 390,
+                "end": 391
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "services action file",
+              "filePath": "todo/actions/services.md",
+              "confidence": "high",
+              "quote": "newer `source/services.html:18` marks the page `Informative`; newer `source/services.html:390-391` says `Services that exchange resources MAY choose...`; commit `270e0ceb7b029dad4ca0fc5ccf5296ff370888cd`; Confluence page `358879917` says `services.html` should be made informative and remove/reframe the `SHOULD maintain resource identity` conformance-language sentence."
+            },
+            {
+              "type": "research-appendix",
+              "label": "services research appendix",
+              "filePath": "todo/research/services.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/services.html:18",
+              "filePath": "source/services.html",
+              "lineRange": {
+                "start": 18,
+                "end": 18
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/services.html:390-391",
+              "filePath": "source/services.html",
+              "lineRange": {
+                "start": 390,
+                "end": 391
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "label": "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "url": "https://github.com/HL7/fhir/commit/270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "commitHash": "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "newer `source/services.html:18` marks the page `Informative`; newer `source/services.html:390-391` says `Services that exchange resources MAY choose...`; commit `270e0ceb7b029dad4ca0fc5ccf5296ff370888cd`; Confluence page `358879917` says `services.html` should be made informative and remove/reframe the `SHOULD maintain resource identity` conformance-language sentence.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "Searches found no Jira/Zulip/Confluence evidence that this remaining conformance keyword was consciously reviewed.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The R6 change removes the uppercase `SHOULD` sentence but leaves an uppercase `MAY` in the same area. Searches found no Jira/Zulip/Confluence evidence that this remaining conformance keyword was consciously reviewed.",
+            "analysis": "H-001: Informative page still has uppercase MAY conformance language\n\nEvidence: newer `source/services.html:18` marks the page `Informative`; newer `source/services.html:390-391` says `Services that exchange resources MAY choose...`; commit `270e0ceb7b029dad4ca0fc5ccf5296ff370888cd`; Confluence page `358879917` says `services.html` should be made informative and remove/reframe the `SHOULD maintain resource identity` conformance-language sentence.\n\nProblem: The R6 change removes the uppercase `SHOULD` sentence but leaves an uppercase `MAY` in the same area. Searches found no Jira/Zulip/Confluence evidence that this remaining conformance keyword was consciously reviewed.\n\nWhy it matters: Readers may still interpret the Informative services page as carrying conformance permissions, undercutting the stated reason for the status/wording change.\n\nRecommended next step: Ask FHIR-I/editorial owners to either lower-case/reword this sentence or document why this particular uppercase `MAY` is intentional on an Informative page.\n\nIntent-vs-implementation context: - H-001 is a possible mismatch/gap: the recorded intent was to make the page Informative and remove/reframe conformance language, but an uppercase `MAY` remains without found rationale.",
+            "whyItMatters": "Readers may still interpret the Informative services page as carrying conformance permissions, undercutting the stated reason for the status/wording change.",
+            "recommendedNextStep": "Ask FHIR-I/editorial owners to either lower-case/reword this sentence or document why this particular uppercase `MAY` is intentional on an Informative page.",
+            "rawEvidenceQuotes": [
+              "source/services.html:18",
+              "Informative",
+              "source/services.html:390-391",
+              "Services that exchange resources MAY choose...",
+              "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "358879917",
+              "services.html",
+              "SHOULD maintain resource identity"
+            ],
+            "limitations": [
+              "- Caveats: no Jira issue was found for the 2025 normative/status/resource-identity change; the strongest rationale is in FHIR-I WGM minutes. The first unquoted Zulip `FHIR-44047` FTS query failed because FTS parsed the hyphenated key; it was rerun quoted and found no results. No rendered-publication check was performed beyond source HTML."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.327Z",
+          "status": "open"
+        },
+        {
+          "id": "services-E-001",
+          "localId": "E-001",
+          "pageLabel": "services",
+          "pagePath": "source/services.html",
+          "title": "Pre-existing reader-facing typos and incomplete sentence remain",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/services.html",
+              "lineRange": {
+                "start": 54,
+                "end": 55
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "services action file",
+              "filePath": "todo/actions/services.md",
+              "confidence": "high",
+              "quote": "newer `source/services.html:54-55` (`that can be deployed that can be used`), `:306` (`error handing`), and `:346` (`event processing needed in complex.`)."
+            },
+            {
+              "type": "research-appendix",
+              "label": "services research appendix",
+              "filePath": "todo/research/services.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/services.html:54-55",
+              "filePath": "source/services.html",
+              "lineRange": {
+                "start": 54,
+                "end": 55
+              },
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "The current page contains obvious wording defects, including an incomplete sentence in the Orchestration section.",
+            "analysis": "E-001: Pre-existing reader-facing typos and incomplete sentence remain\n\nEvidence: newer `source/services.html:54-55` (`that can be deployed that can be used`), `:306` (`error handing`), and `:346` (`event processing needed in complex.`).\n\nProblem: The current page contains obvious wording defects, including an incomplete sentence in the Orchestration section.\n\nWhy it matters: These defects reduce readability on a guidance page that was otherwise touched for R6 cleanup.\n\nRecommended next step: File or bundle an editorial correction to remove the duplicated phrase, fix `error handling`, and complete/reword the line-346 sentence.\n\nOverlooked/newly noticed context: - E-001 lists concrete pre-existing editorial defects visible in the current page and not covered by the tracked changes.",
+            "whyItMatters": "These defects reduce readability on a guidance page that was otherwise touched for R6 cleanup.",
+            "recommendedNextStep": "File or bundle an editorial correction to remove the duplicated phrase, fix `error handling`, and complete/reword the line-346 sentence.",
+            "rawEvidenceQuotes": [
+              "source/services.html:54-55",
+              "that can be deployed that can be used",
+              ":306",
+              "error handing",
+              ":346",
+              "event processing needed in complex."
+            ],
+            "limitations": [
+              "- Caveats: no Jira issue was found for the 2025 normative/status/resource-identity change; the strongest rationale is in FHIR-I WGM minutes. The first unquoted Zulip `FHIR-44047` FTS query failed because FTS parsed the hyphenated key; it was rerun quoted and found no results. No rendered-publication check was performed beyond source HTML."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.327Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 1,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.319Z",
+  "sourceActionFilesGlob": "todo/actions/secpriv-module.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "secpriv-module",
+      "actionFilePath": "todo/actions/secpriv-module.md",
+      "researchFilePath": "todo/research/secpriv-module.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings: one substantive clarity issue around listing Permission after it was moved out of core, and two concrete reader-facing defects in current text.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "secpriv-module-H-001",
+          "localId": "H-001",
+          "pageLabel": "secpriv-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html",
+          "title": "Permission is listed like a module resource after being moved out of core",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html",
+              "lineRange": {
+                "start": 40,
+                "end": 55
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html",
+              "lineRange": {
+                "start": 488,
+                "end": 498
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "secpriv-module action file",
+              "filePath": "todo/actions/secpriv-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:40-55`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:488-498`, commit `0e2a8a7f839d5e1a43787523daccf07d958362f3`, Zulip `#fmg > Assessment of Resources for removal from R6`, Zulip `#Security and Privacy > Permission as additional resource`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "secpriv-module research appendix",
+              "filePath": "todo/research/secpriv-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:40-55",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html",
+              "lineRange": {
+                "start": 40,
+                "end": 55
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:488-498",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html",
+              "lineRange": {
+                "start": 488,
+                "end": 498
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "0e2a8a7f839d5e1a43787523daccf07d958362f3",
+              "label": "0e2a8a7f839d5e1a43787523daccf07d958362f3",
+              "url": "https://github.com/HL7/fhir/commit/0e2a8a7f839d5e1a43787523daccf07d958362f3",
+              "commitHash": "0e2a8a7f839d5e1a43787523daccf07d958362f3",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:40-55`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:488-498`, commit `0e2a8a7f839d5e1a43787523daccf07d958362f3`, Zulip `#fmg > Assessment of Resources for removal from R6`, Zulip `#Security and Privacy > Permission as additional resource`\n- Priority: P2\n- Category: spec-problem\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:40-55`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:488-498`, commit `0e2a8a7f839d5e1a43787523daccf07d958362f3`, Zulip `#fmg > Assessment of Resources for removal from R6`, Zulip `#Security and Privacy > Permission as additional resource`\n- Problem: the current Normative module page lists `Permission` under the \"Resources\" column but links to a CI-build IG after core `source/permission/` was removed.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the current Normative module page lists `Permission` under the \"Resources\" column but links to a CI-build IG after core `source/permission/` was removed. The page does not label Permission as an Additional Resource or work-in-progress, while the roadmap still says future releases will \"develop\" Permission.",
+            "analysis": "H-001: Permission is listed like a module resource after being moved out of core\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:40-55`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:488-498`, commit `0e2a8a7f839d5e1a43787523daccf07d958362f3`, Zulip `#fmg > Assessment of Resources for removal from R6`, Zulip `#Security and Privacy > Permission as additional resource`\n\nProblem: the current Normative module page lists `Permission` under the \"Resources\" column but links to a CI-build IG after core `source/permission/` was removed. The page does not label Permission as an Additional Resource or work-in-progress, while the roadmap still says future releases will \"develop\" Permission.\n\nWhy it matters: readers may infer Permission is a normative/core Security module resource in R6 ballot4, contrary to the later move-out-of-core/additional-resource handling.\n\nRecommended next step: label Permission explicitly as an Additional Resource/work in progress, move it out of the core resource list, or otherwise align the index/roadmap wording with the additional-resource decision and link to the most stable available target.\n\nIntent-vs-implementation context: H-001 is the only material potential mismatch found. The tracked Jira-backed text for access-token enforcement, signature-page migration, audit purging, de-identified profile constraints, and AuditEvent/Consent guidance appears consistent with the cited Jira resolutions.",
+            "whyItMatters": "readers may infer Permission is a normative/core Security module resource in R6 ballot4, contrary to the later move-out-of-core/additional-resource handling.",
+            "recommendedNextStep": "label Permission explicitly as an Additional Resource/work in progress, move it out of the core resource list, or otherwise align the index/roadmap wording with the additional-resource decision and link to the most stable available target.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:40-55",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:488-498",
+              "0e2a8a7f839d5e1a43787523daccf07d958362f3",
+              "#fmg > Assessment of Resources for removal from R6",
+              "#Security and Privacy > Permission as additional resource"
+            ],
+            "limitations": [
+              "- Caveat: this review used the source HTML, not a rendered publisher build. Some links point to generated pages that are not source files, so source-tree absence alone was not treated as proof of broken links."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.318Z",
+          "status": "open"
+        },
+        {
+          "id": "secpriv-module-E-001",
+          "localId": "E-001",
+          "pageLabel": "secpriv-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html",
+          "title": "_revinclude` is misspelled as `_revinc",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html",
+              "lineRange": {
+                "start": 201,
+                "end": 201
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "secpriv-module action file",
+              "filePath": "todo/actions/secpriv-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:201`; correct spelling nearby at `secpriv-module.html:334-336`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "secpriv-module research appendix",
+              "filePath": "todo/research/secpriv-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:201",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html",
+              "lineRange": {
+                "start": 201,
+                "end": 201
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the query-parameter example says `_revinc`, which is not the FHIR search parameter name.",
+            "analysis": "E-001: _revinclude` is misspelled as `_revinc\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:201`; correct spelling nearby at `secpriv-module.html:334-336`\n\nProblem: the query-parameter example says `_revinc`, which is not the FHIR search parameter name.\n\nWhy it matters: this is in authorization guidance and could mislead readers implementing or reviewing `_revinclude` access-control behavior.\n\nRecommended next step: change `_revinc` to `_revinclude`.\n\nOverlooked/newly noticed context: E-001 and E-002 are concrete current-page defects. Other minor typos exist, but they were not included because they are lower signal than the findings above.",
+            "whyItMatters": "this is in authorization guidance and could mislead readers implementing or reviewing `_revinclude` access-control behavior.",
+            "recommendedNextStep": "change `_revinc` to `_revinclude`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:201",
+              "secpriv-module.html:334-336"
+            ],
+            "limitations": [
+              "- Caveat: this review used the source HTML, not a rendered publisher build. Some links point to generated pages that are not source files, so source-tree absence alone was not treated as proof of broken links."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.318Z",
+          "status": "open"
+        },
+        {
+          "id": "secpriv-module-E-002",
+          "localId": "E-002",
+          "pageLabel": "secpriv-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html",
+          "title": "OWASP paragraph renders with a missing space",
+          "kind": "E",
+          "priority": "P3",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html",
+              "lineRange": {
+                "start": 134,
+                "end": 134
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "secpriv-module action file",
+              "filePath": "todo/actions/secpriv-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:134`, `FHIR-34400`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "secpriv-module research appendix",
+              "filePath": "todo/research/secpriv-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:134",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html",
+              "lineRange": {
+                "start": 134,
+                "end": 134
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-34400",
+              "label": "FHIR-34400",
+              "url": "https://jira.hl7.org/browse/FHIR-34400",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the paragraph renders as `OWASP Top Tenand OWASP mobile top 10`.",
+            "analysis": "E-002: OWASP paragraph renders with a missing space\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:134`, `FHIR-34400`\n\nProblem: the paragraph renders as `OWASP Top Tenand OWASP mobile top 10`.\n\nWhy it matters: it is a visible typo in a prominent security warning added by `FHIR-34400`.\n\nRecommended next step: insert a space after the OWASP Top Ten link.\n\nOverlooked/newly noticed context: E-001 and E-002 are concrete current-page defects. Other minor typos exist, but they were not included because they are lower signal than the findings above.",
+            "whyItMatters": "it is a visible typo in a prominent security warning added by `FHIR-34400`.",
+            "recommendedNextStep": "insert a space after the OWASP Top Ten link.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/secpriv-module.html:134",
+              "FHIR-34400"
+            ],
+            "limitations": [
+              "- Caveat: this review used the source HTML, not a rendered publisher build. Some links point to generated pages that are not source files, so source-tree absence alone was not treated as proof of broken links."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.319Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

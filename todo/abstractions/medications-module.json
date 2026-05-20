@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.269Z",
+  "sourceActionFilesGlob": "todo/actions/medications-module.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "medications-module",
+      "actionFilePath": "todo/actions/medications-module.md",
+      "researchFilePath": "todo/research/medications-module.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings. The main risk is an incomplete Additional Resources transition: the R6 ballot4 page points readers to a nonexistent FormularyItem incubator target and still lacks later accepted medications-module cleanup that would separate core normative resources from additional resources.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "medications-module-H-001",
+          "localId": "H-001",
+          "pageLabel": "medications-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/medications-module.html",
+          "title": "FormularyItem replacement path is currently broken",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/medications-module.html",
+              "lineRange": {
+                "start": 49,
+                "end": 49
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "medications-module action file",
+              "filePath": "todo/actions/medications-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/medications-module.html:49`, `:203-204`; commit `9987f9c0c3ce5ec4f277c22ed71cbb2d210efeb6`; `FHIR-50845`; `FHIR-57378`; Confluence page 441128732; 2026-05-20 curl check returned HTTP 404 for `https://build.fhir.org/ig/HL7/phx-incubator/StructureDefinition-FormularyItem`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "medications-module research appendix",
+              "filePath": "todo/research/medications-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/medications-module.html:49",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/medications-module.html",
+              "lineRange": {
+                "start": 49,
+                "end": 49
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-50845",
+              "label": "FHIR-50845",
+              "url": "https://jira.hl7.org/browse/FHIR-50845",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-57378",
+              "label": "FHIR-57378",
+              "url": "https://jira.hl7.org/browse/FHIR-57378",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "9987f9c0c3ce5ec4f277c22ed71cbb2d210efeb6",
+              "label": "9987f9c0c3ce5ec4f277c22ed71cbb2d210efeb6",
+              "url": "https://github.com/HL7/fhir/commit/9987f9c0c3ce5ec4f277c22ed71cbb2d210efeb6",
+              "commitHash": "9987f9c0c3ce5ec4f277c22ed71cbb2d210efeb6",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://build.fhir.org/ig/HL7/phx-incubator/StructureDefinition-FormularyItem`",
+              "url": "https://build.fhir.org/ig/HL7/phx-incubator/StructureDefinition-FormularyItem`",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/medications-module.html:49`, `:203-204`; commit `9987f9c0c3ce5ec4f277c22ed71cbb2d210efeb6`; `FHIR-50845`; `FHIR-57378`; Confluence page 441128732; 2026-05-20 curl check returned HTTP 404 for `https://build.fhir.org/ig/HL7/phx-incubator/StructureDefinition-FormularyItem`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "MedicationKnowledge was removed and FormularyItem was substituted, but the page's FormularyItem link points to a `phx-incubator` target that is not created. The roadmap still references medication knowledge/formulary work without giving implementers the landing/mapping path later requested in `FHIR-57378`.",
+            "analysis": "H-001: FormularyItem replacement path is currently broken\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/medications-module.html:49`, `:203-204`; commit `9987f9c0c3ce5ec4f277c22ed71cbb2d210efeb6`; `FHIR-50845`; `FHIR-57378`; Confluence page 441128732; 2026-05-20 curl check returned HTTP 404 for `https://build.fhir.org/ig/HL7/phx-incubator/StructureDefinition-FormularyItem`.\n\nProblem: MedicationKnowledge was removed and FormularyItem was substituted, but the page's FormularyItem link points to a `phx-incubator` target that is not created. The roadmap still references medication knowledge/formulary work without giving implementers the landing/mapping path later requested in `FHIR-57378`.\n\nWhy it matters: readers cannot find the replacement for removed MedicationKnowledge content, making the R6 transition path unclear and partly broken.\n\nRecommended next step: create/publish the Pharmacy incubator FormularyItem target or change the page to a valid interim target, then add the MedicationKnowledge landing/mapping guidance requested in `FHIR-57378` and update the roadmap text.\n\nIntent-vs-implementation context: - H-001: Pharmacy agreed to remove MedicationKnowledge in favor of FormularyItem/other resources, but the visible FormularyItem replacement link is dead and no landing/mapping guidance is present.\n\nOverlooked/newly noticed context: - H-001: The broken FormularyItem/phx-incubator link is visible in the current page and confirmed by both Confluence incubator status and HTTP 404.",
+            "whyItMatters": "readers cannot find the replacement for removed MedicationKnowledge content, making the R6 transition path unclear and partly broken.",
+            "recommendedNextStep": "create/publish the Pharmacy incubator FormularyItem target or change the page to a valid interim target, then add the MedicationKnowledge landing/mapping guidance requested in `FHIR-57378` and update the roadmap text.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/medications-module.html:49",
+              ":203-204",
+              "9987f9c0c3ce5ec4f277c22ed71cbb2d210efeb6",
+              "FHIR-50845",
+              "FHIR-57378",
+              "https://build.fhir.org/ig/HL7/phx-incubator/StructureDefinition-FormularyItem"
+            ],
+            "limitations": [
+              "- Why it matters: readers cannot find the replacement for removed MedicationKnowledge content, making the R6 transition path unclear and partly broken.",
+              "- Caveats: no PR links were present in the inspected commit metadata. Initial unquoted Zulip FTS searches for issue keys such as `FHIR-38682` failed because the hyphen was parsed by FTS; retried with quoted FTS and SQL `LIKE`, which found no key mentions."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.268Z",
+          "status": "open"
+        },
+        {
+          "id": "medications-module-H-002",
+          "localId": "H-002",
+          "pageLabel": "medications-module",
+          "pagePath": "source/medications-module.html",
+          "title": "Accepted medications-module cleanup is not reflected in the reviewed ballot4 page",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/medications-module.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "medications-module action file",
+              "filePath": "todo/actions/medications-module.md",
+              "confidence": "high",
+              "quote": "current source lines `47-56`, `74`, `100`, `123-129`, `136-161`; `FHIR-53486`; Confluence page 358283983."
+            },
+            {
+              "type": "research-appendix",
+              "label": "medications-module research appendix",
+              "filePath": "todo/research/medications-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53486",
+              "label": "FHIR-53486",
+              "url": "https://jira.hl7.org/browse/FHIR-53486",
+              "confidence": "high"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "current source lines `47-56`, `74`, `100`, `123-129`, `136-161`; `FHIR-53486`; Confluence page 358283983.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-53486` accepted page-specific changes to fix typos, create Normative and Additional Resources subsections, move FormularyItem/ImmunizationEvaluation/ImmunizationRecommendation to Additional Resources, update immunization descriptions, and reorder common use cases. The R6 ballot4 page still intermixes those additional resources in the main index and retains the cited typos.",
+            "analysis": "H-002: Accepted medications-module cleanup is not reflected in the reviewed ballot4 page\n\nEvidence: current source lines `47-56`, `74`, `100`, `123-129`, `136-161`; `FHIR-53486`; Confluence page 358283983.\n\nProblem: `FHIR-53486` accepted page-specific changes to fix typos, create Normative and Additional Resources subsections, move FormularyItem/ImmunizationEvaluation/ImmunizationRecommendation to Additional Resources, update immunization descriptions, and reorder common use cases. The R6 ballot4 page still intermixes those additional resources in the main index and retains the cited typos.\n\nWhy it matters: the current page can mislead readers about which resources remain in core versus external Additional Resources, and it misses a formally accepted workgroup cleanup.\n\nRecommended next step: apply the `FHIR-53486` wording/structure to the medications module page, or verify that it has already been applied in a post-ballot source line before final R6 publication.\n\nIntent-vs-implementation context: - H-002: `FHIR-53486` is accepted/applied in Jira but not visible in the reviewed R6 ballot4 page.",
+            "whyItMatters": "the current page can mislead readers about which resources remain in core versus external Additional Resources, and it misses a formally accepted workgroup cleanup.",
+            "recommendedNextStep": "apply the `FHIR-53486` wording/structure to the medications module page, or verify that it has already been applied in a post-ballot source line before final R6 publication.",
+            "rawEvidenceQuotes": [
+              "47-56",
+              "100",
+              "123-129",
+              "136-161",
+              "FHIR-53486"
+            ],
+            "limitations": [
+              "- Caveats: no PR links were present in the inspected commit metadata. Initial unquoted Zulip FTS searches for issue keys such as `FHIR-38682` failed because the hyphen was parsed by FTS; retried with quoted FTS and SQL `LIKE`, which found no key mentions."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.269Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

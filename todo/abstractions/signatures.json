@@ -1,0 +1,450 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.331Z",
+  "sourceActionFilesGlob": "todo/actions/signatures.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "signatures",
+      "actionFilePath": "todo/actions/signatures.md",
+      "researchFilePath": "todo/research/signatures.md",
+      "status": "has-findings",
+      "summary": "The page has 4 actionable findings. The main risk is that normative signature/canonicalization guidance and worked examples are still inconsistent in places after the R6 rewrite, especially around canonicalization variants, `Bundle.signature` deprecation, and XML signature media types.",
+      "findingCount": 4,
+      "findings": [
+        {
+          "id": "signatures-H-001",
+          "localId": "H-001",
+          "pageLabel": "signatures",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+          "title": "#narrative` canonicalization appears to remove Bundle entries, contradicting nearby text and the Jira intent",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 289,
+                "end": 307
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "signatures action file",
+              "filePath": "todo/actions/signatures.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:289-307`; `FHIR-50934`; commit `66dd40468918876ef3bd89f6be54b58c5f659d98`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "signatures research appendix",
+              "filePath": "todo/research/signatures.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:289-307",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 289,
+                "end": 307
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-50934",
+              "label": "FHIR-50934",
+              "url": "https://jira.hl7.org/browse/FHIR-50934",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "66dd40468918876ef3bd89f6be54b58c5f659d98",
+              "label": "66dd40468918876ef3bd89f6be54b58c5f659d98",
+              "url": "https://github.com/HL7/fhir/commit/66dd40468918876ef3bd89f6be54b58c5f659d98",
+              "commitHash": "66dd40468918876ef3bd89f6be54b58c5f659d98",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the `#narrative` row says \"any bundle entries are removed\", but the following paragraph says path nodes such as `Bundle.entry`/`Bundle.entry.resource` are retained to reach retained Narrative elements. `FHIR-50934` appears to have intended removal of internal references to bundle entries, not removal of the entries themselves.",
+            "analysis": "H-001: #narrative` canonicalization appears to remove Bundle entries, contradicting nearby text and the Jira intent\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:289-307`; `FHIR-50934`; commit `66dd40468918876ef3bd89f6be54b58c5f659d98`\n\nProblem: the `#narrative` row says \"any bundle entries are removed\", but the following paragraph says path nodes such as `Bundle.entry`/`Bundle.entry.resource` are retained to reach retained Narrative elements. `FHIR-50934` appears to have intended removal of internal references to bundle entries, not removal of the entries themselves.\n\nWhy it matters: implementers could canonicalize Bundles differently, making signatures unverifiable across systems.\n\nRecommended next step: clarify whether Bundle entries are retained as path nodes while references/links inside retained narrative may break, and align the text with the `FHIR-50934` resolution.",
+            "whyItMatters": "implementers could canonicalize Bundles differently, making signatures unverifiable across systems.",
+            "recommendedNextStep": "clarify whether Bundle entries are retained as path nodes while references/links inside retained narrative may break, and align the text with the `FHIR-50934` resolution.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:289-307",
+              "FHIR-50934",
+              "66dd40468918876ef3bd89f6be54b58c5f659d98"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "| Jira | `FHIR-52814` | `https://jira.hl7.org/browse/FHIR-52814`; reopen snapshot: `bun run jira:search snapshot FHIR-52814` | Open issue saying document canonicalization and signature/Provenance removal are unclear. |",
+              "- `#document` says to omit `Bundle.metadata` (`new source/signatures.html:299`), but FHIR uses `Bundle.meta`; `FHIR-52814` also says the document canonicalization/signature-removal rules are unclear."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.328Z",
+          "status": "open"
+        },
+        {
+          "id": "signatures-H-002",
+          "localId": "H-002",
+          "pageLabel": "signatures",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+          "title": "#document` canonicalization references unclear/non-existent Bundle metadata and has an open clarity challenge",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 298,
+                "end": 310
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 427,
+                "end": 444
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "signatures action file",
+              "filePath": "todo/actions/signatures.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:298-310`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:427-444`; `FHIR-52814`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "signatures research appendix",
+              "filePath": "todo/research/signatures.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:298-310",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 298,
+                "end": 310
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:427-444",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 427,
+                "end": 444
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-52814",
+              "label": "FHIR-52814",
+              "url": "https://jira.hl7.org/browse/FHIR-52814",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the `#document` row says to omit `Bundle.metadata`, but FHIR Bundles have `Bundle.meta`, not a `Bundle.metadata` element. The embedded-Provenance removal rules also remain hard to interpret, and `FHIR-52814` specifically reports that readers may not understand what is removed for document signatures.",
+            "analysis": "H-002: #document` canonicalization references unclear/non-existent Bundle metadata and has an open clarity challenge\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:298-310`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:427-444`; `FHIR-52814`\n\nProblem: the `#document` row says to omit `Bundle.metadata`, but FHIR Bundles have `Bundle.meta`, not a `Bundle.metadata` element. The embedded-Provenance removal rules also remain hard to interpret, and `FHIR-52814` specifically reports that readers may not understand what is removed for document signatures.\n\nWhy it matters: document-signature verification depends on identical canonical payload construction; ambiguous or incorrect element names create interoperability failures.\n\nRecommended next step: replace `Bundle.metadata` with the intended concrete element(s), and add explicit step-by-step rules for `#document` signing and verification, including which Provenance entries/signature data are removed.",
+            "whyItMatters": "document-signature verification depends on identical canonical payload construction; ambiguous or incorrect element names create interoperability failures.",
+            "recommendedNextStep": "replace `Bundle.metadata` with the intended concrete element(s), and add explicit step-by-step rules for `#document` signing and verification, including which Provenance entries/signature data are removed.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:298-310",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:427-444",
+              "FHIR-52814"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "| Jira | `FHIR-52814` | `https://jira.hl7.org/browse/FHIR-52814`; reopen snapshot: `bun run jira:search snapshot FHIR-52814` | Open issue saying document canonicalization and signature/Provenance removal are unclear. |",
+              "- `#document` says to omit `Bundle.metadata` (`new source/signatures.html:299`), but FHIR uses `Bundle.meta`; `FHIR-52814` also says the document canonicalization/signature-removal rules are unclear."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.329Z",
+          "status": "open"
+        },
+        {
+          "id": "signatures-H-003",
+          "localId": "H-003",
+          "pageLabel": "signatures",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+          "title": "Worked examples still rely on deprecated `Bundle.signature",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 451,
+                "end": 454
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 457,
+                "end": 644
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "signatures action file",
+              "filePath": "todo/actions/signatures.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:451-454`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:457-644`; `FHIR-51099`; commit `9fe4e8ba2ec241ab35dc18046c102c38872e1d50`; Zulip `#Security and Privacy > Bundle.signature`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "signatures research appendix",
+              "filePath": "todo/research/signatures.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:451-454",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 451,
+                "end": 454
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:457-644",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 457,
+                "end": 644
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-51099",
+              "label": "FHIR-51099",
+              "url": "https://jira.hl7.org/browse/FHIR-51099",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "9fe4e8ba2ec241ab35dc18046c102c38872e1d50",
+              "label": "9fe4e8ba2ec241ab35dc18046c102c38872e1d50",
+              "url": "https://github.com/HL7/fhir/commit/9fe4e8ba2ec241ab35dc18046c102c38872e1d50",
+              "commitHash": "9fe4e8ba2ec241ab35dc18046c102c38872e1d50",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:451-454`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:457-644`; `FHIR-51099`; commit `9fe4e8ba2ec241ab35dc18046c102c38872e1d50`; Zulip `#Security and Privacy > Bundle.signature`\n- Priority: P2\n- Category: intent-mismatch\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:451-454`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:457-644`; `FHIR-51099`; commit `9fe4e8ba2ec241ab35dc18046c102c38872e1d50`; Zulip `#Security and Privacy > Bundle.signature`\n- Problem: the page deprecates `Bundle.signature` and recommends Provenance resources, but the examples section says one Bundle example is based on `Bundle.signature` and \"needs to be reworked\", while the detailed JWS example still uses `Bundle.signature` and tells verifiers to remove `Bundle.signature`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page deprecates `Bundle.signature` and recommends Provenance resources, but the examples section says one Bundle example is based on `Bundle.signature` and \"needs to be reworked\", while the detailed JWS example still uses `Bundle.signature` and tells verifiers to remove `Bundle.signature`.",
+            "analysis": "H-003: Worked examples still rely on deprecated `Bundle.signature\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:451-454`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:457-644`; `FHIR-51099`; commit `9fe4e8ba2ec241ab35dc18046c102c38872e1d50`; Zulip `#Security and Privacy > Bundle.signature`\n\nProblem: the page deprecates `Bundle.signature` and recommends Provenance resources, but the examples section says one Bundle example is based on `Bundle.signature` and \"needs to be reworked\", while the detailed JWS example still uses `Bundle.signature` and tells verifiers to remove `Bundle.signature`.\n\nWhy it matters: readers looking for implementation guidance may copy the deprecated pattern instead of the intended Provenance-based approach.\n\nRecommended next step: replace the worked examples with valid Provenance-based Bundle signing examples, or clearly label remaining `Bundle.signature` material as legacy/deprecated and not the preferred R6 pattern.",
+            "whyItMatters": "readers looking for implementation guidance may copy the deprecated pattern instead of the intended Provenance-based approach.",
+            "recommendedNextStep": "replace the worked examples with valid Provenance-based Bundle signing examples, or clearly label remaining `Bundle.signature` material as legacy/deprecated and not the preferred R6 pattern.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:451-454",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:457-644",
+              "FHIR-51099",
+              "9fe4e8ba2ec241ab35dc18046c102c38872e1d50",
+              "#Security and Privacy > Bundle.signature"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "| Jira | `FHIR-52814` | `https://jira.hl7.org/browse/FHIR-52814`; reopen snapshot: `bun run jira:search snapshot FHIR-52814` | Open issue saying document canonicalization and signature/Provenance removal are unclear. |",
+              "- `#document` says to omit `Bundle.metadata` (`new source/signatures.html:299`), but FHIR uses `Bundle.meta`; `FHIR-52814` also says the document canonicalization/signature-removal rules are unclear."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.330Z",
+          "status": "open"
+        },
+        {
+          "id": "signatures-H-004",
+          "localId": "H-004",
+          "pageLabel": "signatures",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+          "title": "XML Digital Signature `sigFormat` conflicts with the Signature datatype text and examples",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 377,
+                "end": 384
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/signature.xml",
+              "lineRange": {
+                "start": 720,
+                "end": 721
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/provenance/provenance-example-sig.xml",
+              "lineRange": {
+                "start": 67,
+                "end": 67
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "signatures action file",
+              "filePath": "todo/actions/signatures.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:377-384`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/signature.xml:720-721`; examples such as `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/provenance/provenance-example-sig.xml:67`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "signatures research appendix",
+              "filePath": "todo/research/signatures.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:377-384",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html",
+              "lineRange": {
+                "start": 377,
+                "end": 384
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/signature.xml:720-721",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/signature.xml",
+              "lineRange": {
+                "start": 720,
+                "end": 721
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/provenance/provenance-example-sig.xml:67",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/provenance/provenance-example-sig.xml",
+              "lineRange": {
+                "start": 67,
+                "end": 67
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the XML Digital Signatures section says `Signature.sigFormat` is `application/pkcs7-signature`, but the Signature datatype definition says the important MIME type for XML DigSig is `application/signature+xml`, and existing examples use `application/signature+xml`.",
+            "analysis": "H-004: XML Digital Signature `sigFormat` conflicts with the Signature datatype text and examples\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:377-384`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/signature.xml:720-721`; examples such as `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/provenance/provenance-example-sig.xml:67`\n\nProblem: the XML Digital Signatures section says `Signature.sigFormat` is `application/pkcs7-signature`, but the Signature datatype definition says the important MIME type for XML DigSig is `application/signature+xml`, and existing examples use `application/signature+xml`.\n\nWhy it matters: this is a direct conformance cue; using different MIME types for the same signature format can break validation, routing, or verification logic.\n\nRecommended next step: confirm the intended MIME type with Security/FHIR-I and align the signatures page, datatype definition, and examples.",
+            "whyItMatters": "this is a direct conformance cue; using different MIME types for the same signature format can break validation, routing, or verification logic.",
+            "recommendedNextStep": "confirm the intended MIME type with Security/FHIR-I and align the signatures page, datatype definition, and examples.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/signatures.html:377-384",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/signature.xml:720-721",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/provenance/provenance-example-sig.xml:67"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "| Jira | `FHIR-52814` | `https://jira.hl7.org/browse/FHIR-52814`; reopen snapshot: `bun run jira:search snapshot FHIR-52814` | Open issue saying document canonicalization and signature/Provenance removal are unclear. |",
+              "- `#document` says to omit `Bundle.metadata` (`new source/signatures.html:299`), but FHIR uses `Bundle.meta`; `FHIR-52814` also says the document canonicalization/signature-removal rules are unclear."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.331Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 4,
+    "byPriority": {
+      "P0": 0,
+      "P1": 2,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 4,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 3,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

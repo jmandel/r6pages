@@ -1,0 +1,175 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.350Z",
+  "sourceActionFilesGlob": "todo/actions/validation.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "validation",
+      "actionFilePath": "todo/actions/validation.md",
+      "researchFilePath": "todo/research/validation.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: the R6 ballot4 validation page still points Schematron readers to the removed `downloads.html#refimpl` XML Tools download, leaving a stale link/instruction after the FHIR-31735 tools split.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "validation-E-001",
+          "localId": "E-001",
+          "pageLabel": "validation",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/validation.html",
+          "title": "Schematron instructions still point to removed XML Tools download",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/validation.html",
+              "lineRange": {
+                "start": 229,
+                "end": 232
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html",
+              "lineRange": {
+                "start": 101,
+                "end": 106
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/downloads.html",
+              "lineRange": {
+                "start": 144,
+                "end": 179
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "validation action file",
+              "filePath": "todo/actions/validation.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/validation.html:229-232`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:101-106`; old target at `fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/downloads.html:144-179`; `FHIR-31735`; Zulip `#committers > XML tools`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "validation research appendix",
+              "filePath": "todo/research/validation.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/validation.html:229-232",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/validation.html",
+              "lineRange": {
+                "start": 229,
+                "end": 232
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:101-106",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html",
+              "lineRange": {
+                "start": 101,
+                "end": 106
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/downloads.html:144-179",
+              "filePath": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/downloads.html",
+              "lineRange": {
+                "start": 144,
+                "end": 179
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-31735",
+              "label": "FHIR-31735",
+              "url": "https://jira.hl7.org/browse/FHIR-31735",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "0da2a0a84dc1",
+              "label": "0da2a0a84dc1",
+              "url": "https://github.com/HL7/fhir/commit/0da2a0a84dc1",
+              "commitHash": "0da2a0a84dc1",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/validation.html:229-232`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:101-106`; old target at `fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/downloads.html:144-179`; `FHIR-31735`; Zulip `#committers > XML tools`\n- Priority: P2\n- Category: rendering\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/validation.html:229-232`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:101-106`; old target at `fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/downloads.html:144-179`; `FHIR-31735`; Zulip `#committers > XML tools`\n- Problem: `validation.html` says `iso_svrl_for_xslt2.xsl` is included in the `XML Tools` download at `downloads.html#refimpl`, but R6 ballot4 `downloads.html` no longer defines `#refimpl` and no longer lists XML Tools.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`validation.html` says `iso_svrl_for_xslt2.xsl` is included in the `XML Tools` download at `downloads.html#refimpl`, but R6 ballot4 `downloads.html` no longer defines `#refimpl` and no longer lists XML Tools.",
+            "analysis": "E-001: Schematron instructions still point to removed XML Tools download\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/validation.html:229-232`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:101-106`; old target at `fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/downloads.html:144-179`; `FHIR-31735`; Zulip `#committers > XML tools`\n\nProblem: `validation.html` says `iso_svrl_for_xslt2.xsl` is included in the `XML Tools` download at `downloads.html#refimpl`, but R6 ballot4 `downloads.html` no longer defines `#refimpl` and no longer lists XML Tools.\n\nWhy it matters: readers trying to run Schematron validation are sent to a removed download/anchor, so the page no longer gives a usable source for the referenced transform.\n\nRecommended next step: update the Schematron paragraph to point to the current location for Schematron/XSLT support files, or remove the XML Tools download claim if there is no current equivalent. When fixing, also check sibling stale references to `downloads.html#refimpl`.\n\nOverlooked/newly noticed context: E-001 covers the current-page problem found during the full-page read.",
+            "whyItMatters": "readers trying to run Schematron validation are sent to a removed download/anchor, so the page no longer gives a usable source for the referenced transform.",
+            "recommendedNextStep": "update the Schematron paragraph to point to the current location for Schematron/XSLT support files, or remove the XML Tools download claim if there is no current equivalent. When fixing, also check sibling stale references to `downloads.html#refimpl`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/validation.html:229-232",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:101-106",
+              "fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/downloads.html:144-179",
+              "FHIR-31735",
+              "#committers > XML tools"
+            ],
+            "limitations": [
+              "- Caveats: first Zulip FTS searches for unquoted Jira keys failed because `FHIR-31735`/`FHIR-44047` were parsed as FTS operators; corrected quoted searches were run. No direct Zulip hit was found for `FHIR-44047`. Confluence FTS for an exact \"Validation Tools\" page did not find a dedicated FHIR page; the applied link goes to the broader FHIR Tools Registry.",
+              "| Source | Current validator caveats | `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/validation.html:171-174` | Generalizes the old Java-validator caveats to validators/common validator code. |",
+              "- Caveat: Jira snapshot status was not \"Applied\" or \"Published\" even though a later source commit applied this page's punctuation changes. This is workflow metadata and not a page content problem."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.350Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

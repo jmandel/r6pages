@@ -1,0 +1,352 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.335Z",
+  "sourceActionFilesGlob": "todo/actions/storage.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "storage",
+      "actionFilePath": "todo/actions/storage.md",
+      "researchFilePath": "todo/research/storage.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings. The main risk is that the updated RDF guidance now points readers toward `fhir:Canonical` while still saying it is describing \"codings\"; two older page-navigation/metadata defects also remain visible in the current source.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "storage-H-001",
+          "localId": "H-001",
+          "pageLabel": "storage",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html",
+          "title": "RDF resolved-link sentence conflates codings with canonical links",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html",
+              "lineRange": {
+                "start": 172,
+                "end": 179
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html",
+              "lineRange": {
+                "start": 492,
+                "end": 515
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "storage action file",
+              "filePath": "todo/actions/storage.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:172-179`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:492-515`, `:518-554`, `:705-715`; commit `8244937cafb494f6c637de64b22982826c5533db`; `FHIR-53178`; PR `https://github.com/HL7/fhir/pull/3852`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "storage research appendix",
+              "filePath": "todo/research/storage.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:172-179",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html",
+              "lineRange": {
+                "start": 172,
+                "end": 179
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:492-515",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html",
+              "lineRange": {
+                "start": 492,
+                "end": 515
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53178",
+              "label": "FHIR-53178",
+              "url": "https://jira.hl7.org/browse/FHIR-53178",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "8244937cafb494f6c637de64b22982826c5533db",
+              "label": "8244937cafb494f6c637de64b22982826c5533db",
+              "url": "https://github.com/HL7/fhir/commit/8244937cafb494f6c637de64b22982826c5533db",
+              "commitHash": "8244937cafb494f6c637de64b22982826c5533db",
+              "confidence": "medium"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/3852`",
+              "url": "https://github.com/HL7/fhir/pull/3852`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the storage page says RDF does the resolved-link pattern for \"references and codings\" but the parenthetical now links to `fhir:Reference` and `fhir:Canonical`. The current RDF page has separate rules for URI/canonical `fhir:l`, references, and coding concept IRIs, so \"codings (`fhir:Canonical`)\" is likely misleading.",
+            "analysis": "H-001: RDF resolved-link sentence conflates codings with canonical links\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:172-179`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:492-515`, `:518-554`, `:705-715`; commit `8244937cafb494f6c637de64b22982826c5533db`; `FHIR-53178`; PR `https://github.com/HL7/fhir/pull/3852`.\n\nProblem: the storage page says RDF does the resolved-link pattern for \"references and codings\" but the parenthetical now links to `fhir:Reference` and `fhir:Canonical`. The current RDF page has separate rules for URI/canonical `fhir:l`, references, and coding concept IRIs, so \"codings (`fhir:Canonical`)\" is likely misleading.\n\nWhy it matters: readers trying to model resolved links in persistent stores may misunderstand whether the guidance is about `Coding`, canonical URI values, references, or all URI-like primitives.\n\nRecommended next step: revise the sentence to name the actual RDF mechanisms, e.g. references plus URI/canonical values via `fhir:l`, and separately link coding concept IRIs if codings are still intended.\n\nIntent-vs-implementation context: H-001 above. No mismatch found for `FHIR-38866`: the request to standardize a resolved-link extension was resolved Not Persuasive / No Change, and the current storage page does not standardize one.",
+            "whyItMatters": "readers trying to model resolved links in persistent stores may misunderstand whether the guidance is about `Coding`, canonical URI values, references, or all URI-like primitives.",
+            "recommendedNextStep": "revise the sentence to name the actual RDF mechanisms, e.g. references plus URI/canonical values via `fhir:l`, and separately link coding concept IRIs if codings are still intended.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:172-179",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:492-515",
+              ":518-554",
+              ":705-715",
+              "8244937cafb494f6c637de64b22982826c5533db",
+              "FHIR-53178",
+              "https://github.com/HL7/fhir/pull/3852"
+            ],
+            "limitations": []
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.334Z",
+          "status": "open"
+        },
+        {
+          "id": "storage-E-001",
+          "localId": "E-001",
+          "pageLabel": "storage",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html",
+          "title": "Duplicate `choice` anchors make `storage.html#choice` ambiguous",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html",
+              "lineRange": {
+                "start": 33,
+                "end": 33
+              }
+            },
+            {
+              "filePath": "source/storage.html",
+              "lineRange": {
+                "start": 33,
+                "end": 33
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "storage action file",
+              "filePath": "todo/actions/storage.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:33`, `:139`; same duplicate existed in R4 at `.../4.0.1-0da2a0a84dc1/source/storage.html:33`, `:137`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "storage research appendix",
+              "filePath": "todo/research/storage.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:33",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html",
+              "lineRange": {
+                "start": 33,
+                "end": 33
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/storage.html:33",
+              "filePath": "source/storage.html",
+              "lineRange": {
+                "start": 33,
+                "end": 33
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-20595",
+              "label": "FHIR-20595",
+              "url": "https://jira.hl7.org/browse/FHIR-20595",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-41344",
+              "label": "FHIR-41344",
+              "url": "https://jira.hl7.org/browse/FHIR-41344",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "0da2a0a84dc1",
+              "label": "0da2a0a84dc1",
+              "url": "https://github.com/HL7/fhir/commit/0da2a0a84dc1",
+              "commitHash": "0da2a0a84dc1",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "both \"Applicability of storing resources natively\" and \"Technology Choices\" declare `<a name=\"choice\"></a>`.",
+            "analysis": "E-001: Duplicate `choice` anchors make `storage.html#choice` ambiguous\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:33`, `:139`; same duplicate existed in R4 at `.../4.0.1-0da2a0a84dc1/source/storage.html:33`, `:137`.\n\nProblem: both \"Applicability of storing resources natively\" and \"Technology Choices\" declare `<a name=\"choice\"></a>`.\n\nWhy it matters: fragment links to `storage.html#choice` cannot unambiguously target the Technology Choices section; related Jira records for different sections (`FHIR-20595`, `FHIR-41344`) both use `storage.html#choice`.\n\nRecommended next step: give \"Technology Choices\" a distinct stable anchor and update any source references that should point there, while preserving backward compatibility if needed.\n\nOverlooked/newly noticed context: E-001 and E-002 above.",
+            "whyItMatters": "fragment links to `storage.html#choice` cannot unambiguously target the Technology Choices section; related Jira records for different sections (`FHIR-20595`, `FHIR-41344`) both use `storage.html#choice`.",
+            "recommendedNextStep": "give \"Technology Choices\" a distinct stable anchor and update any source references that should point there, while preserving backward compatibility if needed.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:33",
+              ":139",
+              ".../4.0.1-0da2a0a84dc1/source/storage.html:33",
+              ":137"
+            ],
+            "limitations": []
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.335Z",
+          "status": "open"
+        },
+        {
+          "id": "storage-E-002",
+          "localId": "E-002",
+          "pageLabel": "storage",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html",
+          "title": "Storage page title still says \"Managing Resource Identity\"",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html",
+              "lineRange": {
+                "start": 4,
+                "end": 4
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html",
+              "lineRange": {
+                "start": 21,
+                "end": 21
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "storage action file",
+              "filePath": "todo/actions/storage.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:4`, `:15`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html:21`, `:32`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "storage research appendix",
+              "filePath": "todo/research/storage.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:4",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html",
+              "lineRange": {
+                "start": 4,
+                "end": 4
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html:21",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html",
+              "lineRange": {
+                "start": 21,
+                "end": 21
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`source/storage.html` sets `[%settitle Managing Resource Identity%]`, duplicating `managing.html` and not matching the storage page heading.",
+            "analysis": "E-002: Storage page title still says \"Managing Resource Identity\"\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:4`, `:15`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html:21`, `:32`.\n\nProblem: `source/storage.html` sets `[%settitle Managing Resource Identity%]`, duplicating `managing.html` and not matching the storage page heading.\n\nWhy it matters: the rendered browser/page title or generated metadata can mislabel the persistent-storage guidance as the identity-management page.\n\nRecommended next step: change the storage page title macro to match the page, such as `Using FHIR in persistent stores`, and verify the rendered title.\n\nOverlooked/newly noticed context: E-001 and E-002 above.",
+            "whyItMatters": "the rendered browser/page title or generated metadata can mislabel the persistent-storage guidance as the identity-management page.",
+            "recommendedNextStep": "change the storage page title macro to match the page, such as `Using FHIR in persistent stores`, and verify the rendered title.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/storage.html:4",
+              ":15",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html:21",
+              ":32"
+            ],
+            "limitations": []
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.335Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

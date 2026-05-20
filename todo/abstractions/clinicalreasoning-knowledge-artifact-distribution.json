@@ -1,0 +1,243 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.151Z",
+  "sourceActionFilesGlob": "todo/actions/clinicalreasoning-knowledge-artifact-distribution.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "clinicalreasoning-knowledge-artifact-distribution",
+      "actionFilePath": "todo/actions/clinicalreasoning-knowledge-artifact-distribution.md",
+      "researchFilePath": "todo/research/clinicalreasoning-knowledge-artifact-distribution.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings: one likely stale DSS search-parameter mapping that could mislead implementers, and one low-risk editorial cleanup item. The tracked Jira-backed changes otherwise appear aligned with the documented intent.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "clinicalreasoning-knowledge-artifact-distribution-H-001",
+          "localId": "H-001",
+          "pageLabel": "clinicalreasoning-knowledge-artifact-distribution",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html",
+          "title": "DSS table still references non-current `KnowledgeArtifact.*` search parameters",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html",
+              "lineRange": {
+                "start": 147,
+                "end": 147
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html",
+              "lineRange": {
+                "start": 149,
+                "end": 149
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/tools/history/release2/search-parameters.xml",
+              "lineRange": {
+                "start": 30867,
+                "end": 30867
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-knowledge-artifact-distribution action file",
+              "filePath": "todo/actions/clinicalreasoning-knowledge-artifact-distribution.md",
+              "confidence": "high",
+              "quote": "current page rows at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:147` and `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:149`; current-tree search found `minScore` only in old release-history data such as `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/tools/history/release2/search-parameters.xml:30867`, while current Library/ActivityDefinition/PlanDefinition/Measure search-param bundles include resource-specific `status`, `topic`, `context`, etc., but no `minScore`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-knowledge-artifact-distribution research appendix",
+              "filePath": "todo/research/clinicalreasoning-knowledge-artifact-distribution.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:147",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html",
+              "lineRange": {
+                "start": 147,
+                "end": 147
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:149",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html",
+              "lineRange": {
+                "start": 149,
+                "end": 149
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/tools/history/release2/search-parameters.xml:30867",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/tools/history/release2/search-parameters.xml",
+              "lineRange": {
+                "start": 30867,
+                "end": 30867
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the DSS mapping table names `KnowledgeArtifact.minScore` and `KnowledgeArtifact.status`, but current R6 source does not appear to define a `KnowledgeArtifact` resource/search-parameter family or a current `minScore` SearchParameter.",
+            "analysis": "H-001: DSS table still references non-current `KnowledgeArtifact.*` search parameters\n\nEvidence: current page rows at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:147` and `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:149`; current-tree search found `minScore` only in old release-history data such as `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/tools/history/release2/search-parameters.xml:30867`, while current Library/ActivityDefinition/PlanDefinition/Measure search-param bundles include resource-specific `status`, `topic`, `context`, etc., but no `minScore`.\n\nProblem: the DSS mapping table names `KnowledgeArtifact.minScore` and `KnowledgeArtifact.status`, but current R6 source does not appear to define a `KnowledgeArtifact` resource/search-parameter family or a current `minScore` SearchParameter.\n\nWhy it matters: readers trying to implement repository search could look for or advertise search parameters that no longer exist in current FHIR core.\n\nRecommended next step: update the DSS mapping table to current resource-specific search parameters, and either mark Minimum Score as not implemented/no current equivalent or point to a current extension/profile if one is intended.\n\nOverlooked/newly noticed context: H-001 is newly noticed inherited/stale text rather than a direct R4-to-R6 diff item. E-001 is a concrete reader-facing cleanup item introduced/retained by the page edits.",
+            "whyItMatters": "readers trying to implement repository search could look for or advertise search parameters that no longer exist in current FHIR core.",
+            "recommendedNextStep": "update the DSS mapping table to current resource-specific search parameters, and either mark Minimum Score as not implemented/no current equivalent or point to a current extension/profile if one is intended.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:147",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:149",
+              "minScore",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/tools/history/release2/search-parameters.xml:30867",
+              "status",
+              "topic",
+              "context"
+            ],
+            "limitations": [
+              "- Caveats: this review used the local source tree and local community-search snapshots, not a rendered-page build. Initial Zulip FTS searches for unquoted hyphenated Jira keys failed; corrected quoted searches found no direct Zulip mentions of `FHIR-27817`, `FHIR-32643`, or `FHIR-53084`."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.150Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-knowledge-artifact-distribution-E-001",
+          "localId": "E-001",
+          "pageLabel": "clinicalreasoning-knowledge-artifact-distribution",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html",
+          "title": "Two reader-facing typos remain in current prose",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html",
+              "lineRange": {
+                "start": 55,
+                "end": 55
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html",
+              "lineRange": {
+                "start": 81,
+                "end": 81
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-knowledge-artifact-distribution action file",
+              "filePath": "todo/actions/clinicalreasoning-knowledge-artifact-distribution.md",
+              "confidence": "high",
+              "quote": "`provide-facing remote decision support` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:55`; `the useContext elements is intended` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:81`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-knowledge-artifact-distribution research appendix",
+              "filePath": "todo/research/clinicalreasoning-knowledge-artifact-distribution.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:55",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html",
+              "lineRange": {
+                "start": 55,
+                "end": 55
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:81",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html",
+              "lineRange": {
+                "start": 81,
+                "end": 81
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "\"provide-facing\" should likely be \"provider-facing\"; \"elements is\" is grammatically inconsistent.",
+            "analysis": "E-001: Two reader-facing typos remain in current prose\n\nEvidence: `provide-facing remote decision support` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:55`; `the useContext elements is intended` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:81`.\n\nProblem: \"provide-facing\" should likely be \"provider-facing\"; \"elements is\" is grammatically inconsistent.\n\nWhy it matters: both are visible in normative-adjacent explanatory text and reduce reader confidence.\n\nRecommended next step: correct both typos in an editorial cleanup.\n\nOverlooked/newly noticed context: H-001 is newly noticed inherited/stale text rather than a direct R4-to-R6 diff item. E-001 is a concrete reader-facing cleanup item introduced/retained by the page edits.",
+            "whyItMatters": "both are visible in normative-adjacent explanatory text and reduce reader confidence.",
+            "recommendedNextStep": "correct both typos in an editorial cleanup.",
+            "rawEvidenceQuotes": [
+              "provide-facing remote decision support",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:55",
+              "the useContext elements is intended",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-distribution.html:81"
+            ],
+            "limitations": [
+              "- Caveats: this review used the local source tree and local community-search snapshots, not a rendered-page build. Initial Zulip FTS searches for unquoted hyphenated Jira keys failed; corrected quoted searches found no direct Zulip mentions of `FHIR-27817`, `FHIR-32643`, or `FHIR-53084`."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.151Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.176Z",
+  "sourceActionFilesGlob": "todo/actions/clinicalreasoning-topics-using-expressions.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "clinicalreasoning-topics-using-expressions",
+      "actionFilePath": "todo/actions/clinicalreasoning-topics-using-expressions.md",
+      "researchFilePath": "todo/research/clinicalreasoning-topics-using-expressions.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings. The main risk is that a Normative R6 page now contains one incorrect canonical UCUM URL and CQL examples that still use the legacy `text/cql` media type where the tracked Jira/Zulip evidence says qualified CQL identifiers should use `text/cql-identifier`.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "clinicalreasoning-topics-using-expressions-H-001",
+          "localId": "H-001",
+          "pageLabel": "clinicalreasoning-topics-using-expressions",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html",
+          "title": "Qualified CQL identifier examples still use `text/cql",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html",
+              "lineRange": {
+                "start": 115,
+                "end": 132
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-topics-using-expressions action file",
+              "filePath": "todo/actions/clinicalreasoning-topics-using-expressions.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:115-132`; `FHIR-35981`; `FHIR-49581`; Zulip `#questionnaire > CQL expression extensions in questionnaire`; Zulip `#hapi > Plan Definition with Conditions syntax help`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-topics-using-expressions research appendix",
+              "filePath": "todo/research/clinicalreasoning-topics-using-expressions.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:115-132",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html",
+              "lineRange": {
+                "start": 115,
+                "end": 132
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-35981",
+              "label": "FHIR-35981",
+              "url": "https://jira.hl7.org/browse/FHIR-35981",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-49581",
+              "label": "FHIR-49581",
+              "url": "https://jira.hl7.org/browse/FHIR-49581",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:115-132`; `FHIR-35981`; `FHIR-49581`; Zulip `#questionnaire > CQL expression extensions in questionnaire`; Zulip `#hapi > Plan Definition with Conditions syntax help`\n- Priority: P1\n- Category: intent-mismatch\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:115-132`; `FHIR-35981`; `FHIR-49581`; Zulip `#questionnaire > CQL expression extensions in questionnaire`; Zulip `#hapi > Plan Definition with Conditions syntax help`\n- Problem: The multiple-library expression-reference examples use `text/cql` at lines 120 and 131, even though the page's own named-expression example uses `text/cql-identifier` at line 99.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The multiple-library expression-reference examples use `text/cql` at lines 120 and 131, even though the page's own named-expression example uses `text/cql-identifier` at line 99. Jira `FHIR-35981` says Using Expressions examples should use `text/cql-expression` or `text/cql-identifier` as appropriate, and `FHIR-49581` says named library expressions use `text/cql-identifier`, qualified when multiple libraries are in scope.",
+            "analysis": "H-001: Qualified CQL identifier examples still use `text/cql\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:115-132`; `FHIR-35981`; `FHIR-49581`; Zulip `#questionnaire > CQL expression extensions in questionnaire`; Zulip `#hapi > Plan Definition with Conditions syntax help`\n\nProblem: The multiple-library expression-reference examples use `text/cql` at lines 120 and 131, even though the page's own named-expression example uses `text/cql-identifier` at line 99. Jira `FHIR-35981` says Using Expressions examples should use `text/cql-expression` or `text/cql-identifier` as appropriate, and `FHIR-49581` says named library expressions use `text/cql-identifier`, qualified when multiple libraries are in scope.\n\nWhy it matters: Implementers may copy these examples and send qualified expression identifiers as raw CQL. Zulip evidence shows this can cause expression-resolution failures and confusion.\n\nRecommended next step: Update the XML and JSON examples to `text/cql-identifier`, unless the workgroup intends these to be inline CQL expressions, in which case update the prose and use `text/cql-expression`.\n\nIntent-vs-implementation context: H-001 is the main mismatch: the retained examples appear broader/older than the Jira and Zulip intent for R5/R6 CQL media-type clarification.",
+            "whyItMatters": "Implementers may copy these examples and send qualified expression identifiers as raw CQL. Zulip evidence shows this can cause expression-resolution failures and confusion.",
+            "recommendedNextStep": "Update the XML and JSON examples to `text/cql-identifier`, unless the workgroup intends these to be inline CQL expressions, in which case update the prose and use `text/cql-expression`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:115-132",
+              "FHIR-35981",
+              "FHIR-49581",
+              "#questionnaire > CQL expression extensions in questionnaire",
+              "#hapi > Plan Definition with Conditions syntax help"
+            ],
+            "limitations": [
+              "- Caveats: most explicit Jira keys had no direct Zulip key hits and no Confluence references. The UCUM typo appears in the current source and is contradicted by FHIRPath text, but no page-specific Jira issue for this typo was found. `FHIR-44047` is still in Jira status `Resolved - change required` even though one punctuation commit touched this page, so it is context for an editorial sweep, not a page-specific disposition."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.173Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-topics-using-expressions-H-002",
+          "localId": "H-002",
+          "pageLabel": "clinicalreasoning-topics-using-expressions",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html",
+          "title": "UCUM system URL is misspelled",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html",
+              "lineRange": {
+                "start": 195,
+                "end": 199
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 194,
+                "end": 202
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-topics-using-expressions action file",
+              "filePath": "todo/actions/clinicalreasoning-topics-using-expressions.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:195-199`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:194-202`; commit `c7660fc81c9a286d9f1db2210560f4d16a29a00f`; `FHIR-28283`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-topics-using-expressions research appendix",
+              "filePath": "todo/research/clinicalreasoning-topics-using-expressions.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:195-199",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html",
+              "lineRange": {
+                "start": 195,
+                "end": 199
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:194-202",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html",
+              "lineRange": {
+                "start": 194,
+                "end": 202
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-28283",
+              "label": "FHIR-28283",
+              "url": "https://jira.hl7.org/browse/FHIR-28283",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "c7660fc81c9a286d9f1db2210560f4d16a29a00f",
+              "label": "c7660fc81c9a286d9f1db2210560f4d16a29a00f",
+              "url": "https://github.com/HL7/fhir/commit/c7660fc81c9a286d9f1db2210560f4d16a29a00f",
+              "commitHash": "c7660fc81c9a286d9f1db2210560f4d16a29a00f",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://unitsofmeausure.org`",
+              "url": "http://unitsofmeausure.org`",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://unitsofmeasure.org`",
+              "url": "http://unitsofmeasure.org`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The new Quantity mapping text says the UCUM system is `http://unitsofmeausure.org`; the correct canonical URL is `http://unitsofmeasure.org`, as shown in the FHIRPath text that `FHIR-28283` asked this page to mirror.",
+            "analysis": "H-002: UCUM system URL is misspelled\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:195-199`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:194-202`; commit `c7660fc81c9a286d9f1db2210560f4d16a29a00f`; `FHIR-28283`\n\nProblem: The new Quantity mapping text says the UCUM system is `http://unitsofmeausure.org`; the correct canonical URL is `http://unitsofmeasure.org`, as shown in the FHIRPath text that `FHIR-28283` asked this page to mirror.\n\nWhy it matters: This is reader-facing normative guidance for when FHIR Quantity can map to CQL `System.Quantity`; copying the typo would produce the wrong coding system.\n\nRecommended next step: Correct the URL to `http://unitsofmeasure.org` and check rendered output for the same typo.\n\nOverlooked/newly noticed context: H-002 and E-001 are concrete current-page defects found while reviewing the R6 ballot4 source. No formal Jira/workgroup decision found in this pass appears to require intentionally keeping either defect.",
+            "whyItMatters": "This is reader-facing normative guidance for when FHIR Quantity can map to CQL `System.Quantity`; copying the typo would produce the wrong coding system.",
+            "recommendedNextStep": "Correct the URL to `http://unitsofmeasure.org` and check rendered output for the same typo.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:195-199",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpath.html:194-202",
+              "c7660fc81c9a286d9f1db2210560f4d16a29a00f",
+              "FHIR-28283"
+            ],
+            "limitations": [
+              "- Caveats: most explicit Jira keys had no direct Zulip key hits and no Confluence references. The UCUM typo appears in the current source and is contradicted by FHIRPath text, but no page-specific Jira issue for this typo was found. `FHIR-44047` is still in Jira status `Resolved - change required` even though one punctuation commit touched this page, so it is context for an editorial sweep, not a page-specific disposition."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.175Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-topics-using-expressions-E-001",
+          "localId": "E-001",
+          "pageLabel": "clinicalreasoning-topics-using-expressions",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html",
+          "title": "Backwards-compatibility note uses a stray `<text>` element",
+          "kind": "E",
+          "priority": "P3",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html",
+              "lineRange": {
+                "start": 90,
+                "end": 90
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-topics-using-expressions action file",
+              "filePath": "todo/actions/clinicalreasoning-topics-using-expressions.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:90`; commit `43b30c68fb2502e969acc862afac259bd4b7d412`; `FHIR-53080`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-topics-using-expressions research appendix",
+              "filePath": "todo/research/clinicalreasoning-topics-using-expressions.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:90",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html",
+              "lineRange": {
+                "start": 90,
+                "end": 90
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53080",
+              "label": "FHIR-53080",
+              "url": "https://jira.hl7.org/browse/FHIR-53080",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "43b30c68fb2502e969acc862afac259bd4b7d412",
+              "label": "43b30c68fb2502e969acc862afac259bd4b7d412",
+              "url": "https://github.com/HL7/fhir/commit/43b30c68fb2502e969acc862afac259bd4b7d412",
+              "commitHash": "43b30c68fb2502e969acc862afac259bd4b7d412",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The sentence says systems may treat `text/cql` as though they had specified `<text>text/cql-identifier</text>`. That appears to be an accidental HTML tag where the surrounding media types use `<code>`.",
+            "analysis": "E-001: Backwards-compatibility note uses a stray `<text>` element\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:90`; commit `43b30c68fb2502e969acc862afac259bd4b7d412`; `FHIR-53080`\n\nProblem: The sentence says systems may treat `text/cql` as though they had specified `<text>text/cql-identifier</text>`. That appears to be an accidental HTML tag where the surrounding media types use `<code>`.\n\nWhy it matters: It creates inconsistent rendering/markup on a Normative page and could fail stricter XHTML checks.\n\nRecommended next step: Replace `<text>text/cql-identifier</text>` with `<code>text/cql-identifier</code>`.\n\nOverlooked/newly noticed context: H-002 and E-001 are concrete current-page defects found while reviewing the R6 ballot4 source. No formal Jira/workgroup decision found in this pass appears to require intentionally keeping either defect.",
+            "whyItMatters": "It creates inconsistent rendering/markup on a Normative page and could fail stricter XHTML checks.",
+            "recommendedNextStep": "Replace `<text>text/cql-identifier</text>` with `<code>text/cql-identifier</code>`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-using-expressions.html:90",
+              "43b30c68fb2502e969acc862afac259bd4b7d412",
+              "FHIR-53080"
+            ],
+            "limitations": [
+              "- Caveats: most explicit Jira keys had no direct Zulip key hits and no Confluence references. The UCUM typo appears in the current source and is contradicted by FHIRPath text, but no page-specific Jira issue for this typo was found. `FHIR-44047` is still in Jira status `Resolved - change required` even though one punctuation commit touched this page, so it is context for an editorial sweep, not a page-specific disposition."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.176Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 2,
+      "P2": 0,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

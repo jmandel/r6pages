@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.243Z",
+  "sourceActionFilesGlob": "todo/actions/help.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "help",
+      "actionFilePath": "todo/actions/help.md",
+      "researchFilePath": "todo/research/help.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable editorial/rendering findings. No substantive conformance or Jira intent mismatch was found; the main risk is that the newly populated glossary still carries stale page metadata and visible import-era typos.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "help-E-001",
+          "localId": "E-001",
+          "pageLabel": "help",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html",
+          "title": "Glossary page still declares itself as Version History",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html",
+              "lineRange": {
+                "start": 3,
+                "end": 3
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "help action file",
+              "filePath": "todo/actions/help.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html:3`, `:20-21`; `FHIR-24866`; Confluence page `78677754`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "help research appendix",
+              "filePath": "todo/research/help.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html:3",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html",
+              "lineRange": {
+                "start": 3,
+                "end": 3
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-24866",
+              "label": "FHIR-24866",
+              "url": "https://jira.hl7.org/browse/FHIR-24866",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html:3`, `:20-21`; `FHIR-24866`; Confluence page `78677754`\n- Priority: P2\n- Category: rendering\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html:3`, `:20-21`; `FHIR-24866`; Confluence page `78677754`\n- Problem: `help.html` now visibly renders as `Glossary`, but the source still has `[%settitle Version History%]` and `<a name=\"history\"></a>`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`help.html` now visibly renders as `Glossary`, but the source still has `[%settitle Version History%]` and `<a name=\"history\"></a>`.",
+            "analysis": "E-001: Glossary page still declares itself as Version History\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html:3`, `:20-21`; `FHIR-24866`; Confluence page `78677754`\n\nProblem: `help.html` now visibly renders as `Glossary`, but the source still has `[%settitle Version History%]` and `<a name=\"history\"></a>`.\n\nWhy it matters: page title/metadata and the top anchor are stale after the glossary was added, which can mislabel the page in browser titles, generated navigation, search results, or deep-link anchors.\n\nRecommended next step: change the source title and top anchor to glossary-specific values, then confirm generated navigation/rendering still links correctly.\n\nOverlooked/newly noticed context: E-001 and E-002 above.",
+            "whyItMatters": "page title/metadata and the top anchor are stale after the glossary was added, which can mislabel the page in browser titles, generated navigation, search results, or deep-link anchors.",
+            "recommendedNextStep": "change the source title and top anchor to glossary-specific values, then confirm generated navigation/rendering still links correctly.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html:3",
+              ":20-21",
+              "FHIR-24866",
+              "78677754"
+            ],
+            "limitations": [
+              "- Important caveat: `FHIR-24666` in the first glossary commit/PR title is a wrong tracker reference; Jira and Zulip show that issue is about Medication `basedOn`, not the glossary. The thread immediately corrected the work to `FHIR-24866`.",
+              "| Confluence | datatype minutes | https://confluence.hl7.org/spaces/FHIRI/pages/66940491/FHIR+Infrastructure+Minutes+CC+20200113 | Mentions `FHIR-25431`; note wording caveat below. Snapshot: `bun run confluence:search snapshot 66940491`. |",
+              "- `FHIR-25431` asks the spec to pick either `data type` or `datatype` and be consistent. The help page application chose `datatype`. Caveat: Confluence minutes for 2020-01-13 contain the phrase `Lloyd: Using \"data type\" Will auto approve`, but the later source application consistently uses `datatype`; I did not find enough evidence to treat this as an actionable mismatch for `help.html`.",
+              "- `FHIR Infrastructure Minutes CC 20200113`, page `66940491`, records `FHIR-25431`: `Lloyd: Using \"data type\" Will auto approve`. This is a caveat because the later source patch chose `datatype`; the current page is at least internally consistent."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.243Z",
+          "status": "open"
+        },
+        {
+          "id": "help-E-002",
+          "localId": "E-002",
+          "pageLabel": "help",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html",
+          "title": "Imported glossary retains obvious reader-facing typos",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html",
+              "lineRange": {
+                "start": 68,
+                "end": 68
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "help action file",
+              "filePath": "todo/actions/help.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html:68`, `:142`, `:1371`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "help research appendix",
+              "filePath": "todo/research/help.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html:68",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html",
+              "lineRange": {
+                "start": 68,
+                "end": 68
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "examples include `an an insurer`, `establishe security measures`, and `StructureDefintion`.",
+            "analysis": "E-002: Imported glossary retains obvious reader-facing typos\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html:68`, `:142`, `:1371`\n\nProblem: examples include `an an insurer`, `establishe security measures`, and `StructureDefintion`.\n\nWhy it matters: these are visible glossary definitions, and the page is intended as a reference aid.\n\nRecommended next step: fix the concrete typos and consider a bounded proofreading pass over the imported glossary text.\n\nOverlooked/newly noticed context: E-001 and E-002 above.",
+            "whyItMatters": "these are visible glossary definitions, and the page is intended as a reference aid.",
+            "recommendedNextStep": "fix the concrete typos and consider a bounded proofreading pass over the imported glossary text.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/help.html:68",
+              ":142",
+              ":1371"
+            ],
+            "limitations": [
+              "- Important caveat: `FHIR-24666` in the first glossary commit/PR title is a wrong tracker reference; Jira and Zulip show that issue is about Medication `basedOn`, not the glossary. The thread immediately corrected the work to `FHIR-24866`.",
+              "| Confluence | datatype minutes | https://confluence.hl7.org/spaces/FHIRI/pages/66940491/FHIR+Infrastructure+Minutes+CC+20200113 | Mentions `FHIR-25431`; note wording caveat below. Snapshot: `bun run confluence:search snapshot 66940491`. |",
+              "- `FHIR-25431` asks the spec to pick either `data type` or `datatype` and be consistent. The help page application chose `datatype`. Caveat: Confluence minutes for 2020-01-13 contain the phrase `Lloyd: Using \"data type\" Will auto approve`, but the later source application consistently uses `datatype`; I did not find enough evidence to treat this as an actionable mismatch for `help.html`.",
+              "- `FHIR Infrastructure Minutes CC 20200113`, page `66940491`, records `FHIR-25431`: `Lloyd: Using \"data type\" Will auto approve`. This is a caveat because the later source patch chose `datatype`; the current page is at least internally consistent."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.243Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

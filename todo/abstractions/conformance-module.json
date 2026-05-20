@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.189Z",
+  "sourceActionFilesGlob": "todo/actions/conformance-module.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "conformance-module",
+      "actionFilePath": "todo/actions/conformance-module.md",
+      "researchFilePath": "todo/research/conformance-module.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings: one P2 broken GraphDefinition/API Incubator link tied to an unresolved R6 Jira issue, and one P3 grammar defect visible in the current page. No substantive intent-vs-implementation mismatch was found for the R6 \"maintenance mode\" roadmap rewrite.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "conformance-module-E-001",
+          "localId": "E-001",
+          "pageLabel": "conformance-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html",
+          "title": "GraphDefinition API Incubator link resolves to 404",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html",
+              "lineRange": {
+                "start": 186,
+                "end": 187
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "conformance-module action file",
+              "filePath": "todo/actions/conformance-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html:186-187`; `FHIR-54250` (`https://jira.hl7.org/browse/FHIR-54250`); `curl -L -I` returned 404 for `http://build.fhir.org/HL7/api-incubator/StructureDefinition-GraphDefinition`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "conformance-module research appendix",
+              "filePath": "todo/research/conformance-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html:186-187",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html",
+              "lineRange": {
+                "start": 186,
+                "end": 187
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-54250",
+              "label": "FHIR-54250",
+              "url": "https://jira.hl7.org/browse/FHIR-54250",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-54250`",
+              "url": "https://jira.hl7.org/browse/FHIR-54250`",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://build.fhir.org/HL7/api-incubator/StructureDefinition-GraphDefinition`",
+              "url": "http://build.fhir.org/HL7/api-incubator/StructureDefinition-GraphDefinition`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the current page tells readers GraphDefinition is in the API Incubator but links to a non-resolving URL. `FHIR-54250` reports the same broken target from another R6 ballot4 page, so the problem is likely cross-page.",
+            "analysis": "E-001: GraphDefinition API Incubator link resolves to 404\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html:186-187`; `FHIR-54250` (`https://jira.hl7.org/browse/FHIR-54250`); `curl -L -I` returned 404 for `http://build.fhir.org/HL7/api-incubator/StructureDefinition-GraphDefinition`\n\nProblem: the current page tells readers GraphDefinition is in the API Incubator but links to a non-resolving URL. `FHIR-54250` reports the same broken target from another R6 ballot4 page, so the problem is likely cross-page.\n\nWhy it matters: readers cannot reach the referenced GraphDefinition replacement/incubator content from the conformance module roadmap.\n\nRecommended next step: coordinate with `FHIR-54250`, identify the intended current API Incubator/Additional Resources target, and update this page plus the other `StructureDefinition-GraphDefinition` references that use the same broken URL.\n\nOverlooked/newly noticed context: E-001 and E-002 above.",
+            "whyItMatters": "readers cannot reach the referenced GraphDefinition replacement/incubator content from the conformance module roadmap.",
+            "recommendedNextStep": "coordinate with `FHIR-54250`, identify the intended current API Incubator/Additional Resources target, and update this page plus the other `StructureDefinition-GraphDefinition` references that use the same broken URL.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html:186-187",
+              "FHIR-54250",
+              "https://jira.hl7.org/browse/FHIR-54250",
+              "curl -L -I",
+              "http://build.fhir.org/HL7/api-incubator/StructureDefinition-GraphDefinition"
+            ],
+            "limitations": [
+              "- Caveats: no PR number was found from local merge history or bounded `gh search prs` searches. Zulip FTS searches for unquoted Jira keys failed because hyphenated keys are parsed as FTS operators; a SQL `LIKE` retry found no key mentions. Some Confluence snapshots have long normalized single-line text, so page IDs/URLs are more useful locators than line numbers.",
+              "- `FHIR-44047` (Resolved - change required, Persuasive, R6 ballot): broad punctuation cleanup for `e.g.,` and `i.e.,`; this page received two comma additions. Confluence minutes `234784975` say \"will fix\". Status being not Applied/Published is a workflow caveat, not a page issue by itself.",
+              "- Zulip key search caveat: direct FTS searches for unquoted `FHIR-24868`, `FHIR-25431`, `FHIR-39179`, `FHIR-44047`, and `FHIR-54250` failed because FTS parsed the hyphenated issue keys as operators. A SQL `LIKE` retry across message content found no key mentions for those keys."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.188Z",
+          "status": "open"
+        },
+        {
+          "id": "conformance-module-E-002",
+          "localId": "E-002",
+          "pageLabel": "conformance-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html",
+          "title": "CapabilityStatement sentence has singular/plural grammar error",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html",
+              "lineRange": {
+                "start": 83,
+                "end": 83
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "conformance-module action file",
+              "filePath": "todo/actions/conformance-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html:83`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "conformance-module research appendix",
+              "filePath": "todo/research/conformance-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html:83",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html",
+              "lineRange": {
+                "start": 83,
+                "end": 83
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page says \"A capability statements use...\" which mixes a singular article with plural noun/verb.",
+            "analysis": "E-002: CapabilityStatement sentence has singular/plural grammar error\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html:83`\n\nProblem: the page says \"A capability statements use...\" which mixes a singular article with plural noun/verb.\n\nWhy it matters: low-priority reader-facing typo in introductory conformance text.\n\nRecommended next step: change to either \"Capability statements use...\" or \"A CapabilityStatement uses...\", matching the page's preferred naming style.\n\nOverlooked/newly noticed context: E-001 and E-002 above.",
+            "whyItMatters": "low-priority reader-facing typo in introductory conformance text.",
+            "recommendedNextStep": "change to either \"Capability statements use...\" or \"A CapabilityStatement uses...\", matching the page's preferred naming style.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/conformance-module.html:83"
+            ],
+            "limitations": [
+              "- Caveats: no PR number was found from local merge history or bounded `gh search prs` searches. Zulip FTS searches for unquoted Jira keys failed because hyphenated keys are parsed as FTS operators; a SQL `LIKE` retry found no key mentions. Some Confluence snapshots have long normalized single-line text, so page IDs/URLs are more useful locators than line numbers.",
+              "- `FHIR-44047` (Resolved - change required, Persuasive, R6 ballot): broad punctuation cleanup for `e.g.,` and `i.e.,`; this page received two comma additions. Confluence minutes `234784975` say \"will fix\". Status being not Applied/Published is a workflow caveat, not a page issue by itself.",
+              "- Zulip key search caveat: direct FTS searches for unquoted `FHIR-24868`, `FHIR-25431`, `FHIR-39179`, `FHIR-44047`, and `FHIR-54250` failed because FTS parsed the hyphenated issue keys as operators. A SQL `LIKE` retry across message content found no key mentions for those keys."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.189Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

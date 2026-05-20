@@ -1,0 +1,489 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.213Z",
+  "sourceActionFilesGlob": "todo/actions/dosage.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "dosage",
+      "actionFilePath": "todo/actions/dosage.md",
+      "researchFilePath": "todo/research/dosage.md",
+      "status": "has-findings",
+      "summary": "The page has 4 actionable findings. The main risk is that R6 ballot4 introduced a breaking DosageDetails model, but some page guidance and related spec text remained ambiguous or was superseded by immediate post-ballot decisions.",
+      "findingCount": 4,
+      "findings": [
+        {
+          "id": "dosage-H-001",
+          "localId": "H-001",
+          "pageLabel": "dosage",
+          "pagePath": "source/dosage.html",
+          "title": "Stale \"multiple dosageInstruction\" wording conflicts with the new 0..1 DosageDetails model",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 47,
+                "end": 49
+              }
+            },
+            {
+              "filePath": "source/medicationrequest/structuredefinition-MedicationRequest.xml",
+              "lineRange": {
+                "start": 850,
+                "end": 877
+              }
+            },
+            {
+              "filePath": "source/medicationdispense/structuredefinition-MedicationDispense.xml",
+              "lineRange": {
+                "start": 729,
+                "end": 743
+              }
+            },
+            {
+              "filePath": "source/datatypes/dosagedetails.xml",
+              "lineRange": {
+                "start": 878,
+                "end": 893
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "dosage action file",
+              "filePath": "todo/actions/dosage.md",
+              "confidence": "high",
+              "quote": "`source/dosage.html:47-49`; `source/medicationrequest/structuredefinition-MedicationRequest.xml:850-877`; `source/medicationdispense/structuredefinition-MedicationDispense.xml:729-743`; `source/datatypes/dosagedetails.xml:878-893`; `FHIR-51540`; PR `https://github.com/HL7/fhir/pull/3974`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "dosage research appendix",
+              "filePath": "todo/research/dosage.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/dosage.html:47-49",
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 47,
+                "end": 49
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/medicationrequest/structuredefinition-MedicationRequest.xml:850-877",
+              "filePath": "source/medicationrequest/structuredefinition-MedicationRequest.xml",
+              "lineRange": {
+                "start": 850,
+                "end": 877
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/medicationdispense/structuredefinition-MedicationDispense.xml:729-743",
+              "filePath": "source/medicationdispense/structuredefinition-MedicationDispense.xml",
+              "lineRange": {
+                "start": 729,
+                "end": 743
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/datatypes/dosagedetails.xml:878-893",
+              "filePath": "source/datatypes/dosagedetails.xml",
+              "lineRange": {
+                "start": 878,
+                "end": 893
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-51540",
+              "label": "FHIR-51540",
+              "url": "https://jira.hl7.org/browse/FHIR-51540",
+              "confidence": "high"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/3974`",
+              "url": "https://github.com/HL7/fhir/pull/3974`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The dosage page says R6 changed MedicationRequest/MedicationDispense/MedicationStatement from multiple `Dosage` entries to one `DosageDetails`, and the structuredefinitions confirm `0..1 DosageDetails`. Related definitions/comments still describe \"multiple dosageInstruction lines\" or \"multiple dosage instructions\" for complex dosing.",
+            "analysis": "H-001: Stale \"multiple dosageInstruction\" wording conflicts with the new 0..1 DosageDetails model\n\nEvidence: `source/dosage.html:47-49`; `source/medicationrequest/structuredefinition-MedicationRequest.xml:850-877`; `source/medicationdispense/structuredefinition-MedicationDispense.xml:729-743`; `source/datatypes/dosagedetails.xml:878-893`; `FHIR-51540`; PR `https://github.com/HL7/fhir/pull/3974`\n\nProblem: The dosage page says R6 changed MedicationRequest/MedicationDispense/MedicationStatement from multiple `Dosage` entries to one `DosageDetails`, and the structuredefinitions confirm `0..1 DosageDetails`. Related definitions/comments still describe \"multiple dosageInstruction lines\" or \"multiple dosage instructions\" for complex dosing.\n\nWhy it matters: Implementers could follow stale guidance and model complex/tapering regimens as multiple `dosageInstruction` entries even though the R6 structure no longer permits that.\n\nRecommended next step: Update related definitions/comments/example labels to point to `DosageDetails.step`/`step.component` rather than multiple `dosageInstruction` instances.",
+            "whyItMatters": "Implementers could follow stale guidance and model complex/tapering regimens as multiple `dosageInstruction` entries even though the R6 structure no longer permits that.",
+            "recommendedNextStep": "Update related definitions/comments/example labels to point to `DosageDetails.step`/`step.component` rather than multiple `dosageInstruction` instances.",
+            "rawEvidenceQuotes": [
+              "source/dosage.html:47-49",
+              "source/medicationrequest/structuredefinition-MedicationRequest.xml:850-877",
+              "source/medicationdispense/structuredefinition-MedicationDispense.xml:729-743",
+              "source/datatypes/dosagedetails.xml:878-893",
+              "FHIR-51540",
+              "https://github.com/HL7/fhir/pull/3974"
+            ],
+            "limitations": [
+              "- Caveats: I did not exhaustively snapshot every post-ballot R6 dosage issue. Exact Zulip searches for `FHIR-33988` and `FHIR-37472` found no hits; the unquoted `FHIR-37472` FTS query failed due hyphen parsing and was rerun quoted. A first ambiguous Zulip snapshot for `Medication Dosage` selected `Maximum Dosage per day`, so exact SQL was used for `#Medication > Dosage`.",
+              "| Source | R6 limitations | `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html:87-103` | New boundary guidance for titration/orchestration/care planning |",
+              "### New limitations/boundaries (`semantic guidance`)",
+              "| `ba10a6f24d181dec80b69dd90e68e0337421e7a0` | 2025-11-11 | wip | https://github.com/HL7/fhir/pull/3974 | Main expansion: title \"Dosage Regimes\", four datatypes, limitations, DosageDetails steps/components, DosageSafety, DosageCondition |",
+              "- `FHIR-51540` is the main formal driver for the R6 rewrite. It started as \"MaxDosePerPeriod to apply across multiple concurrent dosage instruction\" and resolved to modify Dosage, add `DosageDetails` and `DosageSafety`, add examples, add explicit limitations, and add a balloter note. Its comments link the nested datatype Zulip thread and confirm that `sequence` was agreed to be removed. Status was still \"Resolved - change required\" in the local Jira snapshot, but source PR #3974 merged with the page changes.",
+              "| 2025-11-11 to 2025-11-13 | Source commits | PR #3974 builds out `dosage.html` with DosageDetails/Safety/Condition, limitations, renderedInstruction guidance, and balloter note |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.211Z",
+          "status": "open"
+        },
+        {
+          "id": "dosage-H-002",
+          "localId": "H-002",
+          "pageLabel": "dosage",
+          "pagePath": "source/dosage.html",
+          "title": "Component concurrency guidance is internally ambiguous",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 134,
+                "end": 148
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "dosage action file",
+              "filePath": "todo/actions/dosage.md",
+              "confidence": "high",
+              "quote": "`source/dosage.html:134-148`; `FHIR-53687`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "dosage research appendix",
+              "filePath": "todo/research/dosage.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/dosage.html:134-148",
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 134,
+                "end": 148
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53687",
+              "label": "FHIR-53687",
+              "url": "https://jira.hl7.org/browse/FHIR-53687",
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "The page says all components within the same step are concurrent, but immediately gives examples such as \"Different dosages on different days, or different times of the day\" and PRN restrictions. `FHIR-53687` raises this exact concern and remains triaged.",
+            "analysis": "H-002: Component concurrency guidance is internally ambiguous\n\nEvidence: `source/dosage.html:134-148`; `FHIR-53687`\n\nProblem: The page says all components within the same step are concurrent, but immediately gives examples such as \"Different dosages on different days, or different times of the day\" and PRN restrictions. `FHIR-53687` raises this exact concern and remains triaged.\n\nWhy it matters: The difference between concurrent components and sequential/conditional/event-based components affects how systems calculate dosing, timing, and safety limits.\n\nRecommended next step: Clarify whether \"concurrent\" means same step membership, overlapping authorization, or same-time administration; revise examples accordingly.",
+            "whyItMatters": "The difference between concurrent components and sequential/conditional/event-based components affects how systems calculate dosing, timing, and safety limits.",
+            "recommendedNextStep": "Clarify whether \"concurrent\" means same step membership, overlapping authorization, or same-time administration; revise examples accordingly.",
+            "rawEvidenceQuotes": [
+              "source/dosage.html:134-148",
+              "FHIR-53687"
+            ],
+            "limitations": [
+              "- Caveats: I did not exhaustively snapshot every post-ballot R6 dosage issue. Exact Zulip searches for `FHIR-33988` and `FHIR-37472` found no hits; the unquoted `FHIR-37472` FTS query failed due hyphen parsing and was rerun quoted. A first ambiguous Zulip snapshot for `Medication Dosage` selected `Maximum Dosage per day`, so exact SQL was used for `#Medication > Dosage`.",
+              "| Source | R6 limitations | `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html:87-103` | New boundary guidance for titration/orchestration/care planning |",
+              "### New limitations/boundaries (`semantic guidance`)",
+              "| `ba10a6f24d181dec80b69dd90e68e0337421e7a0` | 2025-11-11 | wip | https://github.com/HL7/fhir/pull/3974 | Main expansion: title \"Dosage Regimes\", four datatypes, limitations, DosageDetails steps/components, DosageSafety, DosageCondition |",
+              "- `FHIR-51540` is the main formal driver for the R6 rewrite. It started as \"MaxDosePerPeriod to apply across multiple concurrent dosage instruction\" and resolved to modify Dosage, add `DosageDetails` and `DosageSafety`, add examples, add explicit limitations, and add a balloter note. Its comments link the nested datatype Zulip thread and confirm that `sequence` was agreed to be removed. Status was still \"Resolved - change required\" in the local Jira snapshot, but source PR #3974 merged with the page changes.",
+              "| 2025-11-11 to 2025-11-13 | Source commits | PR #3974 builds out `dosage.html` with DosageDetails/Safety/Condition, limitations, renderedInstruction guidance, and balloter note |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.212Z",
+          "status": "open"
+        },
+        {
+          "id": "dosage-H-003",
+          "localId": "H-003",
+          "pageLabel": "dosage",
+          "pagePath": "source/dosage.html",
+          "title": "Safety levels need relationship/boundary guidance",
+          "kind": "H",
+          "priority": "P1",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 110,
+                "end": 114
+              }
+            },
+            {
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 195,
+                "end": 209
+              }
+            },
+            {
+              "filePath": "source/datatypes/dosagedetails.xml",
+              "lineRange": {
+                "start": 1062,
+                "end": 1091
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "dosage action file",
+              "filePath": "todo/actions/dosage.md",
+              "confidence": "high",
+              "quote": "`source/dosage.html:110-114`, `source/dosage.html:195-209`; `source/datatypes/dosagedetails.xml:1062-1091`; `FHIR-54557`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "dosage research appendix",
+              "filePath": "todo/research/dosage.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/dosage.html:110-114",
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 110,
+                "end": 114
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/dosage.html:195-209",
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 195,
+                "end": 209
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/datatypes/dosagedetails.xml:1062-1091",
+              "filePath": "source/datatypes/dosagedetails.xml",
+              "lineRange": {
+                "start": 1062,
+                "end": 1091
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-54557",
+              "label": "FHIR-54557",
+              "url": "https://jira.hl7.org/browse/FHIR-54557",
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "The ballot4 page introduces safety information at multiple levels but does not explain whether higher-level safety aggregates lower-level safety, whether safety should be populated at the most precise level, or when step-level safety is appropriate.",
+            "analysis": "H-003: Safety levels need relationship/boundary guidance\n\nEvidence: `source/dosage.html:110-114`, `source/dosage.html:195-209`; `source/datatypes/dosagedetails.xml:1062-1091`; `FHIR-54557`\n\nProblem: The ballot4 page introduces safety information at multiple levels but does not explain whether higher-level safety aggregates lower-level safety, whether safety should be populated at the most precise level, or when step-level safety is appropriate.\n\nWhy it matters: The issue is explicitly about medication safety, and ambiguous placement can lead to missed or double-counted dose limits.\n\nRecommended next step: Apply the `FHIR-54557` clarification text to the DosageDetails section and align examples with the chosen safety-level rules.",
+            "whyItMatters": "The issue is explicitly about medication safety, and ambiguous placement can lead to missed or double-counted dose limits.",
+            "recommendedNextStep": "Apply the `FHIR-54557` clarification text to the DosageDetails section and align examples with the chosen safety-level rules.",
+            "rawEvidenceQuotes": [
+              "source/dosage.html:110-114",
+              "source/dosage.html:195-209",
+              "source/datatypes/dosagedetails.xml:1062-1091",
+              "FHIR-54557"
+            ],
+            "limitations": [
+              "- Caveats: I did not exhaustively snapshot every post-ballot R6 dosage issue. Exact Zulip searches for `FHIR-33988` and `FHIR-37472` found no hits; the unquoted `FHIR-37472` FTS query failed due hyphen parsing and was rerun quoted. A first ambiguous Zulip snapshot for `Medication Dosage` selected `Maximum Dosage per day`, so exact SQL was used for `#Medication > Dosage`.",
+              "| Source | R6 limitations | `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html:87-103` | New boundary guidance for titration/orchestration/care planning |",
+              "### New limitations/boundaries (`semantic guidance`)",
+              "| `ba10a6f24d181dec80b69dd90e68e0337421e7a0` | 2025-11-11 | wip | https://github.com/HL7/fhir/pull/3974 | Main expansion: title \"Dosage Regimes\", four datatypes, limitations, DosageDetails steps/components, DosageSafety, DosageCondition |",
+              "- `FHIR-51540` is the main formal driver for the R6 rewrite. It started as \"MaxDosePerPeriod to apply across multiple concurrent dosage instruction\" and resolved to modify Dosage, add `DosageDetails` and `DosageSafety`, add examples, add explicit limitations, and add a balloter note. Its comments link the nested datatype Zulip thread and confirm that `sequence` was agreed to be removed. Status was still \"Resolved - change required\" in the local Jira snapshot, but source PR #3974 merged with the page changes.",
+              "| 2025-11-11 to 2025-11-13 | Source commits | PR #3974 builds out `dosage.html` with DosageDetails/Safety/Condition, limitations, renderedInstruction guidance, and balloter note |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.212Z",
+          "status": "open"
+        },
+        {
+          "id": "dosage-H-004",
+          "localId": "H-004",
+          "pageLabel": "dosage",
+          "pagePath": "source/dosage.html",
+          "title": "Post-ballot applied decisions supersede ballot4 `simple` and `renderedInstruction` guidance",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 56,
+                "end": 84
+              }
+            },
+            {
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 110,
+                "end": 113
+              }
+            },
+            {
+              "filePath": "source/datatypes/dosagedetails.xml",
+              "lineRange": {
+                "start": 878,
+                "end": 917
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "dosage action file",
+              "filePath": "todo/actions/dosage.md",
+              "confidence": "high",
+              "quote": "`source/dosage.html:56-84`, `source/dosage.html:110-113`; `source/datatypes/dosagedetails.xml:878-917`; `FHIR-54014`; `FHIR-54651`; Confluence `413255873`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "dosage research appendix",
+              "filePath": "todo/research/dosage.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/dosage.html:56-84",
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 56,
+                "end": 84
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/dosage.html:110-113",
+              "filePath": "source/dosage.html",
+              "lineRange": {
+                "start": 110,
+                "end": 113
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/datatypes/dosagedetails.xml:878-917",
+              "filePath": "source/datatypes/dosagedetails.xml",
+              "lineRange": {
+                "start": 878,
+                "end": 917
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-54014",
+              "label": "FHIR-54014",
+              "url": "https://jira.hl7.org/browse/FHIR-54014",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-54651",
+              "label": "FHIR-54651",
+              "url": "https://jira.hl7.org/browse/FHIR-54651",
+              "confidence": "high"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`source/dosage.html:56-84`, `source/dosage.html:110-113`; `source/datatypes/dosagedetails.xml:878-917`; `FHIR-54014`; `FHIR-54651`; Confluence `413255873`\n- Priority: P2\n- Category: intent-mismatch\n- Evidence: `source/dosage.html:56-84`, `source/dosage.html:110-113`; `source/datatypes/dosagedetails.xml:878-917`; `FHIR-54014`; `FHIR-54651`; Confluence `413255873`\n- Problem: Ballot4 says `renderedInstruction` is optional/SHOULD and describes `simple` as an alternative to step-based structure.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Ballot4 says `renderedInstruction` is optional/SHOULD and describes `simple` as an alternative to step-based structure. Later applied Jira decisions require `renderedInstruction` and remove `DosageDetails.simple`.",
+            "analysis": "H-004: Post-ballot applied decisions supersede ballot4 `simple` and `renderedInstruction` guidance\n\nEvidence: `source/dosage.html:56-84`, `source/dosage.html:110-113`; `source/datatypes/dosagedetails.xml:878-917`; `FHIR-54014`; `FHIR-54651`; Confluence `413255873`\n\nProblem: Ballot4 says `renderedInstruction` is optional/SHOULD and describes `simple` as an alternative to step-based structure. Later applied Jira decisions require `renderedInstruction` and remove `DosageDetails.simple`.\n\nWhy it matters: Anyone reviewing or carrying forward ballot4 text could preserve semantics that Pharmacy later voted to change.\n\nRecommended next step: Verify the current R6 working source has incorporated `FHIR-54014` and `FHIR-54651`, then update this page's narrative and generated datatype content if any ballot4 wording remains.",
+            "whyItMatters": "Anyone reviewing or carrying forward ballot4 text could preserve semantics that Pharmacy later voted to change.",
+            "recommendedNextStep": "Verify the current R6 working source has incorporated `FHIR-54014` and `FHIR-54651`, then update this page's narrative and generated datatype content if any ballot4 wording remains.",
+            "rawEvidenceQuotes": [
+              "source/dosage.html:56-84",
+              "source/dosage.html:110-113",
+              "source/datatypes/dosagedetails.xml:878-917",
+              "FHIR-54014",
+              "FHIR-54651",
+              "413255873"
+            ],
+            "limitations": [
+              "- Caveats: I did not exhaustively snapshot every post-ballot R6 dosage issue. Exact Zulip searches for `FHIR-33988` and `FHIR-37472` found no hits; the unquoted `FHIR-37472` FTS query failed due hyphen parsing and was rerun quoted. A first ambiguous Zulip snapshot for `Medication Dosage` selected `Maximum Dosage per day`, so exact SQL was used for `#Medication > Dosage`.",
+              "| Source | R6 limitations | `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html:87-103` | New boundary guidance for titration/orchestration/care planning |",
+              "### New limitations/boundaries (`semantic guidance`)",
+              "| `ba10a6f24d181dec80b69dd90e68e0337421e7a0` | 2025-11-11 | wip | https://github.com/HL7/fhir/pull/3974 | Main expansion: title \"Dosage Regimes\", four datatypes, limitations, DosageDetails steps/components, DosageSafety, DosageCondition |",
+              "- `FHIR-51540` is the main formal driver for the R6 rewrite. It started as \"MaxDosePerPeriod to apply across multiple concurrent dosage instruction\" and resolved to modify Dosage, add `DosageDetails` and `DosageSafety`, add examples, add explicit limitations, and add a balloter note. Its comments link the nested datatype Zulip thread and confirm that `sequence` was agreed to be removed. Status was still \"Resolved - change required\" in the local Jira snapshot, but source PR #3974 merged with the page changes.",
+              "| 2025-11-11 to 2025-11-13 | Source commits | PR #3974 builds out `dosage.html` with DosageDetails/Safety/Condition, limitations, renderedInstruction guidance, and balloter note |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.213Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 4,
+    "byPriority": {
+      "P0": 0,
+      "P1": 2,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 4,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 2,
+      "intent-mismatch": 1,
+      "overlooked-problem": 1,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,389 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.156Z",
+  "sourceActionFilesGlob": "todo/actions/clinicalreasoning-knowledge-artifact-representation.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "clinicalreasoning-knowledge-artifact-representation",
+      "actionFilePath": "todo/actions/clinicalreasoning-knowledge-artifact-representation.md",
+      "researchFilePath": "todo/research/clinicalreasoning-knowledge-artifact-representation.md",
+      "status": "has-findings",
+      "summary": "The page has 4 actionable findings. The main risk is that two Jira-applied PlanDefinition guidance changes do not clearly match their recorded intent, and two newly added/example-adjacent markup defects will confuse readers or render incorrectly.",
+      "findingCount": 4,
+      "findings": [
+        {
+          "id": "clinicalreasoning-knowledge-artifact-representation-H-001",
+          "localId": "H-001",
+          "pageLabel": "clinicalreasoning-knowledge-artifact-representation",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+          "title": "FHIR-30209 requested a prescription-medication update example, but the page updates a referral ServiceRequest status",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+              "lineRange": {
+                "start": 252,
+                "end": 277
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-knowledge-artifact-representation action file",
+              "filePath": "todo/actions/clinicalreasoning-knowledge-artifact-representation.md",
+              "confidence": "high",
+              "quote": "`FHIR-30209` resolution says to \"model a request to update the medication on a prescription\"; commit `5369f00212df3db568bacd32d406a0be2d2a58ad`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:252-277`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-knowledge-artifact-representation research appendix",
+              "filePath": "todo/research/clinicalreasoning-knowledge-artifact-representation.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:252-277",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+              "lineRange": {
+                "start": 252,
+                "end": 277
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-30209",
+              "label": "FHIR-30209",
+              "url": "https://jira.hl7.org/browse/FHIR-30209",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5369f00212df3db568bacd32d406a0be2d2a58ad",
+              "label": "5369f00212df3db568bacd32d406a0be2d2a58ad",
+              "url": "https://github.com/HL7/fhir/commit/5369f00212df3db568bacd32d406a0be2d2a58ad",
+              "commitHash": "5369f00212df3db568bacd32d406a0be2d2a58ad",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The applied example updates the status of a referral `ServiceRequest`, not medication on a prescription.",
+            "analysis": "H-001: FHIR-30209 requested a prescription-medication update example, but the page updates a referral ServiceRequest status\n\nEvidence: `FHIR-30209` resolution says to \"model a request to update the medication on a prescription\"; commit `5369f00212df3db568bacd32d406a0be2d2a58ad`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:252-277`\n\nProblem: The applied example updates the status of a referral `ServiceRequest`, not medication on a prescription.\n\nWhy it matters: The example still illustrates an update, but it is narrower/different than the voted Jira resolution and may not answer the original medication/prescription modeling question.\n\nRecommended next step: Ask CDS to confirm whether the scenario intentionally changed; if not, revise the example to match the prescription-medication update requested in `FHIR-30209` or update the Jira rationale.\n\nIntent-vs-implementation context: - H-001: `FHIR-30209` scenario mismatch.",
+            "whyItMatters": "The example still illustrates an update, but it is narrower/different than the voted Jira resolution and may not answer the original medication/prescription modeling question.",
+            "recommendedNextStep": "Ask CDS to confirm whether the scenario intentionally changed; if not, revise the example to match the prescription-medication update requested in `FHIR-30209` or update the Jira rationale.",
+            "rawEvidenceQuotes": [
+              "model a request to update the medication on a prescription",
+              "FHIR-30209",
+              "5369f00212df3db568bacd32d406a0be2d2a58ad",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:252-277"
+            ],
+            "limitations": [
+              "- Caveats: initial unquoted Zulip FTS searches for hyphenated Jira keys failed because FTS parsed the numeric suffix as a column; quoted key searches were rerun and found no direct Zulip hits for `FHIR-53083`, `FHIR-30209`, or `FHIR-30433`. No direct Zulip or Confluence rationale was found for the 2025 `FHIR-53083` page rewrite beyond the Jira and PR."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.154Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-knowledge-artifact-representation-H-002",
+          "localId": "H-002",
+          "pageLabel": "clinicalreasoning-knowledge-artifact-representation",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+          "title": "FHIR-30433's REST interaction URL/code-system guidance is not actually documented on this page",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+              "lineRange": {
+                "start": 279,
+                "end": 279
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-knowledge-artifact-representation action file",
+              "filePath": "todo/actions/clinicalreasoning-knowledge-artifact-representation.md",
+              "confidence": "high",
+              "quote": "`FHIR-30433` resolution says using \"the code system URL + code to refer to the RESTful interactions should be documented in PlanDefinition\"; Zulip `#IG creation > Referencing an interaction`; Confluence page `97478278`; commit `bedab38b5ca162114c3b60501fd84a2da9945692`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:279`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-knowledge-artifact-representation research appendix",
+              "filePath": "todo/research/clinicalreasoning-knowledge-artifact-representation.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:279",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+              "lineRange": {
+                "start": 279,
+                "end": 279
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-30433",
+              "label": "FHIR-30433",
+              "url": "https://jira.hl7.org/browse/FHIR-30433",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "bedab38b5ca162114c3b60501fd84a2da9945692",
+              "label": "bedab38b5ca162114c3b60501fd84a2da9945692",
+              "url": "https://github.com/HL7/fhir/commit/bedab38b5ca162114c3b60501fd84a2da9945692",
+              "commitHash": "bedab38b5ca162114c3b60501fd84a2da9945692",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`FHIR-30433` resolution says using \"the code system URL + code to refer to the RESTful interactions should be documented in PlanDefinition\"; Zulip `#IG creation > Referencing an interaction`; Confluence page `97478278`; commit `bedab38b5ca162114c3b60501fd84a2da9945692`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:279`\n- Priority: P1\n- Category: intent-mismatch\n- Evidence: `FHIR-30433` resolution says using \"the code system URL + code to refer to the RESTful interactions should be documented in PlanDefinition\"; Zulip `#IG creation > Referencing an interaction`; Confluence page `97478278`; commit `bedab38b5ca162114c3b60501fd84a2da9945692`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:279`\n- Problem: The applied paragraph says clients may turn create/update/remove proposals into RESTful API calls, but it does not document the requested mechanism for referencing REST interactions by URL/code or how to distinguish `Patient` create/update from generic create/update.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`FHIR-30433` resolution says using \"the code system URL + code to refer to the RESTful interactions should be documented in PlanDefinition\"; Zulip `#IG creation > Referencing an interaction`; Confluence page `97478278`; commit `bedab38b5ca162114c3b60501fd84a2da9945692`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:279`\n- Priority: P1\n- Category: intent-mismatch\n- Evidence: `FHIR-30433` resolution says using \"the code system URL + code to refer to the RESTful interactions should be documented in PlanDefinition\"; Zulip `#IG creation > Referencing an interaction`; Confluence page `97478278`; commit `bedab38b5ca162114c3b60501fd84a2da9945692`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:279`\n- Problem: The applied paragraph says clients may turn create/update/remove proposals into RESTful API calls, but it does not document the requested mechanism for referencing REST interactions by URL/code or how to distinguish `Patient` create/update from generic create/update.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The applied paragraph says clients may turn create/update/remove proposals into RESTful API calls, but it does not document the requested mechanism for referencing REST interactions by URL/code or how to distinguish `Patient` create/update from generic create/update.",
+            "analysis": "H-002: FHIR-30433's REST interaction URL/code-system guidance is not actually documented on this page\n\nEvidence: `FHIR-30433` resolution says using \"the code system URL + code to refer to the RESTful interactions should be documented in PlanDefinition\"; Zulip `#IG creation > Referencing an interaction`; Confluence page `97478278`; commit `bedab38b5ca162114c3b60501fd84a2da9945692`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:279`\n\nProblem: The applied paragraph says clients may turn create/update/remove proposals into RESTful API calls, but it does not document the requested mechanism for referencing REST interactions by URL/code or how to distinguish `Patient` create/update from generic create/update.\n\nWhy it matters: Implementers reading the applied text still lack the concrete referencing guidance that the Jira issue and FHIRI minutes said should be documented.\n\nRecommended next step: Add explicit PlanDefinition guidance for REST interaction code-system URL + code, or move/point to the page where that mechanism is documented.\n\nIntent-vs-implementation context: - H-002: `FHIR-30433` REST interaction guidance mismatch.",
+            "whyItMatters": "Implementers reading the applied text still lack the concrete referencing guidance that the Jira issue and FHIRI minutes said should be documented.",
+            "recommendedNextStep": "Add explicit PlanDefinition guidance for REST interaction code-system URL + code, or move/point to the page where that mechanism is documented.",
+            "rawEvidenceQuotes": [
+              "the code system URL + code to refer to the RESTful interactions should be documented in PlanDefinition",
+              "FHIR-30433",
+              "#IG creation > Referencing an interaction",
+              "97478278",
+              "bedab38b5ca162114c3b60501fd84a2da9945692",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:279"
+            ],
+            "limitations": [
+              "- Caveats: initial unquoted Zulip FTS searches for hyphenated Jira keys failed because FTS parsed the numeric suffix as a column; quoted key searches were rerun and found no direct Zulip hits for `FHIR-53083`, `FHIR-30209`, or `FHIR-30433`. No direct Zulip or Confluence rationale was found for the 2025 `FHIR-53083` page rewrite beyond the Jira and PR."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.154Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-knowledge-artifact-representation-E-001",
+          "localId": "E-001",
+          "pageLabel": "clinicalreasoning-knowledge-artifact-representation",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+          "title": "Added update example contains `<langage>` instead of `<language>",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+              "lineRange": {
+                "start": 269,
+                "end": 273
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-knowledge-artifact-representation action file",
+              "filePath": "todo/actions/clinicalreasoning-knowledge-artifact-representation.md",
+              "confidence": "high",
+              "quote": "current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:269-273`; introduced by commit `5369f00212df3db568bacd32d406a0be2d2a58ad`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-knowledge-artifact-representation research appendix",
+              "filePath": "todo/research/clinicalreasoning-knowledge-artifact-representation.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:269-273",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+              "lineRange": {
+                "start": 269,
+                "end": 273
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "5369f00212df3db568bacd32d406a0be2d2a58ad",
+              "label": "5369f00212df3db568bacd32d406a0be2d2a58ad",
+              "url": "https://github.com/HL7/fhir/commit/5369f00212df3db568bacd32d406a0be2d2a58ad",
+              "commitHash": "5369f00212df3db568bacd32d406a0be2d2a58ad",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The second expression in the new update example uses `&lt;langage value=\"text/cql-expression\"/&gt;`.",
+            "analysis": "E-001: Added update example contains `<langage>` instead of `<language>\n\nEvidence: current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:269-273`; introduced by commit `5369f00212df3db568bacd32d406a0be2d2a58ad`\n\nProblem: The second expression in the new update example uses `&lt;langage value=\"text/cql-expression\"/&gt;`.\n\nWhy it matters: Readers may copy a malformed example while learning the `dynamicValue.expression` pattern.\n\nRecommended next step: Correct the element name to `&lt;language .../&gt;`.\n\nOverlooked/newly noticed context: - E-001: malformed `<language>` element spelling in the added update example.",
+            "whyItMatters": "Readers may copy a malformed example while learning the `dynamicValue.expression` pattern.",
+            "recommendedNextStep": "Correct the element name to `&lt;language .../&gt;`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:269-273",
+              "5369f00212df3db568bacd32d406a0be2d2a58ad"
+            ],
+            "limitations": [
+              "- Caveats: initial unquoted Zulip FTS searches for hyphenated Jira keys failed because FTS parsed the numeric suffix as a column; quoted key searches were rerun and found no direct Zulip hits for `FHIR-53083`, `FHIR-30209`, or `FHIR-30433`. No direct Zulip or Confluence rationale was found for the 2025 `FHIR-53083` page rewrite beyond the Jira and PR."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.155Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-knowledge-artifact-representation-E-002",
+          "localId": "E-002",
+          "pageLabel": "clinicalreasoning-knowledge-artifact-representation",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+          "title": "Added Guideline table row is missing the Example column",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+              "lineRange": {
+                "start": 345,
+                "end": 357
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-knowledge-artifact-representation action file",
+              "filePath": "todo/actions/clinicalreasoning-knowledge-artifact-representation.md",
+              "confidence": "high",
+              "quote": "current source table header and rows `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:345-357`; introduced by commit `78bdf597e0749e52efa7984e9f9d90a41fdb3616`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-knowledge-artifact-representation research appendix",
+              "filePath": "todo/research/clinicalreasoning-knowledge-artifact-representation.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:345-357",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html",
+              "lineRange": {
+                "start": 345,
+                "end": 357
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "78bdf597e0749e52efa7984e9f9d90a41fdb3616",
+              "label": "78bdf597e0749e52efa7984e9f9d90a41fdb3616",
+              "url": "https://github.com/HL7/fhir/commit/78bdf597e0749e52efa7984e9f9d90a41fdb3616",
+              "commitHash": "78bdf597e0749e52efa7984e9f9d90a41fdb3616",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The artifact-type table has three columns (`Artifact Type`, `Description`, `Example`), but the added `Guideline` row has only two `<td>` cells.",
+            "analysis": "E-002: Added Guideline table row is missing the Example column\n\nEvidence: current source table header and rows `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:345-357`; introduced by commit `78bdf597e0749e52efa7984e9f9d90a41fdb3616`\n\nProblem: The artifact-type table has three columns (`Artifact Type`, `Description`, `Example`), but the added `Guideline` row has only two `<td>` cells.\n\nWhy it matters: The table can render misaligned and gives no example for the newly added artifact type.\n\nRecommended next step: Add a third Example cell for the Guideline row, or intentionally restructure the table if no example should be shown.\n\nOverlooked/newly noticed context: - E-002: missing third cell in the added Guideline table row.",
+            "whyItMatters": "The table can render misaligned and gives no example for the newly added artifact type.",
+            "recommendedNextStep": "Add a third Example cell for the Guideline row, or intentionally restructure the table if no example should be shown.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-knowledge-artifact-representation.html:345-357",
+              "78bdf597e0749e52efa7984e9f9d90a41fdb3616"
+            ],
+            "limitations": [
+              "- Caveats: initial unquoted Zulip FTS searches for hyphenated Jira keys failed because FTS parsed the numeric suffix as a column; quoted key searches were rerun and found no direct Zulip hits for `FHIR-53083`, `FHIR-30209`, or `FHIR-30433`. No direct Zulip or Confluence rationale was found for the 2025 `FHIR-53083` page rewrite beyond the Jira and PR."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.156Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 4,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 3,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 2,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

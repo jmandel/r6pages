@@ -1,0 +1,322 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.258Z",
+  "sourceActionFilesGlob": "todo/actions/license.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "license",
+      "actionFilePath": "todo/actions/license.md",
+      "researchFilePath": "todo/research/license.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings: one stale/possibly non-applied LOINC legal notice, one resolved R6 trademark-clarification request that is not reflected in the current page, and one concrete cluster of reader-facing trademark/legal text defects.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "license-H-001",
+          "localId": "H-001",
+          "pageLabel": "license",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html",
+          "title": "LOINC notice still hard-codes copyright details despite later FHIR-28295 direction",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html",
+              "lineRange": {
+                "start": 115,
+                "end": 117
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "license action file",
+              "filePath": "todo/actions/license.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:115-117`; commit `8cd675bf1d83dc4d58f66a7f54c5bad6c838c083`; `FHIR-28295`; Confluence page `120756184`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "license research appendix",
+              "filePath": "todo/research/license.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:115-117",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html",
+              "lineRange": {
+                "start": 115,
+                "end": 117
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-28295",
+              "label": "FHIR-28295",
+              "url": "https://jira.hl7.org/browse/FHIR-28295",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "8cd675bf1d83dc4d58f66a7f54c5bad6c838c083",
+              "label": "8cd675bf1d83dc4d58f66a7f54c5bad6c838c083",
+              "url": "https://github.com/HL7/fhir/commit/8cd675bf1d83dc4d58f66a7f54c5bad6c838c083",
+              "commitHash": "8cd675bf1d83dc4d58f66a7f54c5bad6c838c083",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:115-117`; commit `8cd675bf1d83dc4d58f66a7f54c5bad6c838c083`; `FHIR-28295`; Confluence page `120756184`\n- Priority: P2\n- Category: intent-mismatch\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:115-117`; commit `8cd675bf1d83dc4d58f66a7f54c5bad6c838c083`; `FHIR-28295`; Confluence page `120756184`\n- Problem: the current page still says LOINC is copyright `1995-2020` and links directly to `loinc.org/license`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the current page still says LOINC is copyright `1995-2020` and links directly to `loinc.org/license`. `FHIR-28295` was later resolved to remove that specific copyright information and refer to THO/terminology.hl7.org; Jira comments explicitly note that `license.html#loinc` likely also needed the same treatment.",
+            "analysis": "H-001: LOINC notice still hard-codes copyright details despite later FHIR-28295 direction\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:115-117`; commit `8cd675bf1d83dc4d58f66a7f54c5bad6c838c083`; `FHIR-28295`; Confluence page `120756184`\n\nProblem: the current page still says LOINC is copyright `1995-2020` and links directly to `loinc.org/license`. `FHIR-28295` was later resolved to remove that specific copyright information and refer to THO/terminology.hl7.org; Jira comments explicitly note that `license.html#loinc` likely also needed the same treatment.\n\nWhy it matters: this is legal/third-party-IP guidance. A hard-coded date/license statement can become stale and conflicts with the documented direction to centralize current LOINC copyright information.\n\nRecommended next step: ask FHIR-I/Vocab/HTA or TSMG to confirm whether the license page LOINC row should be replaced with a THO reference, and file/apply a FHIR-core license-page tracker if no current one exists.\n\nIntent-vs-implementation context: - `H-001` appears to be a partial or stale application of the `FHIR-28295` LOINC copyright direction.",
+            "whyItMatters": "this is legal/third-party-IP guidance. A hard-coded date/license statement can become stale and conflicts with the documented direction to centralize current LOINC copyright information.",
+            "recommendedNextStep": "ask FHIR-I/Vocab/HTA or TSMG to confirm whether the license page LOINC row should be replaced with a THO reference, and file/apply a FHIR-core license-page tracker if no current one exists.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:115-117",
+              "8cd675bf1d83dc4d58f66a7f54c5bad6c838c083",
+              "FHIR-28295",
+              "120756184"
+            ],
+            "limitations": [
+              "- Caveats: unquoted Zulip FTS searches for `FHIR-#####` produced SQLite FTS parse errors because hyphens were interpreted as operators; quoted searches for the explicit Jira keys returned no Zulip hits. No Confluence page was found for `FHIR-34528`.",
+              "| Commit | GOM publication caveat | `c92dc70b2bca517ed796831fdd4ad0043401166b`, https://github.com/HL7/fhir/commit/c92dc70b2bca517ed796831fdd4ad0043401166b | `#34528` added \"at the time this specification was published\". |",
+              "| `5b925c14c27cb5ae1a695ad48e6191eb3f4eaa00` | 2022-08-29 | `Merge remote-tracking branch 'origin/master'` | merge | Combined the `FHIR-29954` downloads/specification change with the `FHIR-34528` GOM Section 09/publication caveat. |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.256Z",
+          "status": "open"
+        },
+        {
+          "id": "license-H-002",
+          "localId": "H-002",
+          "pageLabel": "license",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html",
+          "title": "Resolved R6 trademark-example request is not reflected in the page",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html",
+              "lineRange": {
+                "start": 70,
+                "end": 96
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "license action file",
+              "filePath": "todo/actions/license.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:70-96`; `FHIR-44925`; Zulip `#implementers > Trademark question about text to include`; Confluence page `413043627`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "license research appendix",
+              "filePath": "todo/research/license.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:70-96",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html",
+              "lineRange": {
+                "start": 70,
+                "end": 96
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-44925",
+              "label": "FHIR-44925",
+              "url": "https://jira.hl7.org/browse/FHIR-44925",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:70-96`; `FHIR-44925`; Zulip `#implementers > Trademark question about text to include`; Confluence page `413043627`\n- Priority: P2\n- Category: overlooked-problem\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:70-96`; `FHIR-44925`; Zulip `#implementers > Trademark question about text to include`; Confluence page `413043627`\n- Problem: `FHIR-44925` was resolved persuasive on 2025-12-15 to add examples explaining trademark-use vs non-trademark-use cases.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:70-96`; `FHIR-44925`; Zulip `#implementers > Trademark question about text to include`; Confluence page `413043627`\n- Priority: P2\n- Category: overlooked-problem\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:70-96`; `FHIR-44925`; Zulip `#implementers > Trademark question about text to include`; Confluence page `413043627`\n- Problem: `FHIR-44925` was resolved persuasive on 2025-12-15 to add examples explaining trademark-use vs non-trademark-use cases.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-44925` was resolved persuasive on 2025-12-15 to add examples explaining trademark-use vs non-trademark-use cases. The R6 ballot4 source commit is 2025-12-18, but `source/license.html` has no post-2025-11-03 implementation commit and the current trademark section has no such examples.",
+            "analysis": "H-002: Resolved R6 trademark-example request is not reflected in the page\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:70-96`; `FHIR-44925`; Zulip `#implementers > Trademark question about text to include`; Confluence page `413043627`\n\nProblem: `FHIR-44925` was resolved persuasive on 2025-12-15 to add examples explaining trademark-use vs non-trademark-use cases. The R6 ballot4 source commit is 2025-12-18, but `source/license.html` has no post-2025-11-03 implementation commit and the current trademark section has no such examples.\n\nWhy it matters: the current trademark section was confusing enough to trigger a later community question and a formal FHIR-I decision. Leaving the examples out preserves the ambiguity for readers deciding whether permission and notice text are required.\n\nRecommended next step: apply `FHIR-44925` to `source/license.html#trademark` or update the Jira status/target if it is intentionally deferred past R6 ballot4.\n\nIntent-vs-implementation context: - `H-002` is a resolved R6 page-specific decision not yet present in the current source.",
+            "whyItMatters": "the current trademark section was confusing enough to trigger a later community question and a formal FHIR-I decision. Leaving the examples out preserves the ambiguity for readers deciding whether permission and notice text are required.",
+            "recommendedNextStep": "apply `FHIR-44925` to `source/license.html#trademark` or update the Jira status/target if it is intentionally deferred past R6 ballot4.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:70-96",
+              "FHIR-44925",
+              "#implementers > Trademark question about text to include",
+              "413043627"
+            ],
+            "limitations": [
+              "- Caveats: unquoted Zulip FTS searches for `FHIR-#####` produced SQLite FTS parse errors because hyphens were interpreted as operators; quoted searches for the explicit Jira keys returned no Zulip hits. No Confluence page was found for `FHIR-34528`.",
+              "| Commit | GOM publication caveat | `c92dc70b2bca517ed796831fdd4ad0043401166b`, https://github.com/HL7/fhir/commit/c92dc70b2bca517ed796831fdd4ad0043401166b | `#34528` added \"at the time this specification was published\". |",
+              "| `5b925c14c27cb5ae1a695ad48e6191eb3f4eaa00` | 2022-08-29 | `Merge remote-tracking branch 'origin/master'` | merge | Combined the `FHIR-29954` downloads/specification change with the `FHIR-34528` GOM Section 09/publication caveat. |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.257Z",
+          "status": "open"
+        },
+        {
+          "id": "license-E-001",
+          "localId": "E-001",
+          "pageLabel": "license",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html",
+          "title": "Trademark/legal text has concrete reader-facing typos and malformed wording",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html",
+              "lineRange": {
+                "start": 67,
+                "end": 67
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "license action file",
+              "filePath": "todo/actions/license.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:67`, `:75`, `:78-83`; blame points lines 75, 78-83 to `56a635cea5e5fd1271db44961429a40dea50b3e2`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "license research appendix",
+              "filePath": "todo/research/license.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:67",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html",
+              "lineRange": {
+                "start": 67,
+                "end": 67
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-44925",
+              "label": "FHIR-44925",
+              "url": "https://jira.hl7.org/browse/FHIR-44925",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "56a635cea5e5fd1271db44961429a40dea50b3e2",
+              "label": "56a635cea5e5fd1271db44961429a40dea50b3e2",
+              "url": "https://github.com/HL7/fhir/commit/56a635cea5e5fd1271db44961429a40dea50b3e2",
+              "commitHash": "56a635cea5e5fd1271db44961429a40dea50b3e2",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "current text includes an extra trailing quote in the GOM/patent bullet, `it's affiliates` instead of `its affiliates`, an unclosed parenthetical around the fair-use note, and `FHIR always include the ® symbol`.",
+            "analysis": "E-001: Trademark/legal text has concrete reader-facing typos and malformed wording\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:67`, `:75`, `:78-83`; blame points lines 75, 78-83 to `56a635cea5e5fd1271db44961429a40dea50b3e2`\n\nProblem: current text includes an extra trailing quote in the GOM/patent bullet, `it's affiliates` instead of `its affiliates`, an unclosed parenthetical around the fair-use note, and `FHIR always include the ® symbol`.\n\nWhy it matters: this is a legal/trademark guidance page; visible typos and malformed wording reduce trust and can obscure what users are being asked to do.\n\nRecommended next step: fix these editorial defects when applying the next license/trademark-page update, ideally alongside `FHIR-44925`.\n\nOverlooked/newly noticed context: - `E-001` is visible in the current page and was not clearly covered by the tracked changes reviewed here.",
+            "whyItMatters": "this is a legal/trademark guidance page; visible typos and malformed wording reduce trust and can obscure what users are being asked to do.",
+            "recommendedNextStep": "fix these editorial defects when applying the next license/trademark-page update, ideally alongside `FHIR-44925`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/license.html:67",
+              ":75",
+              ":78-83",
+              "56a635cea5e5fd1271db44961429a40dea50b3e2"
+            ],
+            "limitations": [
+              "- Caveats: unquoted Zulip FTS searches for `FHIR-#####` produced SQLite FTS parse errors because hyphens were interpreted as operators; quoted searches for the explicit Jira keys returned no Zulip hits. No Confluence page was found for `FHIR-34528`.",
+              "| Commit | GOM publication caveat | `c92dc70b2bca517ed796831fdd4ad0043401166b`, https://github.com/HL7/fhir/commit/c92dc70b2bca517ed796831fdd4ad0043401166b | `#34528` added \"at the time this specification was published\". |",
+              "| `5b925c14c27cb5ae1a695ad48e6191eb3f4eaa00` | 2022-08-29 | `Merge remote-tracking branch 'origin/master'` | merge | Combined the `FHIR-29954` downloads/specification change with the `FHIR-34528` GOM Section 09/publication caveat. |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.258Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 1,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

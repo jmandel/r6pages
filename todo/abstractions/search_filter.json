@@ -1,0 +1,315 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.317Z",
+  "sourceActionFilesGlob": "todo/actions/search_filter.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "search_filter",
+      "actionFilePath": "todo/actions/search_filter.md",
+      "researchFilePath": "todo/research/search_filter.md",
+      "status": "has-findings",
+      "summary": "The page has 5 actionable findings. The most significant risks are: (1) a dangling \"see below\" cross-reference left after FHIR-38031 removed the section it points to, making two `Observation: related[...]` examples unexplained; (2) a capitalization inconsistency in the formal grammar (`DateChar` vs `dateChar`) that makes the grammar formally incorrect; (3) two operators (`ap`, `ni`) listed in the summary table but absent from the detailed type-by-parameter matrix; and (4) an inconsistent capitalization of operator `co` → `Co` in the type matrix. The normative promotion has no traced Jira issue but that is an evidence-gap finding, not necessarily a content error.",
+      "findingCount": 5,
+      "findings": [
+        {
+          "id": "search_filter-H-001",
+          "localId": "H-001",
+          "pageLabel": "search_filter",
+          "pagePath": "source/search_filter.html",
+          "title": "Dangling \"see below\" cross-reference after section removal",
+          "kind": "H",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/search_filter.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "search_filter action file",
+              "filePath": "todo/actions/search_filter.md",
+              "confidence": "high",
+              "quote": "FHIR-38031 (commit `60a800ba`, 2022-08-29) removed the \"Additional Parameters\" section that defined `related`, `characteristic`, `relatesTo`, and service-related parameters. The two examples that use `Observation: related[type eq \"has-component\"]` and `Observation: related[type eq has-component]` were not removed. The first example explicitly says \"(note: this uses one of the search parameters defined for this mechanism, see below)\" — but there is no longer anything below."
+            },
+            {
+              "type": "research-appendix",
+              "label": "search_filter research appendix",
+              "filePath": "todo/research/search_filter.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-38031",
+              "label": "FHIR-38031",
+              "url": "https://jira.hl7.org/browse/FHIR-38031",
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "A reader following \"see below\" will find no such definition. The `related` search parameter was part of the deleted table; there is no standard Observation search parameter called `related` in R6. The examples may confuse implementers about what search parameters are valid in `_filter`.",
+            "analysis": "H-001: Dangling \"see below\" cross-reference after section removal\n\nEvidence: FHIR-38031 (commit `60a800ba`, 2022-08-29) removed the \"Additional Parameters\" section that defined `related`, `characteristic`, `relatesTo`, and service-related parameters. The two examples that use `Observation: related[type eq \"has-component\"]` and `Observation: related[type eq has-component]` were not removed. The first example explicitly says \"(note: this uses one of the search parameters defined for this mechanism, see below)\" — but there is no longer anything below.\n\nProblem: A reader following \"see below\" will find no such definition. The `related` search parameter was part of the deleted table; there is no standard Observation search parameter called `related` in R6. The examples may confuse implementers about what search parameters are valid in `_filter`.\n\nWhy it matters: This is on a Normative page. The dangling cross-reference makes the normative content self-contradictory and may mislead implementers into trying to use a search parameter that no longer exists.\n\nRecommended next step: Either (a) remove or replace both `related[...]` examples with current Observation-based examples (e.g., using `component-code`), or (b) add a brief inline note explaining that `related` is retained for illustrative purposes only and does not reflect a current standard search parameter. File a Jira issue against FHIR-core-search / fhir-i WG.\n\nIntent-vs-implementation context: FHIR-45306 resolved \"Persuasive with Modification\": the resolution says \"will leave the first [subject] example as is and will change the other two.\" The applied commit (`1d29a98d`) changed `subject.name` → `patient.name` and `subject.id` → `patient.id` in the two examples. The first example in the list (`Observation: code eq http://loinc.org|1234-5`) has no subject/patient reference and was correctly left unchanged. The two `related` examples (items 5 and 6) were also left unchanged — consistent with the resolution's intention to leave examples using `related` (which is a separate issue — see H-001). Implementation appears consistent with stated intent.",
+            "whyItMatters": "This is on a Normative page. The dangling cross-reference makes the normative content self-contradictory and may mislead implementers into trying to use a search parameter that no longer exists.",
+            "recommendedNextStep": "Either (a) remove or replace both `related[...]` examples with current Observation-based examples (e.g., using `component-code`), or (b) add a brief inline note explaining that `related` is retained for illustrative purposes only and does not reflect a current standard search parameter. File a Jira issue against FHIR-core-search / fhir-i WG.",
+            "rawEvidenceQuotes": [
+              "Additional Parameters",
+              "has-component",
+              "(note: this uses one of the search parameters defined for this mechanism, see below)",
+              "60a800ba",
+              "related",
+              "characteristic",
+              "relatesTo",
+              "Observation: related[type eq \"has-component\"]",
+              "Observation: related[type eq has-component]"
+            ],
+            "limitations": [
+              "- Important caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.315Z",
+          "status": "open"
+        },
+        {
+          "id": "search_filter-H-002",
+          "localId": "H-002",
+          "pageLabel": "search_filter",
+          "pagePath": "source/search_filter.html",
+          "title": "DateChar` vs `dateChar` inconsistency in formal grammar (now Normative)",
+          "kind": "H",
+          "priority": "P3",
+          "category": "other",
+          "sourceLocations": [
+            {
+              "filePath": "source/search_filter.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "search_filter action file",
+              "filePath": "todo/actions/search_filter.md",
+              "confidence": "high",
+              "quote": "Observed in full page review of R6 ballot4 source. No commit introduced this inconsistency; it predates the range under review. Not covered by any found Jira issue."
+            },
+            {
+              "type": "research-appendix",
+              "label": "search_filter research appendix",
+              "filePath": "todo/research/search_filter.md",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The grammar rule `numberOrDate = DIGIT (DateChar)*` references the production `DateChar` (capital D), but the corresponding rule is defined as `dateChar` (lowercase d). In ABNF/EBNF, rule names are case-insensitive by IETF convention but the inconsistency is visually confusing and misleading; in some grammar formalisms it would mean `DateChar` is undefined.",
+            "analysis": "H-002: DateChar` vs `dateChar` inconsistency in formal grammar (now Normative)\n\nEvidence: Observed in full page review of R6 ballot4 source. No commit introduced this inconsistency; it predates the range under review. Not covered by any found Jira issue.\n\nProblem: The grammar rule `numberOrDate = DIGIT (DateChar)*` references the production `DateChar` (capital D), but the corresponding rule is defined as `dateChar` (lowercase d). In ABNF/EBNF, rule names are case-insensitive by IETF convention but the inconsistency is visually confusing and misleading; in some grammar formalisms it would mean `DateChar` is undefined.\n\nWhy it matters: This page is now Normative. An implementer deriving a parser from the formal grammar may be confused. It should be consistent.\n\nRecommended next step: Change `numberOrDate = DIGIT (DateChar)*` to `numberOrDate = DIGIT (dateChar)*` (lowercase). File as Technical Correction.",
+            "whyItMatters": "This page is now Normative. An implementer deriving a parser from the formal grammar may be confused. It should be consistent.",
+            "recommendedNextStep": "Change `numberOrDate = DIGIT (DateChar)*` to `numberOrDate = DIGIT (dateChar)*` (lowercase). File as Technical Correction.",
+            "rawEvidenceQuotes": [],
+            "limitations": [
+              "- Important caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.315Z",
+          "status": "open"
+        },
+        {
+          "id": "search_filter-H-003",
+          "localId": "H-003",
+          "pageLabel": "search_filter",
+          "pagePath": "source/search_filter.html",
+          "title": "Operators `ap` and `ni` appear in summary table but not in type-by-parameter matrix",
+          "kind": "H",
+          "priority": "P3",
+          "category": "other",
+          "sourceLocations": [
+            {
+              "filePath": "source/search_filter.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "search_filter action file",
+              "filePath": "todo/actions/search_filter.md",
+              "confidence": "high",
+              "quote": "Observed in full page review. The summary operators table includes `ap` (approximately equal) and `ni` (not in value set). The detailed type×parameter matrix lists rows for: eq, ne, Co (co), sw, ew, gt/lt/ge/le, pr, po, ss, sb, in, re — but `ap` and `ni` are absent."
+            },
+            {
+              "type": "research-appendix",
+              "label": "search_filter research appendix",
+              "filePath": "todo/research/search_filter.md",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Readers cannot determine how `ap` and `ni` interact with string, number, date, token, reference, and quantity parameter types. For a Normative page this is a substantive gap.",
+            "analysis": "H-003: Operators `ap` and `ni` appear in summary table but not in type-by-parameter matrix\n\nEvidence: Observed in full page review. The summary operators table includes `ap` (approximately equal) and `ni` (not in value set). The detailed type×parameter matrix lists rows for: eq, ne, Co (co), sw, ew, gt/lt/ge/le, pr, po, ss, sb, in, re — but `ap` and `ni` are absent.\n\nProblem: Readers cannot determine how `ap` and `ni` interact with string, number, date, token, reference, and quantity parameter types. For a Normative page this is a substantive gap.\n\nWhy it matters: Conformance testing and implementation cannot be complete without knowing the type behaviour of all operators.\n\nRecommended next step: Add rows for `ap` and `ni` to the type-by-parameter matrix. `ap` applies to number, date, and quantity; `ni` applies to token (inverse of `in`). File as Jira clarification against FHIR-core-search.",
+            "whyItMatters": "Conformance testing and implementation cannot be complete without knowing the type behaviour of all operators.",
+            "recommendedNextStep": "Add rows for `ap` and `ni` to the type-by-parameter matrix. `ap` applies to number, date, and quantity; `ni` applies to token (inverse of `in`). File as Jira clarification against FHIR-core-search.",
+            "rawEvidenceQuotes": [
+              " (approximately equal) and ",
+              " (not in value set). The detailed type×parameter matrix lists rows for: eq, ne, Co (co), sw, ew, gt/lt/ge/le, pr, po, ss, sb, in, re — but ",
+              " and "
+            ],
+            "limitations": [
+              "- Important caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.316Z",
+          "status": "open"
+        },
+        {
+          "id": "search_filter-E-001",
+          "localId": "E-001",
+          "pageLabel": "search_filter",
+          "pagePath": "source/search_filter.html",
+          "title": "Co` capitalization inconsistency in type-by-parameter matrix",
+          "kind": "E",
+          "priority": "P3",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/search_filter.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "search_filter action file",
+              "filePath": "todo/actions/search_filter.md",
+              "confidence": "high",
+              "quote": "Observed in full page review. Summary operators table uses `co` (lowercase). The type-by-parameter matrix table uses `Co` (capital C) in the `<td>` cell for the same operator."
+            },
+            {
+              "type": "research-appendix",
+              "label": "search_filter research appendix",
+              "filePath": "todo/research/search_filter.md",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Inconsistent capitalization of the same operator name within the same page. A reader scanning for `co` in the matrix table will find `Co` instead.",
+            "analysis": "E-001: Co` capitalization inconsistency in type-by-parameter matrix\n\nEvidence: Observed in full page review. Summary operators table uses `co` (lowercase). The type-by-parameter matrix table uses `Co` (capital C) in the `<td>` cell for the same operator.\n\nProblem: Inconsistent capitalization of the same operator name within the same page. A reader scanning for `co` in the matrix table will find `Co` instead.\n\nRecommended next step: Change `<td>Co</td>` to `<td>co</td>` in the type-by-parameter matrix. Technical correction.",
+            "whyItMatters": "",
+            "recommendedNextStep": "Change `<td>Co</td>` to `<td>co</td>` in the type-by-parameter matrix. Technical correction.",
+            "rawEvidenceQuotes": [
+              " (lowercase). The type-by-parameter matrix table uses ",
+              " (capital C) in the "
+            ],
+            "limitations": [
+              "- Important caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.316Z",
+          "status": "open"
+        },
+        {
+          "id": "search_filter-G-001",
+          "localId": "G-001",
+          "pageLabel": "search_filter",
+          "pagePath": "source/search_filter.html",
+          "title": "No Jira issue found for normative promotion of `_filter",
+          "kind": "G",
+          "priority": "P3",
+          "category": "evidence-gap",
+          "sourceLocations": [
+            {
+              "filePath": "source/search_filter.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "search_filter action file",
+              "filePath": "todo/actions/search_filter.md",
+              "confidence": "high",
+              "quote": "Commit `270e0ceb` (2025-10-31) changed the page from Trial Use (FMM 2) to Normative via a generic \"normative changes for R6\" commit. No Jira issue was found through FTS searches on \"_filter normative\", \"_filter parameter normative\", or \"search_filter normative\". No Confluence WGM minutes were found discussing this specific promotion. The `_filter` feature has historically had low implementation breadth (noted in Zulip), which raises a question about readiness for Normative."
+            },
+            {
+              "type": "research-appendix",
+              "label": "search_filter research appendix",
+              "filePath": "todo/research/search_filter.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "No Confluence WGM minutes were found discussing this specific promotion.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "The `_filter` feature has historically had low implementation breadth (noted in Zulip), which raises a question about readiness for Normative.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The normative promotion was not traced to a formal WG vote or Jira decision in available records. If the promotion was deliberate and voted on, evidence is not surfaced. If it was a bulk \"sweep\" commit without individual WG review for this page, that may warrant verification.",
+            "analysis": "G-001: No Jira issue found for normative promotion of `_filter\n\nEvidence: Commit `270e0ceb` (2025-10-31) changed the page from Trial Use (FMM 2) to Normative via a generic \"normative changes for R6\" commit. No Jira issue was found through FTS searches on \"_filter normative\", \"_filter parameter normative\", or \"search_filter normative\". No Confluence WGM minutes were found discussing this specific promotion. The `_filter` feature has historically had low implementation breadth (noted in Zulip), which raises a question about readiness for Normative.\n\nProblem: The normative promotion was not traced to a formal WG vote or Jira decision in available records. If the promotion was deliberate and voted on, evidence is not surfaced. If it was a bulk \"sweep\" commit without individual WG review for this page, that may warrant verification.\n\nWhy it matters: Promoting an underspecified/underimplemented feature to Normative without traceable decision creates risk of binding the spec to incomplete or ambiguous content.\n\nRecommended next step: Verify with FHIR-I WG whether a specific Jira issue or WGM vote covered the `_filter` Normative promotion. If none exists, consider filing a tracker issue to document the decision rationale.",
+            "whyItMatters": "Promoting an underspecified/underimplemented feature to Normative without traceable decision creates risk of binding the spec to incomplete or ambiguous content.",
+            "recommendedNextStep": "Verify with FHIR-I WG whether a specific Jira issue or WGM vote covered the `_filter` Normative promotion. If none exists, consider filing a tracker issue to document the decision rationale.",
+            "rawEvidenceQuotes": [
+              "normative changes for R6",
+              "_filter normative",
+              "_filter parameter normative",
+              "search_filter normative",
+              "270e0ceb",
+              "_filter"
+            ],
+            "limitations": [
+              "- Important caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": true,
+          "dateIdentified": "2026-05-20T19:24:43.316Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": [
+        "E-001: missing narrative.whyItMatters."
+      ]
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 5,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 5
+    },
+    "byKind": {
+      "H": 3,
+      "E": 1,
+      "G": 1
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 1,
+      "other": 2
+    }
+  }
+}

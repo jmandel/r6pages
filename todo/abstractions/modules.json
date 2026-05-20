@@ -1,0 +1,228 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.275Z",
+  "sourceActionFilesGlob": "todo/actions/modules.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "modules",
+      "actionFilePath": "todo/actions/modules.md",
+      "researchFilePath": "todo/research/modules.md",
+      "status": "has-findings",
+      "summary": "The tracked R4 -> R6 ballot4 edits appear to match the Jira/Zulip/Confluence intent and are non-substantive, but the current page has 2 actionable reader-facing cleanup findings: one broken intra-spec anchor and one grammar issue.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "modules-E-001",
+          "localId": "E-001",
+          "pageLabel": "modules",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html",
+          "title": "Foundation Module `#uses` link targets a missing anchor",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html",
+              "lineRange": {
+                "start": 35,
+                "end": 35
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/foundation-module.html",
+              "lineRange": {
+                "start": 19,
+                "end": 79
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "modules action file",
+              "filePath": "todo/actions/modules.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html:35`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/foundation-module.html:19-79`; neighboring anchors exist at `terminology-module.html:129`, `secpriv-module.html:159`, `conformance-module.html:146`, and `workflow-module.html:105`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "modules research appendix",
+              "filePath": "todo/research/modules.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html:35",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html",
+              "lineRange": {
+                "start": 35,
+                "end": 35
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/foundation-module.html:19-79",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/foundation-module.html",
+              "lineRange": {
+                "start": 19,
+                "end": 79
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The first startup bullet links to `foundation-module.html#uses`, but the Foundation module source has no `uses` anchor. The other comparable module links point to existing Common Use Cases anchors.",
+            "analysis": "E-001: Foundation Module `#uses` link targets a missing anchor\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html:35`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/foundation-module.html:19-79`; neighboring anchors exist at `terminology-module.html:129`, `secpriv-module.html:159`, `conformance-module.html:146`, and `workflow-module.html:105`.\n\nProblem: The first startup bullet links to `foundation-module.html#uses`, but the Foundation module source has no `uses` anchor. The other comparable module links point to existing Common Use Cases anchors.\n\nWhy it matters: New implementers following the \"How will information be exchanged?\" guidance may land at the wrong place instead of a use-case section.\n\nRecommended next step: Either add a `uses` anchor/section to `foundation-module.html` or change the link to an existing target such as `foundation-module.html` or `foundation-module.html#index`.\n\nOverlooked/newly noticed context: - `E-001`: existing broken `foundation-module.html#uses` anchor.",
+            "whyItMatters": "New implementers following the \"How will information be exchanged?\" guidance may land at the wrong place instead of a use-case section.",
+            "recommendedNextStep": "Either add a `uses` anchor/section to `foundation-module.html` or change the link to an existing target such as `foundation-module.html` or `foundation-module.html#index`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html:35",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/foundation-module.html:19-79",
+              "terminology-module.html:129",
+              "secpriv-module.html:159",
+              "conformance-module.html:146",
+              "workflow-module.html:105"
+            ],
+            "limitations": [
+              "- Caveats: no PR was found for most page-specific changes beyond Jira comments and source commits. The Confluence hit for `FHIR-22752` looked context-only/mismatched from the snippet and was not used as evidence for the modules grammar fix."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.275Z",
+          "status": "open"
+        },
+        {
+          "id": "modules-E-002",
+          "localId": "E-002",
+          "pageLabel": "modules",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html",
+          "title": "Conformance startup bullet is grammatically awkward",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html",
+              "lineRange": {
+                "start": 40,
+                "end": 40
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "modules action file",
+              "filePath": "todo/actions/modules.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html:40`; commit `c32901f547075a3a54f97ef1c7d2e6ad248dc73d`; `https://jira.hl7.org/browse/FHIR-19572`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "modules research appendix",
+              "filePath": "todo/research/modules.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html:40",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html",
+              "lineRange": {
+                "start": 40,
+                "end": 40
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-19572",
+              "label": "FHIR-19572",
+              "url": "https://jira.hl7.org/browse/FHIR-19572",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "c32901f547075a3a54f97ef1c7d2e6ad248dc73d",
+              "label": "c32901f547075a3a54f97ef1c7d2e6ad248dc73d",
+              "url": "https://github.com/HL7/fhir/commit/c32901f547075a3a54f97ef1c7d2e6ad248dc73d",
+              "commitHash": "c32901f547075a3a54f97ef1c7d2e6ad248dc73d",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-19572`",
+              "url": "https://jira.hl7.org/browse/FHIR-19572`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The added question reads \"How the information conforms to the FHIR specification and implementation guides?\" Unlike the surrounding bullets, it is not a well-formed question.",
+            "analysis": "E-002: Conformance startup bullet is grammatically awkward\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html:40`; commit `c32901f547075a3a54f97ef1c7d2e6ad248dc73d`; `https://jira.hl7.org/browse/FHIR-19572`.\n\nProblem: The added question reads \"How the information conforms to the FHIR specification and implementation guides?\" Unlike the surrounding bullets, it is not a well-formed question.\n\nWhy it matters: Low-risk editorial issue, but this page is explicitly for new implementers and the bullet is part of the entry-point checklist.\n\nRecommended next step: Rephrase to \"How will the information conform to the FHIR specification and implementation guides?\" or \"How does the information conform to the FHIR specification and implementation guides?\"\n\nOverlooked/newly noticed context: - `E-002`: grammar issue in the `FHIR-19572` Conformance bullet, even though the applied wording matches the Jira resolution text.",
+            "whyItMatters": "Low-risk editorial issue, but this page is explicitly for new implementers and the bullet is part of the entry-point checklist.",
+            "recommendedNextStep": "Rephrase to \"How will the information conform to the FHIR specification and implementation guides?\" or \"How does the information conform to the FHIR specification and implementation guides?\"",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/modules.html:40",
+              "c32901f547075a3a54f97ef1c7d2e6ad248dc73d",
+              "https://jira.hl7.org/browse/FHIR-19572"
+            ],
+            "limitations": [
+              "- Caveats: no PR was found for most page-specific changes beyond Jira comments and source commits. The Confluence hit for `FHIR-22752` looked context-only/mismatched from the snippet and was not used as evidence for the modules grammar fix."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.275Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

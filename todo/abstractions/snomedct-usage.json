@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.333Z",
+  "sourceActionFilesGlob": "todo/actions/snomedct-usage.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "snomedct-usage",
+      "actionFilePath": "todo/actions/snomedct-usage.md",
+      "researchFilePath": "todo/research/snomedct-usage.md",
+      "status": "has-findings",
+      "summary": "2 actionable findings were found. Main risk: the R4→R6 source diff is only mechanical, but the unchanged SNOMED licensing/current-guidance prose appears stale and under-linked for R6 ballot4.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "snomedct-usage-H-001",
+          "localId": "H-001",
+          "pageLabel": "snomedct-usage",
+          "pagePath": "source/snomedct-usage.html",
+          "title": "US-specific SNOMED CT exception statement appears stale and unauditable",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/snomedct-usage.html",
+              "lineRange": {
+                "start": 25,
+                "end": 31
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "snomedct-usage action file",
+              "filePath": "todo/actions/snomedct-usage.md",
+              "confidence": "high",
+              "quote": "R6 source still says the base spec “only uses concepts defined in the International distribution,” but “there are some US specific codes” and HL7/IHTSDO are working to remove them (`source/snomedct-usage.html:25-31`). The same wording was introduced in 2016 (`f632a5...`); 2016 Zulip says IHTSDO allowed US-specific content “for now,” not permanently. No page-specific Jira was found."
+            },
+            {
+              "type": "research-appendix",
+              "label": "snomedct-usage research appendix",
+              "filePath": "todo/research/snomedct-usage.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/snomedct-usage.html:25-31",
+              "filePath": "source/snomedct-usage.html",
+              "lineRange": {
+                "start": 25,
+                "end": 31
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "The same wording was introduced in 2016 (`f632a5...`); 2016 Zulip says IHTSDO allowed US-specific content “for now,” not permanently.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The page does not identify which US-specific codes remain, whether the temporary exception is still valid, or who owns cleanup.",
+            "analysis": "H-001: US-specific SNOMED CT exception statement appears stale and unauditable\n\nEvidence: R6 source still says the base spec “only uses concepts defined in the International distribution,” but “there are some US specific codes” and HL7/IHTSDO are working to remove them (`source/snomedct-usage.html:25-31`). The same wording was introduced in 2016 (`f632a5...`); 2016 Zulip says IHTSDO allowed US-specific content “for now,” not permanently. No page-specific Jira was found.\n\nProblem: The page does not identify which US-specific codes remain, whether the temporary exception is still valid, or who owns cleanup.\n\nWhy it matters: This page exists for SNOMED CT licensing management; stale exception language weakens that control.\n\nRecommended next step: Ask FHIR-I/Vocab/HTA to review the generated current code list, document or remove any remaining US-specific exceptions, and update `IHTSDO`/wording to current SNOMED International terminology.\n\nOverlooked/newly noticed context: H-001 and E-001.",
+            "whyItMatters": "This page exists for SNOMED CT licensing management; stale exception language weakens that control.",
+            "recommendedNextStep": "Ask FHIR-I/Vocab/HTA to review the generated current code list, document or remove any remaining US-specific exceptions, and update `IHTSDO`/wording to current SNOMED International terminology.",
+            "rawEvidenceQuotes": [
+              "only uses concepts defined in the International distribution,",
+              "there are some US specific codes",
+              "for now,",
+              "source/snomedct-usage.html:25-31",
+              "f632a5..."
+            ],
+            "limitations": [
+              "- Caveats: this is source HTML, not rendered/generated output; `%sct-vs-list%` and `%sct-concept-list%` are publisher-generated placeholders, so source diff does not show generated value-set/concept list changes. Several broad Confluence/Zulip snapshots are very large; bounded excerpts around exact keys/phrases were used. Unquoted FTS searches for hyphenated strings such as `snomedct-usage` and `FHIR-48715` can fail because FTS parses hyphens as operators; quoted reruns were used for conclusions.",
+              "- Failed/confidence-affecting searches: unquoted `snomedct-usage` and `FHIR-48715` FTS searches failed due hyphen parsing; quoted reruns were used. Quoted page-specific Jira/Confluence searches returned no results, lowering confidence that a formal tracker exists for the current page prose."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.332Z",
+          "status": "open"
+        },
+        {
+          "id": "snomedct-usage-E-001",
+          "localId": "E-001",
+          "pageLabel": "snomedct-usage",
+          "pagePath": "source/snomedct-usage.html",
+          "title": "Current page lacks authoritative SNOMED guidance link and has visible typos",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/snomedct-usage.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "snomedct-usage action file",
+              "filePath": "todo/actions/snomedct-usage.md",
+              "confidence": "high",
+              "quote": "R6 source has no `terminology.hl7.org/SNOMEDCT.html` link; a 2024 Zulip thread requested a prominent link from `snomedct-usage.html` to that THO page. Current text also says `towards remove` (`:30`) and `value sets,the` (`:38`)."
+            },
+            {
+              "type": "research-appendix",
+              "label": "snomedct-usage research appendix",
+              "filePath": "todo/research/snomedct-usage.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "R6 source has no `terminology.hl7.org/SNOMEDCT.html` link; a 2024 Zulip thread requested a prominent link from `snomedct-usage.html` to that THO page.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Readers are not pointed to current THO SNOMED edition/version guidance, and the page looks stale.",
+            "analysis": "E-001: Current page lacks authoritative SNOMED guidance link and has visible typos\n\nEvidence: R6 source has no `terminology.hl7.org/SNOMEDCT.html` link; a 2024 Zulip thread requested a prominent link from `snomedct-usage.html` to that THO page. Current text also says `towards remove` (`:30`) and `value sets,the` (`:38`).\n\nProblem: Readers are not pointed to current THO SNOMED edition/version guidance, and the page looks stale.\n\nWhy it matters: This increases confusion around SNOMED editions/licensing and reduces confidence in a licensing-management page.\n\nRecommended next step: Add a prominent THO SNOMED guidance link and fix the two typos in the same technical-correction PR.\n\nOverlooked/newly noticed context: H-001 and E-001.",
+            "whyItMatters": "This increases confusion around SNOMED editions/licensing and reduces confidence in a licensing-management page.",
+            "recommendedNextStep": "Add a prominent THO SNOMED guidance link and fix the two typos in the same technical-correction PR.",
+            "rawEvidenceQuotes": [
+              "terminology.hl7.org/SNOMEDCT.html",
+              "snomedct-usage.html",
+              "towards remove",
+              ":30",
+              "value sets,the",
+              ":38"
+            ],
+            "limitations": [
+              "- Caveats: this is source HTML, not rendered/generated output; `%sct-vs-list%` and `%sct-concept-list%` are publisher-generated placeholders, so source diff does not show generated value-set/concept list changes. Several broad Confluence/Zulip snapshots are very large; bounded excerpts around exact keys/phrases were used. Unquoted FTS searches for hyphenated strings such as `snomedct-usage` and `FHIR-48715` can fail because FTS parses hyphens as operators; quoted reruns were used for conclusions.",
+              "- Failed/confidence-affecting searches: unquoted `snomedct-usage` and `FHIR-48715` FTS searches failed due hyphen parsing; quoted reruns were used. Quoted page-specific Jira/Confluence searches returned no results, lowering confidence that a formal tracker exists for the current page prose."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.333Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

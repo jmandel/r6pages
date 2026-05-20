@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.255Z",
+  "sourceActionFilesGlob": "todo/actions/languages.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "languages",
+      "actionFilePath": "todo/actions/languages.md",
+      "researchFilePath": "todo/research/languages.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: the CodeSystem/ValueSet translation guidance now uses the newer `preferredForLanguage` example, but later Jira/Zulip evidence shows the page still does not clearly explain when translations belong in CodeSystem supplements vs ValueSet designations or how to handle the legacy `designation-usage#display` example.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "languages-H-001",
+          "localId": "H-001",
+          "pageLabel": "languages",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/languages.html",
+          "title": "Clarify translation designations after the `preferredForLanguage` switch",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/languages.html",
+              "lineRange": {
+                "start": 139,
+                "end": 172
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "languages action file",
+              "filePath": "todo/actions/languages.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/languages.html:139-172`; commit `cd60623d614d8257ec769594687ce0587b385870`; `FHIR-37991`; `FHIR-51614`; Zulip `#terminology > CodeSystem designation-use`; Zulip `#terminology > Better guidance for translating codesystems`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "languages research appendix",
+              "filePath": "todo/research/languages.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/languages.html:139-172",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/languages.html",
+              "lineRange": {
+                "start": 139,
+                "end": 172
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-37991",
+              "label": "FHIR-37991",
+              "url": "https://jira.hl7.org/browse/FHIR-37991",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-51614",
+              "label": "FHIR-51614",
+              "url": "https://jira.hl7.org/browse/FHIR-51614",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "cd60623d614d8257ec769594687ce0587b385870",
+              "label": "cd60623d614d8257ec769594687ce0587b385870",
+              "url": "https://github.com/HL7/fhir/commit/cd60623d614d8257ec769594687ce0587b385870",
+              "commitHash": "cd60623d614d8257ec769594687ce0587b385870",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra#preferredForLanguage`",
+              "url": "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra#preferredForLanguage`",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/languages.html:139-172`; commit `cd60623d614d8257ec769594687ce0587b385870`; `FHIR-37991`; `FHIR-51614`; Zulip `#terminology > CodeSystem designation-use`; Zulip `#terminology > Better guidance for translating codesystems`\n- Priority: P2\n- Category: overlooked-problem\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/languages.html:139-172`; commit `cd60623d614d8257ec769594687ce0587b385870`; `FHIR-37991`; `FHIR-51614`; Zulip `#terminology > CodeSystem designation-use`; Zulip `#terminology > Better guidance for translating codesystems`\n- Problem: the page's designation example was updated to `http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra#preferredForLanguage`, but the surrounding text still broadly says designations can be used on CodeSystems and ValueSets without explaining the important modeling distinction raised later: translations of third-party code systems generally belong in CodeSystem supplements, while ValueSet designations are context/expansion-specific.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page's designation example was updated to `http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra#preferredForLanguage`, but the surrounding text still broadly says designations can be used on CodeSystems and ValueSets without explaining the important modeling distinction raised later: translations of third-party code systems generally belong in CodeSystem supplements, while ValueSet designations are context/expansion-specific. `FHIR-37991` also asked for a statement about legacy `designation-usage#display` backward compatibility, which is not present.",
+            "analysis": "H-001: Clarify translation designations after the `preferredForLanguage` switch\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/languages.html:139-172`; commit `cd60623d614d8257ec769594687ce0587b385870`; `FHIR-37991`; `FHIR-51614`; Zulip `#terminology > CodeSystem designation-use`; Zulip `#terminology > Better guidance for translating codesystems`\n\nProblem: the page's designation example was updated to `http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra#preferredForLanguage`, but the surrounding text still broadly says designations can be used on CodeSystems and ValueSets without explaining the important modeling distinction raised later: translations of third-party code systems generally belong in CodeSystem supplements, while ValueSet designations are context/expansion-specific. `FHIR-37991` also asked for a statement about legacy `designation-usage#display` backward compatibility, which is not present.\n\nWhy it matters: implementers can model translations in the wrong artifact or be confused by old examples/legacy instances using `designation-usage#display`, affecting terminology validation and display behavior.\n\nRecommended next step: resolve or explicitly triage `FHIR-51614` and `FHIR-37991` by adding concise guidance in this section, with links to the relevant CodeSystem/ValueSet designation sections and a note on legacy `designation-usage#display` compatibility.\n\nOverlooked/newly noticed context: H-001 is the only high-signal current-page problem found. No separate actionable editorial/rendering defect was identified.",
+            "whyItMatters": "implementers can model translations in the wrong artifact or be confused by old examples/legacy instances using `designation-usage#display`, affecting terminology validation and display behavior.",
+            "recommendedNextStep": "resolve or explicitly triage `FHIR-51614` and `FHIR-37991` by adding concise guidance in this section, with links to the relevant CodeSystem/ValueSet designation sections and a note on legacy `designation-usage#display` compatibility.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/languages.html:139-172",
+              "cd60623d614d8257ec769594687ce0587b385870",
+              "FHIR-37991",
+              "FHIR-51614",
+              "#terminology > CodeSystem designation-use",
+              "#terminology > Better guidance for translating codesystems"
+            ],
+            "limitations": [
+              "- Caveat: no PR numbers were discovered in the inspected commit metadata or community snapshots. The `preferredForLanguage` source change is in an `Auto stash before merge` commit without a Jira key, but a contemporaneous Zulip thread explicitly says the source was switched from `designation-usage#display` to `hl7TermMaintInfra#preferredForLanguage`.",
+              "| Jira | `FHIR-22695` | https://jira.hl7.org/browse/FHIR-22695 / `bun run jira:search snapshot FHIR-22695` | Rationale for removing obsolete narrative limitation |",
+              "- 2022-03-17: obsolete narrative limitation removed from source (`f12cbe3666...`, `FHIR-22695`)."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.255Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 1,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

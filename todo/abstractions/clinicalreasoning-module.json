@@ -1,0 +1,244 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.160Z",
+  "sourceActionFilesGlob": "todo/actions/clinicalreasoning-module.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "clinicalreasoning-module",
+      "actionFilePath": "todo/actions/clinicalreasoning-module.md",
+      "researchFilePath": "todo/research/clinicalreasoning-module.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings, both concrete reader-facing link defects introduced by late R6 page edits. No broader Jira/Zulip/Confluence intent mismatch was found for the substantive page changes.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "clinicalreasoning-module-E-001",
+          "localId": "E-001",
+          "pageLabel": "clinicalreasoning-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html",
+          "title": "Decision Support Services link is malformed",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html",
+              "lineRange": {
+                "start": 70,
+                "end": 70
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-module action file",
+              "filePath": "todo/actions/clinicalreasoning-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html:70`; commit `1268605a53fabdafc86a868ba2a51656aa9907c7`; `FHIR-53085`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-module research appendix",
+              "filePath": "todo/research/clinicalreasoning-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html:70",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html",
+              "lineRange": {
+                "start": 70,
+                "end": 70
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53085",
+              "label": "FHIR-53085",
+              "url": "https://jira.hl7.org/browse/FHIR-53085",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "1268605a53fabdafc86a868ba2a51656aa9907c7",
+              "label": "1268605a53fabdafc86a868ba2a51656aa9907c7",
+              "url": "https://github.com/HL7/fhir/commit/1268605a53fabdafc86a868ba2a51656aa9907c7",
+              "commitHash": "1268605a53fabdafc86a868ba2a51656aa9907c7",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://clinicalreasoning-cds-on-fhir.html/`",
+              "url": "https://clinicalreasoning-cds-on-fhir.html/`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The page links `Decision Support Services` to `https://clinicalreasoning-cds-on-fhir.html/`, which is parsed as an external HTTPS host rather than the local page.",
+            "analysis": "E-001: Decision Support Services link is malformed\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html:70`; commit `1268605a53fabdafc86a868ba2a51656aa9907c7`; `FHIR-53085`\n\nProblem: The page links `Decision Support Services` to `https://clinicalreasoning-cds-on-fhir.html/`, which is parsed as an external HTTPS host rather than the local page.\n\nWhy it matters: Readers trying to navigate from the audience description will be sent to a broken/nonexistent domain instead of the intended local topic or IG.\n\nRecommended next step: Replace the href with the intended target, likely `clinicalreasoning-cds-on-fhir.html` if the core topic remains the landing page, or the actual Using Clinical Reasoning IG URL if `FHIR-53085` intended an external IG reference.\n\nIntent-vs-implementation context: None found beyond the broken implementation of the `FHIR-53085` link update in E-001.",
+            "whyItMatters": "Readers trying to navigate from the audience description will be sent to a broken/nonexistent domain instead of the intended local topic or IG.",
+            "recommendedNextStep": "Replace the href with the intended target, likely `clinicalreasoning-cds-on-fhir.html` if the core topic remains the landing page, or the actual Using Clinical Reasoning IG URL if `FHIR-53085` intended an external IG reference.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html:70",
+              "1268605a53fabdafc86a868ba2a51656aa9907c7",
+              "FHIR-53085"
+            ],
+            "limitations": [
+              "- Important caveat: no Jira/Zulip/Confluence evidence was found that directly discusses the malformed `https://clinicalreasoning-cds-on-fhir.html/` link or the `EventDefinition` row linking to `evidence.html`; those appear to be concrete source defects visible in the current page.",
+              "- Substantive/semantic index update: the small R4 CQF extension list was replaced with a much broader list of commonly used extension-pack extensions, plus an explicit caveat that the extensions pack is the source of truth if descriptions differ."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.159Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-module-E-002",
+          "localId": "E-002",
+          "pageLabel": "clinicalreasoning-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html",
+          "title": "EventDefinition index row links to Evidence",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html",
+              "lineRange": {
+                "start": 89,
+                "end": 89
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html",
+              "lineRange": {
+                "start": 243,
+                "end": 243
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-module action file",
+              "filePath": "todo/actions/clinicalreasoning-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html:89`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:243`; commit `f2c01f013006a55844d5a4975b429827f025fc0f`; follow-up commit `4fc8a69b31ede7410e3251421346f8b404a91f3d`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-module research appendix",
+              "filePath": "todo/research/clinicalreasoning-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html:89",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html",
+              "lineRange": {
+                "start": 89,
+                "end": 89
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:243",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html",
+              "lineRange": {
+                "start": 243,
+                "end": 243
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "f2c01f013006a55844d5a4975b429827f025fc0f",
+              "label": "f2c01f013006a55844d5a4975b429827f025fc0f",
+              "url": "https://github.com/HL7/fhir/commit/f2c01f013006a55844d5a4975b429827f025fc0f",
+              "commitHash": "f2c01f013006a55844d5a4975b429827f025fc0f",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "4fc8a69b31ede7410e3251421346f8b404a91f3d",
+              "label": "4fc8a69b31ede7410e3251421346f8b404a91f3d",
+              "url": "https://github.com/HL7/fhir/commit/4fc8a69b31ede7410e3251421346f8b404a91f3d",
+              "commitHash": "4fc8a69b31ede7410e3251421346f8b404a91f3d",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The Clinical Reasoning index labels the row `EventDefinition` but its href is `evidence.html`; the resource list uses `eventdefinition.html`.",
+            "analysis": "E-002: EventDefinition index row links to Evidence\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html:89`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:243`; commit `f2c01f013006a55844d5a4975b429827f025fc0f`; follow-up commit `4fc8a69b31ede7410e3251421346f8b404a91f3d`\n\nProblem: The Clinical Reasoning index labels the row `EventDefinition` but its href is `evidence.html`; the resource list uses `eventdefinition.html`.\n\nWhy it matters: The resource index silently routes readers to the wrong resource page.\n\nRecommended next step: Change the EventDefinition row href to `eventdefinition.html`.\n\nOverlooked/newly noticed context: E-002 appears to be a newly noticed QA issue: the same late QA pass fixed the neighboring TriggerDefinition link but left EventDefinition pointing at Evidence.",
+            "whyItMatters": "The resource index silently routes readers to the wrong resource page.",
+            "recommendedNextStep": "Change the EventDefinition row href to `eventdefinition.html`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-module.html:89",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:243",
+              "f2c01f013006a55844d5a4975b429827f025fc0f",
+              "4fc8a69b31ede7410e3251421346f8b404a91f3d"
+            ],
+            "limitations": [
+              "- Important caveat: no Jira/Zulip/Confluence evidence was found that directly discusses the malformed `https://clinicalreasoning-cds-on-fhir.html/` link or the `EventDefinition` row linking to `evidence.html`; those appear to be concrete source defects visible in the current page.",
+              "- Substantive/semantic index update: the small R4 CQF extension list was replaced with a much broader list of commonly used extension-pack extensions, plus an explicit caveat that the extensions pack is the source of truth if descriptions differ."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.159Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 2,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

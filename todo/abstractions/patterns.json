@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.294Z",
+  "sourceActionFilesGlob": "todo/actions/patterns.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "patterns",
+      "actionFilePath": "todo/actions/patterns.md",
+      "researchFilePath": "todo/research/patterns.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding, a low-priority reader-facing typo. No substantive intent-vs-implementation mismatch was found; the R4-to-R6 page changes are metadata/navigation and editorial punctuation.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "patterns-E-001",
+          "localId": "E-001",
+          "pageLabel": "patterns",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/patterns.html",
+          "title": "Correct `that the pattern` to `than the pattern",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/patterns.html",
+              "lineRange": {
+                "start": 76,
+                "end": 76
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "patterns action file",
+              "filePath": "todo/actions/patterns.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/patterns.html:76`; unchanged from R4 line 67; exact Jira/Zulip/Confluence searches for `\"higher cardinality that the pattern\"` found no prior tracker or discussion."
+            },
+            {
+              "type": "research-appendix",
+              "label": "patterns research appendix",
+              "filePath": "todo/research/patterns.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/patterns.html:76",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/patterns.html",
+              "lineRange": {
+                "start": 76,
+                "end": 76
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/patterns.html:76`; unchanged from R4 line 67; exact Jira/Zulip/Confluence searches for `\"higher cardinality that the pattern\"` found no prior tracker or discussion.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/patterns.html:76`; unchanged from R4 line 67; exact Jira/Zulip/Confluence searches for `\"higher cardinality that the pattern\"` found no prior tracker or discussion.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The sentence says interface-pattern resources may \"allow for a higher cardinality that the pattern\"; this appears to be a typo for \"higher cardinality than the pattern.\"",
+            "analysis": "E-001: Correct `that the pattern` to `than the pattern\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/patterns.html:76`; unchanged from R4 line 67; exact Jira/Zulip/Confluence searches for `\"higher cardinality that the pattern\"` found no prior tracker or discussion.\n\nProblem: The sentence says interface-pattern resources may \"allow for a higher cardinality that the pattern\"; this appears to be a typo for \"higher cardinality than the pattern.\"\n\nWhy it matters: This is minor, but it is visible reader-facing guidance in the interface-pattern section.\n\nRecommended next step: File or apply a small editorial correction from `that` to `than`.\n\nOverlooked/newly noticed context: E-001 above.",
+            "whyItMatters": "This is minor, but it is visible reader-facing guidance in the interface-pattern section.",
+            "recommendedNextStep": "File or apply a small editorial correction from `that` to `than`.",
+            "rawEvidenceQuotes": [
+              "higher cardinality that the pattern",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/patterns.html:76",
+              "\"higher cardinality that the pattern\""
+            ],
+            "limitations": [
+              "- Important caveat: no broad, exhaustive keyword search was performed because the direct diff is nearly all metadata/template/navigation and editorial punctuation. A Zulip FTS search for unquoted `FHIR-44047` failed because the hyphen was parsed by SQLite FTS; a SQL `LIKE '%FHIR-44047%'` retry found no Zulip messages."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.294Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

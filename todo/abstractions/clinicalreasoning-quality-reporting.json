@@ -1,0 +1,496 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.165Z",
+  "sourceActionFilesGlob": "todo/actions/clinicalreasoning-quality-reporting.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "clinicalreasoning-quality-reporting",
+      "actionFilePath": "todo/actions/clinicalreasoning-quality-reporting.md",
+      "researchFilePath": "todo/research/clinicalreasoning-quality-reporting.md",
+      "status": "has-findings",
+      "summary": "The page has 4 actionable findings. The main risk is that the Normative R6 ballot4 page still points implementers at retired or mismatched operation semantics while adjacent OperationDefinitions and Jira decisions moved toward `$evaluate`/DEQM alignment.",
+      "findingCount": 4,
+      "findings": [
+        {
+          "id": "clinicalreasoning-quality-reporting-H-001",
+          "localId": "H-001",
+          "pageLabel": "clinicalreasoning-quality-reporting",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+          "title": "Invoking Measures still presents retired `$evaluate-measure` as the primary operation",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+              "lineRange": {
+                "start": 501,
+                "end": 541
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml",
+              "lineRange": {
+                "start": 62,
+                "end": 68
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate-measure.xml",
+              "lineRange": {
+                "start": 11,
+                "end": 13
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-quality-reporting action file",
+              "filePath": "todo/actions/clinicalreasoning-quality-reporting.md",
+              "confidence": "high",
+              "quote": "current page `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:501-541`; same page says MeasureReport is returned by `$evaluate` at `:628`; current `$evaluate` OperationDefinition is `code=evaluate` and `instance=false` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml:62-68`; `$evaluate-measure` is deprecated/retired at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate-measure.xml:11-13` and `:61-86`; `FHIR-50484` says to align with DEQM and \"Correct $evaluate-measure to $evaluate\" (`https://jira.hl7.org/browse/FHIR-50484`); `FHIR-50486` says `$evaluate-measure` was already deprecated; `FHIR-45727` says the subject example should use `subject=Patient/124`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-quality-reporting research appendix",
+              "filePath": "todo/research/clinicalreasoning-quality-reporting.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:501-541",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+              "lineRange": {
+                "start": 501,
+                "end": 541
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml:62-68",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml",
+              "lineRange": {
+                "start": 62,
+                "end": 68
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate-measure.xml:11-13",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate-measure.xml",
+              "lineRange": {
+                "start": 11,
+                "end": 13
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-50484",
+              "label": "FHIR-50484",
+              "url": "https://jira.hl7.org/browse/FHIR-50484",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-50486",
+              "label": "FHIR-50486",
+              "url": "https://jira.hl7.org/browse/FHIR-50486",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-45727",
+              "label": "FHIR-45727",
+              "url": "https://jira.hl7.org/browse/FHIR-45727",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-50484`",
+              "url": "https://jira.hl7.org/browse/FHIR-50484`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The page still describes `$evaluate-measure` as the custom operation, links `operation-measure-evaluate-measure.html`, gives type and instance examples using `$evaluate-measure`, and has a patient example using `[base]/Basic/CMS146/$evaluate-measure?subject=124`.",
+            "analysis": "H-001: Invoking Measures still presents retired `$evaluate-measure` as the primary operation\n\nEvidence: current page `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:501-541`; same page says MeasureReport is returned by `$evaluate` at `:628`; current `$evaluate` OperationDefinition is `code=evaluate` and `instance=false` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml:62-68`; `$evaluate-measure` is deprecated/retired at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate-measure.xml:11-13` and `:61-86`; `FHIR-50484` says to align with DEQM and \"Correct $evaluate-measure to $evaluate\" (`https://jira.hl7.org/browse/FHIR-50484`); `FHIR-50486` says `$evaluate-measure` was already deprecated; `FHIR-45727` says the subject example should use `subject=Patient/124`.\n\nProblem: The page still describes `$evaluate-measure` as the custom operation, links `operation-measure-evaluate-measure.html`, gives type and instance examples using `$evaluate-measure`, and has a patient example using `[base]/Basic/CMS146/$evaluate-measure?subject=124`.\n\nWhy it matters: Readers may implement or call the retired operation, use an invalid/stale resource path, or copy a subject parameter form that later Jira explicitly corrected.\n\nRecommended next step: Rewrite the Invoking Measures section around the current `$evaluate` operation or clearly mark `$evaluate-measure` as deprecated; align examples with the current OperationDefinition and Jira dispositions before publication.\n\nIntent-vs-implementation context: - `H-001`: Jira and OperationDefinition evidence moved toward `$evaluate`, but the page still teaches `$evaluate-measure`.",
+            "whyItMatters": "Readers may implement or call the retired operation, use an invalid/stale resource path, or copy a subject parameter form that later Jira explicitly corrected.",
+            "recommendedNextStep": "Rewrite the Invoking Measures section around the current `$evaluate` operation or clearly mark `$evaluate-measure` as deprecated; align examples with the current OperationDefinition and Jira dispositions before publication.",
+            "rawEvidenceQuotes": [
+              "Correct $evaluate-measure to $evaluate",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:501-541",
+              "$evaluate",
+              ":628",
+              "code=evaluate",
+              "instance=false",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml:62-68",
+              "$evaluate-measure",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate-measure.xml:11-13",
+              ":61-86",
+              "FHIR-50484",
+              "https://jira.hl7.org/browse/FHIR-50484"
+            ],
+            "limitations": [
+              "- Caveats: Jira issue `FHIR-50012` relies on an attached Word document and a Confluence attachment link; the local snapshot records the attachment/link but not the document contents. Some later evidence (`FHIR-53433`, 2026 Confluence) post-dates the R6 ballot4 source tree and is treated as later reassessment, not as provenance for the R4 -> R6 ballot4 diff."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.162Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-quality-reporting-H-002",
+          "localId": "H-002",
+          "pageLabel": "clinicalreasoning-quality-reporting",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+          "title": "Ad-hoc Organization guidance uses parameter names that do not match current operations",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+              "lineRange": {
+                "start": 554,
+                "end": 610
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml",
+              "lineRange": {
+                "start": 129,
+                "end": 142
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-collect-data.xml",
+              "lineRange": {
+                "start": 107,
+                "end": 130
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-care-gaps.xml",
+              "lineRange": {
+                "start": 248,
+                "end": 261
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-quality-reporting action file",
+              "filePath": "todo/actions/clinicalreasoning-quality-reporting.md",
+              "confidence": "high",
+              "quote": "current page says the Organization can be supplied in the `provider` or `providerResource` parameter for `$evaluate`, `$care-gaps`, or `$collect-data` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:554-610`; `$evaluate` currently defines `reporter`/`reporterResource` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml:129-142`; `$collect-data` uses `reporter`, `reporterResource`, and `organizationResource` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-collect-data.xml:107-130`; `$care-gaps` uses `organization`/`organizationResource` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-care-gaps.xml:248-261`; related Jira `FHIR-53278` records the ad-hoc Organization alignment intent."
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-quality-reporting research appendix",
+              "filePath": "todo/research/clinicalreasoning-quality-reporting.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:554-610",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+              "lineRange": {
+                "start": 554,
+                "end": 610
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml:129-142",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml",
+              "lineRange": {
+                "start": 129,
+                "end": 142
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-collect-data.xml:107-130",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-collect-data.xml",
+              "lineRange": {
+                "start": 107,
+                "end": 130
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-care-gaps.xml:248-261",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-care-gaps.xml",
+              "lineRange": {
+                "start": 248,
+                "end": 261
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53278",
+              "label": "FHIR-53278",
+              "url": "https://jira.hl7.org/browse/FHIR-53278",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The page gives one parameter pair for three operations, but the operation definitions use different names. The final SHALL sentence is therefore not directly actionable for at least `$evaluate` and `$care-gaps`.",
+            "analysis": "H-002: Ad-hoc Organization guidance uses parameter names that do not match current operations\n\nEvidence: current page says the Organization can be supplied in the `provider` or `providerResource` parameter for `$evaluate`, `$care-gaps`, or `$collect-data` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:554-610`; `$evaluate` currently defines `reporter`/`reporterResource` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml:129-142`; `$collect-data` uses `reporter`, `reporterResource`, and `organizationResource` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-collect-data.xml:107-130`; `$care-gaps` uses `organization`/`organizationResource` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-care-gaps.xml:248-261`; related Jira `FHIR-53278` records the ad-hoc Organization alignment intent.\n\nProblem: The page gives one parameter pair for three operations, but the operation definitions use different names. The final SHALL sentence is therefore not directly actionable for at least `$evaluate` and `$care-gaps`.\n\nWhy it matters: This is conformance-facing text: implementers need to know which request parameter drives `MeasureReport.reporter` and when a contained ad-hoc Organization is required.\n\nRecommended next step: Replace the generic `provider/providerResource` wording with operation-specific parameter names, or align the OperationDefinitions and page text so they use the same names consistently.\n\nIntent-vs-implementation context: - `H-002`: Ad-hoc Organization text does not match the operation parameter names currently defined.",
+            "whyItMatters": "This is conformance-facing text: implementers need to know which request parameter drives `MeasureReport.reporter` and when a contained ad-hoc Organization is required.",
+            "recommendedNextStep": "Replace the generic `provider/providerResource` wording with operation-specific parameter names, or align the OperationDefinitions and page text so they use the same names consistently.",
+            "rawEvidenceQuotes": [
+              "provider",
+              "providerResource",
+              "$evaluate",
+              "$care-gaps",
+              "$collect-data",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:554-610",
+              "reporter",
+              "reporterResource",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-evaluate.xml:129-142",
+              "organizationResource",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/measure/operationdefinition-Measure-collect-data.xml:107-130",
+              "organization"
+            ],
+            "limitations": [
+              "- Caveats: Jira issue `FHIR-50012` relies on an attached Word document and a Confluence attachment link; the local snapshot records the attachment/link but not the document contents. Some later evidence (`FHIR-53433`, 2026 Confluence) post-dates the R6 ballot4 source tree and is treated as later reassessment, not as provenance for the R4 -> R6 ballot4 diff."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.163Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-quality-reporting-H-003",
+          "localId": "H-003",
+          "pageLabel": "clinicalreasoning-quality-reporting",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+          "title": "Later Jira decision adds missing value-based stratifier behavior",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+              "lineRange": {
+                "start": 335,
+                "end": 444
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-quality-reporting action file",
+              "filePath": "todo/actions/clinicalreasoning-quality-reporting.md",
+              "confidence": "high",
+              "quote": "current value-based/component stratifier guidance is at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:335-444`; `FHIR-53433` explicitly directs adding text above \"Using Value Sets for Stratification\" explaining that multiple returned values mean inclusion in each stratum, not a combined stratum (`https://jira.hl7.org/browse/FHIR-53433`); Confluence page `391651979` references stratifier testing with `FHIR-53433`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-quality-reporting research appendix",
+              "filePath": "todo/research/clinicalreasoning-quality-reporting.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:335-444",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+              "lineRange": {
+                "start": 335,
+                "end": 444
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53433",
+              "label": "FHIR-53433",
+              "url": "https://jira.hl7.org/browse/FHIR-53433",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-53433`",
+              "url": "https://jira.hl7.org/browse/FHIR-53433`",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "current value-based/component stratifier guidance is at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:335-444`; `FHIR-53433` explicitly directs adding text above \"Using Value Sets for Stratification\" explaining that multiple returned values mean inclusion in each stratum, not a combined stratum (`https://jira.hl7.org/browse/FHIR-53433`); Confluence page `391651979` references stratifier testing with `FHIR-53433`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The R6 ballot4 page explains value-based stratifiers but does not state how to interpret a value-based stratifier expression that returns multiple values.",
+            "analysis": "H-003: Later Jira decision adds missing value-based stratifier behavior\n\nEvidence: current value-based/component stratifier guidance is at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:335-444`; `FHIR-53433` explicitly directs adding text above \"Using Value Sets for Stratification\" explaining that multiple returned values mean inclusion in each stratum, not a combined stratum (`https://jira.hl7.org/browse/FHIR-53433`); Confluence page `391651979` references stratifier testing with `FHIR-53433`.\n\nProblem: The R6 ballot4 page explains value-based stratifiers but does not state how to interpret a value-based stratifier expression that returns multiple values.\n\nWhy it matters: Without the clarification, implementations could create an unintended combined stratum rather than counting the case in each returned stratum.\n\nRecommended next step: Apply or backport the `FHIR-53433` clarification to this page, or verify that a later source branch already includes it before closing.\n\nIntent-vs-implementation context: - `H-003`: Later Jira `FHIR-53433` says to add clarification to this page; the R6 ballot4 page lacks it.",
+            "whyItMatters": "Without the clarification, implementations could create an unintended combined stratum rather than counting the case in each returned stratum.",
+            "recommendedNextStep": "Apply or backport the `FHIR-53433` clarification to this page, or verify that a later source branch already includes it before closing.",
+            "rawEvidenceQuotes": [
+              "Using Value Sets for Stratification",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:335-444",
+              "FHIR-53433",
+              "https://jira.hl7.org/browse/FHIR-53433",
+              "391651979"
+            ],
+            "limitations": [
+              "- Caveats: Jira issue `FHIR-50012` relies on an attached Word document and a Confluence attachment link; the local snapshot records the attachment/link but not the document contents. Some later evidence (`FHIR-53433`, 2026 Confluence) post-dates the R6 ballot4 source tree and is treated as later reassessment, not as provenance for the R4 -> R6 ballot4 diff."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.165Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-quality-reporting-E-001",
+          "localId": "E-001",
+          "pageLabel": "clinicalreasoning-quality-reporting",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+          "title": "Current page has multiple concrete rendering/editorial defects in new guidance",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+              "lineRange": {
+                "start": 101,
+                "end": 101
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-quality-reporting action file",
+              "filePath": "todo/actions/clinicalreasoning-quality-reporting.md",
+              "confidence": "high",
+              "quote": "literal backticks in HTML at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:101`; missing space `resource.The` at `:108`; Markdown link left in HTML at `:222`; typos at `:256`, `:261`, `:366`, and `:444`; missing parenthesis in criteria-based stratifier explanation at `:277`; broken escaped XML closing tag `&gt;/component&gt;` at `:348`; grammar issue \"an quality measure\" at `:501`; bare, unwrapped paragraphs in the ad-hoc Organization section at `:554-610`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-quality-reporting research appendix",
+              "filePath": "todo/research/clinicalreasoning-quality-reporting.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:101",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html",
+              "lineRange": {
+                "start": 101,
+                "end": 101
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Several defects are visible to readers or break examples, especially the `>/component>` XML fragment and literal Markdown link.",
+            "analysis": "E-001: Current page has multiple concrete rendering/editorial defects in new guidance\n\nEvidence: literal backticks in HTML at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:101`; missing space `resource.The` at `:108`; Markdown link left in HTML at `:222`; typos at `:256`, `:261`, `:366`, and `:444`; missing parenthesis in criteria-based stratifier explanation at `:277`; broken escaped XML closing tag `&gt;/component&gt;` at `:348`; grammar issue \"an quality measure\" at `:501`; bare, unwrapped paragraphs in the ad-hoc Organization section at `:554-610`.\n\nProblem: Several defects are visible to readers or break examples, especially the `>/component>` XML fragment and literal Markdown link.\n\nWhy it matters: The page is marked Normative, and readers may copy examples or rely on links directly.\n\nRecommended next step: Do an editorial/markup pass over the R6-added sections, prioritizing the broken XML fragment, Markdown-to-HTML conversion, and operation-example wording.\n\nOverlooked/newly noticed context: - `E-001`: Multiple concrete rendering/editorial defects are visible in the current page and were not fully covered by the tracked typo fix.",
+            "whyItMatters": "The page is marked Normative, and readers may copy examples or rely on links directly.",
+            "recommendedNextStep": "Do an editorial/markup pass over the R6-added sections, prioritizing the broken XML fragment, Markdown-to-HTML conversion, and operation-example wording.",
+            "rawEvidenceQuotes": [
+              "an quality measure",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-quality-reporting.html:101",
+              "resource.The",
+              ":108",
+              ":222",
+              ":256",
+              ":261",
+              ":366",
+              ":444",
+              ":277",
+              "&gt;/component&gt;",
+              ":348"
+            ],
+            "limitations": [
+              "- Caveats: Jira issue `FHIR-50012` relies on an attached Word document and a Confluence attachment link; the local snapshot records the attachment/link but not the document contents. Some later evidence (`FHIR-53433`, 2026 Confluence) post-dates the R6 ballot4 source tree and is treated as later reassessment, not as provenance for the R4 -> R6 ballot4 diff."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.165Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 4,
+    "byPriority": {
+      "P0": 0,
+      "P1": 2,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 3,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 1,
+      "overlooked-problem": 1,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.136Z",
+  "sourceActionFilesGlob": "todo/actions/ballot-intro.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "ballot-intro",
+      "actionFilePath": "todo/actions/ballot-intro.md",
+      "researchFilePath": "todo/research/ballot-intro.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings. The main risk is that ballot reviewers are being directed by a change-summary page with one accepted-but-unapplied broken-link correction and a moved-artifact list that is visibly corrupted and later reported incomplete.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "ballot-intro-H-001",
+          "localId": "H-001",
+          "pageLabel": "ballot-intro",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html",
+          "title": "Moved-artifact list is not reliable enough for ballot review",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html",
+              "lineRange": {
+                "start": 69,
+                "end": 113
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "ballot-intro action file",
+              "filePath": "todo/actions/ballot-intro.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html:69-113`; commit `71567db3ee039ac6977be5f96a7e013896569a36`; commit `02f79b0a3ba639280ab7d0d92e364f0a2b676bea`; Zulip `#fmg > Overview of Incubating IGs` (`https://chat.fhir.org/#narrow/stream/fmg/topic/Overview%20of%20Incubating%20IGs`)"
+            },
+            {
+              "type": "research-appendix",
+              "label": "ballot-intro research appendix",
+              "filePath": "todo/research/ballot-intro.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html:69-113",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html",
+              "lineRange": {
+                "start": 69,
+                "end": 113
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "71567db3ee039ac6977be5f96a7e013896569a36",
+              "label": "71567db3ee039ac6977be5f96a7e013896569a36",
+              "url": "https://github.com/HL7/fhir/commit/71567db3ee039ac6977be5f96a7e013896569a36",
+              "commitHash": "71567db3ee039ac6977be5f96a7e013896569a36",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "02f79b0a3ba639280ab7d0d92e364f0a2b676bea",
+              "label": "02f79b0a3ba639280ab7d0d92e364f0a2b676bea",
+              "url": "https://github.com/HL7/fhir/commit/02f79b0a3ba639280ab7d0d92e364f0a2b676bea",
+              "commitHash": "02f79b0a3ba639280ab7d0d92e364f0a2b676bea",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "https://chat.fhir.org/#narrow/stream/fmg/topic/Overview%20of%20Incubating%20IGs`",
+              "url": "https://chat.fhir.org/#narrow/stream/fmg/topic/Overview%20of%20Incubating%20IGs`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The page says \"Here's the list\" for resources moved out of the specification and then lists other moved artifacts, but the list contains a stray rendered `4`, a corrupted `DocumentReCapabilityStatementference.$conforms` label for a CapabilityStatement operation, and a likely wrong `ChargeDefinition.$apply` label pointing to `ChargeItemDefinition.$apply`. Later Zulip discussion says the ballot-intro overview was the only overview found and was incomplete, with `Encounter.$everything` cited as missing.",
+            "analysis": "H-001: Moved-artifact list is not reliable enough for ballot review\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html:69-113`; commit `71567db3ee039ac6977be5f96a7e013896569a36`; commit `02f79b0a3ba639280ab7d0d92e364f0a2b676bea`; Zulip `#fmg > Overview of Incubating IGs` (`https://chat.fhir.org/#narrow/stream/fmg/topic/Overview%20of%20Incubating%20IGs`)\n\nProblem: The page says \"Here's the list\" for resources moved out of the specification and then lists other moved artifacts, but the list contains a stray rendered `4`, a corrupted `DocumentReCapabilityStatementference.$conforms` label for a CapabilityStatement operation, and a likely wrong `ChargeDefinition.$apply` label pointing to `ChargeItemDefinition.$apply`. Later Zulip discussion says the ballot-intro overview was the only overview found and was incomplete, with `Encounter.$everything` cited as missing.\n\nWhy it matters: Balloters may miss or misidentify moved resources/operations when deciding what changed in R6 and where to file comments.\n\nRecommended next step: Reconcile this list against an authoritative incubator/additional-resource inventory, fix the corrupted labels/rendering, and link to the maintained incubator overview rather than relying on a hand-maintained static list.",
+            "whyItMatters": "Balloters may miss or misidentify moved resources/operations when deciding what changed in R6 and where to file comments.",
+            "recommendedNextStep": "Reconcile this list against an authoritative incubator/additional-resource inventory, fix the corrupted labels/rendering, and link to the maintained incubator overview rather than relying on a hand-maintained static list.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html:69-113",
+              "71567db3ee039ac6977be5f96a7e013896569a36",
+              "02f79b0a3ba639280ab7d0d92e364f0a2b676bea",
+              "#fmg > Overview of Incubating IGs",
+              "https://chat.fhir.org/#narrow/stream/fmg/topic/Overview%20of%20Incubating%20IGs"
+            ],
+            "limitations": [
+              "- Caveat: the R6 ballot-intro page is explicitly treated by FMG as per-ballot text that is rewritten/replaced each ballot, so many proofreading Jira comments were resolved \"No Change\" on that basis rather than applied to this already-published ballot4 page.",
+              "| Source lines | R6 normative ballot scope/process | `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html:19-37` | New guidance on full normative ballot, voting, THO movement, FMM caveat, and cross-version artifacts. |",
+              "| Zulip | FMM framework caveat | `#fmg > ✔ FMM framework revisions?`, `https://chat.fhir.org/#narrow/stream/fmg/topic/%E2%9C%94%20FMM%20framework%20revisions%3F`; reopen with `bun run zulip:search snapshot fmg \"✔ FMM framework revisions?\"` | A reader asked about the page's FMM caveat; Lloyd said no real work had happened yet and R6 timing was uncertain. |",
+              "- `#fmg > ✔ FMM framework revisions?`: Max Masnick asked about the page's sentence that FMM updates are pending FMM framework revisions. Lloyd McKenzie answered on 2026-03-21 that there was \"No real work thus far\" and that he was not sure it would happen as part of R6. This suggests the page's FMM caveat is real context but not a completed plan.",
+              "| 2026-03-21 | Zulip | FMM framework caveat prompted reader question; Lloyd said no real work yet and R6 timing uncertain. |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.135Z",
+          "status": "open"
+        },
+        {
+          "id": "ballot-intro-E-001",
+          "localId": "E-001",
+          "pageLabel": "ballot-intro",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html",
+          "title": "Accepted THO link correction is still not applied",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html",
+              "lineRange": {
+                "start": 129,
+                "end": 129
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "ballot-intro action file",
+              "filePath": "todo/actions/ballot-intro.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html:129`; `FHIR-53852` (`https://jira.hl7.org/browse/FHIR-53852`)"
+            },
+            {
+              "type": "research-appendix",
+              "label": "ballot-intro research appendix",
+              "filePath": "todo/research/ballot-intro.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html:129",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html",
+              "lineRange": {
+                "start": 129,
+                "end": 129
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53852",
+              "label": "FHIR-53852",
+              "url": "https://jira.hl7.org/browse/FHIR-53852",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-53852`",
+              "url": "https://jira.hl7.org/browse/FHIR-53852`",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://terminology.fhr.org`",
+              "url": "http://terminology.fhr.org`",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://terminology.hl7.org/`",
+              "url": "https://terminology.hl7.org/`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The medication statement category note still links to `http://terminology.fhr.org`, while `FHIR-53852` resolved that this should be changed to `https://terminology.hl7.org/`.",
+            "analysis": "E-001: Accepted THO link correction is still not applied\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html:129`; `FHIR-53852` (`https://jira.hl7.org/browse/FHIR-53852`)\n\nProblem: The medication statement category note still links to `http://terminology.fhr.org`, while `FHIR-53852` resolved that this should be changed to `https://terminology.hl7.org/`.\n\nWhy it matters: The visible THO link is broken on a ballot guidance page, and the accepted correction has not reached this source snapshot.\n\nRecommended next step: Apply the `FHIR-53852` URL correction and update/close the tracker state when the fix is merged.",
+            "whyItMatters": "The visible THO link is broken on a ballot guidance page, and the accepted correction has not reached this source snapshot.",
+            "recommendedNextStep": "Apply the `FHIR-53852` URL correction and update/close the tracker state when the fix is merged.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html:129",
+              "FHIR-53852",
+              "https://jira.hl7.org/browse/FHIR-53852"
+            ],
+            "limitations": [
+              "- Caveat: the R6 ballot-intro page is explicitly treated by FMG as per-ballot text that is rewritten/replaced each ballot, so many proofreading Jira comments were resolved \"No Change\" on that basis rather than applied to this already-published ballot4 page.",
+              "| Source lines | R6 normative ballot scope/process | `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ballot-intro.html:19-37` | New guidance on full normative ballot, voting, THO movement, FMM caveat, and cross-version artifacts. |",
+              "| Zulip | FMM framework caveat | `#fmg > ✔ FMM framework revisions?`, `https://chat.fhir.org/#narrow/stream/fmg/topic/%E2%9C%94%20FMM%20framework%20revisions%3F`; reopen with `bun run zulip:search snapshot fmg \"✔ FMM framework revisions?\"` | A reader asked about the page's FMM caveat; Lloyd said no real work had happened yet and R6 timing was uncertain. |",
+              "- `#fmg > ✔ FMM framework revisions?`: Max Masnick asked about the page's sentence that FMM updates are pending FMM framework revisions. Lloyd McKenzie answered on 2026-03-21 that there was \"No real work thus far\" and that he was not sure it would happen as part of R6. This suggests the page's FMM caveat is real context but not a completed plan.",
+              "| 2026-03-21 | Zulip | FMM framework caveat prompted reader question; Lloyd said no real work yet and R6 timing uncertain. |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.136Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 1,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

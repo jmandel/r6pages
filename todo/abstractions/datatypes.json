@@ -1,0 +1,228 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.201Z",
+  "sourceActionFilesGlob": "todo/actions/datatypes.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "datatypes",
+      "actionFilePath": "todo/actions/datatypes.md",
+      "researchFilePath": "todo/research/datatypes.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings, both reader-facing editorial/rendering issues. No substantive intent-vs-implementation mismatch was found in the major R6 semantic changes, but the Quantity-variation heading bug directly undercuts a Jira-requested navigation fix.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "datatypes-E-001",
+          "localId": "E-001",
+          "pageLabel": "datatypes",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes.html",
+          "title": "Age variation is mislabeled as Distance",
+          "kind": "E",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes.html",
+              "lineRange": {
+                "start": 975,
+                "end": 1010
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "datatypes action file",
+              "filePath": "todo/actions/datatypes.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes.html:975-1010`; `0cd58f90e8487891bc4cf3b8ceb320d7ee12ce34`; `FHIR-40624`; Confluence page `161059574`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "datatypes research appendix",
+              "filePath": "todo/research/datatypes.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes.html:975-1010",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes.html",
+              "lineRange": {
+                "start": 975,
+                "end": 1010
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-40624",
+              "label": "FHIR-40624",
+              "url": "https://jira.hl7.org/browse/FHIR-40624",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "0cd58f90e8487891bc4cf3b8ceb320d7ee12ce34",
+              "label": "0cd58f90e8487891bc4cf3b8ceb320d7ee12ce34",
+              "url": "https://github.com/HL7/fhir/commit/0cd58f90e8487891bc4cf3b8ceb320d7ee12ce34",
+              "commitHash": "0cd58f90e8487891bc4cf3b8ceb320d7ee12ce34",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes.html:975-1010`; `0cd58f90e8487891bc4cf3b8ceb320d7ee12ce34`; `FHIR-40624`; Confluence page `161059574`\n- Priority: P2\n- Category: intent-mismatch\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes.html:975-1010`; `0cd58f90e8487891bc4cf3b8ceb320d7ee12ce34`; `FHIR-40624`; Confluence page `161059574`\n- Problem: `FHIR-40624` asked for separate subheaders under \"Defined Variations on Quantity\", including Age.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-40624` asked for separate subheaders under \"Defined Variations on Quantity\", including Age. The implementation adds a second `<a name=\"Distance\">` and `<h4>Distance</h4>` immediately before the Age table row.",
+            "analysis": "E-001: Age variation is mislabeled as Distance\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes.html:975-1010`; `0cd58f90e8487891bc4cf3b8ceb320d7ee12ce34`; `FHIR-40624`; Confluence page `161059574`\n\nProblem: `FHIR-40624` asked for separate subheaders under \"Defined Variations on Quantity\", including Age. The implementation adds a second `<a name=\"Distance\">` and `<h4>Distance</h4>` immediately before the Age table row.\n\nWhy it matters: readers and anchor/navigation tooling looking for Age are sent through a duplicate Distance heading, which defeats the discoverability fix.\n\nRecommended next step: change the second `Distance` anchor/heading to `Age` and verify generated anchors remain unique.\n\nIntent-vs-implementation context: Only E-001 found.",
+            "whyItMatters": "readers and anchor/navigation tooling looking for Age are sent through a duplicate Distance heading, which defeats the discoverability fix.",
+            "recommendedNextStep": "change the second `Distance` anchor/heading to `Age` and verify generated anchors remain unique.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes.html:975-1010",
+              "0cd58f90e8487891bc4cf3b8ceb320d7ee12ce34",
+              "FHIR-40624",
+              "161059574"
+            ],
+            "limitations": [
+              "- Caveat: this was bounded page-review research, not a complete audit of every one of the 104 page-touching commits. The action file only elevates concrete reader-facing defects or clear intent/implementation mismatches.",
+              "- `FHIR-35948` (Published, Persuasive, Compatible substantive, R5): describes SampledData's fixed-period limitation and resolves by adding `offsets` plus interval cardinality/definition changes. The Jira description links the Zulip variable-timing thread."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.200Z",
+          "status": "open"
+        },
+        {
+          "id": "datatypes-E-002",
+          "localId": "E-002",
+          "pageLabel": "datatypes",
+          "pagePath": "source/datatypes.html",
+          "title": "Several visible typos/markup issues remain in current prose",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/datatypes.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "datatypes action file",
+              "filePath": "todo/actions/datatypes.md",
+              "confidence": "high",
+              "quote": "current source lines `217`, `1314`, `1326-1329`, `1394`, `1405-1408`, and `1637-1640`; commits `356b6a87ae93a7e325a44c2ba82c60c7205d247d`, `6b6661326a60980f6418679f71a404c573394df2`, `369aa0c0cdf6832e4b9370858d9a4c507fa4984c`, and `ba10a6f24d181dec80b69dd90e68e0337421e7a0`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "datatypes research appendix",
+              "filePath": "todo/research/datatypes.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "356b6a87ae93a7e325a44c2ba82c60c7205d247d",
+              "label": "356b6a87ae93a7e325a44c2ba82c60c7205d247d",
+              "url": "https://github.com/HL7/fhir/commit/356b6a87ae93a7e325a44c2ba82c60c7205d247d",
+              "commitHash": "356b6a87ae93a7e325a44c2ba82c60c7205d247d",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "6b6661326a60980f6418679f71a404c573394df2",
+              "label": "6b6661326a60980f6418679f71a404c573394df2",
+              "url": "https://github.com/HL7/fhir/commit/6b6661326a60980f6418679f71a404c573394df2",
+              "commitHash": "6b6661326a60980f6418679f71a404c573394df2",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "369aa0c0cdf6832e4b9370858d9a4c507fa4984c",
+              "label": "369aa0c0cdf6832e4b9370858d9a4c507fa4984c",
+              "url": "https://github.com/HL7/fhir/commit/369aa0c0cdf6832e4b9370858d9a4c507fa4984c",
+              "commitHash": "369aa0c0cdf6832e4b9370858d9a4c507fa4984c",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "ba10a6f24d181dec80b69dd90e68e0337421e7a0",
+              "label": "ba10a6f24d181dec80b69dd90e68e0337421e7a0",
+              "url": "https://github.com/HL7/fhir/commit/ba10a6f24d181dec80b69dd90e68e0337421e7a0",
+              "commitHash": "ba10a6f24d181dec80b69dd90e68e0337421e7a0",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "examples include \"The time SHALL specified\", \"separated by by\", \"source system defined\", \"There is no escape sequences\", \"processer\", a missing closing parenthesis in the Identifier RFC3986 example sentence, and invalid `<cod>count</cod>` markup.",
+            "analysis": "E-002: Several visible typos/markup issues remain in current prose\n\nEvidence: current source lines `217`, `1314`, `1326-1329`, `1394`, `1405-1408`, and `1637-1640`; commits `356b6a87ae93a7e325a44c2ba82c60c7205d247d`, `6b6661326a60980f6418679f71a404c573394df2`, `369aa0c0cdf6832e4b9370858d9a4c507fa4984c`, and `ba10a6f24d181dec80b69dd90e68e0337421e7a0`\n\nProblem: examples include \"The time SHALL specified\", \"separated by by\", \"source system defined\", \"There is no escape sequences\", \"processer\", a missing closing parenthesis in the Identifier RFC3986 example sentence, and invalid `<cod>count</cod>` markup.\n\nWhy it matters: most are minor, but they appear in normative or implementation-guidance prose; the invalid tag is a concrete rendering defect.\n\nRecommended next step: make an editorial cleanup pass for these exact strings, using `<code>count</code>` for the Timing markup.\n\nOverlooked/newly noticed context: E-002 lists concrete current-page editorial/rendering defects noticed during the full-page read.",
+            "whyItMatters": "most are minor, but they appear in normative or implementation-guidance prose; the invalid tag is a concrete rendering defect.",
+            "recommendedNextStep": "make an editorial cleanup pass for these exact strings, using `<code>count</code>` for the Timing markup.",
+            "rawEvidenceQuotes": [
+              "217",
+              "1314",
+              "1326-1329",
+              "1394",
+              "1405-1408",
+              "1637-1640",
+              "356b6a87ae93a7e325a44c2ba82c60c7205d247d",
+              "6b6661326a60980f6418679f71a404c573394df2",
+              "369aa0c0cdf6832e4b9370858d9a4c507fa4984c",
+              "ba10a6f24d181dec80b69dd90e68e0337421e7a0"
+            ],
+            "limitations": [
+              "- Caveat: this was bounded page-review research, not a complete audit of every one of the 104 page-touching commits. The action file only elevates concrete reader-facing defects or clear intent/implementation mismatches.",
+              "- `FHIR-35948` (Published, Persuasive, Compatible substantive, R5): describes SampledData's fixed-period limitation and resolves by adding `offsets` plus interval cardinality/definition changes. The Jira description links the Zulip variable-timing thread."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.201Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

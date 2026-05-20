@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.336Z",
+  "sourceActionFilesGlob": "todo/actions/summary.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "summary",
+      "actionFilePath": "todo/actions/summary.md",
+      "researchFilePath": "todo/research/summary.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: the R6 ballot4 source contains a reader-facing placeholder where it promises a list of candidate-addition publications.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "summary-E-001",
+          "localId": "E-001",
+          "pageLabel": "summary",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/summary.html",
+          "title": "Development-process section still says `link to be provided",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/summary.html",
+              "lineRange": {
+                "start": 89,
+                "end": 94
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "summary action file",
+              "filePath": "todo/actions/summary.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/summary.html:89-94`; introduced by `270e0ceb7b029dad4ca0fc5ccf5296ff370888cd` in PR https://github.com/HL7/fhir/pull/3901; Jira/Zulip/Confluence searches found no issue or discussion for this placeholder."
+            },
+            {
+              "type": "research-appendix",
+              "label": "summary research appendix",
+              "filePath": "todo/research/summary.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/summary.html:89-94",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/summary.html",
+              "lineRange": {
+                "start": 89,
+                "end": 94
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "label": "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "url": "https://github.com/HL7/fhir/commit/270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "commitHash": "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "confidence": "medium"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/3901",
+              "url": "https://github.com/HL7/fhir/pull/3901",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/summary.html:89-94`; introduced by `270e0ceb7b029dad4ca0fc5ccf5296ff370888cd` in PR https://github.com/HL7/fhir/pull/3901; Jira/Zulip/Confluence searches found no issue or discussion for this placeholder.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/summary.html:89-94`; introduced by `270e0ceb7b029dad4ca0fc5ccf5296ff370888cd` in PR https://github.com/HL7/fhir/pull/3901; Jira/Zulip/Confluence searches found no issue or discussion for this placeholder.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the current page says, `For a list, see link to be provided`, but no link or list is supplied.",
+            "analysis": "E-001: Development-process section still says `link to be provided\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/summary.html:89-94`; introduced by `270e0ceb7b029dad4ca0fc5ccf5296ff370888cd` in PR https://github.com/HL7/fhir/pull/3901; Jira/Zulip/Confluence searches found no issue or discussion for this placeholder.\n\nProblem: the current page says, `For a list, see link to be provided`, but no link or list is supplied.\n\nWhy it matters: readers are directed to non-existent guidance on where candidate additions to FHIR are developed.\n\nRecommended next step: replace the placeholder with the intended page/list URL, or remove the sentence until that list exists.\n\nOverlooked/newly noticed context: E-001 is a concrete current-page issue that was not tied to a Jira/workgroup decision found in this investigation.",
+            "whyItMatters": "readers are directed to non-existent guidance on where candidate additions to FHIR are developed.",
+            "recommendedNextStep": "replace the placeholder with the intended page/list URL, or remove the sentence until that list exists.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/summary.html:89-94",
+              "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd"
+            ],
+            "limitations": [
+              "- Important caveat: the `FHIR-41514` source commit changed the referenced `images/shot.png` asset as well as `source/summary.html`; this appendix focuses on `source/summary.html` but notes that asset-level implementation evidence."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.336Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

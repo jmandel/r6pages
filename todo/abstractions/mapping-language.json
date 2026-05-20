@@ -1,0 +1,351 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.265Z",
+  "sourceActionFilesGlob": "todo/actions/mapping-language.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "mapping-language",
+      "actionFilePath": "todo/actions/mapping-language.md",
+      "researchFilePath": "todo/research/mapping-language.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings. The main risk is that current prose is not fully aligned with the formal grammar and later workgroup discussion for Mapping Language syntax and log semantics.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "mapping-language-H-001",
+          "localId": "H-001",
+          "pageLabel": "mapping-language",
+          "pagePath": "source/mapping-language.html",
+          "title": "Legacy `map` declaration is still in the grammar but no longer documented in the page prose",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 122,
+                "end": 160
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "mapping-language action file",
+              "filePath": "todo/actions/mapping-language.md",
+              "confidence": "high",
+              "quote": "`source/mapping-language.html:122-160`; `images/mapping.g4:10-12` and `images/mapping.g4:40-46`; `FHIR-27915`; Zulip #fhir/infrastructure-wg > `Mapping Language Question (FHIR-25220)` lines 37-43 and 75-91; commit `c372919350db4764cebd887053bd3bd567234faa`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "mapping-language research appendix",
+              "filePath": "todo/research/mapping-language.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/mapping-language.html:122-160",
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 122,
+                "end": 160
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-27915",
+              "label": "FHIR-27915",
+              "url": "https://jira.hl7.org/browse/FHIR-27915",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-25220",
+              "label": "FHIR-25220",
+              "url": "https://jira.hl7.org/browse/FHIR-25220",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "c372919350db4764cebd887053bd3bd567234faa",
+              "label": "c372919350db4764cebd887053bd3bd567234faa",
+              "url": "https://github.com/HL7/fhir/commit/c372919350db4764cebd887053bd3bd567234faa",
+              "commitHash": "c372919350db4764cebd887053bd3bd567234faa",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`source/mapping-language.html:122-160`; `images/mapping.g4:10-12` and `images/mapping.g4:40-46`; `FHIR-27915`; Zulip #fhir/infrastructure-wg > `Mapping Language Question (FHIR-25220)` lines 37-43 and 75-91; commit `c372919350db4764cebd887053bd3bd567234faa`\n- Priority: P1\n- Category: spec-problem\n- Evidence: `source/mapping-language.html:122-160`; `images/mapping.g4:10-12` and `images/mapping.g4:40-46`; `FHIR-27915`; Zulip #fhir/infrastructure-wg > `Mapping Language Question (FHIR-25220)` lines 37-43 and 75-91; commit `c372919350db4764cebd887053bd3bd567234faa`\n- Problem: R6 prose documents `/// name{.property}* = {value}` metadata as the first part of a mapping file, but the formal grammar still accepts an optional `map url = identifier` declaration.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "R6 prose documents `/// name{.property}* = {value}` metadata as the first part of a mapping file, but the formal grammar still accepts an optional `map url = identifier` declaration. `FHIR-27915` was classified as compatible/substantive, and the Zulip discussion explicitly raised concern about breaking existing maps.",
+            "analysis": "H-001: Legacy `map` declaration is still in the grammar but no longer documented in the page prose\n\nEvidence: `source/mapping-language.html:122-160`; `images/mapping.g4:10-12` and `images/mapping.g4:40-46`; `FHIR-27915`; Zulip #fhir/infrastructure-wg > `Mapping Language Question (FHIR-25220)` lines 37-43 and 75-91; commit `c372919350db4764cebd887053bd3bd567234faa`\n\nProblem: R6 prose documents `/// name{.property}* = {value}` metadata as the first part of a mapping file, but the formal grammar still accepts an optional `map url = identifier` declaration. `FHIR-27915` was classified as compatible/substantive, and the Zulip discussion explicitly raised concern about breaking existing maps.\n\nWhy it matters: Implementers using the prose may reject or omit support for legacy `map` declarations even though the grammar still allows them; authors may also think existing maps are invalid.\n\nRecommended next step: Add a compatibility note documenting whether `map \"url\" = \"name\"` remains accepted and how it maps to `url`/`name`, or remove it from the grammar if the intended R6 change is actually non-compatible.\n\nIntent-vs-implementation context: - H-001: `FHIR-27915` compatibility intent and the grammar's optional `mapDeclaration` are not reflected in page prose.",
+            "whyItMatters": "Implementers using the prose may reject or omit support for legacy `map` declarations even though the grammar still allows them; authors may also think existing maps are invalid.",
+            "recommendedNextStep": "Add a compatibility note documenting whether `map \"url\" = \"name\"` remains accepted and how it maps to `url`/`name`, or remove it from the grammar if the intended R6 change is actually non-compatible.",
+            "rawEvidenceQuotes": [
+              "source/mapping-language.html:122-160",
+              "images/mapping.g4:10-12",
+              "images/mapping.g4:40-46",
+              "FHIR-27915",
+              "Mapping Language Question (FHIR-25220)",
+              "c372919350db4764cebd887053bd3bd567234faa"
+            ],
+            "limitations": [
+              "- Caveats: one Zulip exact-key SQL loop hit `database is locked` for `FHIR-27915`; follow-up evidence came from the `Mapping Language Question (FHIR-25220)` Zulip snapshot, Jira `FHIR-27915`, and FHIR-I minutes. The review is bounded; it prioritizes issue-linked and phrase-linked evidence over broad context-only hits.",
+              "| 2025-03-02 | `4ca72903b8bb6bbe73fb451536a6a5c69fda4d36` | `FHIR-43178 StructureMap const definition dynamic behavior unclear` | Clarifies constants' dynamic context |",
+              "| `FHIR-43178` | StructureMap const definition dynamic behavior unclear | Applied | Persuasive | Non-substantive | R6 |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.264Z",
+          "status": "open"
+        },
+        {
+          "id": "mapping-language-H-002",
+          "localId": "H-002",
+          "pageLabel": "mapping-language",
+          "pagePath": "source/mapping-language.html",
+          "title": "Log guidance conflicts with the applied `where`/`check`/`log` clarification",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 387,
+                "end": 390
+              }
+            },
+            {
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 435,
+                "end": 452
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "mapping-language action file",
+              "filePath": "todo/actions/mapping-language.md",
+              "confidence": "high",
+              "quote": "`source/mapping-language.html:387-390` and `source/mapping-language.html:435-452`; `FHIR-46548`; Zulip #FHIR Mapping Language > `where clause` lines 75-115; commit `faa06571e350ec1e47619b0d9ad77fb1a8a21583`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "mapping-language research appendix",
+              "filePath": "todo/research/mapping-language.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/mapping-language.html:387-390",
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 387,
+                "end": 390
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/mapping-language.html:435-452",
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 435,
+                "end": 452
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-46548",
+              "label": "FHIR-46548",
+              "url": "https://jira.hl7.org/browse/FHIR-46548",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "faa06571e350ec1e47619b0d9ad77fb1a8a21583",
+              "label": "faa06571e350ec1e47619b0d9ad77fb1a8a21583",
+              "url": "https://github.com/HL7/fhir/commit/faa06571e350ec1e47619b0d9ad77fb1a8a21583",
+              "commitHash": "faa06571e350ec1e47619b0d9ad77fb1a8a21583",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`source/mapping-language.html:387-390` and `source/mapping-language.html:435-452`; `FHIR-46548`; Zulip #FHIR Mapping Language > `where clause` lines 75-115; commit `faa06571e350ec1e47619b0d9ad77fb1a8a21583`\n- Priority: P2\n- Category: intent-mismatch\n- Evidence: `source/mapping-language.html:387-390` and `source/mapping-language.html:435-452`; `FHIR-46548`; Zulip #FHIR Mapping Language > `where clause` lines 75-115; commit `faa06571e350ec1e47619b0d9ad77fb1a8a21583`\n- Problem: The page now says `where`, `check`, and `log` run in order after aliases are mapped, but it still says log statements are often used to note source elements that are not yet mapped.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The page now says `where`, `check`, and `log` run in order after aliases are mapped, but it still says log statements are often used to note source elements that are not yet mapped. In the Zulip follow-up, Grahame called that comment a problem if log runs last and said he would remove it; Brian agreed.",
+            "analysis": "H-002: Log guidance conflicts with the applied `where`/`check`/`log` clarification\n\nEvidence: `source/mapping-language.html:387-390` and `source/mapping-language.html:435-452`; `FHIR-46548`; Zulip #FHIR Mapping Language > `where clause` lines 75-115; commit `faa06571e350ec1e47619b0d9ad77fb1a8a21583`\n\nProblem: The page now says `where`, `check`, and `log` run in order after aliases are mapped, but it still says log statements are often used to note source elements that are not yet mapped. In the Zulip follow-up, Grahame called that comment a problem if log runs last and said he would remove it; Brian agreed.\n\nWhy it matters: Mapping authors may expect `log` to report rejected/unmapped candidates, while the clarified execution model says it reports content that passed earlier stages.\n\nRecommended next step: Remove or rewrite the \"not yet mapped\" sentence so `log` is described as reporting selected/processed content; if unmapped/rejected logging is supported, document the explicit pattern for doing it.\n\nIntent-vs-implementation context: - H-002: The `FHIR-46548` Zulip follow-up says the stale \"not yet mapped\" log comment should be removed, but it remains.",
+            "whyItMatters": "Mapping authors may expect `log` to report rejected/unmapped candidates, while the clarified execution model says it reports content that passed earlier stages.",
+            "recommendedNextStep": "Remove or rewrite the \"not yet mapped\" sentence so `log` is described as reporting selected/processed content; if unmapped/rejected logging is supported, document the explicit pattern for doing it.",
+            "rawEvidenceQuotes": [
+              "source/mapping-language.html:387-390",
+              "source/mapping-language.html:435-452",
+              "FHIR-46548",
+              "where clause",
+              "faa06571e350ec1e47619b0d9ad77fb1a8a21583"
+            ],
+            "limitations": [
+              "- Caveats: one Zulip exact-key SQL loop hit `database is locked` for `FHIR-27915`; follow-up evidence came from the `Mapping Language Question (FHIR-25220)` Zulip snapshot, Jira `FHIR-27915`, and FHIR-I minutes. The review is bounded; it prioritizes issue-linked and phrase-linked evidence over broad context-only hits.",
+              "| 2025-03-02 | `4ca72903b8bb6bbe73fb451536a6a5c69fda4d36` | `FHIR-43178 StructureMap const definition dynamic behavior unclear` | Clarifies constants' dynamic context |",
+              "| `FHIR-43178` | StructureMap const definition dynamic behavior unclear | Applied | Persuasive | Non-substantive | R6 |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.264Z",
+          "status": "open"
+        },
+        {
+          "id": "mapping-language-E-001",
+          "localId": "E-001",
+          "pageLabel": "mapping-language",
+          "pagePath": "source/mapping-language.html",
+          "title": "Visible markup and typo defects remain in the current page",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 627,
+                "end": 627
+              }
+            },
+            {
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 908,
+                "end": 908
+              }
+            },
+            {
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 407,
+                "end": 407
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "mapping-language action file",
+              "filePath": "todo/actions/mapping-language.md",
+              "confidence": "high",
+              "quote": "stray quote characters after FHIRPath factory links at `source/mapping-language.html:627`, `:633`, `:639`, `:645`, and `:651`; invalid `<codes>types</codes>` at `source/mapping-language.html:908`; typos at `source/mapping-language.html:407` and `:665`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "mapping-language research appendix",
+              "filePath": "todo/research/mapping-language.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/mapping-language.html:627",
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 627,
+                "end": 627
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/mapping-language.html:908",
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 908,
+                "end": 908
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/mapping-language.html:407",
+              "filePath": "source/mapping-language.html",
+              "lineRange": {
+                "start": 407,
+                "end": 407
+              },
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "The rendered page likely shows literal `\"` characters after several factory-function links, fails to code-style `types` because of an invalid tag, and includes obvious typos (\"the the rule\", \"the this specification\").",
+            "analysis": "E-001: Visible markup and typo defects remain in the current page\n\nEvidence: stray quote characters after FHIRPath factory links at `source/mapping-language.html:627`, `:633`, `:639`, `:645`, and `:651`; invalid `<codes>types</codes>` at `source/mapping-language.html:908`; typos at `source/mapping-language.html:407` and `:665`\n\nProblem: The rendered page likely shows literal `\"` characters after several factory-function links, fails to code-style `types` because of an invalid tag, and includes obvious typos (\"the the rule\", \"the this specification\").\n\nWhy it matters: These are concrete reader-facing defects on a Normative page and are low-risk to correct.\n\nRecommended next step: Remove the extra quotes, change `<codes>` to `<code>`, and fix the small typos in the same editorial pass.\n\nOverlooked/newly noticed context: - E-001: Current-page rendering and typo defects visible during the full R6 page read.",
+            "whyItMatters": "These are concrete reader-facing defects on a Normative page and are low-risk to correct.",
+            "recommendedNextStep": "Remove the extra quotes, change `<codes>` to `<code>`, and fix the small typos in the same editorial pass.",
+            "rawEvidenceQuotes": [
+              "source/mapping-language.html:627",
+              ":633",
+              ":639",
+              ":645",
+              ":651",
+              "<codes>types</codes>",
+              "source/mapping-language.html:908",
+              "source/mapping-language.html:407",
+              ":665"
+            ],
+            "limitations": [
+              "- Caveats: one Zulip exact-key SQL loop hit `database is locked` for `FHIR-27915`; follow-up evidence came from the `Mapping Language Question (FHIR-25220)` Zulip snapshot, Jira `FHIR-27915`, and FHIR-I minutes. The review is bounded; it prioritizes issue-linked and phrase-linked evidence over broad context-only hits.",
+              "| 2025-03-02 | `4ca72903b8bb6bbe73fb451536a6a5c69fda4d36` | `FHIR-43178 StructureMap const definition dynamic behavior unclear` | Clarifies constants' dynamic context |",
+              "| `FHIR-43178` | StructureMap const definition dynamic behavior unclear | Applied | Persuasive | Non-substantive | R6 |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.265Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

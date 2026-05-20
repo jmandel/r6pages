@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.356Z",
+  "sourceActionFilesGlob": "todo/actions/workflow-ad-hoc.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "workflow-ad-hoc",
+      "actionFilePath": "todo/actions/workflow-ad-hoc.md",
+      "researchFilePath": "todo/research/workflow-ad-hoc.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings. The main risk is that R6 ballot4 presents informative workflow guidance that still looks unfinished: visible TODO/???/TBD text remains, and the newly linked usage-example page is itself TODO-only.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "workflow-ad-hoc-E-001",
+          "localId": "E-001",
+          "pageLabel": "workflow-ad-hoc",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-ad-hoc.html",
+          "title": "Cleanup of incomplete workflow content is not finished",
+          "kind": "E",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-ad-hoc.html",
+              "lineRange": {
+                "start": 145,
+                "end": 145
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "workflow-ad-hoc action file",
+              "filePath": "todo/actions/workflow-ad-hoc.md",
+              "confidence": "high",
+              "quote": "current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-ad-hoc.html:145`, `:182`, `:193`, `:197`, `:201`, `:209`; usage links at `:66-67`, `:103-104`, `:140-141`, `:176-177`, `:203-204`; `FHIR-44031`; `FHIR-55136`; Confluence page `234784905`; Confluence minutes `234784839` and `239206707`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "workflow-ad-hoc research appendix",
+              "filePath": "todo/research/workflow-ad-hoc.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-ad-hoc.html:145",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-ad-hoc.html",
+              "lineRange": {
+                "start": 145,
+                "end": 145
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-44031",
+              "label": "FHIR-44031",
+              "url": "https://jira.hl7.org/browse/FHIR-44031",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-55136",
+              "label": "FHIR-55136",
+              "url": "https://jira.hl7.org/browse/FHIR-55136",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-ad-hoc.html:145`, `:182`, `:193`, `:197`, `:201`, `:209`; usage links at `:66-67`, `:103-104`, `:140-141`, `:176-177`, `:203-204`; `FHIR-44031`; `FHIR-55136`; Confluence page `234784905`; Confluence minutes `234784839` and `239206707`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-44031` was resolved persuasive/change-required to clean up TODO/TBD/??? content, but the current page still renders TODOs, `???`, and `TBD`. The added \"Usage Examples\" links send readers to Confluence page `234784905`, whose snapshot still lists `TODO` for every workflow pattern.",
+            "analysis": "E-001: Cleanup of incomplete workflow content is not finished\n\nEvidence: current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-ad-hoc.html:145`, `:182`, `:193`, `:197`, `:201`, `:209`; usage links at `:66-67`, `:103-104`, `:140-141`, `:176-177`, `:203-204`; `FHIR-44031`; `FHIR-55136`; Confluence page `234784905`; Confluence minutes `234784839` and `239206707`.\n\nProblem: `FHIR-44031` was resolved persuasive/change-required to clean up TODO/TBD/??? content, but the current page still renders TODOs, `???`, and `TBD`. The added \"Usage Examples\" links send readers to Confluence page `234784905`, whose snapshot still lists `TODO` for every workflow pattern.\n\nWhy it matters: Readers looking for workflow implementation guidance see incomplete normative-adjacent narrative and are directed to a page that does not provide the promised examples.\n\nRecommended next step: Triage `FHIR-44031`/`FHIR-55136` together; either replace the incomplete sections and populate the linked examples page, or explicitly mark the gaps as pending/non-normative implementation notes rather than TODO placeholders.\n\nIntent-vs-implementation context: `FHIR-44031` intended cleanup of TODO/TBD/??? content has not been fully implemented; see E-001.",
+            "whyItMatters": "Readers looking for workflow implementation guidance see incomplete normative-adjacent narrative and are directed to a page that does not provide the promised examples.",
+            "recommendedNextStep": "Triage `FHIR-44031`/`FHIR-55136` together; either replace the incomplete sections and populate the linked examples page, or explicitly mark the gaps as pending/non-normative implementation notes rather than TODO placeholders.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-ad-hoc.html:145",
+              ":182",
+              ":193",
+              ":197",
+              ":201",
+              ":209",
+              ":66-67",
+              ":103-104",
+              ":140-141",
+              ":176-177",
+              ":203-204",
+              "FHIR-44031"
+            ],
+            "limitations": [
+              "- Caveats: direct Zulip FTS on unquoted issue keys failed because FTS parsed hyphenated keys as column/minus syntax; a SQL `LIKE` query was used instead. No Jira issue or PR was found that explicitly cites commit `86c92a8842624a25700fdcee18308d8971c039d2` adding the usage-example links, though Confluence minutes strongly connect that work to cleanup of TODO/TBD/??? content.",
+              "| `aa9bb0058ede4c6c49401d5e4e91a5da03dd4a42` | 2019-12-15 | `Fix typo in workflow-ad-hoc.html J#25300` | Editorial correction | Option A limitation now says the placer posts to the filler's system. |",
+              "| `d6445217a92adf21ee6a65b71a7e030c4c8d488e` | 2025-03-10 | `FHIR-46330 remove option I` | Source cleanup/provenance caveat | Removed hidden/commented Option I block. PR cites `FHIR-46330`, but `FHIR-46220` is the matching Option I Jira. |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.356Z",
+          "status": "open"
+        },
+        {
+          "id": "workflow-ad-hoc-E-002",
+          "localId": "E-002",
+          "pageLabel": "workflow-ad-hoc",
+          "pagePath": "source/workflow-ad-hoc.html",
+          "title": "Multiple concrete spelling and wording defects remain",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/workflow-ad-hoc.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "workflow-ad-hoc action file",
+              "filePath": "todo/actions/workflow-ad-hoc.md",
+              "confidence": "high",
+              "quote": "current source lines `:79` and `:115` (`DiagosticReport`), `:81` (`received and store`), `:91` (`unmanagable`), `:112` (`fullfiller`), `:188` (`conformation of receipt`), `:220` (`Services responds`); related submitted QA issue `FHIR-55135`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "workflow-ad-hoc research appendix",
+              "filePath": "todo/research/workflow-ad-hoc.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-55135",
+              "label": "FHIR-55135",
+              "url": "https://jira.hl7.org/browse/FHIR-55135",
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "The current page still contains several reader-facing typos/wording errors. One R4->R6 change even regressed `unmanageable` to `unmanagable`.",
+            "analysis": "E-002: Multiple concrete spelling and wording defects remain\n\nEvidence: current source lines `:79` and `:115` (`DiagosticReport`), `:81` (`received and store`), `:91` (`unmanagable`), `:112` (`fullfiller`), `:188` (`conformation of receipt`), `:220` (`Services responds`); related submitted QA issue `FHIR-55135`.\n\nProblem: The current page still contains several reader-facing typos/wording errors. One R4->R6 change even regressed `unmanageable` to `unmanagable`.\n\nWhy it matters: These defects are low-risk semantically but undermine page quality, especially on a page already flagged for incomplete content.\n\nRecommended next step: Fix these obvious typos as a technical correction, preferably while resolving the broader incomplete-content cleanup.\n\nOverlooked/newly noticed context: The spelling/wording defects in E-002 are visible in the current page and were not fully covered by the tracked R4-to-R6 page changes.",
+            "whyItMatters": "These defects are low-risk semantically but undermine page quality, especially on a page already flagged for incomplete content.",
+            "recommendedNextStep": "Fix these obvious typos as a technical correction, preferably while resolving the broader incomplete-content cleanup.",
+            "rawEvidenceQuotes": [
+              ":79",
+              ":115",
+              "DiagosticReport",
+              ":81",
+              "received and store",
+              ":91",
+              "unmanagable",
+              ":112",
+              "fullfiller",
+              ":188",
+              "conformation of receipt",
+              ":220"
+            ],
+            "limitations": [
+              "- Caveats: direct Zulip FTS on unquoted issue keys failed because FTS parsed hyphenated keys as column/minus syntax; a SQL `LIKE` query was used instead. No Jira issue or PR was found that explicitly cites commit `86c92a8842624a25700fdcee18308d8971c039d2` adding the usage-example links, though Confluence minutes strongly connect that work to cleanup of TODO/TBD/??? content.",
+              "| `aa9bb0058ede4c6c49401d5e4e91a5da03dd4a42` | 2019-12-15 | `Fix typo in workflow-ad-hoc.html J#25300` | Editorial correction | Option A limitation now says the placer posts to the filler's system. |",
+              "| `d6445217a92adf21ee6a65b71a7e030c4c8d488e` | 2025-03-10 | `FHIR-46330 remove option I` | Source cleanup/provenance caveat | Removed hidden/commented Option I block. PR cites `FHIR-46330`, but `FHIR-46220` is the matching Option I Jira. |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.356Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 1,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

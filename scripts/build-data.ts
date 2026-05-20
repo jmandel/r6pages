@@ -3,12 +3,14 @@ import { basename, dirname, join, resolve } from "node:path";
 import type { BundleData, PageReview } from "../types";
 
 const viewerRoot = resolve(import.meta.dir, "..");
-const repoRoot = resolve(viewerRoot, "..");
+const repoRoot = viewerRoot;
+const legacyWorkspaceRoot = resolve(viewerRoot, "..");
 const sourceDir = process.env.ABSTRACTIONS_DIR
   ? resolve(process.env.ABSTRACTIONS_DIR)
-  : join(repoRoot, "todo", "abstractions");
+  : join(viewerRoot, "todo", "abstractions");
 const targetFile = join(viewerRoot, "data-bundle.ts");
 const localCachePrefix = join(repoRoot, ".cache");
+const legacyCachePrefix = join(legacyWorkspaceRoot, ".cache");
 
 const pageReviews: PageReview[] = [];
 const parseFailures: BundleData["parseFailures"] = [];
@@ -86,14 +88,17 @@ function sanitizePublicValue(value: unknown): unknown {
     return value
       .split(`${localCachePrefix}/`).join("")
       .split(localCachePrefix).join("")
+      .split(`${legacyCachePrefix}/`).join("")
+      .split(legacyCachePrefix).join("")
       .split(`${repoRoot}/`).join("")
-      .split(repoRoot).join("");
+      .split(repoRoot).join("")
+      .split(`${legacyWorkspaceRoot}/`).join("")
+      .split(legacyWorkspaceRoot).join("");
   }
   if (Array.isArray(value)) return value.map(sanitizePublicValue);
   if (value && typeof value === "object") {
     return Object.fromEntries(
       Object.entries(value)
-        .filter(([key]) => key !== "actionabilityTriggers" && key !== "changeClassifications")
         .map(([key, nested]) => [key, sanitizePublicValue(nested)]),
     );
   }

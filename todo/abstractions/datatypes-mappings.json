@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.199Z",
+  "sourceActionFilesGlob": "todo/actions/datatypes-mappings.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "datatypes-mappings",
+      "actionFilePath": "todo/actions/datatypes-mappings.md",
+      "researchFilePath": "todo/research/datatypes-mappings.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings, both reader-facing navigation/label defects. The main risk is that a broad `FHIR-47467` link update appears to have left every non-primitive datatype \"Extensions\" link pointing at the primitive section while also labelling the conversions link as `Extensions`.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "datatypes-mappings-E-001",
+          "localId": "E-001",
+          "pageLabel": "datatypes-mappings",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html",
+          "title": "\"See also\" links point to primitive extensions and duplicate the Extensions label",
+          "kind": "E",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html",
+              "lineRange": {
+                "start": 63,
+                "end": 63
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "datatypes-mappings action file",
+              "filePath": "todo/actions/datatypes-mappings.md",
+              "confidence": "high",
+              "quote": "current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html:63`, `:160`, `:236`; commit `dbb78e2435ad20bdcc43ada9656bf01fe99d6165`; Jira `FHIR-47467`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "datatypes-mappings research appendix",
+              "filePath": "todo/research/datatypes-mappings.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html:63",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html",
+              "lineRange": {
+                "start": 63,
+                "end": 63
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-47467",
+              "label": "FHIR-47467",
+              "url": "https://jira.hl7.org/browse/FHIR-47467",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "dbb78e2435ad20bdcc43ada9656bf01fe99d6165",
+              "label": "dbb78e2435ad20bdcc43ada9656bf01fe99d6165",
+              "url": "https://github.com/HL7/fhir/commit/dbb78e2435ad20bdcc43ada9656bf01fe99d6165",
+              "commitHash": "dbb78e2435ad20bdcc43ada9656bf01fe99d6165",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "after the `FHIR-47467` change, non-primitive datatype sections link `Extensions` to `[%extensions-location%]extensions-datatypes.html#primitive` instead of the datatype-specific anchor, and the conversion link is also labelled `Extensions`.",
+            "analysis": "E-001: \"See also\" links point to primitive extensions and duplicate the Extensions label\n\nEvidence: current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html:63`, `:160`, `:236`; commit `dbb78e2435ad20bdcc43ada9656bf01fe99d6165`; Jira `FHIR-47467`\n\nProblem: after the `FHIR-47467` change, non-primitive datatype sections link `Extensions` to `[%extensions-location%]extensions-datatypes.html#primitive` instead of the datatype-specific anchor, and the conversion link is also labelled `Extensions`.\n\nWhy it matters: readers navigating from mappings for Attachment, RatioRange, RelativeTime, etc. are sent to the primitive extension section and cannot distinguish the conversions link from the extensions link.\n\nRecommended next step: restore datatype-specific extension anchors and give the conversions link an accurate label, or remove/update the conversions link if those mappings have intentionally moved to another IG; audit sibling datatype pages generated from the same pattern.\n\nIntent-vs-implementation context: E-001: `FHIR-47467` intended R6/R5 diff or mapping-page cleanup, but the applied page text changed extension anchors and conversion labels in a way that does not match the stated issue.",
+            "whyItMatters": "readers navigating from mappings for Attachment, RatioRange, RelativeTime, etc. are sent to the primitive extension section and cannot distinguish the conversions link from the extensions link.",
+            "recommendedNextStep": "restore datatype-specific extension anchors and give the conversions link an accurate label, or remove/update the conversions link if those mappings have intentionally moved to another IG; audit sibling datatype pages generated from the same pattern.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html:63",
+              ":160",
+              ":236",
+              "dbb78e2435ad20bdcc43ada9656bf01fe99d6165",
+              "FHIR-47467"
+            ],
+            "limitations": [
+              "- Caveat: this review inspected the HTML source page, not a rendered build. The source contains reader-facing text and link targets, but final rendering/macros should be checked before editing.",
+              "- Caveat: initial Zulip FTS searches for unquoted hyphenated Jira keys failed with SQLite FTS parsing errors (`no such column: 25431`, etc.); they were rerun with quoted keys. Quoted key searches found no hits for `FHIR-25431`, `FHIR-41582`, `FHIR-45488`, or `FHIR-47467`."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.198Z",
+          "status": "open"
+        },
+        {
+          "id": "datatypes-mappings-E-002",
+          "localId": "E-002",
+          "pageLabel": "datatypes-mappings",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html",
+          "title": "RatioRange section is visibly labelled \"Ratio\"",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html",
+              "lineRange": {
+                "start": 156,
+                "end": 163
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "datatypes-mappings action file",
+              "filePath": "todo/actions/datatypes-mappings.md",
+              "confidence": "high",
+              "quote": "current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html:156-163`; commit `b9fd58139d35c8aa90083ae99a279c8a6d3dd854`; Jira `FHIR-55681`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "datatypes-mappings research appendix",
+              "filePath": "todo/research/datatypes-mappings.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html:156-163",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html",
+              "lineRange": {
+                "start": 156,
+                "end": 163
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-55681",
+              "label": "FHIR-55681",
+              "url": "https://jira.hl7.org/browse/FHIR-55681",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "b9fd58139d35c8aa90083ae99a279c8a6d3dd854",
+              "label": "b9fd58139d35c8aa90083ae99a279c8a6d3dd854",
+              "url": "https://github.com/HL7/fhir/commit/b9fd58139d35c8aa90083ae99a279c8a6d3dd854",
+              "commitHash": "b9fd58139d35c8aa90083ae99a279c8a6d3dd854",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the section anchors and mapping macro are for `RatioRange`, but the visible heading says `Ratio`, creating a second `Ratio` section.",
+            "analysis": "E-002: RatioRange section is visibly labelled \"Ratio\"\n\nEvidence: current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html:156-163`; commit `b9fd58139d35c8aa90083ae99a279c8a6d3dd854`; Jira `FHIR-55681`\n\nProblem: the section anchors and mapping macro are for `RatioRange`, but the visible heading says `Ratio`, creating a second `Ratio` section.\n\nWhy it matters: the page mislabels the datatype mapping section and may confuse readers or tooling that relies on visible headings.\n\nRecommended next step: change the mappings-page heading to `RatioRange` and ensure the existing `FHIR-55681` label fix also covers `datatypes-mappings.html`.\n\nOverlooked/newly noticed context: E-002: `FHIR-55681` already tracks wrong RatioRange labels on datatype pages, but this mappings page carries the same visible label defect and should be included in the fix scope.",
+            "whyItMatters": "the page mislabels the datatype mapping section and may confuse readers or tooling that relies on visible headings.",
+            "recommendedNextStep": "change the mappings-page heading to `RatioRange` and ensure the existing `FHIR-55681` label fix also covers `datatypes-mappings.html`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes-mappings.html:156-163",
+              "b9fd58139d35c8aa90083ae99a279c8a6d3dd854",
+              "FHIR-55681"
+            ],
+            "limitations": [
+              "- Caveat: this review inspected the HTML source page, not a rendered build. The source contains reader-facing text and link targets, but final rendering/macros should be checked before editing.",
+              "- Caveat: initial Zulip FTS searches for unquoted hyphenated Jira keys failed with SQLite FTS parsing errors (`no such column: 25431`, etc.); they were rerun with quoted keys. Quoted key searches found no hits for `FHIR-25431`, `FHIR-41582`, `FHIR-45488`, or `FHIR-47467`."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.199Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

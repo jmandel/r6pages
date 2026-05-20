@@ -1,0 +1,216 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.296Z",
+  "sourceActionFilesGlob": "todo/actions/profiling-examples.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "profiling-examples",
+      "actionFilePath": "todo/actions/profiling-examples.md",
+      "researchFilePath": "todo/research/profiling-examples.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings. The main risk is that the R5/R6 modernization meant to make profiling examples valid still leaves multiple copied StructureDefinition snippets invalid or internally contradictory.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "profiling-examples-H-001",
+          "localId": "H-001",
+          "pageLabel": "profiling-examples",
+          "pagePath": "source/profiling-examples.html",
+          "title": "Modernized slicing examples still contain invalid ElementDefinition syntax",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/profiling-examples.html",
+              "lineRange": {
+                "start": 118,
+                "end": 158
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "profiling-examples action file",
+              "filePath": "todo/actions/profiling-examples.md",
+              "confidence": "high",
+              "quote": "`source/profiling-examples.html:118-158`, `:228`, `:286-304`, `:419-423`, `:488-503`, `:590-592`, `:1172-1182`, `:1218-1237`; commit `76a58b57d0ef8e83c56bd0c4c470277c80c51ec6`; `FHIR-20569`; `FHIR-25738`; Zulip `#fhirpath > Slice ID Uniqueness`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "profiling-examples research appendix",
+              "filePath": "todo/research/profiling-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/profiling-examples.html:118-158",
+              "filePath": "source/profiling-examples.html",
+              "lineRange": {
+                "start": 118,
+                "end": 158
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-20569",
+              "label": "FHIR-20569",
+              "url": "https://jira.hl7.org/browse/FHIR-20569",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-25738",
+              "label": "FHIR-25738",
+              "url": "https://jira.hl7.org/browse/FHIR-25738",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "76a58b57d0ef8e83c56bd0c4c470277c80c51ec6",
+              "label": "76a58b57d0ef8e83c56bd0c4c470277c80c51ec6",
+              "url": "https://github.com/HL7/fhir/commit/76a58b57d0ef8e83c56bd0c4c470277c80c51ec6",
+              "commitHash": "76a58b57d0ef8e83c56bd0c4c470277c80c51ec6",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`source/profiling-examples.html:118-158`, `:228`, `:286-304`, `:419-423`, `:488-503`, `:590-592`, `:1172-1182`, `:1218-1237`; commit `76a58b57d0ef8e83c56bd0c4c470277c80c51ec6`; `FHIR-20569`; `FHIR-25738`; Zulip `#fhirpath > Slice ID Uniqueness`\n- Priority: P1\n- Category: intent-mismatch\n- Evidence: `source/profiling-examples.html:118-158`, `:228`, `:286-304`, `:419-423`, `:488-503`, `:590-592`, `:1172-1182`, `:1218-1237`; commit `76a58b57d0ef8e83c56bd0c4c470277c80c51ec6`; `FHIR-20569`; `FHIR-25738`; Zulip `#fhirpath > Slice ID Uniqueness`\n- Problem: `FHIR-20569`/`FHIR-25738` intended to update this page to current valid slicing syntax, but the current snippets still include duplicate ids (`Patient.telecom:WorkPhone`/`Email`), a malformed id (`Patient.telecom:Email.system` missing the closing quote), lowercase `slicename`, a Triglyceride slice with id/path reversed, and reslice ids using `med-request` while the parent slice is `medrequest`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-20569`/`FHIR-25738` intended to update this page to current valid slicing syntax, but the current snippets still include duplicate ids (`Patient.telecom:WorkPhone`/`Email`), a malformed id (`Patient.telecom:Email.system` missing the closing quote), lowercase `slicename`, a Triglyceride slice with id/path reversed, and reslice ids using `med-request` while the parent slice is `medrequest`.",
+            "analysis": "H-001: Modernized slicing examples still contain invalid ElementDefinition syntax\n\nEvidence: `source/profiling-examples.html:118-158`, `:228`, `:286-304`, `:419-423`, `:488-503`, `:590-592`, `:1172-1182`, `:1218-1237`; commit `76a58b57d0ef8e83c56bd0c4c470277c80c51ec6`; `FHIR-20569`; `FHIR-25738`; Zulip `#fhirpath > Slice ID Uniqueness`\n\nProblem: `FHIR-20569`/`FHIR-25738` intended to update this page to current valid slicing syntax, but the current snippets still include duplicate ids (`Patient.telecom:WorkPhone`/`Email`), a malformed id (`Patient.telecom:Email.system` missing the closing quote), lowercase `slicename`, a Triglyceride slice with id/path reversed, and reslice ids using `med-request` while the parent slice is `medrequest`.\n\nWhy it matters: readers can copy examples that violate StructureDefinition constraints, including `sdf-16`/`sdf-17` unique-id rules, undermining the page's purpose as slicing guidance.\n\nRecommended next step: audit every converted snippet from `FHIR-20569`/`FHIR-25738` against a validator-backed example or the attached `FHIR-20569` test IG, then fix all `id`, `path`, and `sliceName` casing/name mismatches.\n\nIntent-vs-implementation context: H-001 is an intent-vs-implementation mismatch: the formal Jira intent was to make profiling examples use current valid `ElementDefinition.id` and `sliceName` syntax, but the applied page still has invalid examples.",
+            "whyItMatters": "readers can copy examples that violate StructureDefinition constraints, including `sdf-16`/`sdf-17` unique-id rules, undermining the page's purpose as slicing guidance.",
+            "recommendedNextStep": "audit every converted snippet from `FHIR-20569`/`FHIR-25738` against a validator-backed example or the attached `FHIR-20569` test IG, then fix all `id`, `path`, and `sliceName` casing/name mismatches.",
+            "rawEvidenceQuotes": [
+              "source/profiling-examples.html:118-158",
+              ":228",
+              ":286-304",
+              ":419-423",
+              ":488-503",
+              ":590-592",
+              ":1172-1182",
+              ":1218-1237",
+              "76a58b57d0ef8e83c56bd0c4c470277c80c51ec6",
+              "FHIR-20569",
+              "FHIR-25738",
+              "#fhirpath > Slice ID Uniqueness"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.296Z",
+          "status": "open"
+        },
+        {
+          "id": "profiling-examples-H-002",
+          "localId": "H-002",
+          "pageLabel": "profiling-examples",
+          "pagePath": "source/profiling-examples.html",
+          "title": "HDLCholesterol profile snippet constrains an LDL code",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/profiling-examples.html",
+              "lineRange": {
+                "start": 714,
+                "end": 737
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "profiling-examples action file",
+              "filePath": "todo/actions/profiling-examples.md",
+              "confidence": "high",
+              "quote": "`source/profiling-examples.html:714-737`, `:801-821`; commit `ea9e526cc83eeeff8d3446a95de766022e8d215c`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "profiling-examples research appendix",
+              "filePath": "todo/research/profiling-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/profiling-examples.html:714-737",
+              "filePath": "source/profiling-examples.html",
+              "lineRange": {
+                "start": 714,
+                "end": 737
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "ea9e526cc83eeeff8d3446a95de766022e8d215c",
+              "label": "ea9e526cc83eeeff8d3446a95de766022e8d215c",
+              "url": "https://github.com/HL7/fhir/commit/ea9e526cc83eeeff8d3446a95de766022e8d215c",
+              "commitHash": "ea9e526cc83eeeff8d3446a95de766022e8d215c",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the `HDLCholesterol` profile snippet fixes `Observation.code` to LOINC `2089-1` with display `LDL Cholesterol`, while the matching example instance uses `2085-9` with display `HDL Cholesterol`.",
+            "analysis": "H-002: HDLCholesterol profile snippet constrains an LDL code\n\nEvidence: `source/profiling-examples.html:714-737`, `:801-821`; commit `ea9e526cc83eeeff8d3446a95de766022e8d215c`\n\nProblem: the `HDLCholesterol` profile snippet fixes `Observation.code` to LOINC `2089-1` with display `LDL Cholesterol`, while the matching example instance uses `2085-9` with display `HDL Cholesterol`.\n\nWhy it matters: the lipid slicing example depends on different target profiles constraining different LOINC codes; an HDL profile that constrains an LDL code breaks the discriminator example.\n\nRecommended next step: decide whether the snippet is meant to be HDL or LDL and make the profile name, targetProfile, fixed code, display, and instance code consistent.\n\nOverlooked/newly noticed context: H-002 appears to be a current page problem not clearly covered by the tracked Jira issues for this page.",
+            "whyItMatters": "the lipid slicing example depends on different target profiles constraining different LOINC codes; an HDL profile that constrains an LDL code breaks the discriminator example.",
+            "recommendedNextStep": "decide whether the snippet is meant to be HDL or LDL and make the profile name, targetProfile, fixed code, display, and instance code consistent.",
+            "rawEvidenceQuotes": [
+              "source/profiling-examples.html:714-737",
+              ":801-821",
+              "ea9e526cc83eeeff8d3446a95de766022e8d215c"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.296Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 1,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

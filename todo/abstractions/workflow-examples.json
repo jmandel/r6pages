@@ -1,0 +1,317 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.359Z",
+  "sourceActionFilesGlob": "todo/actions/workflow-examples.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "workflow-examples",
+      "actionFilePath": "todo/actions/workflow-examples.md",
+      "researchFilePath": "todo/research/workflow-examples.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings, all reader-facing editorial or consistency issues. No high-severity normative/conformance problem was found; the main risk is that the new examples tab still contains incomplete or misleading example content despite being part of a workflow-page cleanup.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "workflow-examples-E-001",
+          "localId": "E-001",
+          "pageLabel": "workflow-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html",
+          "title": "Option H section is present but empty",
+          "kind": "E",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html",
+              "lineRange": {
+                "start": 61,
+                "end": 63
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "workflow-examples action file",
+              "filePath": "todo/actions/workflow-examples.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:61-63`; commit `70e67c6d2dc76bdd232f94e9e062ce4f6b34df16`; `FHIR-45287`; Confluence `239206707`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "workflow-examples research appendix",
+              "filePath": "todo/research/workflow-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:61-63",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html",
+              "lineRange": {
+                "start": 61,
+                "end": 63
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-45287",
+              "label": "FHIR-45287",
+              "url": "https://jira.hl7.org/browse/FHIR-45287",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "70e67c6d2dc76bdd232f94e9e062ce4f6b34df16",
+              "label": "70e67c6d2dc76bdd232f94e9e062ce4f6b34df16",
+              "url": "https://github.com/HL7/fhir/commit/70e67c6d2dc76bdd232f94e9e062ce4f6b34df16",
+              "commitHash": "70e67c6d2dc76bdd232f94e9e062ce4f6b34df16",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:61-63`; commit `70e67c6d2dc76bdd232f94e9e062ce4f6b34df16`; `FHIR-45287`; Confluence `239206707`\n- Priority: P2\n- Category: overlooked-problem\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:61-63`; commit `70e67c6d2dc76bdd232f94e9e062ce4f6b34df16`; `FHIR-45287`; Confluence `239206707`\n- Problem: The current examples page renders an \"Option H Scenario - POST of Task to a workflow broker\" heading with no scenario text beneath it.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The current examples page renders an \"Option H Scenario - POST of Task to a workflow broker\" heading with no scenario text beneath it.",
+            "analysis": "E-001: Option H section is present but empty\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:61-63`; commit `70e67c6d2dc76bdd232f94e9e062ce4f6b34df16`; `FHIR-45287`; Confluence `239206707`\n\nProblem: The current examples page renders an \"Option H Scenario - POST of Task to a workflow broker\" heading with no scenario text beneath it.\n\nWhy it matters: The PR-linked Jira issue and FHIR-I minutes were about cleaning up TODO/TBD/empty workflow sections; leaving a blank example section undermines that cleanup and signals unfinished content to readers.\n\nRecommended next step: Add the Option H scenario content or remove/hide the heading until content exists, then update `FHIR-45287` with the remaining cleanup status.",
+            "whyItMatters": "The PR-linked Jira issue and FHIR-I minutes were about cleaning up TODO/TBD/empty workflow sections; leaving a blank example section undermines that cleanup and signals unfinished content to readers.",
+            "recommendedNextStep": "Add the Option H scenario content or remove/hide the heading until content exists, then update `FHIR-45287` with the remaining cleanup status.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:61-63",
+              "70e67c6d2dc76bdd232f94e9e062ce4f6b34df16",
+              "FHIR-45287",
+              "239206707"
+            ],
+            "limitations": [
+              "- Caveat: `FHIR-45287` is still `Triaged`/unresolved in the local Jira snapshot even though PR #3553 containing the page changes was merged. There are no Jira comments on the issue, so formal disposition details are limited.",
+              "- Caveat: an initial unquoted `FHIR-45287` Zulip FTS query failed because FTS parsed the hyphenated key as an expression. The corrected quoted search returned no results."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.358Z",
+          "status": "open"
+        },
+        {
+          "id": "workflow-examples-E-002",
+          "localId": "E-002",
+          "pageLabel": "workflow-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html",
+          "title": "Related text promises example instances that the examples tab does not provide",
+          "kind": "E",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html",
+              "lineRange": {
+                "start": 33,
+                "end": 78
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-management.html",
+              "lineRange": {
+                "start": 94,
+                "end": 96
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "workflow-examples action file",
+              "filePath": "todo/actions/workflow-examples.md",
+              "confidence": "high",
+              "quote": "target page narrative-only content at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:33-78`; related links at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-management.html:94-96`, `:152-154`, `:242-244`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "workflow-examples research appendix",
+              "filePath": "todo/research/workflow-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:33-78",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html",
+              "lineRange": {
+                "start": 33,
+                "end": 78
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-management.html:94-96",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-management.html",
+              "lineRange": {
+                "start": 94,
+                "end": 96
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The management page links to the examples tab for F/G/I \"including example instances,\" but the target page only provides prose scenarios and no instance links or embedded resources.",
+            "analysis": "E-002: Related text promises example instances that the examples tab does not provide\n\nEvidence: target page narrative-only content at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:33-78`; related links at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-management.html:94-96`, `:152-154`, `:242-244`\n\nProblem: The management page links to the examples tab for F/G/I \"including example instances,\" but the target page only provides prose scenarios and no instance links or embedded resources.\n\nWhy it matters: Readers following the links may expect concrete FHIR resource examples and instead find narrative only, which is misleading for implementation guidance.\n\nRecommended next step: Either add/link actual example instances for the scenarios or remove \"including example instances\" from the related management-page link text.",
+            "whyItMatters": "Readers following the links may expect concrete FHIR resource examples and instead find narrative only, which is misleading for implementation guidance.",
+            "recommendedNextStep": "Either add/link actual example instances for the scenarios or remove \"including example instances\" from the related management-page link text.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:33-78",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-management.html:94-96",
+              ":152-154",
+              ":242-244"
+            ],
+            "limitations": [
+              "- Caveat: `FHIR-45287` is still `Triaged`/unresolved in the local Jira snapshot even though PR #3553 containing the page changes was merged. There are no Jira comments on the issue, so formal disposition details are limited.",
+              "- Caveat: an initial unquoted `FHIR-45287` Zulip FTS query failed because FTS parsed the hyphenated key as an expression. The corrected quoted search returned no results."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.359Z",
+          "status": "open"
+        },
+        {
+          "id": "workflow-examples-E-003",
+          "localId": "E-003",
+          "pageLabel": "workflow-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html",
+          "title": "New scenario prose contains obvious grammar defects",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html",
+              "lineRange": {
+                "start": 55,
+                "end": 55
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html",
+              "lineRange": {
+                "start": 76,
+                "end": 76
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "workflow-examples action file",
+              "filePath": "todo/actions/workflow-examples.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:55`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:76`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "workflow-examples research appendix",
+              "filePath": "todo/research/workflow-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:55",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html",
+              "lineRange": {
+                "start": 55,
+                "end": 55
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:76",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html",
+              "lineRange": {
+                "start": 76,
+                "end": 76
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Option G says \"Once the medication is picked up is fulfilled,\" and Option I says \"The cardiologist document the findings.\"",
+            "analysis": "E-003: New scenario prose contains obvious grammar defects\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:55`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:76`\n\nProblem: Option G says \"Once the medication is picked up is fulfilled,\" and Option I says \"The cardiologist document the findings.\"\n\nWhy it matters: These are visible defects in newly added examples and can make the intended event/resource lifecycle harder to parse.\n\nRecommended next step: Editorially revise those sentences, e.g. clarify whether pickup, dispense, Task completion, or request fulfillment is the event being described.",
+            "whyItMatters": "These are visible defects in newly added examples and can make the intended event/resource lifecycle harder to parse.",
+            "recommendedNextStep": "Editorially revise those sentences, e.g. clarify whether pickup, dispense, Task completion, or request fulfillment is the event being described.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:55",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-examples.html:76"
+            ],
+            "limitations": [
+              "- Caveat: `FHIR-45287` is still `Triaged`/unresolved in the local Jira snapshot even though PR #3553 containing the page changes was merged. There are no Jira comments on the issue, so formal disposition details are limited.",
+              "- Caveat: an initial unquoted `FHIR-45287` Zulip FTS query failed because FTS parsed the hyphenated key as an expression. The corrected quoted search returned no results."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.359Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 3,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 1,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

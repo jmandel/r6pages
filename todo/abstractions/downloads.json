@@ -1,0 +1,238 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.215Z",
+  "sourceActionFilesGlob": "todo/actions/downloads.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "downloads",
+      "actionFilePath": "todo/actions/downloads.md",
+      "researchFilePath": "todo/research/downloads.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings: one P2 intent/discoverability mismatch around the removed Reference Implementations link, and one P3 reader-facing typo in the R6 package list.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "downloads-H-001",
+          "localId": "H-001",
+          "pageLabel": "downloads",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html",
+          "title": "Reference implementation Confluence link disappeared after decisions to keep it external but discoverable",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html",
+              "lineRange": {
+                "start": 105,
+                "end": 107
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "downloads action file",
+              "filePath": "todo/actions/downloads.md",
+              "confidence": "high",
+              "quote": "current page only links the FHIR Tools Registry at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:105-107` and ends without a Reference Implementations row at lines 144-154; commit `3bfb4a3a0bea81f82e7e71100893c1226d8fccdc` / PR https://github.com/HL7/fhir/pull/3987 deleted the remaining Reference Implementations Confluence link; `FHIR-31735` and `FHIR-30088` both resolved to move reference implementations to Confluence, not to make them undiscoverable from downloads."
+            },
+            {
+              "type": "research-appendix",
+              "label": "downloads research appendix",
+              "filePath": "todo/research/downloads.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:105-107",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html",
+              "lineRange": {
+                "start": 105,
+                "end": 107
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-31735",
+              "label": "FHIR-31735",
+              "url": "https://jira.hl7.org/browse/FHIR-31735",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-30088",
+              "label": "FHIR-30088",
+              "url": "https://jira.hl7.org/browse/FHIR-30088",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "3bfb4a3a0bea81f82e7e71100893c1226d8fccdc",
+              "label": "3bfb4a3a0bea81f82e7e71100893c1226d8fccdc",
+              "url": "https://github.com/HL7/fhir/commit/3bfb4a3a0bea81f82e7e71100893c1226d8fccdc",
+              "commitHash": "3bfb4a3a0bea81f82e7e71100893c1226d8fccdc",
+              "confidence": "medium"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/3987",
+              "url": "https://github.com/HL7/fhir/pull/3987",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "https://confluence.hl7.org/display/FHIR/Open+Source+Implementations`",
+              "url": "https://confluence.hl7.org/display/FHIR/Open+Source+Implementations`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "R6 ballot4 no longer gives downloads-page readers a direct `Open Source Implementations`/reference implementation destination, even though the tracked Jira and FHIR-I minutes expected that list to live on Confluence and remain linked from the spec.",
+            "analysis": "H-001: Reference implementation Confluence link disappeared after decisions to keep it external but discoverable\n\nEvidence: current page only links the FHIR Tools Registry at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:105-107` and ends without a Reference Implementations row at lines 144-154; commit `3bfb4a3a0bea81f82e7e71100893c1226d8fccdc` / PR https://github.com/HL7/fhir/pull/3987 deleted the remaining Reference Implementations Confluence link; `FHIR-31735` and `FHIR-30088` both resolved to move reference implementations to Confluence, not to make them undiscoverable from downloads.\n\nProblem: R6 ballot4 no longer gives downloads-page readers a direct `Open Source Implementations`/reference implementation destination, even though the tracked Jira and FHIR-I minutes expected that list to live on Confluence and remain linked from the spec.\n\nWhy it matters: implementers looking for supported libraries/reference platforms lose the intended handoff, and the final source no longer clearly matches the recorded workgroup intent.\n\nRecommended next step: ask FHIR-I/spec maintainers whether PR #3987 intentionally removed this handoff; if not, restore a concise row/link to `https://confluence.hl7.org/display/FHIR/Open+Source+Implementations` or mention it next to the Tools Registry link.\n\nIntent-vs-implementation context: H-001 is the only mismatch found that appears worth triage.",
+            "whyItMatters": "implementers looking for supported libraries/reference platforms lose the intended handoff, and the final source no longer clearly matches the recorded workgroup intent.",
+            "recommendedNextStep": "ask FHIR-I/spec maintainers whether PR #3987 intentionally removed this handoff; if not, restore a concise row/link to `https://confluence.hl7.org/display/FHIR/Open+Source+Implementations` or mention it next to the Tools Registry link.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:105-107",
+              "3bfb4a3a0bea81f82e7e71100893c1226d8fccdc",
+              "FHIR-31735",
+              "FHIR-30088"
+            ],
+            "limitations": [
+              "| 2022-08-09 | `b45913e9990355abbf1dc7ab73da4f425c55d519` | FHIR-22780 | Patch adds Python library links, but `FHIR-22780` snapshot is about contained resources; commit subject appears mis-keyed or unrelated | history caveat |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.214Z",
+          "status": "open"
+        },
+        {
+          "id": "downloads-E-001",
+          "localId": "E-001",
+          "pageLabel": "downloads",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html",
+          "title": "Typo in the R6 expansions package description",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html",
+              "lineRange": {
+                "start": 116,
+                "end": 116
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "downloads action file",
+              "filePath": "todo/actions/downloads.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:116`; blame points the current line to `3bfb4a3a0bea81f82e7e71100893c1226d8fccdc`, with the phrase originally introduced by `b98b26f6cb50c11be16c313747ddb33bbea37ad1`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "downloads research appendix",
+              "filePath": "todo/research/downloads.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:116",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html",
+              "lineRange": {
+                "start": 116,
+                "end": 116
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "3bfb4a3a0bea81f82e7e71100893c1226d8fccdc",
+              "label": "3bfb4a3a0bea81f82e7e71100893c1226d8fccdc",
+              "url": "https://github.com/HL7/fhir/commit/3bfb4a3a0bea81f82e7e71100893c1226d8fccdc",
+              "commitHash": "3bfb4a3a0bea81f82e7e71100893c1226d8fccdc",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "b98b26f6cb50c11be16c313747ddb33bbea37ad1",
+              "label": "b98b26f6cb50c11be16c313747ddb33bbea37ad1",
+              "url": "https://github.com/HL7/fhir/commit/b98b26f6cb50c11be16c313747ddb33bbea37ad1",
+              "commitHash": "b98b26f6cb50c11be16c313747ddb33bbea37ad1",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The text says \"value sets the have a required binding\" instead of \"value sets that have a required binding\".",
+            "analysis": "E-001: Typo in the R6 expansions package description\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:116`; blame points the current line to `3bfb4a3a0bea81f82e7e71100893c1226d8fccdc`, with the phrase originally introduced by `b98b26f6cb50c11be16c313747ddb33bbea37ad1`.\n\nProblem: The text says \"value sets the have a required binding\" instead of \"value sets that have a required binding\".\n\nWhy it matters: reader-facing typo on a high-traffic downloads page.\n\nRecommended next step: change `the have` to `that have`.\n\nOverlooked/newly noticed context: E-001 is the only concrete current-page editorial defect found.",
+            "whyItMatters": "reader-facing typo on a high-traffic downloads page.",
+            "recommendedNextStep": "change `the have` to `that have`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/downloads.html:116",
+              "3bfb4a3a0bea81f82e7e71100893c1226d8fccdc",
+              "b98b26f6cb50c11be16c313747ddb33bbea37ad1"
+            ],
+            "limitations": [
+              "| 2022-08-09 | `b45913e9990355abbf1dc7ab73da4f425c55d519` | FHIR-22780 | Patch adds Python library links, but `FHIR-22780` snapshot is about contained resources; commit subject appears mis-keyed or unrelated | history caveat |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.215Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.277Z",
+  "sourceActionFilesGlob": "todo/actions/narrative.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "narrative",
+      "actionFilePath": "todo/actions/narrative.md",
+      "researchFilePath": "todo/research/narrative.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: the current narrative page does not clearly align with related HTTP guidance about narrative `<a href=\"\">` links to FHIR resources, and a later unresolved Jira flags this as a clinically relevant ambiguity.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "narrative-H-001",
+          "localId": "H-001",
+          "pageLabel": "narrative",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html",
+          "title": "Narrative href links lack display semantics while HTTP requires replacement",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html",
+              "lineRange": {
+                "start": 112,
+                "end": 116
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html",
+              "lineRange": {
+                "start": 212,
+                "end": 217
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html",
+              "lineRange": {
+                "start": 338,
+                "end": 343
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html",
+              "lineRange": {
+                "start": 1832,
+                "end": 1838
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "narrative action file",
+              "filePath": "todo/actions/narrative.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:112-116`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:212-217`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:338-343`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html:1832-1838`, `FHIR-53999`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "narrative research appendix",
+              "filePath": "todo/research/narrative.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:112-116",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html",
+              "lineRange": {
+                "start": 112,
+                "end": 116
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:212-217",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html",
+              "lineRange": {
+                "start": 212,
+                "end": 217
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:338-343",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html",
+              "lineRange": {
+                "start": 338,
+                "end": 343
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html:1832-1838",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html",
+              "lineRange": {
+                "start": 1832,
+                "end": 1838
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53999",
+              "label": "FHIR-53999",
+              "url": "https://jira.hl7.org/browse/FHIR-53999",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`narrative.html` allows XHTML `<a>` elements with `href` and gives explicit preprocessing guidance for `img src=\"#...\"`, but the linking section only describes `narrativeLink`/`originalText` extensions. Meanwhile `http.html` says servers SHALL replace narrative `<a href=\"\">` links during transaction processing. `FHIR-53999` notes that the spec does not say whether FHIR resources should be referenced via narrative `href`, or how display systems should handle such links.",
+            "analysis": "H-001: Narrative href links lack display semantics while HTTP requires replacement\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:112-116`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:212-217`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:338-343`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html:1832-1838`, `FHIR-53999`\n\nProblem: `narrative.html` allows XHTML `<a>` elements with `href` and gives explicit preprocessing guidance for `img src=\"#...\"`, but the linking section only describes `narrativeLink`/`originalText` extensions. Meanwhile `http.html` says servers SHALL replace narrative `<a href=\"\">` links during transaction processing. `FHIR-53999` notes that the spec does not say whether FHIR resources should be referenced via narrative `href`, or how display systems should handle such links.\n\nWhy it matters: narrative display implementations may resolve, expose, ignore, or render FHIR-resource hrefs differently, which can produce unsafe or misleading human-readable displays.\n\nRecommended next step: resolve `FHIR-53999` by aligning `narrative.html`, `http.html`, and any Bundle text: either explicitly discourage/remove FHIR-resource href usage in narratives, or add normative/display guidance comparable to the existing `img src` guidance.\n\nOverlooked/newly noticed context: See H-001.",
+            "whyItMatters": "narrative display implementations may resolve, expose, ignore, or render FHIR-resource hrefs differently, which can produce unsafe or misleading human-readable displays.",
+            "recommendedNextStep": "resolve `FHIR-53999` by aligning `narrative.html`, `http.html`, and any Bundle text: either explicitly discourage/remove FHIR-resource href usage in narratives, or add normative/display guidance comparable to the existing `img src` guidance.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:112-116",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:212-217",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/narrative.html:338-343",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/http.html:1832-1838",
+              "FHIR-53999"
+            ],
+            "limitations": [
+              "- Caveats: initial Zulip FTS searches for unquoted Jira keys failed because FTS parsed hyphens as operators; I reran those as SQL `content LIKE` searches. A Confluence FTS query for `Composition.section.text originalText` also hit FTS punctuation syntax and was treated as a failed search; Jira/source evidence for that change is still strong.",
+              "This was not introduced by a direct R4-to-R6 page diff, but it is visible in the current page and backed by later `FHIR-53999`. The narrative page permits XHTML `a` elements with `href` (`source/narrative.html:112-116`) and explains `img src=\"#...\"` preprocessing (`source/narrative.html:212-217`), while the HTTP page says servers SHALL replace `<a href=\"\">` and `<img src=\"\">` links in narrative (`source/http.html:1832-1838`). The narrative/data linking section only discusses `narrativeLink` and `originalText` extensions (`source/narrative.html:338-343`). `FHIR-53999` says this leaves unclear whether FHIR resources should ever be referenced through narrative `href`, and if so how display implementations should handle those links. This is carried into the actionable file."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.277Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

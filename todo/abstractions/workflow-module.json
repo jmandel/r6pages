@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.361Z",
+  "sourceActionFilesGlob": "todo/actions/workflow-module.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "workflow-module",
+      "actionFilePath": "todo/actions/workflow-module.md",
+      "researchFilePath": "todo/research/workflow-module.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: a concrete reader-facing typo introduced in the updated roadmap text. No substantive intent-vs-implementation mismatch was found for the tracked Jira-backed changes.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "workflow-module-E-001",
+          "localId": "E-001",
+          "pageLabel": "workflow-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-module.html",
+          "title": "Typo in roadmap interoperability sentence",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-module.html",
+              "lineRange": {
+                "start": 163,
+                "end": 165
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "workflow-module action file",
+              "filePath": "todo/actions/workflow-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-module.html:163-165`; commit `1ce2d8dfbf69e6a9b9617a382aee935403e9a5b5`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "workflow-module research appendix",
+              "filePath": "todo/research/workflow-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-module.html:163-165",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-module.html",
+              "lineRange": {
+                "start": 163,
+                "end": 165
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "1ce2d8dfbf69e6a9b9617a382aee935403e9a5b5",
+              "label": "1ce2d8dfbf69e6a9b9617a382aee935403e9a5b5",
+              "url": "https://github.com/HL7/fhir/commit/1ce2d8dfbf69e6a9b9617a382aee935403e9a5b5",
+              "commitHash": "1ce2d8dfbf69e6a9b9617a382aee935403e9a5b5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The sentence says `expected interoperablity interactions`; `interoperablity` is misspelled.",
+            "analysis": "E-001: Typo in roadmap interoperability sentence\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-module.html:163-165`; commit `1ce2d8dfbf69e6a9b9617a382aee935403e9a5b5`\n\nProblem: The sentence says `expected interoperablity interactions`; `interoperablity` is misspelled.\n\nWhy it matters: This is visible on an informative module page and was introduced in the R4 -> R6 roadmap rewrite.\n\nRecommended next step: Correct `interoperablity` to `interoperability`.\n\nOverlooked/newly noticed context: See E-001.",
+            "whyItMatters": "This is visible on an informative module page and was introduced in the R4 -> R6 roadmap rewrite.",
+            "recommendedNextStep": "Correct `interoperablity` to `interoperability`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow-module.html:163-165",
+              "1ce2d8dfbf69e6a9b9617a382aee935403e9a5b5"
+            ],
+            "limitations": [
+              "- Caveat: the 2025 OO-incubator link change has clear source/PR/community context, but no Jira key in the page-changing commit itself; do not treat later OO-incubator Jira hits as causal for the workflow page commit."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.361Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

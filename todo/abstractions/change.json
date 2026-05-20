@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.143Z",
+  "sourceActionFilesGlob": "todo/actions/change.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "change",
+      "actionFilePath": "todo/actions/change.md",
+      "researchFilePath": "todo/research/change.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: a low-priority editorial regression in changed prose. No substantive FHIR conformance, REST/search, terminology, or intent-vs-implementation problem was found.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "change-E-001",
+          "localId": "E-001",
+          "pageLabel": "change",
+          "pagePath": "source/change.html",
+          "title": "Hyphenated noun phrase in the first paragraph",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/change.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "change action file",
+              "filePath": "todo/actions/change.md",
+              "confidence": "high",
+              "quote": "New `source/change.html` line 24; commit `dad7cf37c75822c352509e1c2e8d050408d0be18` changed `real world` to `real-world`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "change research appendix",
+              "filePath": "todo/research/change.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "dad7cf37c75822c352509e1c2e8d050408d0be18",
+              "label": "dad7cf37c75822c352509e1c2e8d050408d0be18",
+              "url": "https://github.com/HL7/fhir/commit/dad7cf37c75822c352509e1c2e8d050408d0be18",
+              "commitHash": "dad7cf37c75822c352509e1c2e8d050408d0be18",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR's strength lies in it being grounded in the real-world which is changing rapidly` uses `real-world` as a noun phrase after `the`; standard usage would be `real world`, ideally with a comma before `which`.",
+            "analysis": "E-001: Hyphenated noun phrase in the first paragraph\n\nEvidence: New `source/change.html` line 24; commit `dad7cf37c75822c352509e1c2e8d050408d0be18` changed `real world` to `real-world`.\n\nProblem: `FHIR's strength lies in it being grounded in the real-world which is changing rapidly` uses `real-world` as a noun phrase after `the`; standard usage would be `real world`, ideally with a comma before `which`.\n\nWhy it matters: Minor readability/grammar defect introduced by QA/editorial churn on a public informative page.\n\nRecommended next step: Change the phrase to `grounded in the real world, which is changing rapidly` (or equivalent) through the normal spec edit process.",
+            "whyItMatters": "Minor readability/grammar defect introduced by QA/editorial churn on a public informative page.",
+            "recommendedNextStep": "Change the phrase to `grounded in the real world, which is changing rapidly` (or equivalent) through the normal spec edit process.",
+            "rawEvidenceQuotes": [
+              "source/change.html",
+              "dad7cf37c75822c352509e1c2e8d050408d0be18",
+              "real world",
+              "real-world"
+            ],
+            "limitations": [
+              "- Caveats: FTS tokenization treats dots/hyphens specially; unquoted `change.html`, unquoted `FHIR-xxxxx`, and GitHub URLs caused syntax/no-column errors in some tools, so those searches were retried with quoted terms or SQL `LIKE`. The page is an informative essay, not a conformance page; no REST/search/operation semantics are present."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.143Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

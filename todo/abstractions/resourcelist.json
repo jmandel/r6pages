@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.308Z",
+  "sourceActionFilesGlob": "todo/actions/resourcelist.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "resourcelist",
+      "actionFilePath": "todo/actions/resourcelist.md",
+      "researchFilePath": "todo/research/resourcelist.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: its replacement link for Testing Resources is broken in R6 ballot4, blocking readers from reaching the external IG that replaced `TestPlan`, `TestReport`, and `TestScript`.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "resourcelist-E-001",
+          "localId": "E-001",
+          "pageLabel": "resourcelist",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html",
+          "title": "Testing Resources link points to a 404 target",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html",
+              "lineRange": {
+                "start": 257,
+                "end": 260
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhir.ini",
+              "lineRange": {
+                "start": 8,
+                "end": 9
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "resourcelist action file",
+              "filePath": "todo/actions/resourcelist.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:257-260`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhir.ini:8-9`; commit `f9a44787c45071394532c7c2ee94d76f30f47387`; `FHIR-54820`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "resourcelist research appendix",
+              "filePath": "todo/research/resourcelist.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:257-260",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html",
+              "lineRange": {
+                "start": 257,
+                "end": 260
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhir.ini:8-9",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhir.ini",
+              "lineRange": {
+                "start": 8,
+                "end": 9
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-54820",
+              "label": "FHIR-54820",
+              "url": "https://jira.hl7.org/browse/FHIR-54820",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "f9a44787c45071394532c7c2ee94d76f30f47387",
+              "label": "f9a44787c45071394532c7c2ee94d76f30f47387",
+              "url": "https://github.com/HL7/fhir/commit/f9a44787c45071394532c7c2ee94d76f30f47387",
+              "commitHash": "f9a44787c45071394532c7c2ee94d76f30f47387",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://build.fhir.org/ig/hl7/fhir-testing-ig/index.html`",
+              "url": "https://build.fhir.org/ig/hl7/fhir-testing-ig/index.html`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`[%ig testing%]` expands to `https://build.fhir.org/ig/hl7/fhir-testing-ig/index.html`, which returns 404. The visible row also starts with a stray-looking `+ see also`.",
+            "analysis": "E-001: Testing Resources link points to a 404 target\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:257-260`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhir.ini:8-9`; commit `f9a44787c45071394532c7c2ee94d76f30f47387`; `FHIR-54820`\n\nProblem: `[%ig testing%]` expands to `https://build.fhir.org/ig/hl7/fhir-testing-ig/index.html`, which returns 404. The visible row also starts with a stray-looking `+ see also`.\n\nWhy it matters: readers looking for the testing resources removed from core cannot follow the advertised replacement link.\n\nRecommended next step: update the `testing` IG URL to the working uppercase `HL7` Testing IG URL and clean up the visible leading `+`; then resolve `FHIR-54820`.\n\nIntent-vs-implementation context: None found beyond E-001.",
+            "whyItMatters": "readers looking for the testing resources removed from core cannot follow the advertised replacement link.",
+            "recommendedNextStep": "update the `testing` IG URL to the working uppercase `HL7` Testing IG URL and clean up the visible leading `+`; then resolve `FHIR-54820`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:257-260",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhir.ini:8-9",
+              "f9a44787c45071394532c7c2ee94d76f30f47387",
+              "FHIR-54820"
+            ],
+            "limitations": [
+              "- Caveat: the first Zulip FTS pass used unquoted Jira keys and failed because FTS parsed hyphens as operators; quoted key searches were rerun. No Zulip hit was found for `FHIR-54820`."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.308Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

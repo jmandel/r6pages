@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.114Z",
+  "sourceActionFilesGlob": "todo/actions/administration-module.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "administration-module",
+      "actionFilePath": "todo/actions/administration-module.md",
+      "researchFilePath": "todo/research/administration-module.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: an unclear, untracked Research Studies implementation note that gives modeling/search guidance but reads like draft text. The main Jira-backed additions otherwise match their recorded dispositions.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "administration-module-E-001",
+          "localId": "E-001",
+          "pageLabel": "administration-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html",
+          "title": "Research Studies implementation note is unclear draft-like guidance",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html",
+              "lineRange": {
+                "start": 245,
+                "end": 250
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "administration-module action file",
+              "filePath": "todo/actions/administration-module.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html:245-250`; commit `c048e735e0c4c9d01b4e4e7548393dbbd45de4e2`; no Jira/Zulip/Confluence hits for `\"mix of research and non research content\"` or `\"creating 2 encounters\" research`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "administration-module research appendix",
+              "filePath": "todo/research/administration-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html:245-250",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html",
+              "lineRange": {
+                "start": 245,
+                "end": 250
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "c048e735e0c4c9d01b4e4e7548393dbbd45de4e2",
+              "label": "c048e735e0c4c9d01b4e4e7548393dbbd45de4e2",
+              "url": "https://github.com/HL7/fhir/commit/c048e735e0c4c9d01b4e4e7548393dbbd45de4e2",
+              "commitHash": "c048e735e0c4c9d01b4e4e7548393dbbd45de4e2",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html:245-250`; commit `c048e735e0c4c9d01b4e4e7548393dbbd45de4e2`; no Jira/Zulip/Confluence hits for `\"mix of research and non research content\"` or `\"creating 2 encounters\" research`\n- Priority: P2\n- Category: editorial\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html:245-250`; commit `c048e735e0c4c9d01b4e4e7548393dbbd45de4e2`; no Jira/Zulip/Confluence hits for `\"mix of research and non research content\"` or `\"creating 2 encounters\" research`\n- Problem: The note says to recommend creating 2 Encounters for mixed research/non-research content, then trails into \"however could derive that information Based on...\" from observations/diagnostic reports/immunizations.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html:245-250`; commit `c048e735e0c4c9d01b4e4e7548393dbbd45de4e2`; no Jira/Zulip/Confluence hits for `\"mix of research and non research content\"` or `\"creating 2 encounters\" research`\n- Priority: P2\n- Category: editorial\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html:245-250`; commit `c048e735e0c4c9d01b4e4e7548393dbbd45de4e2`; no Jira/Zulip/Confluence hits for `\"mix of research and non research content\"` or `\"creating 2 encounters\" research`\n- Problem: The note says to recommend creating 2 Encounters for mixed research/non-research content, then trails into \"however could derive that information Based on...\" from observations/diagnostic reports/immunizations.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The note says to recommend creating 2 Encounters for mixed research/non-research content, then trails into \"however could derive that information Based on...\" from observations/diagnostic reports/immunizations. It is grammatically incomplete, uses informal abbreviations, and leaves the intended modeling recommendation ambiguous.",
+            "analysis": "E-001: Research Studies implementation note is unclear draft-like guidance\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html:245-250`; commit `c048e735e0c4c9d01b4e4e7548393dbbd45de4e2`; no Jira/Zulip/Confluence hits for `\"mix of research and non research content\"` or `\"creating 2 encounters\" research`\n\nProblem: The note says to recommend creating 2 Encounters for mixed research/non-research content, then trails into \"however could derive that information Based on...\" from observations/diagnostic reports/immunizations. It is grammatically incomplete, uses informal abbreviations, and leaves the intended modeling recommendation ambiguous.\n\nWhy it matters: This is implementation guidance about encounter modeling, extensions, and search behavior; readers could misinterpret whether separate Encounters are recommended, optional, or merely one possible derivation strategy.\n\nRecommended next step: Open a PA editorial/spec-clarification ticket to rewrite or remove the note, explicitly naming the relevant standard extensions/search parameters and the intended modeling pattern.\n\nOverlooked/newly noticed context: E-001 above.",
+            "whyItMatters": "This is implementation guidance about encounter modeling, extensions, and search behavior; readers could misinterpret whether separate Encounters are recommended, optional, or merely one possible derivation strategy.",
+            "recommendedNextStep": "Open a PA editorial/spec-clarification ticket to rewrite or remove the note, explicitly naming the relevant standard extensions/search parameters and the intended modeling pattern.",
+            "rawEvidenceQuotes": [
+              "mix of research and non research content",
+              "creating 2 encounters",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html:245-250",
+              "c048e735e0c4c9d01b4e4e7548393dbbd45de4e2",
+              "\"mix of research and non research content\"",
+              "\"creating 2 encounters\" research"
+            ],
+            "limitations": [
+              "- Caveats: this is a bounded review, not an exhaustive review of every resource added to the module index. Several changes are broad module/index updates or diagram-support text rather than resource definitions. The R6 ballot4 source predates later 2026 Security work on `FHIR-50838`, so that issue is later context rather than implementation evidence for this page version.",
+              "| Source | Research note | `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/administration-module.html:232-250` | Current unclear implementation note; actionable finding |",
+              "| Commit | Research section | `c048e735e0c4c9d01b4e4e7548393dbbd45de4e2`, https://github.com/HL7/fhir/commit/c048e735e0c4c9d01b4e4e7548393dbbd45de4e2 | Adds the research section and unclear note without an explicit Jira key |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.113Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

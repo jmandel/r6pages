@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.192Z",
+  "sourceActionFilesGlob": "todo/actions/conformance-rules.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "conformance-rules",
+      "actionFilePath": "todo/actions/conformance-rules.md",
+      "researchFilePath": "todo/research/conformance-rules.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings: one possible intent mismatch where FHIR-37692's accepted constraint-key uniqueness wording appears weaker/vaguer in the current page, and one concrete editorial cleanup cluster in reader-facing normative text.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "conformance-rules-H-001",
+          "localId": "H-001",
+          "pageLabel": "conformance-rules",
+          "pagePath": "source/conformance-rules.html",
+          "title": "Constraint-key uniqueness text is weaker than the accepted FHIR-37692 wording",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/conformance-rules.html",
+              "lineRange": {
+                "start": 345,
+                "end": 350
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "conformance-rules action file",
+              "filePath": "todo/actions/conformance-rules.md",
+              "confidence": "high",
+              "quote": "`source/conformance-rules.html:345-350`; commit `39122085c8ac5594f8421a1ec1902e20b8bf6832`; FHIR-37692; Zulip `#fhir/infrastructure-wg > FHIR-37692`; Confluence page 108303407"
+            },
+            {
+              "type": "research-appendix",
+              "label": "conformance-rules research appendix",
+              "filePath": "todo/research/conformance-rules.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/conformance-rules.html:345-350",
+              "filePath": "source/conformance-rules.html",
+              "lineRange": {
+                "start": 345,
+                "end": 350
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-37692",
+              "label": "FHIR-37692",
+              "url": "https://jira.hl7.org/browse/FHIR-37692",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "39122085c8ac5594f8421a1ec1902e20b8bf6832",
+              "label": "39122085c8ac5594f8421a1ec1902e20b8bf6832",
+              "url": "https://github.com/HL7/fhir/commit/39122085c8ac5594f8421a1ec1902e20b8bf6832",
+              "commitHash": "39122085c8ac5594f8421a1ec1902e20b8bf6832",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`source/conformance-rules.html:345-350`; commit `39122085c8ac5594f8421a1ec1902e20b8bf6832`; FHIR-37692; Zulip `#fhir/infrastructure-wg > FHIR-37692`; Confluence page 108303407\n- Priority: P2\n- Category: intent-mismatch\n- Evidence: `source/conformance-rules.html:345-350`; commit `39122085c8ac5594f8421a1ec1902e20b8bf6832`; FHIR-37692; Zulip `#fhir/infrastructure-wg > FHIR-37692`; Confluence page 108303407\n- Problem: FHIR-37692's resolution says constraint IDs \"SHALL be defined such that they are unique within a StructureDefinition (though they may appear in multiple places in derived models due to slicing).\" The current page instead says keys are \"required to be unique when they are declared\" and that validators check they are \"meaningfully unique as they can,\" without the explicit SHALL/scope language.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`source/conformance-rules.html:345-350`; commit `39122085c8ac5594f8421a1ec1902e20b8bf6832`; FHIR-37692; Zulip `#fhir/infrastructure-wg > FHIR-37692`; Confluence page 108303407\n- Priority: P2\n- Category: intent-mismatch\n- Evidence: `source/conformance-rules.html:345-350`; commit `39122085c8ac5594f8421a1ec1902e20b8bf6832`; FHIR-37692; Zulip `#fhir/infrastructure-wg > FHIR-37692`; Confluence page 108303407\n- Problem: FHIR-37692's resolution says constraint IDs \"SHALL be defined such that they are unique within a StructureDefinition (though they may appear in multiple places in derived models due to slicing).\" The current page instead says keys are \"required to be unique when they are declared\" and that validators check they are \"meaningfully unique as they can,\" without the explicit SHALL/scope language.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "FHIR-37692's resolution says constraint IDs \"SHALL be defined such that they are unique within a StructureDefinition (though they may appear in multiple places in derived models due to slicing).\" The current page instead says keys are \"required to be unique when they are declared\" and that validators check they are \"meaningfully unique as they can,\" without the explicit SHALL/scope language.",
+            "analysis": "H-001: Constraint-key uniqueness text is weaker than the accepted FHIR-37692 wording\n\nEvidence: `source/conformance-rules.html:345-350`; commit `39122085c8ac5594f8421a1ec1902e20b8bf6832`; FHIR-37692; Zulip `#fhir/infrastructure-wg > FHIR-37692`; Confluence page 108303407\n\nProblem: FHIR-37692's resolution says constraint IDs \"SHALL be defined such that they are unique within a StructureDefinition (though they may appear in multiple places in derived models due to slicing).\" The current page instead says keys are \"required to be unique when they are declared\" and that validators check they are \"meaningfully unique as they can,\" without the explicit SHALL/scope language.\n\nWhy it matters: implementers and tool authors may not understand the intended uniqueness scope, especially around slicing/inheritance.\n\nRecommended next step: ask FHIR-I to either align this paragraph with the FHIR-37692 resolution or explicitly document the intended weaker/special-case rule.\n\nIntent-vs-implementation context: H-001 only.",
+            "whyItMatters": "implementers and tool authors may not understand the intended uniqueness scope, especially around slicing/inheritance.",
+            "recommendedNextStep": "ask FHIR-I to either align this paragraph with the FHIR-37692 resolution or explicitly document the intended weaker/special-case rule.",
+            "rawEvidenceQuotes": [
+              "source/conformance-rules.html:345-350",
+              "39122085c8ac5594f8421a1ec1902e20b8bf6832",
+              "#fhir/infrastructure-wg > FHIR-37692"
+            ],
+            "limitations": [
+              "- Caveat: no PR numbers were found in the local commit/Jira/Zulip/Confluence evidence reviewed."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.191Z",
+          "status": "open"
+        },
+        {
+          "id": "conformance-rules-E-001",
+          "localId": "E-001",
+          "pageLabel": "conformance-rules",
+          "pagePath": "source/conformance-rules.html",
+          "title": "Current page has several concrete reader-facing typos/wording defects",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/conformance-rules.html",
+              "lineRange": {
+                "start": 78,
+                "end": 78
+              }
+            },
+            {
+              "filePath": "source/conformance-rules.html",
+              "lineRange": {
+                "start": 135,
+                "end": 135
+              }
+            },
+            {
+              "filePath": "source/conformance-rules.html",
+              "lineRange": {
+                "start": 299,
+                "end": 299
+              }
+            },
+            {
+              "filePath": "source/conformance-rules.html",
+              "lineRange": {
+                "start": 312,
+                "end": 312
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "conformance-rules action file",
+              "filePath": "todo/actions/conformance-rules.md",
+              "confidence": "high",
+              "quote": "`source/conformance-rules.html:78`, `source/conformance-rules.html:135`, `source/conformance-rules.html:299`, `source/conformance-rules.html:312`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "conformance-rules research appendix",
+              "filePath": "todo/research/conformance-rules.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/conformance-rules.html:78",
+              "filePath": "source/conformance-rules.html",
+              "lineRange": {
+                "start": 78,
+                "end": 78
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/conformance-rules.html:135",
+              "filePath": "source/conformance-rules.html",
+              "lineRange": {
+                "start": 135,
+                "end": 135
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/conformance-rules.html:299",
+              "filePath": "source/conformance-rules.html",
+              "lineRange": {
+                "start": 299,
+                "end": 299
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/conformance-rules.html:312",
+              "filePath": "source/conformance-rules.html",
+              "lineRange": {
+                "start": 312,
+                "end": 312
+              },
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "The current page contains `absense`, `mimimum`, \"the base application does not specify any application obligations\" where the surrounding text appears to mean \"base specification,\" and \"Allows for suppress warnings\" instead of grammatical wording such as \"Allows suppression of warnings.\"",
+            "analysis": "E-001: Current page has several concrete reader-facing typos/wording defects\n\nEvidence: `source/conformance-rules.html:78`, `source/conformance-rules.html:135`, `source/conformance-rules.html:299`, `source/conformance-rules.html:312`\n\nProblem: The current page contains `absense`, `mimimum`, \"the base application does not specify any application obligations\" where the surrounding text appears to mean \"base specification,\" and \"Allows for suppress warnings\" instead of grammatical wording such as \"Allows suppression of warnings.\"\n\nWhy it matters: this is a normative page; the obligations wording in particular can distract or confuse readers.\n\nRecommended next step: file/apply a small technical correction for these typos and review the copied obligations wording in `source/obligations.html`.\n\nOverlooked/newly noticed context: E-001 only.",
+            "whyItMatters": "this is a normative page; the obligations wording in particular can distract or confuse readers.",
+            "recommendedNextStep": "file/apply a small technical correction for these typos and review the copied obligations wording in `source/obligations.html`.",
+            "rawEvidenceQuotes": [
+              "source/conformance-rules.html:78",
+              "source/conformance-rules.html:135",
+              "source/conformance-rules.html:299",
+              "source/conformance-rules.html:312"
+            ],
+            "limitations": [
+              "- Caveat: no PR numbers were found in the local commit/Jira/Zulip/Confluence evidence reviewed."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.192Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.261Z",
+  "sourceActionFilesGlob": "todo/actions/logical.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "logical",
+      "actionFilePath": "todo/actions/logical.md",
+      "researchFilePath": "todo/research/logical.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings: one substantive clarification gap about logical-model instances/FHIR REST conformance, one incorrect Base/Element link pair, and one small cluster of reader-facing editorial defects.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "logical-H-001",
+          "localId": "H-001",
+          "pageLabel": "logical",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html",
+          "title": "Clarify whether logical-model instances are FHIR resources or REST endpoints",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html",
+              "lineRange": {
+                "start": 26,
+                "end": 28
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "logical action file",
+              "filePath": "todo/actions/logical.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:26-28`, `:76-78`; Zulip `#implementers > Logical Models instantiation` (2024-08-23 to 2024-08-24), `bun run zulip:search snapshot implementers \"Logical Models instantiation\"`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "logical research appendix",
+              "filePath": "todo/research/logical.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:26-28",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html",
+              "lineRange": {
+                "start": 26,
+                "end": 28
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:26-28`, `:76-78`; Zulip `#implementers > Logical Models instantiation` (2024-08-23 to 2024-08-24), `bun run zulip:search snapshot implementers \"Logical Models instantiation\"`\n- Priority: P2\n- Category: overlooked-problem\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:26-28`, `:76-78`; Zulip `#implementers > Logical Models instantiation` (2024-08-23 to 2024-08-24), `bun run zulip:search snapshot implementers \"Logical Models instantiation\"`\n- Problem: the page explains projecting logical models into FHIR resources/profiles or other standards, but does not state the related conformance boundary that later came up on Zulip: logical models can be instantiated, but they are not FHIR resources and cannot automatically be regular FHIR REST CRUD endpoints.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page explains projecting logical models into FHIR resources/profiles or other standards, but does not state the related conformance boundary that later came up on Zulip: logical models can be instantiated, but they are not FHIR resources and cannot automatically be regular FHIR REST CRUD endpoints.",
+            "analysis": "H-001: Clarify whether logical-model instances are FHIR resources or REST endpoints\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:26-28`, `:76-78`; Zulip `#implementers > Logical Models instantiation` (2024-08-23 to 2024-08-24), `bun run zulip:search snapshot implementers \"Logical Models instantiation\"`\n\nProblem: the page explains projecting logical models into FHIR resources/profiles or other standards, but does not state the related conformance boundary that later came up on Zulip: logical models can be instantiated, but they are not FHIR resources and cannot automatically be regular FHIR REST CRUD endpoints.\n\nWhy it matters: implementers may infer that exposing logical-model-shaped instances over CRUD is a FHIR-conformant interface, which Grahame Grieve and Lloyd McKenzie explicitly said is not the case in the later discussion.\n\nRecommended next step: triage a focused change request for a short \"instances and exchange\" note that distinguishes projection into resources/profiles from direct logical-model instances and says any server endpoint for those instances is not a regular FHIR REST resource endpoint unless otherwise specified.\n\nOverlooked/newly noticed context: H-001, E-001, and E-002 above.",
+            "whyItMatters": "implementers may infer that exposing logical-model-shaped instances over CRUD is a FHIR-conformant interface, which Grahame Grieve and Lloyd McKenzie explicitly said is not the case in the later discussion.",
+            "recommendedNextStep": "triage a focused change request for a short \"instances and exchange\" note that distinguishes projection into resources/profiles from direct logical-model instances and says any server endpoint for those instances is not a regular FHIR REST resource endpoint unless otherwise specified.",
+            "rawEvidenceQuotes": [
+              "Logical Models instantiation",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:26-28",
+              ":76-78",
+              "#implementers > Logical Models instantiation",
+              "bun run zulip:search snapshot implementers \"Logical Models instantiation\""
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.261Z",
+          "status": "open"
+        },
+        {
+          "id": "logical-E-001",
+          "localId": "E-001",
+          "pageLabel": "logical",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html",
+          "title": "Base and Element links are reversed",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html",
+              "lineRange": {
+                "start": 31,
+                "end": 31
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "logical action file",
+              "filePath": "todo/actions/logical.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:31`; `types.html:46-55` defines `#Base`; `types.html:73-83` defines `#Element`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "logical research appendix",
+              "filePath": "todo/research/logical.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:31",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html",
+              "lineRange": {
+                "start": 31,
+                "end": 31
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the sentence says `Element` but links it to `types.html#Base`, and says `Base` but links it to `types.html#Element`.",
+            "analysis": "E-001: Base and Element links are reversed\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:31`; `types.html:46-55` defines `#Base`; `types.html:73-83` defines `#Element`\n\nProblem: the sentence says `Element` but links it to `types.html#Base`, and says `Base` but links it to `types.html#Element`.\n\nWhy it matters: this sends readers to the wrong base-type definition in the key \"Defining logical models\" section.\n\nRecommended next step: swap the anchors so `Element` links to `types.html#Element` and `Base` links to `types.html#Base`.\n\nOverlooked/newly noticed context: H-001, E-001, and E-002 above.",
+            "whyItMatters": "this sends readers to the wrong base-type definition in the key \"Defining logical models\" section.",
+            "recommendedNextStep": "swap the anchors so `Element` links to `types.html#Element` and `Base` links to `types.html#Base`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:31",
+              "types.html:46-55",
+              "#Base",
+              "types.html:73-83",
+              "#Element"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.261Z",
+          "status": "open"
+        },
+        {
+          "id": "logical-E-002",
+          "localId": "E-002",
+          "pageLabel": "logical",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html",
+          "title": "Current page has visible typos and malformed wording",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html",
+              "lineRange": {
+                "start": 21,
+                "end": 21
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "logical action file",
+              "filePath": "todo/actions/logical.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:21`, `:60`, `:66`, `:72`, `:82`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "logical research appendix",
+              "filePath": "todo/research/logical.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:21",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html",
+              "lineRange": {
+                "start": 21,
+                "end": 21
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "reader-facing text includes `They allows`, `posible`, `thic`, `techical`, and the patterns sentence \"design patterns that are expected the FHIR resources...\" is missing words.",
+            "analysis": "E-002: Current page has visible typos and malformed wording\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:21`, `:60`, `:66`, `:72`, `:82`\n\nProblem: reader-facing text includes `They allows`, `posible`, `thic`, `techical`, and the patterns sentence \"design patterns that are expected the FHIR resources...\" is missing words.\n\nWhy it matters: the page is informative guidance for a concept that already causes implementer questions; obvious typos reduce clarity and polish.\n\nRecommended next step: bundle these into a small editorial cleanup pass, ideally alongside the link fix.\n\nOverlooked/newly noticed context: H-001, E-001, and E-002 above.",
+            "whyItMatters": "the page is informative guidance for a concept that already causes implementer questions; obvious typos reduce clarity and polish.",
+            "recommendedNextStep": "bundle these into a small editorial cleanup pass, ideally alongside the link fix.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/logical.html:21",
+              ":60",
+              ":66",
+              ":72",
+              ":82"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.261Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 1,
+      "editorial": 2,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

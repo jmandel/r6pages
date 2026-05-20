@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.348Z",
+  "sourceActionFilesGlob": "todo/actions/updates.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "updates",
+      "actionFilePath": "todo/actions/updates.md",
+      "researchFilePath": "todo/research/updates.md",
+      "status": "has-findings",
+      "summary": "Found 1 actionable finding: the R6 ballot4 `updates.html` page is labeled Informative while retaining uppercase conformance language, despite FHIR-I R6 minutes saying to move conformance language and make the page normative.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "updates-H-001",
+          "localId": "H-001",
+          "pageLabel": "updates",
+          "pagePath": "source/updates.html",
+          "title": "Informative page still contains normative SHOULD",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/updates.html",
+              "lineRange": {
+                "start": 12,
+                "end": 12
+              }
+            },
+            {
+              "filePath": "source/updates.html",
+              "lineRange": {
+                "start": 170,
+                "end": 170
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "updates action file",
+              "filePath": "todo/actions/updates.md",
+              "confidence": "high",
+              "quote": "`source/updates.html:12` marks the page `Standards Status: Informative`; `source/updates.html:170` says `the server SHOULD either...`; FHIRI WGM 202509 minutes for `updates.html` say `Move conformance language and make normative`; commit `270e0ceb` instead changed the page to Informative."
+            },
+            {
+              "type": "research-appendix",
+              "label": "updates research appendix",
+              "filePath": "todo/research/updates.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/updates.html:12",
+              "filePath": "source/updates.html",
+              "lineRange": {
+                "start": 12,
+                "end": 12
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/updates.html:170",
+              "filePath": "source/updates.html",
+              "lineRange": {
+                "start": 170,
+                "end": 170
+              },
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "Current source leaves a normative-style requirement on an Informative page, and appears not to apply the recorded R6 status decision.",
+            "analysis": "H-001: Informative page still contains normative SHOULD\n\nEvidence: `source/updates.html:12` marks the page `Standards Status: Informative`; `source/updates.html:170` says `the server SHOULD either...`; FHIRI WGM 202509 minutes for `updates.html` say `Move conformance language and make normative`; commit `270e0ceb` instead changed the page to Informative.\n\nProblem: Current source leaves a normative-style requirement on an Informative page, and appears not to apply the recorded R6 status decision.\n\nWhy it matters: Readers and implementers may be unsure whether the ETag behavior is enforceable conformance guidance or only informative advice.\n\nRecommended next step: Ask FHIR-I to confirm intent; either make `updates.html` normative or move/reword the `SHOULD` into a normative page such as HTTP and leave only non-normative explanation here.\n\nIntent-vs-implementation context: H-001.",
+            "whyItMatters": "Readers and implementers may be unsure whether the ETag behavior is enforceable conformance guidance or only informative advice.",
+            "recommendedNextStep": "Ask FHIR-I to confirm intent; either make `updates.html` normative or move/reword the `SHOULD` into a normative page such as HTTP and leave only non-normative explanation here.",
+            "rawEvidenceQuotes": [
+              "source/updates.html:12",
+              "Standards Status: Informative",
+              "source/updates.html:170",
+              "the server SHOULD either...",
+              "updates.html",
+              "Move conformance language and make normative",
+              "270e0ceb"
+            ],
+            "limitations": [
+              "- Caveats: the review is source/history/community evidence only; it did not render the HTML. Confluence snapshot output was too large to keep whole in the terminal, so targeted SQL snippets from `plain_text` were used for the relevant locators. The default Zulip DB omits noisy notification streams. Some Jira issue states lag source application (for example `FHIR-44047` is still `Resolved - change required` in the local Jira snapshot despite a source commit and PR merge).",
+              "- Jira `FHIR-32757` says this language should be added to the updates page and points to Zulip de-containment discussion. The Zulip `de-containment` thread contains the same business-logic/uniqueness rationale from Grahame Grieve and caveats from Lloyd McKenzie and others.",
+              "- `#implementers > Security tags in a transaction` (2019-03-29 to 2019-04-18) is background for `FHIR-20874`: Lloyd says servers may ignore/alter bits and SHOULD warn if possible; later messages discuss OperationOutcome limitations. Jira resolved no change due burden/weak use case."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.348Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 0,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.252Z",
+  "sourceActionFilesGlob": "todo/actions/integrated-examples.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "integrated-examples",
+      "actionFilePath": "todo/actions/integrated-examples.md",
+      "researchFilePath": "todo/research/integrated-examples.md",
+      "status": "has-findings",
+      "summary": "The R4 -> R6 ballot4 page diff itself has no substantive/spec-semantic findings: the changes are template metadata and typo cleanup only. One P3 editorial finding remains for the current page because an unresolved Jira issue flags `didn't`, and nearby obvious reader-facing typos remain in the R6 ballot4 source.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "integrated-examples-E-001",
+          "localId": "E-001",
+          "pageLabel": "integrated-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/integrated-examples.html",
+          "title": "Current page still has reader-facing spelling and abbreviation defects",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/integrated-examples.html",
+              "lineRange": {
+                "start": 39,
+                "end": 39
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "integrated-examples action file",
+              "filePath": "todo/actions/integrated-examples.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/integrated-examples.html:39`, `:74`, `:153`, `:223`, `:415`; `FHIR-55108` (`https://jira.hl7.org/browse/FHIR-55108`); QA cleanup commit `dad7cf37c75822c352509e1c2e8d050408d0be18`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "integrated-examples research appendix",
+              "filePath": "todo/research/integrated-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/integrated-examples.html:39",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/integrated-examples.html",
+              "lineRange": {
+                "start": 39,
+                "end": 39
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-55108",
+              "label": "FHIR-55108",
+              "url": "https://jira.hl7.org/browse/FHIR-55108",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "dad7cf37c75822c352509e1c2e8d050408d0be18",
+              "label": "dad7cf37c75822c352509e1c2e8d050408d0be18",
+              "url": "https://github.com/HL7/fhir/commit/dad7cf37c75822c352509e1c2e8d050408d0be18",
+              "commitHash": "dad7cf37c75822c352509e1c2e8d050408d0be18",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-55108`",
+              "url": "https://jira.hl7.org/browse/FHIR-55108`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The 2023 QA commit fixed `hopital`, but the current page still contains `didn't` (explicitly flagged by unresolved `FHIR-55108`) plus apparent typos such as `specializm`, `presciber`, `Antiobiotic`, `mediatinum`, and `Celsius1`.",
+            "analysis": "E-001: Current page still has reader-facing spelling and abbreviation defects\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/integrated-examples.html:39`, `:74`, `:153`, `:223`, `:415`; `FHIR-55108` (`https://jira.hl7.org/browse/FHIR-55108`); QA cleanup commit `dad7cf37c75822c352509e1c2e8d050408d0be18`\n\nProblem: The 2023 QA commit fixed `hopital`, but the current page still contains `didn't` (explicitly flagged by unresolved `FHIR-55108`) plus apparent typos such as `specializm`, `presciber`, `Antiobiotic`, `mediatinum`, and `Celsius1`.\n\nWhy it matters: This is an Informative examples page used as reader-facing clinical/example material; the defects do not change conformance behavior, but they reduce publication polish and may confuse readers.\n\nRecommended next step: Triage `FHIR-55108` and apply a targeted editorial cleanup for the listed lines, confirming intended clinical wording where needed.\n\nOverlooked/newly noticed context: See E-001.",
+            "whyItMatters": "This is an Informative examples page used as reader-facing clinical/example material; the defects do not change conformance behavior, but they reduce publication polish and may confuse readers.",
+            "recommendedNextStep": "Triage `FHIR-55108` and apply a targeted editorial cleanup for the listed lines, confirming intended clinical wording where needed.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/integrated-examples.html:39",
+              ":74",
+              ":153",
+              ":223",
+              ":415",
+              "FHIR-55108",
+              "https://jira.hl7.org/browse/FHIR-55108",
+              "dad7cf37c75822c352509e1c2e8d050408d0be18"
+            ],
+            "limitations": [
+              "- Caveat: the diff is almost entirely broad template/QA churn, not page-specific semantics. One later unresolved Jira issue (`FHIR-55108`) concerns the current page but was created after the R6 ballot4 source commit."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.252Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

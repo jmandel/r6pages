@@ -1,0 +1,384 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.210Z",
+  "sourceActionFilesGlob": "todo/actions/dosage-examples.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "dosage-examples",
+      "actionFilePath": "todo/actions/dosage-examples.md",
+      "researchFilePath": "todo/research/dosage-examples.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings. The main risk is that R6 ballot4 introduced a large hand-authored examples page, and several snippets either conflict with later approved R6 dosage decisions or contain concrete cross-format/path defects that implementers could copy.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "dosage-examples-H-001",
+          "localId": "H-001",
+          "pageLabel": "dosage-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html",
+          "title": "Ballot4 examples using `DosageDetails.simple` are superseded by later R6 decisions",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html",
+              "lineRange": {
+                "start": 91,
+                "end": 101
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "dosage-examples action file",
+              "filePath": "todo/actions/dosage-examples.md",
+              "confidence": "high",
+              "quote": "ballot4 uses `simple` in examples such as `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:91-101`, `:1362-1371`, `:1488-1497`, and `:1780-1788`; `FHIR-54651` says to remove `Dosage.simple`; Confluence page `413255873` records a 7-0-0 vote; post-ballot commit `accc7b7f11fd24da385298c692cdd0304cc220ee` updates examples; `FHIR-56016` and commits `b5c35f6ea3e799a408023608279ce72ab62b4084`/`a566c33d62e08b7daf02d4fe0f4abdb895693825` fix the follow-on `step.component` placement."
+            },
+            {
+              "type": "research-appendix",
+              "label": "dosage-examples research appendix",
+              "filePath": "todo/research/dosage-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:91-101",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html",
+              "lineRange": {
+                "start": 91,
+                "end": 101
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-54651",
+              "label": "FHIR-54651",
+              "url": "https://jira.hl7.org/browse/FHIR-54651",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-56016",
+              "label": "FHIR-56016",
+              "url": "https://jira.hl7.org/browse/FHIR-56016",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "accc7b7f11fd24da385298c692cdd0304cc220ee",
+              "label": "accc7b7f11fd24da385298c692cdd0304cc220ee",
+              "url": "https://github.com/HL7/fhir/commit/accc7b7f11fd24da385298c692cdd0304cc220ee",
+              "commitHash": "accc7b7f11fd24da385298c692cdd0304cc220ee",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "b5c35f6ea3e799a408023608279ce72ab62b4084",
+              "label": "b5c35f6ea3e799a408023608279ce72ab62b4084",
+              "url": "https://github.com/HL7/fhir/commit/b5c35f6ea3e799a408023608279ce72ab62b4084",
+              "commitHash": "b5c35f6ea3e799a408023608279ce72ab62b4084",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "a566c33d62e08b7daf02d4fe0f4abdb895693825",
+              "label": "a566c33d62e08b7daf02d4fe0f4abdb895693825",
+              "url": "https://github.com/HL7/fhir/commit/a566c33d62e08b7daf02d4fe0f4abdb895693825",
+              "commitHash": "a566c33d62e08b7daf02d4fe0f4abdb895693825",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "ballot4 uses `simple` in examples such as `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:91-101`, `:1362-1371`, `:1488-1497`, and `:1780-1788`; `FHIR-54651` says to remove `Dosage.simple`; Confluence page `413255873` records a 7-0-0 vote; post-ballot commit `accc7b7f11fd24da385298c692cdd0304cc220ee` updates examples; `FHIR-56016` and commits `b5c35f6ea3e799a408023608279ce72ab62b4084`/`a566c33d62e08b7daf02d4fe0f4abdb895693825` fix the follow-on `step.component` placement.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the reviewed ballot4 page still teaches `DosageDetails.simple`, while the later approved R6 direction removes it and requires simple dosages to be expressed as a step with a component.",
+            "analysis": "H-001: Ballot4 examples using `DosageDetails.simple` are superseded by later R6 decisions\n\nEvidence: ballot4 uses `simple` in examples such as `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:91-101`, `:1362-1371`, `:1488-1497`, and `:1780-1788`; `FHIR-54651` says to remove `Dosage.simple`; Confluence page `413255873` records a 7-0-0 vote; post-ballot commit `accc7b7f11fd24da385298c692cdd0304cc220ee` updates examples; `FHIR-56016` and commits `b5c35f6ea3e799a408023608279ce72ab62b4084`/`a566c33d62e08b7daf02d4fe0f4abdb895693825` fix the follow-on `step.component` placement.\n\nProblem: the reviewed ballot4 page still teaches `DosageDetails.simple`, while the later approved R6 direction removes it and requires simple dosages to be expressed as a step with a component.\n\nWhy it matters: readers using ballot4 examples as implementation guidance may model R6 dosage instructions against a structure that was subsequently removed.\n\nRecommended next step: when triaging this page, verify the target publication branch includes the post-`FHIR-54651` and post-`FHIR-56016` example form; avoid carrying forward ballot4 `simple` examples.\n\nIntent-vs-implementation context: H-001 and H-002 are the material mismatches: later Jira/workgroup decisions and post-boundary commits show that the ballot4 examples were not the final intended R6 shape, and `FHIR-54523` confirms several example values/structures did not match the intended text.",
+            "whyItMatters": "readers using ballot4 examples as implementation guidance may model R6 dosage instructions against a structure that was subsequently removed.",
+            "recommendedNextStep": "when triaging this page, verify the target publication branch includes the post-`FHIR-54651` and post-`FHIR-56016` example form; avoid carrying forward ballot4 `simple` examples.",
+            "rawEvidenceQuotes": [
+              "simple",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:91-101",
+              ":1362-1371",
+              ":1488-1497",
+              ":1780-1788",
+              "FHIR-54651",
+              "Dosage.simple",
+              "413255873",
+              "accc7b7f11fd24da385298c692cdd0304cc220ee",
+              "FHIR-56016",
+              "b5c35f6ea3e799a408023608279ce72ab62b4084",
+              "a566c33d62e08b7daf02d4fe0f4abdb895693825"
+            ],
+            "limitations": [
+              "- Caveat: several high-signal Jira issues and source commits occurred after the R6 ballot4 boundary commit. They are evidence that the ballot4 page was later corrected or superseded, not evidence that the reviewed R6 ballot4 source already contains those fixes."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.209Z",
+          "status": "open"
+        },
+        {
+          "id": "dosage-examples-H-002",
+          "localId": "H-002",
+          "pageLabel": "dosage-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html",
+          "title": "Several example snippets are internally inconsistent or structurally incomplete",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html",
+              "lineRange": {
+                "start": 333,
+                "end": 351
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/dosagesafety.xml",
+              "lineRange": {
+                "start": 904,
+                "end": 917
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "dosage-examples action file",
+              "filePath": "todo/actions/dosage-examples.md",
+              "confidence": "high",
+              "quote": "`FHIR-54523` explicitly identifies mismatches in examples 1-3; source examples show Example 2 missing PRN `doseAndRate` and using safety unit `\"s\"` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:333-351`, duplicate Example 2 XML safety at `:473-506`, and Example 3 safety period/scope problems at `:632-635`, `:854-864`, and `:1061-1070`; `DosageSafety.doseLimit.scope` is 1..1 at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/dosagesafety.xml:904-917`; post-ballot commit `074fad2f3edd694c8c41bc7e8280691b040063c8` fixes several but not the observed missing `scope`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "dosage-examples research appendix",
+              "filePath": "todo/research/dosage-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:333-351",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html",
+              "lineRange": {
+                "start": 333,
+                "end": 351
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/dosagesafety.xml:904-917",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/dosagesafety.xml",
+              "lineRange": {
+                "start": 904,
+                "end": 917
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-54523",
+              "label": "FHIR-54523",
+              "url": "https://jira.hl7.org/browse/FHIR-54523",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "074fad2f3edd694c8c41bc7e8280691b040063c8",
+              "label": "074fad2f3edd694c8c41bc7e8280691b040063c8",
+              "url": "https://github.com/HL7/fhir/commit/074fad2f3edd694c8c41bc7e8280691b040063c8",
+              "commitHash": "074fad2f3edd694c8c41bc7e8280691b040063c8",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page presents examples whose narrative, YAML, JSON, and XML do not all describe the same dosage; at least one safety limit omits a mandatory `scope`.",
+            "analysis": "H-002: Several example snippets are internally inconsistent or structurally incomplete\n\nEvidence: `FHIR-54523` explicitly identifies mismatches in examples 1-3; source examples show Example 2 missing PRN `doseAndRate` and using safety unit `\"s\"` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:333-351`, duplicate Example 2 XML safety at `:473-506`, and Example 3 safety period/scope problems at `:632-635`, `:854-864`, and `:1061-1070`; `DosageSafety.doseLimit.scope` is 1..1 at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/dosagesafety.xml:904-917`; post-ballot commit `074fad2f3edd694c8c41bc7e8280691b040063c8` fixes several but not the observed missing `scope`.\n\nProblem: the page presents examples whose narrative, YAML, JSON, and XML do not all describe the same dosage; at least one safety limit omits a mandatory `scope`.\n\nWhy it matters: implementers often copy examples directly, so these mismatches can produce invalid resources or incorrect dose-safety logic.\n\nRecommended next step: apply/verify the `FHIR-54523` fixes and additionally add the missing `doseLimit.scope` for Example 3 or clarify why the safety limit is intentionally not a conformant `DosageSafety.doseLimit`.\n\nIntent-vs-implementation context: H-001 and H-002 are the material mismatches: later Jira/workgroup decisions and post-boundary commits show that the ballot4 examples were not the final intended R6 shape, and `FHIR-54523` confirms several example values/structures did not match the intended text.\n\nOverlooked/newly noticed context: E-001 appears not to have a tracked Jira issue. H-002 also includes a newly noticed missing `doseLimit.scope` in Example 3 that was not explicitly covered by the `FHIR-54523` resolution text.",
+            "whyItMatters": "implementers often copy examples directly, so these mismatches can produce invalid resources or incorrect dose-safety logic.",
+            "recommendedNextStep": "apply/verify the `FHIR-54523` fixes and additionally add the missing `doseLimit.scope` for Example 3 or clarify why the safety limit is intentionally not a conformant `DosageSafety.doseLimit`.",
+            "rawEvidenceQuotes": [
+              "FHIR-54523",
+              "doseAndRate",
+              "\"s\"",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:333-351",
+              ":473-506",
+              ":632-635",
+              ":854-864",
+              ":1061-1070",
+              "DosageSafety.doseLimit.scope",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/datatypes/dosagesafety.xml:904-917",
+              "074fad2f3edd694c8c41bc7e8280691b040063c8",
+              "scope"
+            ],
+            "limitations": [
+              "- Caveat: several high-signal Jira issues and source commits occurred after the R6 ballot4 boundary commit. They are evidence that the ballot4 page was later corrected or superseded, not evidence that the reviewed R6 ballot4 source already contains those fixes."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.209Z",
+          "status": "open"
+        },
+        {
+          "id": "dosage-examples-E-001",
+          "localId": "E-001",
+          "pageLabel": "dosage-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html",
+          "title": "Example 1 still uses stale `renderedDosageInstruction` path text",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html",
+              "lineRange": {
+                "start": 79,
+                "end": 83
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html",
+              "lineRange": {
+                "start": 41,
+                "end": 49
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "dosage-examples action file",
+              "filePath": "todo/actions/dosage-examples.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:79-83` says `MedicationRequest.dosageInstruction.renderedDosageInstruction`; the same page says `renderedInstruction` at `:48-53`, R6 dosage overview says rendered dosage moved into `DosageDetails.renderedInstruction` in `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html:41-49`, and exact Jira/Zulip/Confluence searches for that stale full path found no tracked issue."
+            },
+            {
+              "type": "research-appendix",
+              "label": "dosage-examples research appendix",
+              "filePath": "todo/research/dosage-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:79-83",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html",
+              "lineRange": {
+                "start": 79,
+                "end": 83
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html:41-49",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html",
+              "lineRange": {
+                "start": 41,
+                "end": 49
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:79-83` says `MedicationRequest.dosageInstruction.renderedDosageInstruction`; the same page says `renderedInstruction` at `:48-53`, R6 dosage overview says rendered dosage moved into `DosageDetails.renderedInstruction` in `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html:41-49`, and exact Jira/Zulip/Confluence searches for that stale full path found no tracked issue.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:79-83` says `MedicationRequest.dosageInstruction.renderedDosageInstruction`; the same page says `renderedInstruction` at `:48-53`, R6 dosage overview says rendered dosage moved into `DosageDetails.renderedInstruction` in `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html:41-49`, and exact Jira/Zulip/Confluence searches for that stale full path found no tracked issue.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the example list names the removed resource-level element instead of the R6 `DosageDetails.renderedInstruction` element.",
+            "analysis": "E-001: Example 1 still uses stale `renderedDosageInstruction` path text\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:79-83` says `MedicationRequest.dosageInstruction.renderedDosageInstruction`; the same page says `renderedInstruction` at `:48-53`, R6 dosage overview says rendered dosage moved into `DosageDetails.renderedInstruction` in `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html:41-49`, and exact Jira/Zulip/Confluence searches for that stale full path found no tracked issue.\n\nProblem: the example list names the removed resource-level element instead of the R6 `DosageDetails.renderedInstruction` element.\n\nWhy it matters: it is a reader-facing path error on a page specifically teaching the R6 dosage redesign.\n\nRecommended next step: replace the displayed path with `MedicationRequest.dosageInstruction.renderedInstruction` and check whether the same stale path survives in post-ballot/current build branches.\n\nOverlooked/newly noticed context: E-001 appears not to have a tracked Jira issue. H-002 also includes a newly noticed missing `doseLimit.scope` in Example 3 that was not explicitly covered by the `FHIR-54523` resolution text.",
+            "whyItMatters": "it is a reader-facing path error on a page specifically teaching the R6 dosage redesign.",
+            "recommendedNextStep": "replace the displayed path with `MedicationRequest.dosageInstruction.renderedInstruction` and check whether the same stale path survives in post-ballot/current build branches.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage-examples.html:79-83",
+              "MedicationRequest.dosageInstruction.renderedDosageInstruction",
+              "renderedInstruction",
+              ":48-53",
+              "DosageDetails.renderedInstruction",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/dosage.html:41-49"
+            ],
+            "limitations": [
+              "- Caveat: several high-signal Jira issues and source commits occurred after the R6 ballot4 boundary commit. They are evidence that the ballot4 page was later corrected or superseded, not evidence that the reviewed R6 ballot4 source already contains those fixes."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.210Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 2,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

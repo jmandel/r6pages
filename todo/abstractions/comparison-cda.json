@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.180Z",
+  "sourceActionFilesGlob": "todo/actions/comparison-cda.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "comparison-cda",
+      "actionFilePath": "todo/actions/comparison-cda.md",
+      "researchFilePath": "todo/research/comparison-cda.md",
+      "status": "has-findings",
+      "summary": "The R4-to-R6 page diff itself did not reveal a substantive CDA/FHIR guidance change or intent mismatch. One low-priority current-page editorial issue is actionable because it is already tracked in unresolved Jira `FHIR-55087` and remains present in the R6 ballot4 source.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "comparison-cda-E-001",
+          "localId": "E-001",
+          "pageLabel": "comparison-cda",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-cda.html",
+          "title": "Current page still contains the contraction flagged by `FHIR-55087",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-cda.html",
+              "lineRange": {
+                "start": 54,
+                "end": 54
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "comparison-cda action file",
+              "filePath": "todo/actions/comparison-cda.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-cda.html:54`; `FHIR-55087` (`https://jira.hl7.org/browse/FHIR-55087`)"
+            },
+            {
+              "type": "research-appendix",
+              "label": "comparison-cda research appendix",
+              "filePath": "todo/research/comparison-cda.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-cda.html:54",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-cda.html",
+              "lineRange": {
+                "start": 54,
+                "end": 54
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-55087",
+              "label": "FHIR-55087",
+              "url": "https://jira.hl7.org/browse/FHIR-55087",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-55087`",
+              "url": "https://jira.hl7.org/browse/FHIR-55087`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-55087` says abbreviations need to be fully spelled out and specifically flags `\"isn't\"` on `comparison-cda`; the current page still says `It isn't obvious...`.",
+            "analysis": "E-001: Current page still contains the contraction flagged by `FHIR-55087\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-cda.html:54`; `FHIR-55087` (`https://jira.hl7.org/browse/FHIR-55087`)\n\nProblem: `FHIR-55087` says abbreviations need to be fully spelled out and specifically flags `\"isn't\"` on `comparison-cda`; the current page still says `It isn't obvious...`.\n\nWhy it matters: This is a reader-facing editorial/style issue that has a live, page-specific Jira and can be fixed without affecting CDA/FHIR semantics.\n\nRecommended next step: Triage `FHIR-55087` and, if accepted, change `isn't` to `is not` on `source/comparison-cda.html`.\n\nOverlooked/newly noticed context: E-001 covers the only concrete current-page issue found. No substantive overlooked CDA/FHIR guidance problem was identified.",
+            "whyItMatters": "This is a reader-facing editorial/style issue that has a live, page-specific Jira and can be fixed without affecting CDA/FHIR semantics.",
+            "recommendedNextStep": "Triage `FHIR-55087` and, if accepted, change `isn't` to `is not` on `source/comparison-cda.html`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-cda.html:54",
+              "FHIR-55087",
+              "https://jira.hl7.org/browse/FHIR-55087"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.180Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.293Z",
+  "sourceActionFilesGlob": "todo/actions/overview.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "overview",
+      "actionFilePath": "todo/actions/overview.md",
+      "researchFilePath": "todo/research/overview.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: a low-priority reader-navigation issue where the current \"Resource Definitions\" getting-started link appears inconsistent with the R6 split between Resource Definitions and Resource Formats. No substantive/normative, example, REST/search/operation, or intent-vs-implementation problem was found.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "overview-E-001",
+          "localId": "E-001",
+          "pageLabel": "overview",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html",
+          "title": "\"Resource Definitions\" getting-started link appears to target the wrong page",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html",
+              "lineRange": {
+                "start": 110,
+                "end": 110
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html",
+              "lineRange": {
+                "start": 58,
+                "end": 58
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html",
+              "lineRange": {
+                "start": 2,
+                "end": 2
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html",
+              "lineRange": {
+                "start": 13,
+                "end": 13
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "overview action file",
+              "filePath": "todo/actions/overview.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html:110`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html:58`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:2`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:13`; commit `fb6236f76aef7e34c5874572f098f3a646dcc983` (`FHIR-18448`)"
+            },
+            {
+              "type": "research-appendix",
+              "label": "overview research appendix",
+              "filePath": "todo/research/overview.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html:110",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html",
+              "lineRange": {
+                "start": 110,
+                "end": 110
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html:58",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html",
+              "lineRange": {
+                "start": 58,
+                "end": 58
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:2",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html",
+              "lineRange": {
+                "start": 2,
+                "end": 2
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:13",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html",
+              "lineRange": {
+                "start": 13,
+                "end": 13
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-18448",
+              "label": "FHIR-18448",
+              "url": "https://jira.hl7.org/browse/FHIR-18448",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "fb6236f76aef7e34c5874572f098f3a646dcc983",
+              "label": "fb6236f76aef7e34c5874572f098f3a646dcc983",
+              "url": "https://github.com/HL7/fhir/commit/fb6236f76aef7e34c5874572f098f3a646dcc983",
+              "commitHash": "fb6236f76aef7e34c5874572f098f3a646dcc983",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`overview.html:110` labels a getting-started link as \"Resource Definitions\" but still points to `resource.html`. The current page titled \"Resource Definitions\" is `formats.html`, and the same overview page now points \"define\" to `formats.html` after the `FHIR-18448` formats/navigation cleanup.",
+            "analysis": "E-001: \"Resource Definitions\" getting-started link appears to target the wrong page\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html:110`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html:58`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:2`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:13`; commit `fb6236f76aef7e34c5874572f098f3a646dcc983` (`FHIR-18448`)\n\nProblem: `overview.html:110` labels a getting-started link as \"Resource Definitions\" but still points to `resource.html`. The current page titled \"Resource Definitions\" is `formats.html`, and the same overview page now points \"define\" to `formats.html` after the `FHIR-18448` formats/navigation cleanup.\n\nWhy it matters: First-time readers using the overview may be sent to the base Resource page instead of the page that explains how resource definitions are documented.\n\nRecommended next step: Verify the intended target; if the link is meant to introduce resource-definition mechanics, change `overview.html:110` to `formats.html`, otherwise relabel the link so it accurately describes `resource.html`.\n\nOverlooked/newly noticed context: `E-001` is a current-page navigation issue noticed during full-page review; it was not directly raised by the tracked Jira evidence.",
+            "whyItMatters": "First-time readers using the overview may be sent to the base Resource page instead of the page that explains how resource definitions are documented.",
+            "recommendedNextStep": "Verify the intended target; if the link is meant to introduce resource-definition mechanics, change `overview.html:110` to `formats.html`, otherwise relabel the link so it accurately describes `resource.html`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html:110",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/overview.html:58",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:2",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/formats.html:13",
+              "fb6236f76aef7e34c5874572f098f3a646dcc983",
+              "FHIR-18448"
+            ],
+            "limitations": [
+              "- Caveat: several commits are broad mechanical/template/QA commits. The only source-history keys are non-substantive Jira issues, and no source-history evidence points to a normative or conformance behavior change on this page.",
+              "- Confluence caveat: FHIR-I minutes page `66940491` records \"Lloyd: Using \\\"data type\\\" Will auto approve\". The final source implementation uses \"datatype(s)\" on this page. Because the Jira issue itself only requires consistency and the current FHIR page title is \"Datatypes\", this was treated as context rather than a high-signal action item.",
+              "Important search caveat: unquoted FTS searches for `FHIR-18448` and `FHIR-25431` failed because the hyphen was parsed as an FTS operator. The corrected quoted searches above found no relevant Zulip evidence."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.293Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

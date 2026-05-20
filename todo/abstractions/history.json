@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.245Z",
+  "sourceActionFilesGlob": "todo/actions/history.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "history",
+      "actionFilePath": "todo/actions/history.md",
+      "researchFilePath": "todo/research/history.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings, both concrete reader-facing defects: the R4B date is internally inconsistent, and a GraphDefinition link points to a known broken API Incubator URL.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "history-E-001",
+          "localId": "E-001",
+          "pageLabel": "history",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html",
+          "title": "R4B milestone date conflicts with the page's detailed R4B row",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html",
+              "lineRange": {
+                "start": 50,
+                "end": 53
+              }
+            },
+            {
+              "filePath": "source/history.html",
+              "lineRange": {
+                "start": 309,
+                "end": 312
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "history action file",
+              "filePath": "todo/actions/history.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html:50-53` says R4B `4.3.0` is `Dec 27, 2018`; the same page says `Release R4B: May 28, 2022` at `source/history.html:309-312`. The published R4B page also reports `May 28, 2022`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "history research appendix",
+              "filePath": "todo/research/history.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html:50-53",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html",
+              "lineRange": {
+                "start": 50,
+                "end": 53
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/history.html:309-312",
+              "filePath": "source/history.html",
+              "lineRange": {
+                "start": 309,
+                "end": 312
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the top milestone table gives R4B the R4 publication date.",
+            "analysis": "E-001: R4B milestone date conflicts with the page's detailed R4B row\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html:50-53` says R4B `4.3.0` is `Dec 27, 2018`; the same page says `Release R4B: May 28, 2022` at `source/history.html:309-312`. The published R4B page also reports `May 28, 2022`.\n\nProblem: the top milestone table gives R4B the R4 publication date.\n\nWhy it matters: readers using the quick milestone table get the wrong publication chronology.\n\nRecommended next step: change the R4B milestone date to `May 28, 2022` and check whether any generated/published history page copies need the same correction.\n\nOverlooked/newly noticed context: See `E-001` and `E-002`.",
+            "whyItMatters": "readers using the quick milestone table get the wrong publication chronology.",
+            "recommendedNextStep": "change the R4B milestone date to `May 28, 2022` and check whether any generated/published history page copies need the same correction.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html:50-53",
+              "4.3.0",
+              "Dec 27, 2018",
+              "Release R4B: May 28, 2022",
+              "source/history.html:309-312",
+              "May 28, 2022"
+            ],
+            "limitations": [
+              "- Important caveats: many old `GF#...` references in the historical R4 ballot table are legacy tracker references and were not exhaustively searched because the R4-era text is not the main R4->R6 change. Several broad exact-phrase searches found no Jira/Zulip/Confluence hits; these are noted in the evidence log."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.244Z",
+          "status": "open"
+        },
+        {
+          "id": "history-E-002",
+          "localId": "E-002",
+          "pageLabel": "history",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html",
+          "title": "GraphDefinition link resolves to 404",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html",
+              "lineRange": {
+                "start": 604,
+                "end": 607
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "history action file",
+              "filePath": "todo/actions/history.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html:604-607` links GraphDefinition to `http://build.fhir.org/HL7/api-incubator/StructureDefinition-GraphDefinition`; `curl -L` returns 404. `FHIR-54250` reports the same broken URL on another R6 ballot4 page."
+            },
+            {
+              "type": "research-appendix",
+              "label": "history research appendix",
+              "filePath": "todo/research/history.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html:604-607",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html",
+              "lineRange": {
+                "start": 604,
+                "end": 607
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-54250",
+              "label": "FHIR-54250",
+              "url": "https://jira.hl7.org/browse/FHIR-54250",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://build.fhir.org/HL7/api-incubator/StructureDefinition-GraphDefinition`",
+              "url": "http://build.fhir.org/HL7/api-incubator/StructureDefinition-GraphDefinition`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the current history page points readers to a non-resolving GraphDefinition target.",
+            "analysis": "E-002: GraphDefinition link resolves to 404\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html:604-607` links GraphDefinition to `http://build.fhir.org/HL7/api-incubator/StructureDefinition-GraphDefinition`; `curl -L` returns 404. `FHIR-54250` reports the same broken URL on another R6 ballot4 page.\n\nProblem: the current history page points readers to a non-resolving GraphDefinition target.\n\nWhy it matters: GraphDefinition was moved to an API Incubator home, but the current link does not take readers there.\n\nRecommended next step: include `history.html` when fixing `FHIR-54250`; retarget to the actual API Incubator GraphDefinition page once available, or remove the link until a stable target exists.\n\nOverlooked/newly noticed context: See `E-001` and `E-002`.",
+            "whyItMatters": "GraphDefinition was moved to an API Incubator home, but the current link does not take readers there.",
+            "recommendedNextStep": "include `history.html` when fixing `FHIR-54250`; retarget to the actual API Incubator GraphDefinition page once available, or remove the link until a stable target exists.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/history.html:604-607",
+              "http://build.fhir.org/HL7/api-incubator/StructureDefinition-GraphDefinition",
+              "curl -L",
+              "FHIR-54250"
+            ],
+            "limitations": [
+              "- Important caveats: many old `GF#...` references in the historical R4 ballot table are legacy tracker references and were not exhaustively searched because the R4-era text is not the main R4->R6 change. Several broad exact-phrase searches found no Jira/Zulip/Confluence hits; these are noted in the evidence log."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.245Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.185Z",
+  "sourceActionFilesGlob": "todo/actions/comparison-v3.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "comparison-v3",
+      "actionFilePath": "todo/actions/comparison-v3.md",
+      "researchFilePath": "todo/research/comparison-v3.md",
+      "status": "has-findings",
+      "summary": "The page has 1 low-priority actionable finding: the only Jira-linked content change is editorial terminology, but the available FHIR-I minute appears to name the opposite spelling from what was applied. No substantive, normative, example, REST/search, or operation-semantics issue was found.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "comparison-v3-H-001",
+          "localId": "H-001",
+          "pageLabel": "comparison-v3",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v3.html",
+          "title": "Confirm the intended FHIR-25431 spelling direction",
+          "kind": "H",
+          "priority": "P3",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v3.html",
+              "lineRange": {
+                "start": 21,
+                "end": 27
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "comparison-v3 action file",
+              "filePath": "todo/actions/comparison-v3.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v3.html:21-27`, `:42-47`, `:115-132`; commit `8592e1207273b786db340efb927bb6d1dc9756c9`; `https://jira.hl7.org/browse/FHIR-25431`; Confluence page `66940491` (`FHIR Infrastructure Minutes CC 20200113`)"
+            },
+            {
+              "type": "research-appendix",
+              "label": "comparison-v3 research appendix",
+              "filePath": "todo/research/comparison-v3.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v3.html:21-27",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v3.html",
+              "lineRange": {
+                "start": 21,
+                "end": 27
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-25431",
+              "label": "FHIR-25431",
+              "url": "https://jira.hl7.org/browse/FHIR-25431",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "8592e1207273b786db340efb927bb6d1dc9756c9",
+              "label": "8592e1207273b786db340efb927bb6d1dc9756c9",
+              "url": "https://github.com/HL7/fhir/commit/8592e1207273b786db340efb927bb6d1dc9756c9",
+              "commitHash": "8592e1207273b786db340efb927bb6d1dc9756c9",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-25431`",
+              "url": "https://jira.hl7.org/browse/FHIR-25431`",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v3.html:21-27`, `:42-47`, `:115-132`; commit `8592e1207273b786db340efb927bb6d1dc9756c9`; `https://jira.hl7.org/browse/FHIR-25431`; Confluence page `66940491` (`FHIR Infrastructure Minutes CC 20200113`)\n- Priority: P3\n- Category: intent-mismatch\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v3.html:21-27`, `:42-47`, `:115-132`; commit `8592e1207273b786db340efb927bb6d1dc9756c9`; `https://jira.hl7.org/browse/FHIR-25431`; Confluence page `66940491` (`FHIR Infrastructure Minutes CC 20200113`)\n- Problem: `FHIR-25431` says to choose either `data type` or `datatype`, and the implementation commit changes this page to `datatype(s)`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-25431` says to choose either `data type` or `datatype`, and the implementation commit changes this page to `datatype(s)`. The only workgroup-minute evidence found says `jira:FHIR-25431 Lloyd: Using \"data type\" Will auto approve`, so the applied spelling may be opposite the recorded intent.",
+            "analysis": "H-001: Confirm the intended FHIR-25431 spelling direction\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v3.html:21-27`, `:42-47`, `:115-132`; commit `8592e1207273b786db340efb927bb6d1dc9756c9`; `https://jira.hl7.org/browse/FHIR-25431`; Confluence page `66940491` (`FHIR Infrastructure Minutes CC 20200113`)\n\nProblem: `FHIR-25431` says to choose either `data type` or `datatype`, and the implementation commit changes this page to `datatype(s)`. The only workgroup-minute evidence found says `jira:FHIR-25431 Lloyd: Using \"data type\" Will auto approve`, so the applied spelling may be opposite the recorded intent.\n\nWhy it matters: this is editorial, not semantic, but it affects visible terminology consistency across a comparison page and the broader FHIR core terminology cleanup.\n\nRecommended next step: confirm the intended convention with FHIR-I/editorial history. If `data type` was intended, update the applied wording; if `datatype` was intended, consider correcting/annotating the issue or minutes trail so future reviewers do not treat this as an unresolved mismatch.\n\nIntent-vs-implementation context: See H-001.",
+            "whyItMatters": "this is editorial, not semantic, but it affects visible terminology consistency across a comparison page and the broader FHIR core terminology cleanup.",
+            "recommendedNextStep": "confirm the intended convention with FHIR-I/editorial history. If `data type` was intended, update the applied wording; if `datatype` was intended, consider correcting/annotating the issue or minutes trail so future reviewers do not treat this as an unresolved mismatch.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/comparison-v3.html:21-27",
+              ":42-47",
+              ":115-132",
+              "8592e1207273b786db340efb927bb6d1dc9756c9",
+              "https://jira.hl7.org/browse/FHIR-25431",
+              "66940491",
+              "FHIR Infrastructure Minutes CC 20200113"
+            ],
+            "limitations": [
+              "- Important caveat: Jira `FHIR-25431` asks for consistency but does not record the final chosen spelling in its snapshot. The only Confluence minute found says `Using \"data type\"`, while the implementation commit changes this page and many others to `datatype(s)`. This is an editorial intent/evidence tension, not a semantic FHIR behavior change.",
+              "- Failed searches that affected confidence: unquoted FTS searches for `FHIR-25431` and `comparison-v3` in Jira/Zulip/Confluence errored because the hyphen was parsed as an operator; quoted retries were used for conclusions."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.185Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

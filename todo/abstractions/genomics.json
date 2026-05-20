@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.240Z",
+  "sourceActionFilesGlob": "todo/actions/genomics.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "genomics",
+      "actionFilePath": "todo/actions/genomics.md",
+      "researchFilePath": "todo/research/genomics.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: a concrete stale metadata/title defect. The major R4-to-R6 content removals and MolecularSequence-to-MolecularDefinition/GenomicStudy link changes have traceable source, Jira, Zulip, and Confluence rationale; no substantive intent-vs-implementation mismatch was found for the current page text.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "genomics-E-001",
+          "localId": "E-001",
+          "pageLabel": "genomics",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/genomics.html",
+          "title": "Source page title is still the Messaging page title",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/genomics.html",
+              "lineRange": {
+                "start": 3,
+                "end": 3
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "genomics action file",
+              "filePath": "todo/actions/genomics.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/genomics.html:3`; current visible heading is `Genomics in FHIR` at lines 38-48; exact Jira searches for `Messaging using FHIR Resources` and `Genomics in FHIR` found no matching issue."
+            },
+            {
+              "type": "research-appendix",
+              "label": "genomics research appendix",
+              "filePath": "todo/research/genomics.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/genomics.html:3",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/genomics.html",
+              "lineRange": {
+                "start": 3,
+                "end": 3
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`[%settitle Messaging using FHIR Resources%]` is unrelated to genomics and appears to be a stale copy/paste title.",
+            "analysis": "E-001: Source page title is still the Messaging page title\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/genomics.html:3`; current visible heading is `Genomics in FHIR` at lines 38-48; exact Jira searches for `Messaging using FHIR Resources` and `Genomics in FHIR` found no matching issue.\n\nProblem: `[%settitle Messaging using FHIR Resources%]` is unrelated to genomics and appears to be a stale copy/paste title.\n\nWhy it matters: rendered page metadata, browser/search titles, and generated navigation can label the genomics page as a messaging page, confusing readers and reviewers.\n\nRecommended next step: update the `settitle` to `Genomics in FHIR` or the work group preferred genomics page title, then confirm the rendered page title.\n\nOverlooked/newly noticed context: See E-001.",
+            "whyItMatters": "rendered page metadata, browser/search titles, and generated navigation can label the genomics page as a messaging page, confusing readers and reviewers.",
+            "recommendedNextStep": "update the `settitle` to `Genomics in FHIR` or the work group preferred genomics page title, then confirm the rendered page title.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/genomics.html:3",
+              "Genomics in FHIR",
+              "Messaging using FHIR Resources"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "- Important caveat: the page's first MolecularDefinition replacement commit (`f23e7828...`) predates `FHIR-51227`, so the causal path appears to be broader CG work and resource-proposal history, later ratified by `FHIR-51227`."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.240Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.194Z",
+  "sourceActionFilesGlob": "todo/actions/credits.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "credits",
+      "actionFilePath": "todo/actions/credits.md",
+      "researchFilePath": "todo/research/credits.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: a concrete editorial defect in the current former-FMG-member credits list. No substantive, conformance, or intent-vs-implementation mismatch was found for the Jira-backed page changes.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "credits-E-001",
+          "localId": "E-001",
+          "pageLabel": "credits",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/credits.html",
+          "title": "Missing separator between former FMG member names",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/credits.html",
+              "lineRange": {
+                "start": 139,
+                "end": 139
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "credits action file",
+              "filePath": "todo/actions/credits.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/credits.html:139`; introduced by `71567db3ee039ac6977be5f96a7e013896569a36`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "credits research appendix",
+              "filePath": "todo/research/credits.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/credits.html:139",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/credits.html",
+              "lineRange": {
+                "start": 139,
+                "end": 139
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "71567db3ee039ac6977be5f96a7e013896569a36",
+              "label": "71567db3ee039ac6977be5f96a7e013896569a36",
+              "url": "https://github.com/HL7/fhir/commit/71567db3ee039ac6977be5f96a7e013896569a36",
+              "commitHash": "71567db3ee039ac6977be5f96a7e013896569a36",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The former members list reads `John Quinn Josh Mandel`, making two names look like one.",
+            "analysis": "E-001: Missing separator between former FMG member names\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/credits.html:139`; introduced by `71567db3ee039ac6977be5f96a7e013896569a36`\n\nProblem: The former members list reads `John Quinn Josh Mandel`, making two names look like one.\n\nWhy it matters: It is a reader-facing miscredit in the credits page.\n\nRecommended next step: Insert a comma or `and` between `John Quinn` and `Josh Mandel`; optionally proofread the surrounding FMG roster sentence for spacing.\n\nOverlooked/newly noticed context: E-001 is the only concrete newly noticed problem.",
+            "whyItMatters": "It is a reader-facing miscredit in the credits page.",
+            "recommendedNextStep": "Insert a comma or `and` between `John Quinn` and `Josh Mandel`; optionally proofread the surrounding FMG roster sentence for spacing.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/credits.html:139",
+              "71567db3ee039ac6977be5f96a7e013896569a36"
+            ],
+            "limitations": [
+              "- Caveats:",
+              "- Failed search: `bun run jira:search fts credits.html --limit 20` failed due FTS syntax near `.`; rerun as `credits html`."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.193Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

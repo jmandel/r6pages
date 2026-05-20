@@ -1,0 +1,482 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.304Z",
+  "sourceActionFilesGlob": "todo/actions/references.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "references",
+      "actionFilePath": "todo/actions/references.md",
+      "researchFilePath": "todo/research/references.md",
+      "status": "has-findings",
+      "summary": "The page has 5 actionable findings. The main risk is one current normative conflict in canonical version matching, plus concrete reader-facing defects in examples/links/prose introduced or left behind by the R4-to-R6 changes.",
+      "findingCount": 5,
+      "findings": [
+        {
+          "id": "references-H-001",
+          "localId": "H-001",
+          "pageLabel": "references",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+          "title": "Canonical package-first and manifest-first rules appear to conflict",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+              "lineRange": {
+                "start": 399,
+                "end": 416
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "references action file",
+              "filePath": "todo/actions/references.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:399-416`; `FHIR-55991` (`https://jira.hl7.org/browse/FHIR-55991`); Zulip `#fhir/infrastructure-wg > Version-specific references`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "references research appendix",
+              "filePath": "todo/research/references.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:399-416",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+              "lineRange": {
+                "start": 399,
+                "end": 416
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-55991",
+              "label": "FHIR-55991",
+              "url": "https://jira.hl7.org/browse/FHIR-55991",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-55991`",
+              "url": "https://jira.hl7.org/browse/FHIR-55991`",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:399-416`; `FHIR-55991` (`https://jira.hl7.org/browse/FHIR-55991`); Zulip `#fhir/infrastructure-wg > Version-specific references`\n- Priority: P1\n- Category: spec-problem\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:399-416`; `FHIR-55991` (`https://jira.hl7.org/browse/FHIR-55991`); Zulip `#fhir/infrastructure-wg > Version-specific references`\n- Problem: the page says applications SHALL first look through the package/dependencies for unversioned or wildcard canonical references, then says manifest-specified versions SHALL be used and typically must be consulted before package dependencies.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page says applications SHALL first look through the package/dependencies for unversioned or wildcard canonical references, then says manifest-specified versions SHALL be used and typically must be consulted before package dependencies.",
+            "analysis": "H-001: Canonical package-first and manifest-first rules appear to conflict\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:399-416`; `FHIR-55991` (`https://jira.hl7.org/browse/FHIR-55991`); Zulip `#fhir/infrastructure-wg > Version-specific references`\n\nProblem: the page says applications SHALL first look through the package/dependencies for unversioned or wildcard canonical references, then says manifest-specified versions SHALL be used and typically must be consulted before package dependencies.\n\nWhy it matters: implementers get conflicting conformance instructions for canonical resolution in package plus manifest contexts.\n\nRecommended next step: resolve/apply FHIR-55991 by qualifying the package-first rule with an exception for explicit manifest or other resolution methods.",
+            "whyItMatters": "implementers get conflicting conformance instructions for canonical resolution in package plus manifest contexts.",
+            "recommendedNextStep": "resolve/apply FHIR-55991 by qualifying the package-first rule with an exception for explicit manifest or other resolution methods.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:399-416",
+              "FHIR-55991",
+              "https://jira.hl7.org/browse/FHIR-55991",
+              "#fhir/infrastructure-wg > Version-specific references"
+            ],
+            "limitations": [
+              "- Caveats: initial unquoted Zulip FTS searches for Jira keys such as `FHIR-52895` failed because the hyphen was parsed by SQLite FTS; the searches were rerun as quoted terms. Some broad Jira/Confluence hits such as package-source extension follow-ups are context only unless tied to a concrete page defect.",
+              "- Quoted FTS for `\"FHIR-33008\"` found `#implementers > Id required for a contained \"Provenance\"`, where the unclear contained-resource rule was raised; Jira/Confluence are stronger formal evidence."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.302Z",
+          "status": "open"
+        },
+        {
+          "id": "references-H-002",
+          "localId": "H-002",
+          "pageLabel": "references",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+          "title": "Contained-resource XPath correction was applied incorrectly",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+              "lineRange": {
+                "start": 721,
+                "end": 727
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "references action file",
+              "filePath": "todo/actions/references.md",
+              "confidence": "high",
+              "quote": "current XPath at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:721-727`; commit `38aa93e3461d8c449438335c18a74054987993e1`; `FHIR-39715`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "references research appendix",
+              "filePath": "todo/research/references.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:721-727",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+              "lineRange": {
+                "start": 721,
+                "end": 727
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-39715",
+              "label": "FHIR-39715",
+              "url": "https://jira.hl7.org/browse/FHIR-39715",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "38aa93e3461d8c449438335c18a74054987993e1",
+              "label": "38aa93e3461d8c449438335c18a74054987993e1",
+              "url": "https://github.com/HL7/fhir/commit/38aa93e3461d8c449438335c18a74054987993e1",
+              "commitHash": "38aa93e3461d8c449438335c18a74054987993e1",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "FHIR-39715 resolved to use `ancestor::f:*[not(parent::f:*)]/f:contained/*[f:id/@value=substring-after(current()/f:reference/@value, '#')]`, but the current page has `ancestor::f:[not(parent::f:*)]/f:contained/[...]`, missing both wildcard steps.",
+            "analysis": "H-002: Contained-resource XPath correction was applied incorrectly\n\nEvidence: current XPath at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:721-727`; commit `38aa93e3461d8c449438335c18a74054987993e1`; `FHIR-39715`\n\nProblem: FHIR-39715 resolved to use `ancestor::f:*[not(parent::f:*)]/f:contained/*[f:id/@value=substring-after(current()/f:reference/@value, '#')]`, but the current page has `ancestor::f:[not(parent::f:*)]/f:contained/[...]`, missing both wildcard steps.\n\nWhy it matters: the example XPath is syntactically wrong and fails the correction the Jira issue was meant to make.\n\nRecommended next step: update the XPath example to match the FHIR-39715 resolution.",
+            "whyItMatters": "the example XPath is syntactically wrong and fails the correction the Jira issue was meant to make.",
+            "recommendedNextStep": "update the XPath example to match the FHIR-39715 resolution.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:721-727",
+              "38aa93e3461d8c449438335c18a74054987993e1",
+              "FHIR-39715"
+            ],
+            "limitations": [
+              "- Caveats: initial unquoted Zulip FTS searches for Jira keys such as `FHIR-52895` failed because the hyphen was parsed by SQLite FTS; the searches were rerun as quoted terms. Some broad Jira/Confluence hits such as package-source extension follow-ups are context only unless tied to a concrete page defect.",
+              "- Quoted FTS for `\"FHIR-33008\"` found `#implementers > Id required for a contained \"Provenance\"`, where the unclear contained-resource rule was raised; Jira/Confluence are stronger formal evidence."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.302Z",
+          "status": "open"
+        },
+        {
+          "id": "references-H-003",
+          "localId": "H-003",
+          "pageLabel": "references",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+          "title": "Additional References guidance has a resolved search-behavior follow-up",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+              "lineRange": {
+                "start": 304,
+                "end": 323
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "references action file",
+              "filePath": "todo/actions/references.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:304-323`; `FHIR-53909` (`https://jira.hl7.org/browse/FHIR-53909`); Confluence page `404100072`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "references research appendix",
+              "filePath": "todo/research/references.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:304-323",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+              "lineRange": {
+                "start": 304,
+                "end": 323
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53909",
+              "label": "FHIR-53909",
+              "url": "https://jira.hl7.org/browse/FHIR-53909",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-53909`",
+              "url": "https://jira.hl7.org/browse/FHIR-53909`",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:304-323`; `FHIR-53909` (`https://jira.hl7.org/browse/FHIR-53909`); Confluence page `404100072`\n- Priority: P2\n- Category: overlooked-problem\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:304-323`; `FHIR-53909` (`https://jira.hl7.org/browse/FHIR-53909`); Confluence page `404100072`\n- Problem: the page recommends `alternate-reference`, but later FHIR-I discussion resolved that reference search parameters need guidance for indexing/searching `additionalReference` or rejecting unsupported instances.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page recommends `alternate-reference`, but later FHIR-I discussion resolved that reference search parameters need guidance for indexing/searching `additionalReference` or rejecting unsupported instances.",
+            "analysis": "H-003: Additional References guidance has a resolved search-behavior follow-up\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:304-323`; `FHIR-53909` (`https://jira.hl7.org/browse/FHIR-53909`); Confluence page `404100072`\n\nProblem: the page recommends `alternate-reference`, but later FHIR-I discussion resolved that reference search parameters need guidance for indexing/searching `additionalReference` or rejecting unsupported instances.\n\nWhy it matters: without the follow-up, implementers can accept alternate references that normal reference searches silently miss.\n\nRecommended next step: ensure FHIR-53909 is applied, and consider adding a cross-link from `references.html#additional` to the search-page note once present.",
+            "whyItMatters": "without the follow-up, implementers can accept alternate references that normal reference searches silently miss.",
+            "recommendedNextStep": "ensure FHIR-53909 is applied, and consider adding a cross-link from `references.html#additional` to the search-page note once present.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:304-323",
+              "FHIR-53909",
+              "https://jira.hl7.org/browse/FHIR-53909",
+              "404100072"
+            ],
+            "limitations": [
+              "- Caveats: initial unquoted Zulip FTS searches for Jira keys such as `FHIR-52895` failed because the hyphen was parsed by SQLite FTS; the searches were rerun as quoted terms. Some broad Jira/Confluence hits such as package-source extension follow-ups are context only unless tied to a concrete page defect.",
+              "- Quoted FTS for `\"FHIR-33008\"` found `#implementers > Id required for a contained \"Provenance\"`, where the unclear contained-resource rule was raised; Jira/Confluence are stronger formal evidence."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.303Z",
+          "status": "open"
+        },
+        {
+          "id": "references-E-001",
+          "localId": "E-001",
+          "pageLabel": "references",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+          "title": "Canonical section has concrete broken/dangling reader-facing text",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+              "lineRange": {
+                "start": 404,
+                "end": 412
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "references action file",
+              "filePath": "todo/actions/references.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:404-412` and `:481-486`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "references research appendix",
+              "filePath": "todo/research/references.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:404-412",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+              "lineRange": {
+                "start": 404,
+                "end": 412
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://hl7.org.fhir/...`",
+              "url": "http://hl7.org.fhir/...`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the package-source link uses malformed host `http://hl7.org.fhir/...`; the manifest paragraph says \"context of us\"; and the paragraph \"In addition, some types of Additional Resources\" is incomplete.",
+            "analysis": "E-001: Canonical section has concrete broken/dangling reader-facing text\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:404-412` and `:481-486`\n\nProblem: the package-source link uses malformed host `http://hl7.org.fhir/...`; the manifest paragraph says \"context of us\"; and the paragraph \"In addition, some types of Additional Resources\" is incomplete.\n\nWhy it matters: the broken URL and dangling prose interrupt a normative section and can mislead readers looking for package-source or additional-resource guidance.\n\nRecommended next step: correct the package-source URL, change \"context of us\" to \"context of use\", and complete or remove the dangling Additional Resources paragraph.",
+            "whyItMatters": "the broken URL and dangling prose interrupt a normative section and can mislead readers looking for package-source or additional-resource guidance.",
+            "recommendedNextStep": "correct the package-source URL, change \"context of us\" to \"context of use\", and complete or remove the dangling Additional Resources paragraph.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:404-412",
+              ":481-486"
+            ],
+            "limitations": [
+              "- Caveats: initial unquoted Zulip FTS searches for Jira keys such as `FHIR-52895` failed because the hyphen was parsed by SQLite FTS; the searches were rerun as quoted terms. Some broad Jira/Confluence hits such as package-source extension follow-ups are context only unless tied to a concrete page defect.",
+              "- Quoted FTS for `\"FHIR-33008\"` found `#implementers > Id required for a contained \"Provenance\"`, where the unclear contained-resource rule was raised; Jira/Confluence are stronger formal evidence."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.303Z",
+          "status": "open"
+        },
+        {
+          "id": "references-E-002",
+          "localId": "E-002",
+          "pageLabel": "references",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+          "title": "Low-risk prose defects remain in changed reference guidance",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+              "lineRange": {
+                "start": 260,
+                "end": 264
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "references action file",
+              "filePath": "todo/actions/references.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:260-264` and `:326-330`; commits `50302bfe36d1307fc1a80cc37d51b3da221219a6`, `4c62878beb7f314514c3f68dd936bbdc510dc25a`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "references research appendix",
+              "filePath": "todo/research/references.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:260-264",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html",
+              "lineRange": {
+                "start": 260,
+                "end": 264
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "50302bfe36d1307fc1a80cc37d51b3da221219a6",
+              "label": "50302bfe36d1307fc1a80cc37d51b3da221219a6",
+              "url": "https://github.com/HL7/fhir/commit/50302bfe36d1307fc1a80cc37d51b3da221219a6",
+              "commitHash": "50302bfe36d1307fc1a80cc37d51b3da221219a6",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "4c62878beb7f314514c3f68dd936bbdc510dc25a",
+              "label": "4c62878beb7f314514c3f68dd936bbdc510dc25a",
+              "url": "https://github.com/HL7/fhir/commit/4c62878beb7f314514c3f68dd936bbdc510dc25a",
+              "commitHash": "4c62878beb7f314514c3f68dd936bbdc510dc25a",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the logical-reference aggregation sentence is ungrammatical (\"nor does ... aggregation restrictions\"), and the Additional References paragraph retains a trailing quotation mark from the Jira resolution text.",
+            "analysis": "E-002: Low-risk prose defects remain in changed reference guidance\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:260-264` and `:326-330`; commits `50302bfe36d1307fc1a80cc37d51b3da221219a6`, `4c62878beb7f314514c3f68dd936bbdc510dc25a`\n\nProblem: the logical-reference aggregation sentence is ungrammatical (\"nor does ... aggregation restrictions\"), and the Additional References paragraph retains a trailing quotation mark from the Jira resolution text.\n\nWhy it matters: these do not change conformance intent, but they are visible on a normative page and reduce reader confidence.\n\nRecommended next step: rewrite the aggregation sentence and remove the stray quote.",
+            "whyItMatters": "these do not change conformance intent, but they are visible on a normative page and reduce reader confidence.",
+            "recommendedNextStep": "rewrite the aggregation sentence and remove the stray quote.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/references.html:260-264",
+              ":326-330",
+              "50302bfe36d1307fc1a80cc37d51b3da221219a6",
+              "4c62878beb7f314514c3f68dd936bbdc510dc25a"
+            ],
+            "limitations": [
+              "- Caveats: initial unquoted Zulip FTS searches for Jira keys such as `FHIR-52895` failed because the hyphen was parsed by SQLite FTS; the searches were rerun as quoted terms. Some broad Jira/Confluence hits such as package-source extension follow-ups are context only unless tied to a concrete page defect.",
+              "- Quoted FTS for `\"FHIR-33008\"` found `#implementers > Id required for a contained \"Provenance\"`, where the unclear contained-resource rule was raised; Jira/Confluence are stronger formal evidence."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.304Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 5,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 3,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 3,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 1,
+      "overlooked-problem": 1,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

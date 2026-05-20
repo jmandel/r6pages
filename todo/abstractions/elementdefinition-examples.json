@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.217Z",
+  "sourceActionFilesGlob": "todo/actions/elementdefinition-examples.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "elementdefinition-examples",
+      "actionFilePath": "todo/actions/elementdefinition-examples.md",
+      "researchFilePath": "todo/research/elementdefinition-examples.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: JSON examples added to clarify `ElementDefinition.pattern[x]` contain malformed JSON, undermining an otherwise well-supported `FHIR-36700` implementation.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "elementdefinition-examples-E-001",
+          "localId": "E-001",
+          "pageLabel": "elementdefinition-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html",
+          "title": "Malformed JSON examples in pattern examples",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html",
+              "lineRange": {
+                "start": 167,
+                "end": 187
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html",
+              "lineRange": {
+                "start": 281,
+                "end": 295
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "elementdefinition-examples action file",
+              "filePath": "todo/actions/elementdefinition-examples.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html:167-187`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html:281-295`; commit `e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6`; `FHIR-19608`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "elementdefinition-examples research appendix",
+              "filePath": "todo/research/elementdefinition-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html:167-187",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html",
+              "lineRange": {
+                "start": 167,
+                "end": 187
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html:281-295",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html",
+              "lineRange": {
+                "start": 281,
+                "end": 295
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-19608",
+              "label": "FHIR-19608",
+              "url": "https://jira.hl7.org/browse/FHIR-19608",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "label": "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "url": "https://github.com/HL7/fhir/commit/e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "commitHash": "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The complex Coding JSON example has invalid tokens like `\"url\" : \"lang\"\" : {` and `\"url\" : \"content\"\" : {`; the invalid repeating-value JSON example omits the closing `]` for `coding` before `\"text\"`.",
+            "analysis": "E-001: Malformed JSON examples in pattern examples\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html:167-187`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html:281-295`; commit `e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6`; `FHIR-19608`\n\nProblem: The complex Coding JSON example has invalid tokens like `\"url\" : \"lang\"\" : {` and `\"url\" : \"content\"\" : {`; the invalid repeating-value JSON example omits the closing `]` for `coding` before `\"text\"`.\n\nWhy it matters: This page exists to clarify subtle pattern semantics; invalid JSON examples can mislead profile authors and implementers or render badly in generated example tabs.\n\nRecommended next step: Correct the malformed JSON snippets and review the remaining JSON examples on this page that were added in the same commit.\n\nOverlooked/newly noticed context: See E-001. No additional high-signal problems found.",
+            "whyItMatters": "This page exists to clarify subtle pattern semantics; invalid JSON examples can mislead profile authors and implementers or render badly in generated example tabs.",
+            "recommendedNextStep": "Correct the malformed JSON snippets and review the remaining JSON examples on this page that were added in the same commit.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html:167-187",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/elementdefinition-examples.html:281-295",
+              "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "FHIR-19608"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.217Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

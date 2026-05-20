@@ -1,0 +1,417 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.254Z",
+  "sourceActionFilesGlob": "todo/actions/json.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "json",
+      "actionFilePath": "todo/actions/json.md",
+      "researchFilePath": "todo/research/json.md",
+      "status": "has-findings",
+      "summary": "The page has 4 actionable findings. The main risks are a substantive `resourceDefinition` mismatch with later FHIR-I guidance, and an RFC 8785 canonical JSON change that appears in the current text while its matching Jira remains unresolved.",
+      "findingCount": 4,
+      "findings": [
+        {
+          "id": "json-H-001",
+          "localId": "H-001",
+          "pageLabel": "json",
+          "pagePath": "source/json.html",
+          "title": "resourceDefinition` guidance contradicts the promoted-to-core compatibility rule",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/json.html",
+              "lineRange": {
+                "start": 95,
+                "end": 99
+              }
+            },
+            {
+              "filePath": "source/resource/resource-introduction.xml",
+              "lineRange": {
+                "start": 97,
+                "end": 98
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "json action file",
+              "filePath": "todo/actions/json.md",
+              "confidence": "high",
+              "quote": "`source/json.html:95-99`; `source/resource/resource-introduction.xml:97-98`; `FHIR-50863`; commit `09b9a4c718f6db95ad354a42fede0090b80dfce8`; Confluence page `358883031`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "json research appendix",
+              "filePath": "todo/research/json.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/json.html:95-99",
+              "filePath": "source/json.html",
+              "lineRange": {
+                "start": 95,
+                "end": 99
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/resource/resource-introduction.xml:97-98",
+              "filePath": "source/resource/resource-introduction.xml",
+              "lineRange": {
+                "start": 97,
+                "end": 98
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-50863",
+              "label": "FHIR-50863",
+              "url": "https://jira.hl7.org/browse/FHIR-50863",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "09b9a4c718f6db95ad354a42fede0090b80dfce8",
+              "label": "09b9a4c718f6db95ad354a42fede0090b80dfce8",
+              "url": "https://github.com/HL7/fhir/commit/09b9a4c718f6db95ad354a42fede0090b80dfce8",
+              "commitHash": "09b9a4c718f6db95ad354a42fede0090b80dfce8",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`source/json.html:95-99`; `source/resource/resource-introduction.xml:97-98`; `FHIR-50863`; commit `09b9a4c718f6db95ad354a42fede0090b80dfce8`; Confluence page `358883031`\n- Priority: P1\n- Category: intent-mismatch\n- Evidence: `source/json.html:95-99`; `source/resource/resource-introduction.xml:97-98`; `FHIR-50863`; commit `09b9a4c718f6db95ad354a42fede0090b80dfce8`; Confluence page `358883031`\n- Problem: The JSON page says `resourceDefinition` \"is not present\" when `resourceType` is defined in the core specification.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The JSON page says `resourceDefinition` \"is not present\" when `resourceType` is defined in the core specification. Later `FHIR-50863` says that after an additional resource moves into core, `resourceDefinition` may remain present for backward compatibility, SHOULD NOT be added, and if present its version SHALL match the published core FHIR version.",
+            "analysis": "H-001: resourceDefinition` guidance contradicts the promoted-to-core compatibility rule\n\nEvidence: `source/json.html:95-99`; `source/resource/resource-introduction.xml:97-98`; `FHIR-50863`; commit `09b9a4c718f6db95ad354a42fede0090b80dfce8`; Confluence page `358883031`\n\nProblem: The JSON page says `resourceDefinition` \"is not present\" when `resourceType` is defined in the core specification. Later `FHIR-50863` says that after an additional resource moves into core, `resourceDefinition` may remain present for backward compatibility, SHOULD NOT be added, and if present its version SHALL match the published core FHIR version.\n\nWhy it matters: Implementers reading only the JSON format page could reject or strip a backward-compatible `resourceDefinition` that the resource introduction explicitly allows.\n\nRecommended next step: Update the JSON page to mirror the `FHIR-50863` rule, or add a cross-link to the moved-to-core rule so the JSON format page is not stricter than the general additional-resource guidance.\n\nIntent-vs-implementation context: H-001 is a direct mismatch between the JSON page and the later applied `FHIR-50863` moved-to-core rule. G-001 is a formal evidence gap for a substantive canonicalization change.",
+            "whyItMatters": "Implementers reading only the JSON format page could reject or strip a backward-compatible `resourceDefinition` that the resource introduction explicitly allows.",
+            "recommendedNextStep": "Update the JSON page to mirror the `FHIR-50863` rule, or add a cross-link to the moved-to-core rule so the JSON format page is not stricter than the general additional-resource guidance.",
+            "rawEvidenceQuotes": [
+              "source/json.html:95-99",
+              "source/resource/resource-introduction.xml:97-98",
+              "FHIR-50863",
+              "09b9a4c718f6db95ad354a42fede0090b80dfce8",
+              "358883031"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.253Z",
+          "status": "open"
+        },
+        {
+          "id": "json-G-001",
+          "localId": "G-001",
+          "pageLabel": "json",
+          "pagePath": "source/json.html",
+          "title": "Canonical JSON now uses RFC 8785, but the matching Jira is unresolved",
+          "kind": "G",
+          "priority": "P1",
+          "category": "evidence-gap",
+          "sourceLocations": [
+            {
+              "filePath": "source/json.html",
+              "lineRange": {
+                "start": 350,
+                "end": 355
+              }
+            },
+            {
+              "filePath": "source/signatures.html",
+              "lineRange": {
+                "start": 196,
+                "end": 210
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "json action file",
+              "filePath": "todo/actions/json.md",
+              "confidence": "high",
+              "quote": "`source/json.html:350-355`; `source/signatures.html:196-210`; commit `dcf53a8af6d730f886918f45af2510e990a986eb`; `FHIR-51115`; `FHIR-41522`; Confluence pages `358255047` and `358258654`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "json research appendix",
+              "filePath": "todo/research/json.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/json.html:350-355",
+              "filePath": "source/json.html",
+              "lineRange": {
+                "start": 350,
+                "end": 355
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/signatures.html:196-210",
+              "filePath": "source/signatures.html",
+              "lineRange": {
+                "start": 196,
+                "end": 210
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-51115",
+              "label": "FHIR-51115",
+              "url": "https://jira.hl7.org/browse/FHIR-51115",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-41522",
+              "label": "FHIR-41522",
+              "url": "https://jira.hl7.org/browse/FHIR-41522",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "dcf53a8af6d730f886918f45af2510e990a986eb",
+              "label": "dcf53a8af6d730f886918f45af2510e990a986eb",
+              "url": "https://github.com/HL7/fhir/commit/dcf53a8af6d730f886918f45af2510e990a986eb",
+              "commitHash": "dcf53a8af6d730f886918f45af2510e990a986eb",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`source/json.html:350-355`; `source/signatures.html:196-210`; commit `dcf53a8af6d730f886918f45af2510e990a986eb`; `FHIR-51115`; `FHIR-41522`; Confluence pages `358255047` and `358258654`\n- Priority: P1\n- Category: evidence-gap\n- Evidence: `source/json.html:350-355`; `source/signatures.html:196-210`; commit `dcf53a8af6d730f886918f45af2510e990a986eb`; `FHIR-51115`; `FHIR-41522`; Confluence pages `358255047` and `358258654`\n- Problem: The JSON page now delegates canonical JSON to the signatures page, where JSON resources SHALL use RFC 8785.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The JSON page now delegates canonical JSON to the signatures page, where JSON resources SHALL use RFC 8785. `FHIR-51115`, the tracker proposing this change, is still Triaged/Unresolved, and its comments call the number-canonicalization change technically breaking.",
+            "analysis": "G-001: Canonical JSON now uses RFC 8785, but the matching Jira is unresolved\n\nEvidence: `source/json.html:350-355`; `source/signatures.html:196-210`; commit `dcf53a8af6d730f886918f45af2510e990a986eb`; `FHIR-51115`; `FHIR-41522`; Confluence pages `358255047` and `358258654`\n\nProblem: The JSON page now delegates canonical JSON to the signatures page, where JSON resources SHALL use RFC 8785. `FHIR-51115`, the tracker proposing this change, is still Triaged/Unresolved, and its comments call the number-canonicalization change technically breaking.\n\nWhy it matters: Canonicalization affects signature interoperability and conformance. The current page may be right, but the formal decision trail is not clear from Jira/source history.\n\nRecommended next step: Resolve or otherwise formally disposition `FHIR-51115` for R6, and confirm the RFC 8785 wording in `signatures.html#json` is the intended approved rule.\n\nIntent-vs-implementation context: H-001 is a direct mismatch between the JSON page and the later applied `FHIR-50863` moved-to-core rule. G-001 is a formal evidence gap for a substantive canonicalization change.",
+            "whyItMatters": "Canonicalization affects signature interoperability and conformance. The current page may be right, but the formal decision trail is not clear from Jira/source history.",
+            "recommendedNextStep": "Resolve or otherwise formally disposition `FHIR-51115` for R6, and confirm the RFC 8785 wording in `signatures.html#json` is the intended approved rule.",
+            "rawEvidenceQuotes": [
+              "source/json.html:350-355",
+              "source/signatures.html:196-210",
+              "dcf53a8af6d730f886918f45af2510e990a986eb",
+              "FHIR-51115",
+              "FHIR-41522",
+              "358255047",
+              "358258654"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": true,
+          "dateIdentified": "2026-05-20T19:24:43.253Z",
+          "status": "open"
+        },
+        {
+          "id": "json-E-001",
+          "localId": "E-001",
+          "pageLabel": "json",
+          "pagePath": "source/json.html",
+          "title": "Primitive JSON example has an unmatched closing brace",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/json.html",
+              "lineRange": {
+                "start": 175,
+                "end": 181
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "json action file",
+              "filePath": "todo/actions/json.md",
+              "confidence": "high",
+              "quote": "`source/json.html:175-181`; commit `6940f50152d47d242a8365fda5d825396a22f30b`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "json research appendix",
+              "filePath": "todo/research/json.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/json.html:175-181",
+              "filePath": "source/json.html",
+              "lineRange": {
+                "start": 175,
+                "end": 181
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "6940f50152d47d242a8365fda5d825396a22f30b",
+              "label": "6940f50152d47d242a8365fda5d825396a22f30b",
+              "url": "https://github.com/HL7/fhir/commit/6940f50152d47d242a8365fda5d825396a22f30b",
+              "commitHash": "6940f50152d47d242a8365fda5d825396a22f30b",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The primitive JSON example starts with `\"code\" : \"abc\"` but ends with `}` without an opening `{`.",
+            "analysis": "E-001: Primitive JSON example has an unmatched closing brace\n\nEvidence: `source/json.html:175-181`; commit `6940f50152d47d242a8365fda5d825396a22f30b`\n\nProblem: The primitive JSON example starts with `\"code\" : \"abc\"` but ends with `}` without an opening `{`.\n\nWhy it matters: This is a reader-facing invalid JSON snippet on the JSON format page.\n\nRecommended next step: Remove the stray closing brace or add an opening brace if the example is intended to be a complete object.\n\nOverlooked/newly noticed context: E-001 and E-002 are visible current-page defects that were not the intended substance of the tracked Jira changes.",
+            "whyItMatters": "This is a reader-facing invalid JSON snippet on the JSON format page.",
+            "recommendedNextStep": "Remove the stray closing brace or add an opening brace if the example is intended to be a complete object.",
+            "rawEvidenceQuotes": [
+              "source/json.html:175-181",
+              "6940f50152d47d242a8365fda5d825396a22f30b"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.253Z",
+          "status": "open"
+        },
+        {
+          "id": "json-E-002",
+          "localId": "E-002",
+          "pageLabel": "json",
+          "pagePath": "source/json.html",
+          "title": "Cardinality warning leaves a visible stray colon",
+          "kind": "E",
+          "priority": "P3",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/json.html",
+              "lineRange": {
+                "start": 151,
+                "end": 160
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "json action file",
+              "filePath": "todo/actions/json.md",
+              "confidence": "high",
+              "quote": "`source/json.html:151-160`; `FHIR-47629`; commit `0a5592638b4ebfaa8352e8ec5f9b2ae0044e7a71`; commit `02a18701b372f2b0e25ad61286546803bda59dec`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "json research appendix",
+              "filePath": "todo/research/json.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/json.html:151-160",
+              "filePath": "source/json.html",
+              "lineRange": {
+                "start": 151,
+                "end": 160
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-47629",
+              "label": "FHIR-47629",
+              "url": "https://jira.hl7.org/browse/FHIR-47629",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "0a5592638b4ebfaa8352e8ec5f9b2ae0044e7a71",
+              "label": "0a5592638b4ebfaa8352e8ec5f9b2ae0044e7a71",
+              "url": "https://github.com/HL7/fhir/commit/0a5592638b4ebfaa8352e8ec5f9b2ae0044e7a71",
+              "commitHash": "0a5592638b4ebfaa8352e8ec5f9b2ae0044e7a71",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "02a18701b372f2b0e25ad61286546803bda59dec",
+              "label": "02a18701b372f2b0e25ad61286546803bda59dec",
+              "url": "https://github.com/HL7/fhir/commit/02a18701b372f2b0e25ad61286546803bda59dec",
+              "commitHash": "02a18701b372f2b0e25ad61286546803bda59dec",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "A standalone `:` appears between `[%dragons-end%]` and the `JSON representation of primitive elements` heading.",
+            "analysis": "E-002: Cardinality warning leaves a visible stray colon\n\nEvidence: `source/json.html:151-160`; `FHIR-47629`; commit `0a5592638b4ebfaa8352e8ec5f9b2ae0044e7a71`; commit `02a18701b372f2b0e25ad61286546803bda59dec`\n\nProblem: A standalone `:` appears between `[%dragons-end%]` and the `JSON representation of primitive elements` heading.\n\nWhy it matters: It is a concrete rendering defect introduced with the FHIR-47629 warning and not part of the Jira resolution text.\n\nRecommended next step: Remove the standalone colon.\n\nOverlooked/newly noticed context: E-001 and E-002 are visible current-page defects that were not the intended substance of the tracked Jira changes.",
+            "whyItMatters": "It is a concrete rendering defect introduced with the FHIR-47629 warning and not part of the Jira resolution text.",
+            "recommendedNextStep": "Remove the standalone colon.",
+            "rawEvidenceQuotes": [
+              "source/json.html:151-160",
+              "FHIR-47629",
+              "0a5592638b4ebfaa8352e8ec5f9b2ae0044e7a71",
+              "02a18701b372f2b0e25ad61286546803bda59dec"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.254Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 4,
+    "byPriority": {
+      "P0": 0,
+      "P1": 2,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 2,
+      "G": 1
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 2,
+      "evidence-gap": 1,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.301Z",
+  "sourceActionFilesGlob": "todo/actions/rdf.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "rdf",
+      "actionFilePath": "todo/actions/rdf.md",
+      "researchFilePath": "todo/research/rdf.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings. The main risk is that current normative RDF guidance contains contradictory XHTML datatype prose and examples that can produce different or invalid Turtle.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "rdf-H-001",
+          "localId": "H-001",
+          "pageLabel": "rdf",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html",
+          "title": "XHTML datatype prose still says `xsd:string` after `rdf:XMLLiteral` decisions",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html",
+              "lineRange": {
+                "start": 410,
+                "end": 428
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "rdf action file",
+              "filePath": "todo/actions/rdf.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:410-428`; `FHIR-49834`; W3C HCLS issues https://github.com/w3c-cg/hcls-fhir-rdf/issues/187 and https://github.com/w3c-cg/hcls-fhir-rdf/issues/199; commit `1c59841a18ca23ed4a027d63029f087722b31e2e`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "rdf research appendix",
+              "filePath": "todo/research/rdf.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:410-428",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html",
+              "lineRange": {
+                "start": 410,
+                "end": 428
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-49834",
+              "label": "FHIR-49834",
+              "url": "https://jira.hl7.org/browse/FHIR-49834",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "1c59841a18ca23ed4a027d63029f087722b31e2e",
+              "label": "1c59841a18ca23ed4a027d63029f087722b31e2e",
+              "url": "https://github.com/HL7/fhir/commit/1c59841a18ca23ed4a027d63029f087722b31e2e",
+              "commitHash": "1c59841a18ca23ed4a027d63029f087722b31e2e",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://github.com/w3c-cg/hcls-fhir-rdf/issues/187",
+              "url": "https://github.com/w3c-cg/hcls-fhir-rdf/issues/187",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://github.com/w3c-cg/hcls-fhir-rdf/issues/199",
+              "url": "https://github.com/w3c-cg/hcls-fhir-rdf/issues/199",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page says RDF type `rdf:XMLLiteral` is used for FHIR `xhtml`, and examples now use `fhir:div [ fhir:v \"...\"^^rdf:XMLLiteral ]`, but the same primitive section still says \"XHTML is represented as an escaped xsd:string.\"",
+            "analysis": "H-001: XHTML datatype prose still says `xsd:string` after `rdf:XMLLiteral` decisions\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:410-428`; `FHIR-49834`; W3C HCLS issues https://github.com/w3c-cg/hcls-fhir-rdf/issues/187 and https://github.com/w3c-cg/hcls-fhir-rdf/issues/199; commit `1c59841a18ca23ed4a027d63029f087722b31e2e`.\n\nProblem: the page says RDF type `rdf:XMLLiteral` is used for FHIR `xhtml`, and examples now use `fhir:div [ fhir:v \"...\"^^rdf:XMLLiteral ]`, but the same primitive section still says \"XHTML is represented as an escaped xsd:string.\"\n\nWhy it matters: implementers could serialize narrative XHTML using the wrong literal datatype, contradicting the applied `FHIR-49834`/RDF subgroup intent.\n\nRecommended next step: update the stale sentence to describe `xhtml` as `rdf:XMLLiteral` in the `fhir:v` bnode form, or remove it if the earlier datatype list is sufficient.\n\nIntent-vs-implementation context: - `H-001`: applied `rdf:XMLLiteral` intent is only partially reflected in the page.",
+            "whyItMatters": "implementers could serialize narrative XHTML using the wrong literal datatype, contradicting the applied `FHIR-49834`/RDF subgroup intent.",
+            "recommendedNextStep": "update the stale sentence to describe `xhtml` as `rdf:XMLLiteral` in the `fhir:v` bnode form, or remove it if the earlier datatype list is sufficient.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:410-428",
+              "FHIR-49834",
+              "1c59841a18ca23ed4a027d63029f087722b31e2e"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.299Z",
+          "status": "open"
+        },
+        {
+          "id": "rdf-E-001",
+          "localId": "E-001",
+          "pageLabel": "rdf",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html",
+          "title": "Non-modifier extension example is internally inconsistent and appears invalid Turtle",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html",
+              "lineRange": {
+                "start": 821,
+                "end": 854
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "rdf action file",
+              "filePath": "todo/actions/rdf.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:821-854`; introduced/retained through commits `95ebab0581cb29d7f8867a843d478baf9c3415d6`, `e18df923cf7f39629f132e50cc03dd54ecf94992`, and `0bb7b4d111f8ceb2851c9928df9c6f7732c84a2d`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "rdf research appendix",
+              "filePath": "todo/research/rdf.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:821-854",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html",
+              "lineRange": {
+                "start": 821,
+                "end": 854
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "95ebab0581cb29d7f8867a843d478baf9c3415d6",
+              "label": "95ebab0581cb29d7f8867a843d478baf9c3415d6",
+              "url": "https://github.com/HL7/fhir/commit/95ebab0581cb29d7f8867a843d478baf9c3415d6",
+              "commitHash": "95ebab0581cb29d7f8867a843d478baf9c3415d6",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "e18df923cf7f39629f132e50cc03dd54ecf94992",
+              "label": "e18df923cf7f39629f132e50cc03dd54ecf94992",
+              "url": "https://github.com/HL7/fhir/commit/e18df923cf7f39629f132e50cc03dd54ecf94992",
+              "commitHash": "e18df923cf7f39629f132e50cc03dd54ecf94992",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "0bb7b4d111f8ceb2851c9928df9c6f7732c84a2d",
+              "label": "0bb7b4d111f8ceb2851c9928df9c6f7732c84a2d",
+              "url": "https://github.com/HL7/fhir/commit/0bb7b4d111f8ceb2851c9928df9c6f7732c84a2d",
+              "commitHash": "0bb7b4d111f8ceb2851c9928df9c6f7732c84a2d",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the example uses a `MedicationRequest/MR321` URI with type `fhir:Observation`, and its `fhir:coding (` lists contain `a sct:...; fhir:system ...` without wrapping each Coding in a blank node (`[ ... ]`), unlike nearby valid coding-list examples.",
+            "analysis": "E-001: Non-modifier extension example is internally inconsistent and appears invalid Turtle\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:821-854`; introduced/retained through commits `95ebab0581cb29d7f8867a843d478baf9c3415d6`, `e18df923cf7f39629f132e50cc03dd54ecf94992`, and `0bb7b4d111f8ceb2851c9928df9c6f7732c84a2d`.\n\nProblem: the example uses a `MedicationRequest/MR321` URI with type `fhir:Observation`, and its `fhir:coding (` lists contain `a sct:...; fhir:system ...` without wrapping each Coding in a blank node (`[ ... ]`), unlike nearby valid coding-list examples.\n\nWhy it matters: this is reader-facing sample Turtle on a Normative page; copying it can lead to invalid or misleading RDF.\n\nRecommended next step: decide whether the example resource should be an Observation or MedicationRequest, then rewrite each `fhir:coding` list member as a valid blank node Coding.\n\nOverlooked/newly noticed context: - `E-001`: the non-modifier extension example appears to have both resource-type and Turtle syntax defects.",
+            "whyItMatters": "this is reader-facing sample Turtle on a Normative page; copying it can lead to invalid or misleading RDF.",
+            "recommendedNextStep": "decide whether the example resource should be an Observation or MedicationRequest, then rewrite each `fhir:coding` list member as a valid blank node Coding.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:821-854",
+              "95ebab0581cb29d7f8867a843d478baf9c3415d6",
+              "e18df923cf7f39629f132e50cc03dd54ecf94992",
+              "0bb7b4d111f8ceb2851c9928df9c6f7732c84a2d"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.300Z",
+          "status": "open"
+        },
+        {
+          "id": "rdf-H-002",
+          "localId": "H-002",
+          "pageLabel": "rdf",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html",
+          "title": "LOINC concept IRI examples mix `http` and `https` stems",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html",
+              "lineRange": {
+                "start": 100,
+                "end": 100
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "rdf action file",
+              "filePath": "todo/actions/rdf.md",
+              "confidence": "high",
+              "quote": "`http://loinc.org/rdf/` appears at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:100`, `:754-755`, `:809`, and `:1461`; `https://loinc.org/rdf/` appears at `:1354-1363`; W3C issue https://github.com/w3c-cg/hcls-fhir-rdf/issues/185 records LOINC URI cleanup but not this scheme mismatch."
+            },
+            {
+              "type": "research-appendix",
+              "label": "rdf research appendix",
+              "filePath": "todo/research/rdf.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:100",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html",
+              "lineRange": {
+                "start": 100,
+                "end": 100
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://loinc.org/rdf/`",
+              "url": "http://loinc.org/rdf/`",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://loinc.org/rdf/`",
+              "url": "https://loinc.org/rdf/`",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://github.com/w3c-cg/hcls-fhir-rdf/issues/185",
+              "url": "https://github.com/w3c-cg/hcls-fhir-rdf/issues/185",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://loinc.org/rdf/...`",
+              "url": "http://loinc.org/rdf/...`",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://loinc.org/rdf/...`",
+              "url": "https://loinc.org/rdf/...`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page presents both `http://loinc.org/rdf/...` and `https://loinc.org/rdf/...` as LOINC concept IRI stems/examples.",
+            "analysis": "H-002: LOINC concept IRI examples mix `http` and `https` stems\n\nEvidence: `http://loinc.org/rdf/` appears at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:100`, `:754-755`, `:809`, and `:1461`; `https://loinc.org/rdf/` appears at `:1354-1363`; W3C issue https://github.com/w3c-cg/hcls-fhir-rdf/issues/185 records LOINC URI cleanup but not this scheme mismatch.\n\nProblem: the page presents both `http://loinc.org/rdf/...` and `https://loinc.org/rdf/...` as LOINC concept IRI stems/examples.\n\nWhy it matters: RDF IRIs are identifiers; `http` and `https` forms are distinct IRIs unless explicitly normalized, so the examples can fragment concept identity.\n\nRecommended next step: verify the current THO/LOINC authoritative IRI stem and make all LOINC prefix, prose, and Appendix 1 examples use the same scheme.\n\nIntent-vs-implementation context: - `H-002`: LOINC IRI cleanup left inconsistent stem schemes in the current text.",
+            "whyItMatters": "RDF IRIs are identifiers; `http` and `https` forms are distinct IRIs unless explicitly normalized, so the examples can fragment concept identity.",
+            "recommendedNextStep": "verify the current THO/LOINC authoritative IRI stem and make all LOINC prefix, prose, and Appendix 1 examples use the same scheme.",
+            "rawEvidenceQuotes": [
+              "http://loinc.org/rdf/",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/rdf.html:100",
+              ":754-755",
+              ":809",
+              ":1461",
+              "https://loinc.org/rdf/",
+              ":1354-1363"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.301Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

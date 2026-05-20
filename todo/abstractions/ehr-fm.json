@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.216Z",
+  "sourceActionFilesGlob": "todo/actions/ehr-fm.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "ehr-fm",
+      "actionFilePath": "todo/actions/ehr-fm.md",
+      "researchFilePath": "todo/research/ehr-fm.md",
+      "status": "has-findings",
+      "summary": "The R4 4.0.1 -> R6 ballot4 edits to this page are template/editorial only, and no changed-line intent mismatch was found. One actionable overlooked problem remains in the current page: an unchanged EHR-FM mapping row still names obsolete conformance resources, which can mislead R6 readers.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "ehr-fm-H-001",
+          "localId": "H-001",
+          "pageLabel": "ehr-fm",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ehr-fm.html",
+          "title": "Interchange Agreements row uses obsolete conformance resource names",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ehr-fm.html",
+              "lineRange": {
+                "start": 97,
+                "end": 97
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html",
+              "lineRange": {
+                "start": 50,
+                "end": 52
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "ehr-fm action file",
+              "filePath": "todo/actions/ehr-fm.md",
+              "confidence": "high",
+              "quote": "Current page says `The FHIR Conformance Statement and Resource Profile resources...` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ehr-fm.html:97`; the current R6 resource list names `CapabilityStatement` and `StructureDefinition` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:50-52`, `:301`, and `:414`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "ehr-fm research appendix",
+              "filePath": "todo/research/ehr-fm.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ehr-fm.html:97",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ehr-fm.html",
+              "lineRange": {
+                "start": 97,
+                "end": 97
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:50-52",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html",
+              "lineRange": {
+                "start": 50,
+                "end": 52
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The EHR-FM `TI.5.4 Interchange Agreements` mapping still uses pre-current terminology (`Conformance Statement` and `Resource Profile resources`) rather than the R6 resource names.",
+            "analysis": "H-001: Interchange Agreements row uses obsolete conformance resource names\n\nEvidence: Current page says `The FHIR Conformance Statement and Resource Profile resources...` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ehr-fm.html:97`; the current R6 resource list names `CapabilityStatement` and `StructureDefinition` at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:50-52`, `:301`, and `:414`.\n\nProblem: The EHR-FM `TI.5.4 Interchange Agreements` mapping still uses pre-current terminology (`Conformance Statement` and `Resource Profile resources`) rather than the R6 resource names.\n\nWhy it matters: Readers using the R6 page may look for nonexistent/currently-renamed resources or misunderstand which conformance artifacts support trading partner agreements.\n\nRecommended next step: Ask EHR/FHIR-I to update the row to current linked terminology, likely `CapabilityStatement` and `StructureDefinition`/profiles, and confirm the broader `registry-based infrastructure` claim is still accurate.\n\nOverlooked/newly noticed context: H-001 above.",
+            "whyItMatters": "Readers using the R6 page may look for nonexistent/currently-renamed resources or misunderstand which conformance artifacts support trading partner agreements.",
+            "recommendedNextStep": "Ask EHR/FHIR-I to update the row to current linked terminology, likely `CapabilityStatement` and `StructureDefinition`/profiles, and confirm the broader `registry-based infrastructure` claim is still accurate.",
+            "rawEvidenceQuotes": [
+              "The FHIR Conformance Statement and Resource Profile resources...",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/ehr-fm.html:97",
+              "CapabilityStatement",
+              "StructureDefinition",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourcelist.html:50-52",
+              ":301",
+              ":414"
+            ],
+            "limitations": [
+              "- Important caveats:",
+              "- Interpretation caveat: that phrase is not enough by itself to prove the final implementation should have used spaced `data type`; the later source commit explicitly tied to `FHIR-25431` standardizes this page to `datatypes`, and current `source/datatypes.html:3`/`:15` uses title `Datatypes`."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.216Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 1,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

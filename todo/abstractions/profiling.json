@@ -1,0 +1,247 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.298Z",
+  "sourceActionFilesGlob": "todo/actions/profiling.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "profiling",
+      "actionFilePath": "todo/actions/profiling.md",
+      "researchFilePath": "todo/research/profiling.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings. The main risk is that the R6 `FHIR-50391` Must Support/obligations clarification appears only partially applied to `profiling.html`, leaving duplicated older guidance and no link from the profiling page to the new repeating/sliced-element obligations guidance.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "profiling-H-001",
+          "localId": "H-001",
+          "pageLabel": "profiling",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html",
+          "title": "FHIR-50391 profiling text was applied as a duplicate instead of the resolved cross-reference",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html",
+              "lineRange": {
+                "start": 1123,
+                "end": 1134
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "profiling action file",
+              "filePath": "todo/actions/profiling.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1123-1134`; commit `3f3077a286d669ed69f2cb51540b8f3aef58a433`; `FHIR-50391`; Zulip `#IG creation > Slices not inheriting preferred bindings from root`; Confluence page `358880988`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "profiling research appendix",
+              "filePath": "todo/research/profiling.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1123-1134",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html",
+              "lineRange": {
+                "start": 1123,
+                "end": 1134
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-50391",
+              "label": "FHIR-50391",
+              "url": "https://jira.hl7.org/browse/FHIR-50391",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-28607",
+              "label": "FHIR-28607",
+              "url": "https://jira.hl7.org/browse/FHIR-28607",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "3f3077a286d669ed69f2cb51540b8f3aef58a433",
+              "label": "3f3077a286d669ed69f2cb51540b8f3aef58a433",
+              "url": "https://github.com/HL7/fhir/commit/3f3077a286d669ed69f2cb51540b8f3aef58a433",
+              "commitHash": "3f3077a286d669ed69f2cb51540b8f3aef58a433",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1123-1134`; commit `3f3077a286d669ed69f2cb51540b8f3aef58a433`; `FHIR-50391`; Zulip `#IG creation > Slices not inheriting preferred bindings from root`; Confluence page `358880988`\n- Priority: P1\n- Category: intent-mismatch\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1123-1134`; commit `3f3077a286d669ed69f2cb51540b8f3aef58a433`; `FHIR-50391`; Zulip `#IG creation > Slices not inheriting preferred bindings from root`; Confluence page `358880988`\n- Problem: `profiling.html` now says the child-element Must Support rule twice.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1123-1134`; commit `3f3077a286d669ed69f2cb51540b8f3aef58a433`; `FHIR-50391`; Zulip `#IG creation > Slices not inheriting preferred bindings from root`; Confluence page `358880988`\n- Priority: P1\n- Category: intent-mismatch\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1123-1134`; commit `3f3077a286d669ed69f2cb51540b8f3aef58a433`; `FHIR-50391`; Zulip `#IG creation > Slices not inheriting preferred bindings from root`; Confluence page `358880988`\n- Problem: `profiling.html` now says the child-element Must Support rule twice.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`profiling.html` now says the child-element Must Support rule twice. The first copy was added by `FHIR-50391`; the second is the older `FHIR-28607` text and still says \"if it support the parent\". `FHIR-50391` instead called for profiling to point implementers to the Implementation Obligations page for repeating elements and slices.",
+            "analysis": "H-001: FHIR-50391 profiling text was applied as a duplicate instead of the resolved cross-reference\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1123-1134`; commit `3f3077a286d669ed69f2cb51540b8f3aef58a433`; `FHIR-50391`; Zulip `#IG creation > Slices not inheriting preferred bindings from root`; Confluence page `358880988`\n\nProblem: `profiling.html` now says the child-element Must Support rule twice. The first copy was added by `FHIR-50391`; the second is the older `FHIR-28607` text and still says \"if it support the parent\". `FHIR-50391` instead called for profiling to point implementers to the Implementation Obligations page for repeating elements and slices.\n\nWhy it matters: Readers of `profiling.html#obligations` miss the R6 clarification about ambiguous Must Support/obligation applicability on repeating and sliced elements, while seeing duplicated guidance that looks accidental.\n\nRecommended next step: Replace the duplicate paragraphs with one corrected child/parent statement plus the `FHIR-50391` cross-reference to `obligations.html` and the repeating/sliced-element guidance already present there.\n\nIntent-vs-implementation context: H-001 is the only material mismatch found.",
+            "whyItMatters": "Readers of `profiling.html#obligations` miss the R6 clarification about ambiguous Must Support/obligation applicability on repeating and sliced elements, while seeing duplicated guidance that looks accidental.",
+            "recommendedNextStep": "Replace the duplicate paragraphs with one corrected child/parent statement plus the `FHIR-50391` cross-reference to `obligations.html` and the repeating/sliced-element guidance already present there.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1123-1134",
+              "3f3077a286d669ed69f2cb51540b8f3aef58a433",
+              "FHIR-50391",
+              "#IG creation > Slices not inheriting preferred bindings from root",
+              "358880988"
+            ],
+            "limitations": [
+              "- Caveats: this review used source HTML, not a full rendered build. Some Confluence hit snippets are compressed by the search tool; only the most relevant pages were snapshotted. I did not chase context-only Jira hits after they matched the commit evidence and did not indicate a current page issue.",
+              "- Exact phrase search for `\"Implementers should read the documentation on the Implementation Obligations Page\"` also returned only `FHIR-50391`; that sentence was not found in current `profiling.html`."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.297Z",
+          "status": "open"
+        },
+        {
+          "id": "profiling-E-001",
+          "localId": "E-001",
+          "pageLabel": "profiling",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html",
+          "title": "Obligations hyperlink target is malformed",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html",
+              "lineRange": {
+                "start": 1107,
+                "end": 1107
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "profiling action file",
+              "filePath": "todo/actions/profiling.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1107`; commit `1e1665b9352f33a691326fdf3079bc19865a8681`; `FHIR-46201` Zulip thread quotes the rendered text as `\">Obligations`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "profiling research appendix",
+              "filePath": "todo/research/profiling.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1107",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html",
+              "lineRange": {
+                "start": 1107,
+                "end": 1107
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-46201",
+              "label": "FHIR-46201",
+              "url": "https://jira.hl7.org/browse/FHIR-46201",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "1e1665b9352f33a691326fdf3079bc19865a8681",
+              "label": "1e1665b9352f33a691326fdf3079bc19865a8681",
+              "url": "https://github.com/HL7/fhir/commit/1e1665b9352f33a691326fdf3079bc19865a8681",
+              "commitHash": "1e1665b9352f33a691326fdf3079bc19865a8681",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1107`; commit `1e1665b9352f33a691326fdf3079bc19865a8681`; `FHIR-46201` Zulip thread quotes the rendered text as `\">Obligations`\n- Priority: P2\n- Category: rendering\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1107`; commit `1e1665b9352f33a691326fdf3079bc19865a8681`; `FHIR-46201` Zulip thread quotes the rendered text as `\">Obligations`\n- Problem: The link is `<a href=\"obligations.html>\">Obligations</a>`, so the href target includes a stray `>`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The link is `<a href=\"obligations.html>\">Obligations</a>`, so the href target includes a stray `>`.",
+            "analysis": "E-001: Obligations hyperlink target is malformed\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1107`; commit `1e1665b9352f33a691326fdf3079bc19865a8681`; `FHIR-46201` Zulip thread quotes the rendered text as `\">Obligations`\n\nProblem: The link is `<a href=\"obligations.html>\">Obligations</a>`, so the href target includes a stray `>`.\n\nWhy it matters: The main Must Support alternatives list contains a broken or misleading link to the Implementation Obligations page.\n\nRecommended next step: Change the link target to `obligations.html` and verify the rendered page navigates correctly.\n\nOverlooked/newly noticed context: E-001 is a concrete current-page rendering defect. Minor typos also remain (`Instution`, `publically`, `discrinator`, and \"but it normally be necessary\"), but they are lower priority than the findings above.",
+            "whyItMatters": "The main Must Support alternatives list contains a broken or misleading link to the Implementation Obligations page.",
+            "recommendedNextStep": "Change the link target to `obligations.html` and verify the rendered page navigates correctly.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/profiling.html:1107",
+              "1e1665b9352f33a691326fdf3079bc19865a8681",
+              "FHIR-46201",
+              "\">Obligations"
+            ],
+            "limitations": [
+              "- Caveats: this review used source HTML, not a full rendered build. Some Confluence hit snippets are compressed by the search tool; only the most relevant pages were snapshotted. I did not chase context-only Jira hits after they matched the commit evidence and did not indicate a current page issue.",
+              "- Exact phrase search for `\"Implementers should read the documentation on the Implementation Obligations Page\"` also returned only `FHIR-50391`; that sentence was not found in current `profiling.html`."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.298Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

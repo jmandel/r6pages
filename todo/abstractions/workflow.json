@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.363Z",
+  "sourceActionFilesGlob": "todo/actions/workflow.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "workflow",
+      "actionFilePath": "todo/actions/workflow.md",
+      "researchFilePath": "todo/research/workflow.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings. The main risk is that the current Workflow table points readers to a non-existent ClinicalAssessment incubator page; a smaller intent mismatch makes a resolved SpecimenDefinition rationale look like an open issue, and an inherited table-class typo likely affects rendering.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "workflow-E-001",
+          "localId": "E-001",
+          "pageLabel": "workflow",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html",
+          "title": "ClinicalAssessment incubator link is currently dead",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html",
+              "lineRange": {
+                "start": 169,
+                "end": 172
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "workflow action file",
+              "filePath": "todo/actions/workflow.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:169-172`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; `curl -L -s -o /dev/null -w '%{http_code}' https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-ClinicalAssessment.html` returned `404`; `gh api repos/HL7/pc-incubator` showed repo `size: 0`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "workflow research appendix",
+              "filePath": "todo/research/workflow.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:169-172",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html",
+              "lineRange": {
+                "start": 169,
+                "end": 172
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "label": "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "url": "https://github.com/HL7/fhir/commit/fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "commitHash": "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-ClinicalAssessment.html`",
+              "url": "https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-ClinicalAssessment.html`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The Events list links ClinicalAssessment to `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-ClinicalAssessment.html`, but that IG page is not live.",
+            "analysis": "E-001: ClinicalAssessment incubator link is currently dead\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:169-172`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; `curl -L -s -o /dev/null -w '%{http_code}' https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-ClinicalAssessment.html` returned `404`; `gh api repos/HL7/pc-incubator` showed repo `size: 0`\n\nProblem: The Events list links ClinicalAssessment to `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-ClinicalAssessment.html`, but that IG page is not live.\n\nWhy it matters: Readers following the workflow resource list cannot reach the referenced resource, and the broken `pc-incubator` target may affect other R6 pages using the same Additional Resources link pattern.\n\nRecommended next step: Either publish/populate the PC incubator IG at the linked path, or update/remove the link until a stable ClinicalAssessment Additional Resources URL exists.\n\nOverlooked/newly noticed context: E-001 and E-002 are current-page defects found while reading the page and checking links. E-002 is inherited from R4 rather than introduced by the R4-to-R6 diff.",
+            "whyItMatters": "Readers following the workflow resource list cannot reach the referenced resource, and the broken `pc-incubator` target may affect other R6 pages using the same Additional Resources link pattern.",
+            "recommendedNextStep": "Either publish/populate the PC incubator IG at the linked path, or update/remove the link until a stable ClinicalAssessment Additional Resources URL exists.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:169-172",
+              "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "curl -L -s -o /dev/null -w '%{http_code}' https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-ClinicalAssessment.html",
+              "404",
+              "gh api repos/HL7/pc-incubator",
+              "size: 0"
+            ],
+            "limitations": [
+              "- Caveats: this was bounded, not exhaustive. Some broad R6 \"remove/additional resources\" changes were applied by mechanical commits without page-specific Jira keys. Live link checks were performed on 2026-05-20; the `pc-incubator` target could become valid later if that IG is populated and built."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.362Z",
+          "status": "open"
+        },
+        {
+          "id": "workflow-H-001",
+          "localId": "H-001",
+          "pageLabel": "workflow",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html",
+          "title": "SpecimenDefinition rationale is presented as an open issue",
+          "kind": "H",
+          "priority": "P3",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html",
+              "lineRange": {
+                "start": 311,
+                "end": 329
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "workflow action file",
+              "filePath": "todo/actions/workflow.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:311-329`; `FHIR-28105`; PR `https://github.com/HL7/fhir/pull/1398`; Zulip `#workflow > ObservationDefinition, SpecimenDefinition`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "workflow research appendix",
+              "filePath": "todo/research/workflow.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:311-329",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html",
+              "lineRange": {
+                "start": 311,
+                "end": 329
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-28105",
+              "label": "FHIR-28105",
+              "url": "https://jira.hl7.org/browse/FHIR-28105",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/1398`",
+              "url": "https://github.com/HL7/fhir/pull/1398`",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:311-329`; `FHIR-28105`; PR `https://github.com/HL7/fhir/pull/1398`; Zulip `#workflow > ObservationDefinition, SpecimenDefinition`\n- Priority: P3\n- Category: intent-mismatch\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:311-329`; `FHIR-28105`; PR `https://github.com/HL7/fhir/pull/1398`; Zulip `#workflow > ObservationDefinition, SpecimenDefinition`\n- Problem: `FHIR-28105` requested a note/footnote explaining that SpecimenDefinition is not a Definition because it defines a thing, not an action.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-28105` requested a note/footnote explaining that SpecimenDefinition is not a Definition because it defines a thing, not an action. The applied text is now inside the \"Open Issues\" list.",
+            "analysis": "H-001: SpecimenDefinition rationale is presented as an open issue\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:311-329`; `FHIR-28105`; PR `https://github.com/HL7/fhir/pull/1398`; Zulip `#workflow > ObservationDefinition, SpecimenDefinition`\n\nProblem: `FHIR-28105` requested a note/footnote explaining that SpecimenDefinition is not a Definition because it defines a thing, not an action. The applied text is now inside the \"Open Issues\" list.\n\nWhy it matters: The page makes a resolved rationale look like an unresolved workflow issue.\n\nRecommended next step: Move the SpecimenDefinition sentence out of \"Open Issues\" into a footnote or explanatory note near the Definitions list, or reword it as non-issue guidance.\n\nIntent-vs-implementation context: H-001 is the only material mismatch found: the SpecimenDefinition text matches the rationale from `FHIR-28105`, but not the requested placement/status as a note or footnote.",
+            "whyItMatters": "The page makes a resolved rationale look like an unresolved workflow issue.",
+            "recommendedNextStep": "Move the SpecimenDefinition sentence out of \"Open Issues\" into a footnote or explanatory note near the Definitions list, or reword it as non-issue guidance.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:311-329",
+              "FHIR-28105",
+              "https://github.com/HL7/fhir/pull/1398",
+              "#workflow > ObservationDefinition, SpecimenDefinition"
+            ],
+            "limitations": [
+              "- Caveats: this was bounded, not exhaustive. Some broad R6 \"remove/additional resources\" changes were applied by mechanical commits without page-specific Jira keys. Live link checks were performed on 2026-05-20; the `pc-incubator` target could become valid later if that IG is populated and built."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.363Z",
+          "status": "open"
+        },
+        {
+          "id": "workflow-E-002",
+          "localId": "E-002",
+          "pageLabel": "workflow",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html",
+          "title": "Workflow resources table uses `calss` instead of `class",
+          "kind": "E",
+          "priority": "P3",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html",
+              "lineRange": {
+                "start": 90,
+                "end": 90
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/workflow.html",
+              "lineRange": {
+                "start": 90,
+                "end": 90
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "workflow action file",
+              "filePath": "todo/actions/workflow.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:90`; the same typo exists in the R4 source at `fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/workflow.html:90`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "workflow research appendix",
+              "filePath": "todo/research/workflow.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:90",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html",
+              "lineRange": {
+                "start": 90,
+                "end": 90
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/workflow.html:90",
+              "filePath": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/workflow.html",
+              "lineRange": {
+                "start": 90,
+                "end": 90
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "0da2a0a84dc1",
+              "label": "0da2a0a84dc1",
+              "url": "https://github.com/HL7/fhir/commit/0da2a0a84dc1",
+              "commitHash": "0da2a0a84dc1",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`<table calss=\"grid\">` likely prevents the workflow resources table from receiving intended grid styling.",
+            "analysis": "E-002: Workflow resources table uses `calss` instead of `class\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:90`; the same typo exists in the R4 source at `fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/workflow.html:90`\n\nProblem: `<table calss=\"grid\">` likely prevents the workflow resources table from receiving intended grid styling.\n\nWhy it matters: This is a concrete reader-facing rendering defect on the central resource list.\n\nRecommended next step: Correct the attribute to `<table class=\"grid\">`.\n\nOverlooked/newly noticed context: E-001 and E-002 are current-page defects found while reading the page and checking links. E-002 is inherited from R4 rather than introduced by the R4-to-R6 diff.",
+            "whyItMatters": "This is a concrete reader-facing rendering defect on the central resource list.",
+            "recommendedNextStep": "Correct the attribute to `<table class=\"grid\">`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/workflow.html:90",
+              "fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/workflow.html:90"
+            ],
+            "limitations": [
+              "- Caveats: this was bounded, not exhaustive. Some broad R6 \"remove/additional resources\" changes were applied by mechanical commits without page-specific Jira keys. Live link checks were performed on 2026-05-20; the `pc-incubator` target could become valid later if that IG is populated and built."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.363Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 2
+    },
+    "byKind": {
+      "H": 1,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 2,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

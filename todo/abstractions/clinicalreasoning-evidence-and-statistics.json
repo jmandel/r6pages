@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.148Z",
+  "sourceActionFilesGlob": "todo/actions/clinicalreasoning-evidence-and-statistics.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "clinicalreasoning-evidence-and-statistics",
+      "actionFilePath": "todo/actions/clinicalreasoning-evidence-and-statistics.md",
+      "researchFilePath": "todo/research/clinicalreasoning-evidence-and-statistics.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: the current R6 ballot4 source marks the page `Normative`, but the formal `FHIR-53004` resolution for this same page says to update the page status to informative.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "clinicalreasoning-evidence-and-statistics-H-001",
+          "localId": "H-001",
+          "pageLabel": "clinicalreasoning-evidence-and-statistics",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-evidence-and-statistics.html",
+          "title": "Page status conflicts with FHIR-53004 resolution",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-evidence-and-statistics.html",
+              "lineRange": {
+                "start": 13,
+                "end": 13
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-evidence-and-statistics action file",
+              "filePath": "todo/actions/clinicalreasoning-evidence-and-statistics.md",
+              "confidence": "high",
+              "quote": "current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-evidence-and-statistics.html:13`; `FHIR-53004` resolution (`https://jira.hl7.org/browse/FHIR-53004`); applying PR `https://github.com/HL7/fhir/pull/3779`; later status commit `7466cfc63cd0b162497a42c80a67480eed86c75a`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-evidence-and-statistics research appendix",
+              "filePath": "todo/research/clinicalreasoning-evidence-and-statistics.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-evidence-and-statistics.html:13",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-evidence-and-statistics.html",
+              "lineRange": {
+                "start": 13,
+                "end": 13
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53004",
+              "label": "FHIR-53004",
+              "url": "https://jira.hl7.org/browse/FHIR-53004",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "7466cfc63cd0b162497a42c80a67480eed86c75a",
+              "label": "7466cfc63cd0b162497a42c80a67480eed86c75a",
+              "url": "https://github.com/HL7/fhir/commit/7466cfc63cd0b162497a42c80a67480eed86c75a",
+              "commitHash": "7466cfc63cd0b162497a42c80a67480eed86c75a",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-53004`",
+              "url": "https://jira.hl7.org/browse/FHIR-53004`",
+              "confidence": "medium"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/3779`",
+              "url": "https://github.com/HL7/fhir/pull/3779`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-53004` says \"update content as suggested and update page status to informative,\" but the current page header says `Standards Status: Normative`.",
+            "analysis": "H-001: Page status conflicts with FHIR-53004 resolution\n\nEvidence: current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-evidence-and-statistics.html:13`; `FHIR-53004` resolution (`https://jira.hl7.org/browse/FHIR-53004`); applying PR `https://github.com/HL7/fhir/pull/3779`; later status commit `7466cfc63cd0b162497a42c80a67480eed86c75a`\n\nProblem: `FHIR-53004` says \"update content as suggested and update page status to informative,\" but the current page header says `Standards Status: Normative`.\n\nWhy it matters: standards status changes reader expectations and conformance interpretation; a broad later status cleanup may have overridden a page-specific workgroup decision.\n\nRecommended next step: ask CDS/FHIR editors to confirm intended status. If `FHIR-53004` still governs, change this page to `Informative`; if Normative was intentional, record the superseding rationale in Jira/source history.\n\nIntent-vs-implementation context: H-001 is the only intent-vs-implementation mismatch found.",
+            "whyItMatters": "standards status changes reader expectations and conformance interpretation; a broad later status cleanup may have overridden a page-specific workgroup decision.",
+            "recommendedNextStep": "ask CDS/FHIR editors to confirm intended status. If `FHIR-53004` still governs, change this page to `Informative`; if Normative was intentional, record the superseding rationale in Jira/source history.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-evidence-and-statistics.html:13",
+              "FHIR-53004",
+              "https://jira.hl7.org/browse/FHIR-53004",
+              "https://github.com/HL7/fhir/pull/3779",
+              "7466cfc63cd0b162497a42c80a67480eed86c75a"
+            ],
+            "limitations": [
+              "- Important caveat: the revised copy for `FHIR-53004` points to a Google document; I did not use that external document as evidence. `FHIR-53004` itself is enough to show the formal resolution included \"update page status to informative.\"",
+              "- Important caveat: no Zulip or Confluence hit was found for `FHIR-53004`; the status mismatch finding rests on Jira resolution, source history, and the current source page."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.148Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 0,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

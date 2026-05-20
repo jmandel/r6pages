@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.357Z",
+  "sourceActionFilesGlob": "todo/actions/workflow-communications.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "workflow-communications",
+      "actionFilePath": "todo/actions/workflow-communications.md",
+      "researchFilePath": "todo/research/workflow-communications.md",
+      "status": "has-findings",
+      "summary": "One actionable finding: the R6 ballot4 pattern list in `workflow-communications.html` reflects the intended Option I removal/renumbering, but the target `workflow-management.html` anchors/headings do not. This creates wrong or broken navigation and exposes obsolete workflow guidance.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "workflow-communications-H-001",
+          "localId": "H-001",
+          "pageLabel": "workflow-communications",
+          "pagePath": "source/workflow-communications.html",
+          "title": "Pattern list links I/J/K do not match workflow-management targets",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/workflow-communications.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "workflow-communications action file",
+              "filePath": "todo/actions/workflow-communications.md",
+              "confidence": "high",
+              "quote": "`workflow-communications.html` lines 561-573 list Option I = Messaging (`#optioni`), Option J = Service request (`#optionj`), and Option K = Combining (`#optionk`). Current `workflow-management.html` has duplicate `#optioni` anchors, no `#optionj`, `#optionk` = Service request, and `#optionl` = Combining. Commit `d6445217`/PR #3363 intended to remove old Option I and renumber later options."
+            },
+            {
+              "type": "research-appendix",
+              "label": "workflow-communications research appendix",
+              "filePath": "todo/research/workflow-communications.md",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Following the communications-page list can land on the obsolete sub-Task Option I, a missing Option J anchor, or the wrong Option K content.",
+            "analysis": "H-001: Pattern list links I/J/K do not match workflow-management targets\n\nEvidence: `workflow-communications.html` lines 561-573 list Option I = Messaging (`#optioni`), Option J = Service request (`#optionj`), and Option K = Combining (`#optionk`). Current `workflow-management.html` has duplicate `#optioni` anchors, no `#optionj`, `#optionk` = Service request, and `#optionl` = Combining. Commit `d6445217`/PR #3363 intended to remove old Option I and renumber later options.\n\nProblem: Following the communications-page list can land on the obsolete sub-Task Option I, a missing Option J anchor, or the wrong Option K content.\n\nWhy it matters: Implementers can be sent to the wrong workflow pattern, and the “remove option which abuses the meaning of Task” change is only partially realized.\n\nRecommended next step: Reconcile `workflow-management.html` with the `d6445217` intended state (remove old sub-Task Option I; unique `optioni/optionj/optionk` anchors for Messaging/Service/Combining), or explicitly revert the communications-page list if the WG decides to retain old I-L numbering. Also review external Workflow Pattern Examples links if renumbering is retained.\n\nIntent-vs-implementation context: H-001 covers the material mismatch found.\n\nOverlooked/newly noticed context: None found beyond H-001.",
+            "whyItMatters": "Implementers can be sent to the wrong workflow pattern, and the “remove option which abuses the meaning of Task” change is only partially realized.",
+            "recommendedNextStep": "Reconcile `workflow-management.html` with the `d6445217` intended state (remove old sub-Task Option I; unique `optioni/optionj/optionk` anchors for Messaging/Service/Combining), or explicitly revert the communications-page list if the WG decides to retain old I-L numbering. Also review external Workflow Pattern Examples links if renumbering is retained.",
+            "rawEvidenceQuotes": [
+              "workflow-communications.html",
+              "#optioni",
+              "#optionj",
+              "#optionk",
+              "workflow-management.html",
+              "#optionl",
+              "d6445217"
+            ],
+            "limitations": [
+              "- Caveats: Unquoted Zulip searches for hyphenated Jira keys failed with FTS parse errors; quoted key searches were rerun. One parallel Zulip snapshot hit `SQLITE_BUSY_RECOVERY` and was retried successfully. Jira `FHIR-46330` itself is about AppointmentResponse/Workflow mapping, while PR #3363 and the commit use that key for “remove option I”; causality for the workflow-option removal is therefore based on the implementation PR/commit, not the Jira description alone."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.357Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 0,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

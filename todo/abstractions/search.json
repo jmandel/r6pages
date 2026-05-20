@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.314Z",
+  "sourceActionFilesGlob": "todo/actions/search.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "search",
+      "actionFilePath": "todo/actions/search.md",
+      "researchFilePath": "todo/research/search.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings: one substantive FHIR-53569 intent/application gap that leaves out a client-side SHALL, and one concrete set of broken internal source links.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "search-H-001",
+          "localId": "H-001",
+          "pageLabel": "search",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/search.html",
+          "title": "FHIR-53569 client CapabilityStatement guidance was not applied",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/search.html",
+              "lineRange": {
+                "start": 693,
+                "end": 693
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "search action file",
+              "filePath": "todo/actions/search.md",
+              "confidence": "high",
+              "quote": "FHIR-53569 resolution at https://jira.hl7.org/browse/FHIR-53569; commit `8b4082caae2d890a9164d9119c7db8722a31f172`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/search.html:693` and `:6469`; Confluence page `413042140`; Zulip #implementers / \"Custom SearchParameters and preceding hyphens\"."
+            },
+            {
+              "type": "research-appendix",
+              "label": "search research appendix",
+              "filePath": "todo/research/search.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/search.html:693",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/search.html",
+              "lineRange": {
+                "start": 693,
+                "end": 693
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53569",
+              "label": "FHIR-53569",
+              "url": "https://jira.hl7.org/browse/FHIR-53569",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "8b4082caae2d890a9164d9119c7db8722a31f172",
+              "label": "8b4082caae2d890a9164d9119c7db8722a31f172",
+              "url": "https://github.com/HL7/fhir/commit/8b4082caae2d890a9164d9119c7db8722a31f172",
+              "commitHash": "8b4082caae2d890a9164d9119c7db8722a31f172",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-53569",
+              "url": "https://jira.hl7.org/browse/FHIR-53569",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "FHIR-53569 resolution at https://jira.hl7.org/browse/FHIR-53569; commit `8b4082caae2d890a9164d9119c7db8722a31f172`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/search.html:693` and `:6469`; Confluence page `413042140`; Zulip #implementers / \"Custom SearchParameters and preceding hyphens\".",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "FHIR-53569 resolution at https://jira.hl7.org/browse/FHIR-53569; commit `8b4082caae2d890a9164d9119c7db8722a31f172`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/search.html:693` and `:6469`; Confluence page `413042140`; Zulip #implementers / \"Custom SearchParameters and preceding hyphens\".",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "FHIR-53569 said to add a paragraph after \"Search inputs are dereferenced...\" requiring unfamiliar clients to query the CapabilityStatement and adjust search names. The applied commit only changed the server/IG-author custom prefix bullet near Server Conformance.",
+            "analysis": "H-001: FHIR-53569 client CapabilityStatement guidance was not applied\n\nEvidence: FHIR-53569 resolution at https://jira.hl7.org/browse/FHIR-53569; commit `8b4082caae2d890a9164d9119c7db8722a31f172`; current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/search.html:693` and `:6469`; Confluence page `413042140`; Zulip #implementers / \"Custom SearchParameters and preceding hyphens\".\n\nProblem: FHIR-53569 said to add a paragraph after \"Search inputs are dereferenced...\" requiring unfamiliar clients to query the CapabilityStatement and adjust search names. The applied commit only changed the server/IG-author custom prefix bullet near Server Conformance.\n\nWhy it matters: the omitted sentence is normative client behavior tied to resolving ambiguous custom SearchParameter names; without it, the page only warns authors/servers and loses the client-side disambiguation rule the workgroup approved.\n\nRecommended next step: add the missing FHIR-53569 client guidance near `search.html:693` or reopen/adjust FHIR-53569 if the workgroup intentionally dropped that part.\n\nIntent-vs-implementation context: H-001.",
+            "whyItMatters": "the omitted sentence is normative client behavior tied to resolving ambiguous custom SearchParameter names; without it, the page only warns authors/servers and loses the client-side disambiguation rule the workgroup approved.",
+            "recommendedNextStep": "add the missing FHIR-53569 client guidance near `search.html:693` or reopen/adjust FHIR-53569 if the workgroup intentionally dropped that part.",
+            "rawEvidenceQuotes": [
+              "Custom SearchParameters and preceding hyphens",
+              "8b4082caae2d890a9164d9119c7db8722a31f172",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/search.html:693",
+              ":6469",
+              "413042140"
+            ],
+            "limitations": []
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.313Z",
+          "status": "open"
+        },
+        {
+          "id": "search-E-001",
+          "localId": "E-001",
+          "pageLabel": "search",
+          "pagePath": "source/search.html",
+          "title": "Several internal links target missing source anchors",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/search.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "search action file",
+              "filePath": "todo/actions/search.md",
+              "confidence": "high",
+              "quote": "current source `search.html:109` links `#paging` but the section anchor is `search.html:5802` as `Paging`; `search.html:6361` links `#types` but the multi-type section anchor is `search.html:4661` as `type`; `_summary` value links at `search.html:5208`, `:5216`, `:5226`, `:5230`, and `:5234` target `#summary-true`, `#summary-text`, `#summary-data`, `#summary-count`, and `#summary-false` with no matching source anchors."
+            },
+            {
+              "type": "research-appendix",
+              "label": "search research appendix",
+              "filePath": "todo/research/search.md",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "readers following these links will not land on the intended sections/rows in source-derived output unless the publisher injects matching anchors elsewhere.",
+            "analysis": "E-001: Several internal links target missing source anchors\n\nEvidence: current source `search.html:109` links `#paging` but the section anchor is `search.html:5802` as `Paging`; `search.html:6361` links `#types` but the multi-type section anchor is `search.html:4661` as `type`; `_summary` value links at `search.html:5208`, `:5216`, `:5226`, `:5230`, and `:5234` target `#summary-true`, `#summary-text`, `#summary-data`, `#summary-count`, and `#summary-false` with no matching source anchors.\n\nProblem: readers following these links will not land on the intended sections/rows in source-derived output unless the publisher injects matching anchors elsewhere.\n\nWhy it matters: these are navigation aids in a long normative page; broken links make the R6 search page harder to use and audit.\n\nRecommended next step: align the hrefs with existing anchors (`#Paging` -> or rename the anchor to lowercase, `#types` -> `#type`) and either add anchors for the `_summary` values or remove those self-links.\n\nOverlooked/newly noticed context: E-001.",
+            "whyItMatters": "these are navigation aids in a long normative page; broken links make the R6 search page harder to use and audit.",
+            "recommendedNextStep": "align the hrefs with existing anchors (`#Paging` -> or rename the anchor to lowercase, `#types` -> `#type`) and either add anchors for the `_summary` values or remove those self-links.",
+            "rawEvidenceQuotes": [
+              "search.html:109",
+              "#paging",
+              "search.html:5802",
+              "Paging",
+              "search.html:6361",
+              "#types",
+              "search.html:4661",
+              "type",
+              "_summary",
+              "search.html:5208",
+              ":5216",
+              ":5226"
+            ],
+            "limitations": []
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.314Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

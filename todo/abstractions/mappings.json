@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.267Z",
+  "sourceActionFilesGlob": "todo/actions/mappings.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "mappings",
+      "actionFilePath": "todo/actions/mappings.md",
+      "researchFilePath": "todo/research/mappings.md",
+      "status": "no-actionable-findings",
+      "summary": "No actionable findings found. The R4 to R6 ballot4 diff for `source/mappings.html` is limited to broad template/header metadata churn; the mapping guidance prose and mappings-table placeholder are unchanged, and community evidence did not reveal a missed formal decision or current contradiction.",
+      "findingCount": 0,
+      "findings": [],
+      "noFindingReason": "No actionable findings found. The R4 to R6 ballot4 diff for `source/mappings.html` is limited to broad template/header metadata churn; the mapping guidance prose and mappings-table placeholder are unchanged, and community evidence did not reveal a missed formal decision or current contradiction.",
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 0,
+    "pagesWithNoActionableFindings": 1,
+    "findings": 0,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.274Z",
+  "sourceActionFilesGlob": "todo/actions/metadatatypes.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "metadatatypes",
+      "actionFilePath": "todo/actions/metadatatypes.md",
+      "researchFilePath": "todo/research/metadatatypes.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings: one concrete rendering/section-numbering defect already tracked in Jira, plus a small cluster of reader-facing editorial defects in new or changed narrative text. No substantive intent-vs-implementation mismatch was found for the main Jira-backed semantic changes.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "metadatatypes-E-001",
+          "localId": "E-001",
+          "pageLabel": "metadatatypes",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html",
+          "title": "RelatedArtifact subheadings skip heading levels",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html",
+              "lineRange": {
+                "start": 177,
+                "end": 225
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "metadatatypes action file",
+              "filePath": "todo/actions/metadatatypes.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html:177-225`; `FHIR-51822` (`https://jira.hl7.org/browse/FHIR-51822`); Zulip `#committers > Skipped heading levels`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "metadatatypes research appendix",
+              "filePath": "todo/research/metadatatypes.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html:177-225",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html",
+              "lineRange": {
+                "start": 177,
+                "end": 225
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-51822",
+              "label": "FHIR-51822",
+              "url": "https://jira.hl7.org/browse/FHIR-51822",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-51822`",
+              "url": "https://jira.hl7.org/browse/FHIR-51822`",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html:177-225`; `FHIR-51822` (`https://jira.hl7.org/browse/FHIR-51822`); Zulip `#committers > Skipped heading levels`\n- Priority: P2\n- Category: rendering\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html:177-225`; `FHIR-51822` (`https://jira.hl7.org/browse/FHIR-51822`); Zulip `#committers > Skipped heading levels`\n- Problem: The current page has `h4` headings directly under the `RelatedArtifact` `h2`, and `FHIR-51822` explicitly reports `metadatatypes.html: h4 follows H2`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The current page has `h4` headings directly under the `RelatedArtifact` `h2`, and `FHIR-51822` explicitly reports `metadatatypes.html: h4 follows H2`.",
+            "analysis": "E-001: RelatedArtifact subheadings skip heading levels\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html:177-225`; `FHIR-51822` (`https://jira.hl7.org/browse/FHIR-51822`); Zulip `#committers > Skipped heading levels`\n\nProblem: The current page has `h4` headings directly under the `RelatedArtifact` `h2`, and `FHIR-51822` explicitly reports `metadatatypes.html: h4 follows H2`.\n\nWhy it matters: The generated section numbering can include spurious `.0.` levels and creates a reader-facing/navigation defect.\n\nRecommended next step: Fix the RelatedArtifact subheading hierarchy, likely by making these subheads `h3` or otherwise aligning heading levels, and resolve `FHIR-51822`.\n\nOverlooked/newly noticed context: E-001 and E-002 above.",
+            "whyItMatters": "The generated section numbering can include spurious `.0.` levels and creates a reader-facing/navigation defect.",
+            "recommendedNextStep": "Fix the RelatedArtifact subheading hierarchy, likely by making these subheads `h3` or otherwise aligning heading levels, and resolve `FHIR-51822`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html:177-225",
+              "FHIR-51822",
+              "https://jira.hl7.org/browse/FHIR-51822",
+              "#committers > Skipped heading levels"
+            ],
+            "limitations": [
+              "- Caveat: community searches were bounded. They focused on explicit Jira keys, distinctive changed phrases, and current-page defects rather than exhaustive context-only hits."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.273Z",
+          "status": "open"
+        },
+        {
+          "id": "metadatatypes-E-002",
+          "localId": "E-002",
+          "pageLabel": "metadatatypes",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html",
+          "title": "Several current-page typos remain in narrative text",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html",
+              "lineRange": {
+                "start": 298,
+                "end": 298
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "metadatatypes action file",
+              "filePath": "todo/actions/metadatatypes.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html:298`, `:316-318`, `:373`, and `:453`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "metadatatypes research appendix",
+              "filePath": "todo/research/metadatatypes.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html:298",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html",
+              "lineRange": {
+                "start": 298,
+                "end": 298
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The current R6 ballot4 page contains visible spelling/grammar errors in Expression, ExtendedContactDetail, and MonetaryComponent prose.",
+            "analysis": "E-002: Several current-page typos remain in narrative text\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html:298`, `:316-318`, `:373`, and `:453`\n\nProblem: The current R6 ballot4 page contains visible spelling/grammar errors in Expression, ExtendedContactDetail, and MonetaryComponent prose.\n\nWhy it matters: These are low-risk but reader-facing defects in normative-page narrative.\n\nRecommended next step: Correct these in the next editorial pass.\n\nOverlooked/newly noticed context: E-001 and E-002 above.",
+            "whyItMatters": "These are low-risk but reader-facing defects in normative-page narrative.",
+            "recommendedNextStep": "Correct these in the next editorial pass.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/metadatatypes.html:298",
+              ":316-318",
+              ":373",
+              ":453"
+            ],
+            "limitations": [
+              "- Caveat: community searches were bounded. They focused on explicit Jira keys, distinctive changed phrases, and current-page defects rather than exhaustive context-only hits."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.273Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.250Z",
+  "sourceActionFilesGlob": "todo/actions/identifier-registry.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "identifier-registry",
+      "actionFilePath": "todo/actions/identifier-registry.md",
+      "researchFilePath": "todo/research/identifier-registry.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: the R6 page preserves conformance-style Identifier.system rules, but the release cutoff, IG applicability, and linked TSMG policy scope are ambiguous enough to merit triage.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "identifier-registry-H-001",
+          "localId": "H-001",
+          "pageLabel": "identifier-registry",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/identifier-registry.html",
+          "title": "Clarify release-relative and IG-scope rules for THO Identifier.system URIs",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/identifier-registry.html",
+              "lineRange": {
+                "start": 17,
+                "end": 17
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "identifier-registry action file",
+              "filePath": "todo/actions/identifier-registry.md",
+              "confidence": "high",
+              "quote": "current R6 page lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/identifier-registry.html:17` and `:24-27`, `FHIR-35932`, Zulip `#implementers > Identifier.system for NAIC code?` message ids `445447512`, `445468856`, `445497849`, Confluence page `413241175`, commit `71f5602acf06ad7fe0f46052ca1c6b477311c1ae`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "identifier-registry research appendix",
+              "filePath": "todo/research/identifier-registry.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/identifier-registry.html:17",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/identifier-registry.html",
+              "lineRange": {
+                "start": 17,
+                "end": 17
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-35932",
+              "label": "FHIR-35932",
+              "url": "https://jira.hl7.org/browse/FHIR-35932",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "71f5602acf06ad7fe0f46052ca1c6b477311c1ae",
+              "label": "71f5602acf06ad7fe0f46052ca1c6b477311c1ae",
+              "url": "https://github.com/HL7/fhir/commit/71f5602acf06ad7fe0f46052ca1c6b477311c1ae",
+              "commitHash": "71f5602acf06ad7fe0f46052ca1c6b477311c1ae",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "current R6 page lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/identifier-registry.html:17` and `:24-27`, `FHIR-35932`, Zulip `#implementers > Identifier.system for NAIC code?` message ids `445447512`, `445468856`, `445497849`, Confluence page `413241175`, commit `71f5602acf06ad7fe0f46052ca1c6b477311c1ae`.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "current R6 page lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/identifier-registry.html:17` and `:24-27`, `FHIR-35932`, Zulip `#implementers > Identifier.system for NAIC code?` message ids `445447512`, `445468856`, `445497849`, Confluence page `413241175`, commit `71f5602acf06ad7fe0f46052ca1c6b477311c1ae`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page is now marked Informative but still says THO Identifier.system URIs can be SHALL-level requirements, then gives only an R5-specific example (`systems claiming conformance to FHIR R5`). Later Zulip discussion shows readers were unsure how this applies to IGs and to implementations based on older or newer FHIR releases. The 2025 TSMG minutes behind the latest link update also say the Terminology Expectations policy needs to be broadened to all implementers, while the current shortlink resolves to `Terminology Expectations for IG Developers`.",
+            "analysis": "H-001: Clarify release-relative and IG-scope rules for THO Identifier.system URIs\n\nEvidence: current R6 page lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/identifier-registry.html:17` and `:24-27`, `FHIR-35932`, Zulip `#implementers > Identifier.system for NAIC code?` message ids `445447512`, `445468856`, `445497849`, Confluence page `413241175`, commit `71f5602acf06ad7fe0f46052ca1c6b477311c1ae`.\n\nProblem: the page is now marked Informative but still says THO Identifier.system URIs can be SHALL-level requirements, then gives only an R5-specific example (`systems claiming conformance to FHIR R5`). Later Zulip discussion shows readers were unsure how this applies to IGs and to implementations based on older or newer FHIR releases. The 2025 TSMG minutes behind the latest link update also say the Terminology Expectations policy needs to be broadened to all implementers, while the current shortlink resolves to `Terminology Expectations for IG Developers`.\n\nWhy it matters: implementers and IG authors may not know whether the applicable SHALL set is based on the base FHIR release, the IG publication date, the current THO release, or HL7-published-IG policy. This affects whether different `Identifier.system` strings are conformant and can create interoperability-breaking aliases.\n\nRecommended next step: open or triage a FHIR-core/TSMG issue to rewrite this paragraph in release-relative terms, explicitly state how it applies to IGs versus non-IG implementations, and align the source link text/target with the finalized TSMG policy scope.\n\nIntent-vs-implementation context: H-001 is the only material mismatch found: the R5-era `FHIR-35932` wording remains on the R6 page after later TSMG policy discussions exposed scope ambiguity.\n\nOverlooked/newly noticed context: H-001 is also a newly noticed current-page problem. No separate rendering or typo defect was found.",
+            "whyItMatters": "implementers and IG authors may not know whether the applicable SHALL set is based on the base FHIR release, the IG publication date, the current THO release, or HL7-published-IG policy. This affects whether different `Identifier.system` strings are conformant and can create interoperability-breaking aliases.",
+            "recommendedNextStep": "open or triage a FHIR-core/TSMG issue to rewrite this paragraph in release-relative terms, explicitly state how it applies to IGs versus non-IG implementations, and align the source link text/target with the finalized TSMG policy scope.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/identifier-registry.html:17",
+              ":24-27",
+              "FHIR-35932",
+              "#implementers > Identifier.system for NAIC code?",
+              "445447512",
+              "445468856",
+              "445497849",
+              "413241175",
+              "71f5602acf06ad7fe0f46052ca1c6b477311c1ae"
+            ],
+            "limitations": [
+              "- Caveats: the R6 standards-status commit `270e0ceb...` and TSMG-link commit `71f5602...` have no Jira key in the commit/PR body. Exact Confluence search for the link text `Terminology Expectations in FHIR` returned no page title, but the source shortlink `https://confluence.hl7.org/x/LKOZCQ` resolves to Confluence page `161063724`, currently titled `Terminology Expectations for IG Developers`."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.250Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 0,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

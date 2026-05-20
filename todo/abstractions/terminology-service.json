@@ -1,0 +1,275 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.347Z",
+  "sourceActionFilesGlob": "todo/actions/terminology-service.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "terminology-service",
+      "actionFilePath": "todo/actions/terminology-service.md",
+      "researchFilePath": "todo/research/terminology-service.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings. The main risk is that the new normative conformance table can be read as changing operation input requirements and is stale for `$translate` parameter naming.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "terminology-service-H-001",
+          "localId": "H-001",
+          "pageLabel": "terminology-service",
+          "pagePath": "source/terminology-service.html",
+          "title": "Conformance table's \"required input parameters\" are ambiguous and partly stale",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/terminology-service.html",
+              "lineRange": {
+                "start": 73,
+                "end": 164
+              }
+            },
+            {
+              "filePath": "source/conceptmap/operationdefinition-ConceptMap-translate.xml",
+              "lineRange": {
+                "start": 91,
+                "end": 177
+              }
+            },
+            {
+              "filePath": "source/codesystem/operationdefinition-CodeSystem-lookup.xml",
+              "lineRange": {
+                "start": 68,
+                "end": 123
+              }
+            },
+            {
+              "filePath": "source/valueset/operationdefinition-ValueSet-expand.xml",
+              "lineRange": {
+                "start": 68,
+                "end": 149
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "terminology-service action file",
+              "filePath": "todo/actions/terminology-service.md",
+              "confidence": "high",
+              "quote": "`source/terminology-service.html:73-164`; `source/conceptmap/operationdefinition-ConceptMap-translate.xml:91-177`; `source/codesystem/operationdefinition-CodeSystem-lookup.xml:68-123`; `source/valueset/operationdefinition-ValueSet-expand.xml:68-149`; `FHIR-24698`; `FHIR-32129`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "terminology-service research appendix",
+              "filePath": "todo/research/terminology-service.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/terminology-service.html:73-164",
+              "filePath": "source/terminology-service.html",
+              "lineRange": {
+                "start": 73,
+                "end": 164
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/conceptmap/operationdefinition-ConceptMap-translate.xml:91-177",
+              "filePath": "source/conceptmap/operationdefinition-ConceptMap-translate.xml",
+              "lineRange": {
+                "start": 91,
+                "end": 177
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/codesystem/operationdefinition-CodeSystem-lookup.xml:68-123",
+              "filePath": "source/codesystem/operationdefinition-CodeSystem-lookup.xml",
+              "lineRange": {
+                "start": 68,
+                "end": 123
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/valueset/operationdefinition-ValueSet-expand.xml:68-149",
+              "filePath": "source/valueset/operationdefinition-ValueSet-expand.xml",
+              "lineRange": {
+                "start": 68,
+                "end": 149
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-24698",
+              "label": "FHIR-24698",
+              "url": "https://jira.hl7.org/browse/FHIR-24698",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-32129",
+              "label": "FHIR-32129",
+              "url": "https://jira.hl7.org/browse/FHIR-32129",
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "The Normative conformance table says terminology services SHALL support operations with \"required input parameters\", but many listed parameters are optional in the OperationDefinitions. For `$translate`, the table lists `system`, while the R6 OperationDefinition uses `sourceSystem` and only says the previous `system` name MAY still be accepted.",
+            "analysis": "H-001: Conformance table's \"required input parameters\" are ambiguous and partly stale\n\nEvidence: `source/terminology-service.html:73-164`; `source/conceptmap/operationdefinition-ConceptMap-translate.xml:91-177`; `source/codesystem/operationdefinition-CodeSystem-lookup.xml:68-123`; `source/valueset/operationdefinition-ValueSet-expand.xml:68-149`; `FHIR-24698`; `FHIR-32129`\n\nProblem: The Normative conformance table says terminology services SHALL support operations with \"required input parameters\", but many listed parameters are optional in the OperationDefinitions. For `$translate`, the table lists `system`, while the R6 OperationDefinition uses `sourceSystem` and only says the previous `system` name MAY still be accepted.\n\nWhy it matters: Implementers could infer stricter request cardinalities or a mandatory legacy `$translate` alias that the operation definitions do not require.\n\nRecommended next step: Clarify whether the table means \"input parameters servers must support\" rather than \"parameters clients must supply\", and align `$translate` names with the current OperationDefinition or explicitly document the legacy alias requirement.\n\nIntent-vs-implementation context: H-001 is the only material mismatch found: `FHIR-24698` intentionally added minimum terminology-server requirements, but the final table wording and `$translate` parameter names do not cleanly match the current OperationDefinitions and `FHIR-32129`.",
+            "whyItMatters": "Implementers could infer stricter request cardinalities or a mandatory legacy `$translate` alias that the operation definitions do not require.",
+            "recommendedNextStep": "Clarify whether the table means \"input parameters servers must support\" rather than \"parameters clients must supply\", and align `$translate` names with the current OperationDefinition or explicitly document the legacy alias requirement.",
+            "rawEvidenceQuotes": [
+              "source/terminology-service.html:73-164",
+              "source/conceptmap/operationdefinition-ConceptMap-translate.xml:91-177",
+              "source/codesystem/operationdefinition-CodeSystem-lookup.xml:68-123",
+              "source/valueset/operationdefinition-ValueSet-expand.xml:68-149",
+              "FHIR-24698",
+              "FHIR-32129"
+            ],
+            "limitations": [
+              "- Jira, Zulip, and Confluence were searched for explicit keys and distinctive changed phrases. Caveat: no Jira key was found in the 2025 commit that removed `$closure`/`$find-matches`; Confluence search found older process context, not the 2025 removal decision itself.",
+              "| 2022-09-02 | `dca11a08ddb81b0b478fe651e9d9f30354e4003e` | Applied FHIR-24698 | Removes some over-specific CapabilityStatement/TerminologyCapabilities fields and adds conformant-resource caveat. |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.346Z",
+          "status": "open"
+        },
+        {
+          "id": "terminology-service-E-001",
+          "localId": "E-001",
+          "pageLabel": "terminology-service",
+          "pagePath": "source/terminology-service.html",
+          "title": "Several current examples still contain invalid FHIR JSON/HTTP snippets",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/terminology-service.html",
+              "lineRange": {
+                "start": 590,
+                "end": 612
+              }
+            },
+            {
+              "filePath": "source/terminology-service.html",
+              "lineRange": {
+                "start": 745,
+                "end": 803
+              }
+            },
+            {
+              "filePath": "source/terminology-service.html",
+              "lineRange": {
+                "start": 888,
+                "end": 975
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "terminology-service action file",
+              "filePath": "todo/actions/terminology-service.md",
+              "confidence": "high",
+              "quote": "`source/terminology-service.html:590-612`, `source/terminology-service.html:745-803`, `source/terminology-service.html:888-975`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "terminology-service research appendix",
+              "filePath": "todo/research/terminology-service.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/terminology-service.html:590-612",
+              "filePath": "source/terminology-service.html",
+              "lineRange": {
+                "start": 590,
+                "end": 612
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/terminology-service.html:745-803",
+              "filePath": "source/terminology-service.html",
+              "lineRange": {
+                "start": 745,
+                "end": 803
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/terminology-service.html:888-975",
+              "filePath": "source/terminology-service.html",
+              "lineRange": {
+                "start": 888,
+                "end": 975
+              },
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "Examples use `ResourceType` instead of `resourceType`, include malformed Bundle JSON structure, mix `Get`/`GET`, and one `$validate-code` URL uses `codes=` instead of `code=`.",
+            "analysis": "E-001: Several current examples still contain invalid FHIR JSON/HTTP snippets\n\nEvidence: `source/terminology-service.html:590-612`, `source/terminology-service.html:745-803`, `source/terminology-service.html:888-975`\n\nProblem: Examples use `ResourceType` instead of `resourceType`, include malformed Bundle JSON structure, mix `Get`/`GET`, and one `$validate-code` URL uses `codes=` instead of `code=`.\n\nWhy it matters: These are reader-facing examples on a Normative page and can be copied into implementations or tests.\n\nRecommended next step: Open a cleanup ticket to normalize the JSON examples and validate the shown request URLs.\n\nOverlooked/newly noticed context: E-001 is an inherited current-page example defect, not a direct R4-to-R6 change.",
+            "whyItMatters": "These are reader-facing examples on a Normative page and can be copied into implementations or tests.",
+            "recommendedNextStep": "Open a cleanup ticket to normalize the JSON examples and validate the shown request URLs.",
+            "rawEvidenceQuotes": [
+              "source/terminology-service.html:590-612",
+              "source/terminology-service.html:745-803",
+              "source/terminology-service.html:888-975"
+            ],
+            "limitations": [
+              "- Jira, Zulip, and Confluence were searched for explicit keys and distinctive changed phrases. Caveat: no Jira key was found in the 2025 commit that removed `$closure`/`$find-matches`; Confluence search found older process context, not the 2025 removal decision itself.",
+              "| 2022-09-02 | `dca11a08ddb81b0b478fe651e9d9f30354e4003e` | Applied FHIR-24698 | Removes some over-specific CapabilityStatement/TerminologyCapabilities fields and adds conformant-resource caveat. |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.347Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

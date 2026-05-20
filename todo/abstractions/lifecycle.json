@@ -1,0 +1,338 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.259Z",
+  "sourceActionFilesGlob": "todo/actions/lifecycle.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "lifecycle",
+      "actionFilePath": "todo/actions/lifecycle.md",
+      "researchFilePath": "todo/research/lifecycle.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings. The main risk is that R6 removed the lifecycle page's current-list definitions while related `_list`, List, safety, and resource-guide text still points readers to `lifecycle.html#current` as if those definitions remain.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "lifecycle-H-001",
+          "localId": "H-001",
+          "pageLabel": "lifecycle",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html",
+          "title": "Removed current-list definitions left dependent references dangling",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html",
+              "lineRange": {
+                "start": 195,
+                "end": 201
+              }
+            },
+            {
+              "filePath": "source/search.html",
+              "lineRange": {
+                "start": 6078,
+                "end": 6082
+              }
+            },
+            {
+              "filePath": "source/search.html",
+              "lineRange": {
+                "start": 4085,
+                "end": 4090
+              }
+            },
+            {
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 2087,
+                "end": 2087
+              }
+            },
+            {
+              "filePath": "source/resource/bundle-Resource-search-params.xml",
+              "lineRange": {
+                "start": 103,
+                "end": 104
+              }
+            },
+            {
+              "filePath": "source/list/list-notes.xml",
+              "lineRange": {
+                "start": 14,
+                "end": 15
+              }
+            },
+            {
+              "filePath": "source/list/list-notes.xml",
+              "lineRange": {
+                "start": 33,
+                "end": 36
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "lifecycle action file",
+              "filePath": "todo/actions/lifecycle.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html:195-201`; commit `270e0ceb7b029dad4ca0fc5ccf5296ff370888cd`; Confluence page `358879917`; `/source/search.html:6078-6082`, `/source/search.html:4085-4090`, `/source/http.html:2087`, `/source/resource/bundle-Resource-search-params.xml:103-104`, `/source/list/list-notes.xml:14-15`, `/source/list/list-notes.xml:33-36`; `FHIR-39342`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "lifecycle research appendix",
+              "filePath": "todo/research/lifecycle.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html:195-201",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html",
+              "lineRange": {
+                "start": 195,
+                "end": 201
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/search.html:6078-6082",
+              "filePath": "source/search.html",
+              "lineRange": {
+                "start": 6078,
+                "end": 6082
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/search.html:4085-4090",
+              "filePath": "source/search.html",
+              "lineRange": {
+                "start": 4085,
+                "end": 4090
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/http.html:2087",
+              "filePath": "source/http.html",
+              "lineRange": {
+                "start": 2087,
+                "end": 2087
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/resource/bundle-Resource-search-params.xml:103-104",
+              "filePath": "source/resource/bundle-Resource-search-params.xml",
+              "lineRange": {
+                "start": 103,
+                "end": 104
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/list/list-notes.xml:14-15",
+              "filePath": "source/list/list-notes.xml",
+              "lineRange": {
+                "start": 14,
+                "end": 15
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/list/list-notes.xml:33-36",
+              "filePath": "source/list/list-notes.xml",
+              "lineRange": {
+                "start": 33,
+                "end": 36
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-39342",
+              "label": "FHIR-39342",
+              "url": "https://jira.hl7.org/browse/FHIR-39342",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "label": "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "url": "https://github.com/HL7/fhir/commit/270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "commitHash": "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html:195-201`; commit `270e0ceb7b029dad4ca0fc5ccf5296ff370888cd`; Confluence page `358879917`; `/source/search.html:6078-6082`, `/source/search.html:4085-4090`, `/source/http.html:2087`, `/source/resource/bundle-Resource-search-params.xml:103-104`, `/source/list/list-notes.xml:14-15`, `/source/list/list-notes.xml:33-36`; `FHIR-39342`\n- Priority: P1\n- Category: intent-mismatch\n- Evidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html:195-201`; commit `270e0ceb7b029dad4ca0fc5ccf5296ff370888cd`; Confluence page `358879917`; `/source/search.html:6078-6082`, `/source/search.html:4085-4090`, `/source/http.html:2087`, `/source/resource/bundle-Resource-search-params.xml:103-104`, `/source/list/list-notes.xml:14-15`, `/source/list/list-notes.xml:33-36`; `FHIR-39342`\n- Problem: The lifecycle page now says the current-list section was removed, but related current R6 source still says functional-list literals are defined there and that current list references are allowed.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The lifecycle page now says the current-list section was removed, but related current R6 source still says functional-list literals are defined there and that current list references are allowed.",
+            "analysis": "H-001: Removed current-list definitions left dependent references dangling\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html:195-201`; commit `270e0ceb7b029dad4ca0fc5ccf5296ff370888cd`; Confluence page `358879917`; `/source/search.html:6078-6082`, `/source/search.html:4085-4090`, `/source/http.html:2087`, `/source/resource/bundle-Resource-search-params.xml:103-104`, `/source/list/list-notes.xml:14-15`, `/source/list/list-notes.xml:33-36`; `FHIR-39342`\n\nProblem: The lifecycle page now says the current-list section was removed, but related current R6 source still says functional-list literals are defined there and that current list references are allowed.\n\nWhy it matters: Implementers following `_list` or List guidance can no longer find the `$current-*` definitions/conformance text, leaving search behavior underspecified and navigation misleading.\n\nRecommended next step: Audit all `lifecycle.html#current` and `$current-*` references; either restore/relocate the functional-list definitions and update links, or remove/deprecate functional-list semantics consistently across `_list`, List, safety, and resource-guide text.\n\nIntent-vs-implementation context: H-001 is the substantive mismatch: FHIR-I minutes say to remove `$current` lists and replace the lifecycle section with a note, but the implementation left related text that still relies on lifecycle for functional-list definitions.",
+            "whyItMatters": "Implementers following `_list` or List guidance can no longer find the `$current-*` definitions/conformance text, leaving search behavior underspecified and navigation misleading.",
+            "recommendedNextStep": "Audit all `lifecycle.html#current` and `$current-*` references; either restore/relocate the functional-list definitions and update links, or remove/deprecate functional-list semantics consistently across `_list`, List, safety, and resource-guide text.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html:195-201",
+              "270e0ceb7b029dad4ca0fc5ccf5296ff370888cd",
+              "358879917",
+              "/source/search.html:6078-6082",
+              "/source/search.html:4085-4090",
+              "/source/http.html:2087",
+              "/source/resource/bundle-Resource-search-params.xml:103-104",
+              "/source/list/list-notes.xml:14-15",
+              "/source/list/list-notes.xml:33-36",
+              "FHIR-39342"
+            ],
+            "limitations": [
+              "- Caveats: initial Zulip FTS searches for unquoted issue keys failed because hyphenated keys were parsed badly; quoted reruns found no key hits. Exact Jira/Zulip searches for `\"lack of implementation experience\"` and `\"API Incubator\" \"current lists\"` found no Jira/Zulip hits; Confluence did find a directly relevant WGM page.",
+              "| Zulip | Current lists clarification | https://chat.fhir.org/#narrow/stream/implementers/topic/Current%20Resource%20Lists%20clarifications; `bun run zulip:search snapshot implementers \"Current Resource Lists clarifications\"` | 2024 community thread says current-list logic was unclear and not fully interoperable |",
+              "- Paul Lomayesva said Current Resource Lists/functional lists were unclear and asked what ties a functional list to a Patient, how LOINC codes should be used, and what `$find` should do with multiple matches.",
+              "| 2024-09-09 to 2024-09-12 | Zulip discussion | Implementers thread says current-list logic is unclear/not fully interoperable |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.259Z",
+          "status": "open"
+        },
+        {
+          "id": "lifecycle-E-001",
+          "localId": "E-001",
+          "pageLabel": "lifecycle",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html",
+          "title": "Appointment.status link points to Encounter.status anchor",
+          "kind": "E",
+          "priority": "P3",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html",
+              "lineRange": {
+                "start": 83,
+                "end": 86
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "lifecycle action file",
+              "filePath": "todo/actions/lifecycle.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html:83-86`; commit `fb56e0750c8530f97dc1c861248216fc6e310d79`; `FHIR-32152`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "lifecycle research appendix",
+              "filePath": "todo/research/lifecycle.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html:83-86",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html",
+              "lineRange": {
+                "start": 83,
+                "end": 86
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-32152",
+              "label": "FHIR-32152",
+              "url": "https://jira.hl7.org/browse/FHIR-32152",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "fb56e0750c8530f97dc1c861248216fc6e310d79",
+              "label": "fb56e0750c8530f97dc1c861248216fc6e310d79",
+              "url": "https://github.com/HL7/fhir/commit/fb56e0750c8530f97dc1c861248216fc6e310d79",
+              "commitHash": "fb56e0750c8530f97dc1c861248216fc6e310d79",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The lifecycle example text says `Appointment.status`, but the hyperlink target is `appointment-definitions.html#Encounter.status`.",
+            "analysis": "E-001: Appointment.status link points to Encounter.status anchor\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html:83-86`; commit `fb56e0750c8530f97dc1c861248216fc6e310d79`; `FHIR-32152`\n\nProblem: The lifecycle example text says `Appointment.status`, but the hyperlink target is `appointment-definitions.html#Encounter.status`.\n\nWhy it matters: Readers are sent to the wrong/missing definition anchor when checking Appointment status lifecycle details.\n\nRecommended next step: Change the href to `appointment-definitions.html#Appointment.status`.\n\nOverlooked/newly noticed context: E-001 is a concrete link defect introduced when `Appointment.status` was added to the lifecycle examples.",
+            "whyItMatters": "Readers are sent to the wrong/missing definition anchor when checking Appointment status lifecycle details.",
+            "recommendedNextStep": "Change the href to `appointment-definitions.html#Appointment.status`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/lifecycle.html:83-86",
+              "fb56e0750c8530f97dc1c861248216fc6e310d79",
+              "FHIR-32152"
+            ],
+            "limitations": [
+              "- Caveats: initial Zulip FTS searches for unquoted issue keys failed because hyphenated keys were parsed badly; quoted reruns found no key hits. Exact Jira/Zulip searches for `\"lack of implementation experience\"` and `\"API Incubator\" \"current lists\"` found no Jira/Zulip hits; Confluence did find a directly relevant WGM page.",
+              "| Zulip | Current lists clarification | https://chat.fhir.org/#narrow/stream/implementers/topic/Current%20Resource%20Lists%20clarifications; `bun run zulip:search snapshot implementers \"Current Resource Lists clarifications\"` | 2024 community thread says current-list logic was unclear and not fully interoperable |",
+              "- Paul Lomayesva said Current Resource Lists/functional lists were unclear and asked what ties a functional list to a Patient, how LOINC codes should be used, and what `$find` should do with multiple matches.",
+              "| 2024-09-09 to 2024-09-12 | Zulip discussion | Implementers thread says current-list logic is unclear/not fully interoperable |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.259Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 0,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

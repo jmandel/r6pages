@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.220Z",
+  "sourceActionFilesGlob": "todo/actions/elementdefinition.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "elementdefinition",
+      "actionFilePath": "todo/actions/elementdefinition.md",
+      "researchFilePath": "todo/research/elementdefinition.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings: one substantive `FHIR-50391` follow-up where snapshot-rendering guidance discussed in Jira/Zulip appears absent from the applied slicing text, and one concrete editorial cleanup cluster in current normative prose.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "elementdefinition-H-001",
+          "localId": "H-001",
+          "pageLabel": "elementdefinition",
+          "pagePath": "source/elementdefinition.html",
+          "title": "FHIR-50391 slicer-constraint snapshot caveat appears absent",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/elementdefinition.html",
+              "lineRange": {
+                "start": 416,
+                "end": 432
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "elementdefinition action file",
+              "filePath": "todo/actions/elementdefinition.md",
+              "confidence": "high",
+              "quote": "`source/elementdefinition.html:416-432`; commit `3f3077a286d669ed69f2cb51540b8f3aef58a433`; `FHIR-50391` comment in local snapshot lines 90-93; Zulip `#IG creation > Slices not inheriting preferred bindings from root` lines 916-925 and 937-943; Confluence page `358880988` records `FHIR-50391` approved 6-0-1."
+            },
+            {
+              "type": "research-appendix",
+              "label": "elementdefinition research appendix",
+              "filePath": "todo/research/elementdefinition.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/elementdefinition.html:416-432",
+              "filePath": "source/elementdefinition.html",
+              "lineRange": {
+                "start": 416,
+                "end": 432
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-50391",
+              "label": "FHIR-50391",
+              "url": "https://jira.hl7.org/browse/FHIR-50391",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "3f3077a286d669ed69f2cb51540b8f3aef58a433",
+              "label": "3f3077a286d669ed69f2cb51540b8f3aef58a433",
+              "url": "https://github.com/HL7/fhir/commit/3f3077a286d669ed69f2cb51540b8f3aef58a433",
+              "commitHash": "3f3077a286d669ed69f2cb51540b8f3aef58a433",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "`source/elementdefinition.html:416-432`; commit `3f3077a286d669ed69f2cb51540b8f3aef58a433`; `FHIR-50391` comment in local snapshot lines 90-93; Zulip `#IG creation > Slices not inheriting preferred bindings from root` lines 916-925 and 937-943; Confluence page `358880988` records `FHIR-50391` approved 6-0-1.",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`source/elementdefinition.html:416-432`; commit `3f3077a286d669ed69f2cb51540b8f3aef58a433`; `FHIR-50391` comment in local snapshot lines 90-93; Zulip `#IG creation > Slices not inheriting preferred bindings from root` lines 916-925 and 937-943; Confluence page `358880988` records `FHIR-50391` approved 6-0-1.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the applied page says which slicer constraints apply across all slices, but does not include the discussed caveat that these constraints may not be explicitly rendered/displayed in slice snapshots and may need to be repeated on slices only for display, not validation.",
+            "analysis": "H-001: FHIR-50391 slicer-constraint snapshot caveat appears absent\n\nEvidence: `source/elementdefinition.html:416-432`; commit `3f3077a286d669ed69f2cb51540b8f3aef58a433`; `FHIR-50391` comment in local snapshot lines 90-93; Zulip `#IG creation > Slices not inheriting preferred bindings from root` lines 916-925 and 937-943; Confluence page `358880988` records `FHIR-50391` approved 6-0-1.\n\nProblem: the applied page says which slicer constraints apply across all slices, but does not include the discussed caveat that these constraints may not be explicitly rendered/displayed in slice snapshots and may need to be repeated on slices only for display, not validation.\n\nWhy it matters: the original problem was readers/tooling seeing generated snapshots that appeared not to inherit slicer constraints. Without the caveat, profile authors may still infer that omitted slice-snapshot text means the constraint does not apply.\n\nRecommended next step: ask FHIR-I whether the snapshot-rendering caveat was intentionally omitted from `FHIR-50391`; if not, add a short note under the slicing bullets.\n\nIntent-vs-implementation context: H-001 is the only material mismatch found. The main Jira resolutions for `FHIR-33432`, `FHIR-28126`, `FHIR-39180`, `FHIR-39182`, `FHIR-40296`, `FHIR-48664`, and the core `FHIR-50391` bullets otherwise appear reflected in the current page.",
+            "whyItMatters": "the original problem was readers/tooling seeing generated snapshots that appeared not to inherit slicer constraints. Without the caveat, profile authors may still infer that omitted slice-snapshot text means the constraint does not apply.",
+            "recommendedNextStep": "ask FHIR-I whether the snapshot-rendering caveat was intentionally omitted from `FHIR-50391`; if not, add a short note under the slicing bullets.",
+            "rawEvidenceQuotes": [
+              "source/elementdefinition.html:416-432",
+              "3f3077a286d669ed69f2cb51540b8f3aef58a433",
+              "FHIR-50391",
+              "#IG creation > Slices not inheriting preferred bindings from root",
+              "358880988"
+            ],
+            "limitations": [
+              "- Problem: the applied page says which slicer constraints apply across all slices, but does not include the discussed caveat that these constraints may not be explicitly rendered/displayed in slice snapshots and may need to be repeated on slices only for display, not validation.",
+              "- Why it matters: the original problem was readers/tooling seeing generated snapshots that appeared not to inherit slicer constraints. Without the caveat, profile authors may still infer that omitted slice-snapshot text means the constraint does not apply.",
+              "- Recommended next step: ask FHIR-I whether the snapshot-rendering caveat was intentionally omitted from `FHIR-50391`; if not, add a short note under the slicing bullets.",
+              "- Caveats: no broad PR mining was done beyond Jira/source references; only one PR link was found (`HL7/fhir#1814`). Some Confluence snapshots flatten minutes into one long text line, so page IDs/URLs are more useful than line ranges for those minute snippets. Initial unquoted FTS searches for hyphenated Jira keys failed in Zulip/Jira; quoted/key-specific searches were rerun where needed.",
+              "| Zulip | `Slices not inheriting preferred bindings from root` | `https://chat.fhir.org/#narrow/stream/IG%20creation/topic/Slices%20not%20inheriting%20preferred%20bindings%20from%20root`; `bun run zulip:search snapshot \"IG creation\" \"Slices not inheriting preferred bindings from root\"` | Long discussion behind `FHIR-50391`; contains unresolved/possibly omitted snapshot-rendering caveat. |",
+              "- Later in the same thread, Grahame and Rob/Lloyd drafted an additional caveat: constraints on the slicer apply even if they are not explicitly rendered/displayed in slice snapshots; to display them in the snapshot, authors may need to explicitly define them on slices, though this is not necessary for validation. No matching text was found in current source.",
+              "- Cross-check for the possible `FHIR-50391` omitted snapshot-rendering caveat used `rg \"explicitly rendered|displayed in the snapshot|explicitly shown|define them explicitly on the slices|not necessary for validation|constraints on the slicer\"` across the R6 ballot4 source HTML and found no matches."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.219Z",
+          "status": "open"
+        },
+        {
+          "id": "elementdefinition-E-001",
+          "localId": "E-001",
+          "pageLabel": "elementdefinition",
+          "pagePath": "source/elementdefinition.html",
+          "title": "Several current-page prose defects remain in normative guidance",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/elementdefinition.html",
+              "lineRange": {
+                "start": 414,
+                "end": 414
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "elementdefinition action file",
+              "filePath": "todo/actions/elementdefinition.md",
+              "confidence": "high",
+              "quote": "`source/elementdefinition.html:414` (\"All elements following the first repeat that containing...\"), `:417` (\"It's use\"), `:471` (\"an extension may be present the either provides\"), `:495` (\"co-occurence\")."
+            },
+            {
+              "type": "research-appendix",
+              "label": "elementdefinition research appendix",
+              "filePath": "todo/research/elementdefinition.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/elementdefinition.html:414",
+              "filePath": "source/elementdefinition.html",
+              "lineRange": {
+                "start": 414,
+                "end": 414
+              },
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "the current page has visible grammar/spelling errors in the slicing and primitive-value sections.",
+            "analysis": "E-001: Several current-page prose defects remain in normative guidance\n\nEvidence: `source/elementdefinition.html:414` (\"All elements following the first repeat that containing...\"), `:417` (\"It's use\"), `:471` (\"an extension may be present the either provides\"), `:495` (\"co-occurence\").\n\nProblem: the current page has visible grammar/spelling errors in the slicing and primitive-value sections.\n\nWhy it matters: these sections explain conformance behavior; small prose defects make already subtle rules harder to read and quote.\n\nRecommended next step: correct the grammar/spelling without changing semantics.\n\nOverlooked/newly noticed context: E-001 covers concrete current-page editorial defects. No additional substantive contradictions were found.",
+            "whyItMatters": "these sections explain conformance behavior; small prose defects make already subtle rules harder to read and quote.",
+            "recommendedNextStep": "correct the grammar/spelling without changing semantics.",
+            "rawEvidenceQuotes": [
+              "All elements following the first repeat that containing...",
+              "It's use",
+              "an extension may be present the either provides",
+              "co-occurence",
+              "source/elementdefinition.html:414",
+              ":417",
+              ":471",
+              ":495"
+            ],
+            "limitations": [
+              "- Caveats: no broad PR mining was done beyond Jira/source references; only one PR link was found (`HL7/fhir#1814`). Some Confluence snapshots flatten minutes into one long text line, so page IDs/URLs are more useful than line ranges for those minute snippets. Initial unquoted FTS searches for hyphenated Jira keys failed in Zulip/Jira; quoted/key-specific searches were rerun where needed.",
+              "| Zulip | `Slices not inheriting preferred bindings from root` | `https://chat.fhir.org/#narrow/stream/IG%20creation/topic/Slices%20not%20inheriting%20preferred%20bindings%20from%20root`; `bun run zulip:search snapshot \"IG creation\" \"Slices not inheriting preferred bindings from root\"` | Long discussion behind `FHIR-50391`; contains unresolved/possibly omitted snapshot-rendering caveat. |",
+              "- Later in the same thread, Grahame and Rob/Lloyd drafted an additional caveat: constraints on the slicer apply even if they are not explicitly rendered/displayed in slice snapshots; to display them in the snapshot, authors may need to explicitly define them on slices, though this is not necessary for validation. No matching text was found in current source.",
+              "- Cross-check for the possible `FHIR-50391` omitted snapshot-rendering caveat used `rg \"explicitly rendered|displayed in the snapshot|explicitly shown|define them explicitly on the slices|not necessary for validation|constraints on the slicer\"` across the R6 ballot4 source HTML and found no matches."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.220Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

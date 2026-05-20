@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.204Z",
+  "sourceActionFilesGlob": "todo/actions/diagnostics-module.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "diagnostics-module",
+      "actionFilePath": "todo/actions/diagnostics-module.md",
+      "researchFilePath": "todo/research/diagnostics-module.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings, both reader-facing coherence defects in the current R6 ballot4 source: the top resource index is inconsistent with the module/table, and the page repeats the same related-resources section.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "diagnostics-module-E-001",
+          "localId": "E-001",
+          "pageLabel": "diagnostics-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/diagnostics-module.html",
+          "title": "Resource index omits ServiceRequest and duplicates imaging resources",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/diagnostics-module.html",
+              "lineRange": {
+                "start": 40,
+                "end": 64
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "diagnostics-module action file",
+              "filePath": "todo/actions/diagnostics-module.md",
+              "confidence": "high",
+              "quote": "current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/diagnostics-module.html:40-64` lists `ImagingSelection` and `ImagingStudy` twice and omits `ServiceRequest`; the resource table at lines 96-103 still includes `ServiceRequest`; commit `cefb308f4b8691afd6ae29eef993eb48bf8aba68` removed `ServiceRequest` from the index and added the duplicate imaging entries."
+            },
+            {
+              "type": "research-appendix",
+              "label": "diagnostics-module research appendix",
+              "filePath": "todo/research/diagnostics-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/diagnostics-module.html:40-64",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/diagnostics-module.html",
+              "lineRange": {
+                "start": 40,
+                "end": 64
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "cefb308f4b8691afd6ae29eef993eb48bf8aba68",
+              "label": "cefb308f4b8691afd6ae29eef993eb48bf8aba68",
+              "url": "https://github.com/HL7/fhir/commit/cefb308f4b8691afd6ae29eef993eb48bf8aba68",
+              "commitHash": "cefb308f4b8691afd6ae29eef993eb48bf8aba68",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the \"Diagnostics module covers the following resources\" index is internally inconsistent with the page's own Table 1 and with the rest of the narrative, which repeatedly uses ServiceRequest as a core diagnostics workflow resource.",
+            "analysis": "E-001: Resource index omits ServiceRequest and duplicates imaging resources\n\nEvidence: current source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/diagnostics-module.html:40-64` lists `ImagingSelection` and `ImagingStudy` twice and omits `ServiceRequest`; the resource table at lines 96-103 still includes `ServiceRequest`; commit `cefb308f4b8691afd6ae29eef993eb48bf8aba68` removed `ServiceRequest` from the index and added the duplicate imaging entries.\n\nProblem: the \"Diagnostics module covers the following resources\" index is internally inconsistent with the page's own Table 1 and with the rest of the narrative, which repeatedly uses ServiceRequest as a core diagnostics workflow resource.\n\nWhy it matters: readers relying on the module index may miss ServiceRequest as an in-scope diagnostics resource and see duplicated imaging entries as intentional.\n\nRecommended next step: fix the index to include `ServiceRequest` once and list `ImagingSelection`/`ImagingStudy` once; confirm intended placement of external MolecularDefinition/GenomicStudy links while editing.",
+            "whyItMatters": "readers relying on the module index may miss ServiceRequest as an in-scope diagnostics resource and see duplicated imaging entries as intentional.",
+            "recommendedNextStep": "fix the index to include `ServiceRequest` once and list `ImagingSelection`/`ImagingStudy` once; confirm intended placement of external MolecularDefinition/GenomicStudy links while editing.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/diagnostics-module.html:40-64",
+              "ImagingSelection",
+              "ImagingStudy",
+              "ServiceRequest",
+              "cefb308f4b8691afd6ae29eef993eb48bf8aba68"
+            ],
+            "limitations": [
+              "- Caveats: the Confluence `Diagnostic Module - R6 Updates` page snapshot is version 26, last edited 2026-05-19, after the R6 ballot4 source boundary; it is useful as later/current working context, not proof of R6 ballot4 intent by itself. I did not inspect image pixels/OCR for `diagnostic-module-resources.png`, so figure-content Jira resolutions were checked only through HTML text/history and related evidence.",
+              "| Confluence | Diagnostic Module R6 Updates | Page `161056620`, https://confluence.hl7.org/spaces/OO/pages/161056620/Diagnostic+Module+-+R6+Updates | Working page for R6 module edits; later-edited caveat applies. |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.204Z",
+          "status": "open"
+        },
+        {
+          "id": "diagnostics-module-E-002",
+          "localId": "E-002",
+          "pageLabel": "diagnostics-module",
+          "pagePath": "source/diagnostics-module.html",
+          "title": "Duplicate \"Related Resources and Modules\" sections",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/diagnostics-module.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "diagnostics-module action file",
+              "filePath": "todo/actions/diagnostics-module.md",
+              "confidence": "high",
+              "quote": "current source lines 69-73 and 376-383 both contain `Related Resources and Modules` with the same Administration / Clinical Summary / Medications paragraph; blame shows the first block added in `cefb308f4b8691afd6ae29eef993eb48bf8aba68` while the older block from `ab140a0db3a9e05c2f36a63d57180a7a17f52776` remains."
+            },
+            {
+              "type": "research-appendix",
+              "label": "diagnostics-module research appendix",
+              "filePath": "todo/research/diagnostics-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "cefb308f4b8691afd6ae29eef993eb48bf8aba68",
+              "label": "cefb308f4b8691afd6ae29eef993eb48bf8aba68",
+              "url": "https://github.com/HL7/fhir/commit/cefb308f4b8691afd6ae29eef993eb48bf8aba68",
+              "commitHash": "cefb308f4b8691afd6ae29eef993eb48bf8aba68",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "ab140a0db3a9e05c2f36a63d57180a7a17f52776",
+              "label": "ab140a0db3a9e05c2f36a63d57180a7a17f52776",
+              "url": "https://github.com/HL7/fhir/commit/ab140a0db3a9e05c2f36a63d57180a7a17f52776",
+              "commitHash": "ab140a0db3a9e05c2f36a63d57180a7a17f52776",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page repeats the same section under different anchors (`relatedresources` and `related`), creating duplicate navigation/content.",
+            "analysis": "E-002: Duplicate \"Related Resources and Modules\" sections\n\nEvidence: current source lines 69-73 and 376-383 both contain `Related Resources and Modules` with the same Administration / Clinical Summary / Medications paragraph; blame shows the first block added in `cefb308f4b8691afd6ae29eef993eb48bf8aba68` while the older block from `ab140a0db3a9e05c2f36a63d57180a7a17f52776` remains.\n\nProblem: the page repeats the same section under different anchors (`relatedresources` and `related`), creating duplicate navigation/content.\n\nWhy it matters: duplicate sections make the page look accidentally merged and can confuse readers or downstream anchors.\n\nRecommended next step: keep one related-resources section in the intended location, remove the duplicate, and update any generated navigation/anchor references if needed.",
+            "whyItMatters": "duplicate sections make the page look accidentally merged and can confuse readers or downstream anchors.",
+            "recommendedNextStep": "keep one related-resources section in the intended location, remove the duplicate, and update any generated navigation/anchor references if needed.",
+            "rawEvidenceQuotes": [
+              "Related Resources and Modules",
+              "cefb308f4b8691afd6ae29eef993eb48bf8aba68",
+              "ab140a0db3a9e05c2f36a63d57180a7a17f52776"
+            ],
+            "limitations": [
+              "- Caveats: the Confluence `Diagnostic Module - R6 Updates` page snapshot is version 26, last edited 2026-05-19, after the R6 ballot4 source boundary; it is useful as later/current working context, not proof of R6 ballot4 intent by itself. I did not inspect image pixels/OCR for `diagnostic-module-resources.png`, so figure-content Jira resolutions were checked only through HTML text/history and related evidence.",
+              "| Confluence | Diagnostic Module R6 Updates | Page `161056620`, https://confluence.hl7.org/spaces/OO/pages/161056620/Diagnostic+Module+-+R6+Updates | Working page for R6 module edits; later-edited caveat applies. |"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.204Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 0,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 2,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

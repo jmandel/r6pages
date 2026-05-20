@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.138Z",
+  "sourceActionFilesGlob": "todo/actions/best-practices.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "best-practices",
+      "actionFilePath": "todo/actions/best-practices.md",
+      "researchFilePath": "todo/research/best-practices.md",
+      "status": "no-actionable-findings",
+      "summary": "No actionable findings found. The R4 -> R6 ballot4 source-page changes are limited to template/status/metadata chrome; the substantive best-practices prose and generated-list placeholder are unchanged, and community evidence found no intent-vs-implementation mismatch for this page.",
+      "findingCount": 0,
+      "findings": [],
+      "noFindingReason": "No actionable findings found. The R4 -> R6 ballot4 source-page changes are limited to template/status/metadata chrome; the substantive best-practices prose and generated-list placeholder are unchanged, and community evidence found no intent-vs-implementation mismatch for this page.",
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 0,
+    "pagesWithNoActionableFindings": 1,
+    "findings": 0,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

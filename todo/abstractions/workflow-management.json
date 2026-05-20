@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.361Z",
+  "sourceActionFilesGlob": "todo/actions/workflow-management.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "workflow-management",
+      "actionFilePath": "todo/actions/workflow-management.md",
+      "researchFilePath": "todo/research/workflow-management.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: a formally approved removal of old Workflow Option I appears to have been undone by a later merge conflict cleanup, leaving duplicate anchors/headings and broken/out-of-sync workflow navigation.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "workflow-management-H-001",
+          "localId": "H-001",
+          "pageLabel": "workflow-management",
+          "pagePath": "source/workflow-management.html",
+          "title": "Old Option I was reintroduced after `FHIR-46220` approved dropping it",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/workflow-management.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "workflow-management action file",
+              "filePath": "todo/actions/workflow-management.md",
+              "confidence": "high",
+              "quote": "current `workflow-management.html:188-244` still contains \"Option I: POST of Task to fulfiller's system, followed by POST of sub-Task on placer's system\"; `workflow-management.html:246-280` adds a second `<a name=\"optioni\">` for \"Option I: Messaging Task from placer to fulfiller\"; `workflow-communications.html:563-573` expects I=Messaging, J=Service request, K=Combining approaches; `exchanging-messaging.html:38` links to missing `workflow-management.html#optionj`; `FHIR-46220` says \"Drop Option I from workflow\" and was Applied for R6; Confluence page `248715006` records `FHIR-46220 - Created and approved`; PR #3363/commit `d6445217a92adf21ee6a65b71a7e030c4c8d488e` removed old Option I and renumbered later options; PR #3553 merge commit `a8c653b3a1f5b412194c2589c98b48c4aeff7633` and cleanup commit `151b4bbcd4ffd5bff684f1aa549d7b46392e7b3d` left both versions."
+            },
+            {
+              "type": "research-appendix",
+              "label": "workflow-management research appendix",
+              "filePath": "todo/research/workflow-management.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-46220",
+              "label": "FHIR-46220",
+              "url": "https://jira.hl7.org/browse/FHIR-46220",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "d6445217a92adf21ee6a65b71a7e030c4c8d488e",
+              "label": "d6445217a92adf21ee6a65b71a7e030c4c8d488e",
+              "url": "https://github.com/HL7/fhir/commit/d6445217a92adf21ee6a65b71a7e030c4c8d488e",
+              "commitHash": "d6445217a92adf21ee6a65b71a7e030c4c8d488e",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "a8c653b3a1f5b412194c2589c98b48c4aeff7633",
+              "label": "a8c653b3a1f5b412194c2589c98b48c4aeff7633",
+              "url": "https://github.com/HL7/fhir/commit/a8c653b3a1f5b412194c2589c98b48c4aeff7633",
+              "commitHash": "a8c653b3a1f5b412194c2589c98b48c4aeff7633",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "151b4bbcd4ffd5bff684f1aa549d7b46392e7b3d",
+              "label": "151b4bbcd4ffd5bff684f1aa549d7b46392e7b3d",
+              "url": "https://github.com/HL7/fhir/commit/151b4bbcd4ffd5bff684f1aa549d7b46392e7b3d",
+              "commitHash": "151b4bbcd4ffd5bff684f1aa549d7b46392e7b3d",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "current `workflow-management.html:188-244` still contains \"Option I: POST of Task to fulfiller's system, followed by POST of sub-Task on placer's system\"; `workflow-management.html:246-280` adds a second `<a name=\"optioni\">` for \"Option I: Messaging Task from placer to fulfiller\"; `workflow-communications.html:563-573` expects I=Messaging, J=Service request, K=Combining approaches; `exchanging-messaging.html:38` links to missing `workflow-management.html#optionj`; `FHIR-46220` says \"Drop Option I from workflow\" and was Applied for R6; Confluence page `248715006` records `FHIR-46220 - Created and approved`; PR #3363/commit `d6445217a92adf21ee6a65b71a7e030c4c8d488e` removed old Option I and renumbered later options; PR #3553 merge commit `a8c653b3a1f5b412194c2589c98b48c4aeff7633` and cleanup commit `151b4bbcd4ffd5bff684f1aa549d7b46392e7b3d` left both versions.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the current page preserves a workflow pattern the WG approved removing, while also duplicating `optioni` and omitting `optionj`.",
+            "analysis": "H-001: Old Option I was reintroduced after `FHIR-46220` approved dropping it\n\nEvidence: current `workflow-management.html:188-244` still contains \"Option I: POST of Task to fulfiller's system, followed by POST of sub-Task on placer's system\"; `workflow-management.html:246-280` adds a second `<a name=\"optioni\">` for \"Option I: Messaging Task from placer to fulfiller\"; `workflow-communications.html:563-573` expects I=Messaging, J=Service request, K=Combining approaches; `exchanging-messaging.html:38` links to missing `workflow-management.html#optionj`; `FHIR-46220` says \"Drop Option I from workflow\" and was Applied for R6; Confluence page `248715006` records `FHIR-46220 - Created and approved`; PR #3363/commit `d6445217a92adf21ee6a65b71a7e030c4c8d488e` removed old Option I and renumbered later options; PR #3553 merge commit `a8c653b3a1f5b412194c2589c98b48c4aeff7633` and cleanup commit `151b4bbcd4ffd5bff684f1aa549d7b46392e7b3d` left both versions.\n\nProblem: the current page preserves a workflow pattern the WG approved removing, while also duplicating `optioni` and omitting `optionj`.\n\nWhy it matters: readers can land on the wrong pattern, follow guidance the WG said no longer makes sense, and encounter broken cross-page links/numbering.\n\nRecommended next step: reconcile the page with `FHIR-46220` by removing the old sub-Task Option I or explicitly reopening/reversing that decision; then renumber anchors/headings and update related links/examples/Confluence references consistently.\n\nIntent-vs-implementation context: H-001 covers the material mismatch found.\n\nOverlooked/newly noticed context: None beyond H-001.",
+            "whyItMatters": "readers can land on the wrong pattern, follow guidance the WG said no longer makes sense, and encounter broken cross-page links/numbering.",
+            "recommendedNextStep": "reconcile the page with `FHIR-46220` by removing the old sub-Task Option I or explicitly reopening/reversing that decision; then renumber anchors/headings and update related links/examples/Confluence references consistently.",
+            "rawEvidenceQuotes": [
+              "Option I: POST of Task to fulfiller's system, followed by POST of sub-Task on placer's system",
+              "Option I: Messaging Task from placer to fulfiller",
+              "Drop Option I from workflow",
+              "workflow-management.html:188-244",
+              "workflow-management.html:246-280",
+              "<a name=\"optioni\">",
+              "workflow-communications.html:563-573",
+              "exchanging-messaging.html:38",
+              "workflow-management.html#optionj",
+              "FHIR-46220",
+              "248715006",
+              "FHIR-46220 - Created and approved"
+            ],
+            "limitations": [
+              "- Caveats: PR #3363 and commit `d6445217a92a` cite `FHIR-46330`, but that Jira issue is about AppointmentResponse. The PR branch is `vassil-FHIR-46220`, and `FHIR-46220` is the matching \"Drop Option I from workflow\" issue. Initial unquoted Zulip FTS searches for Jira keys failed because the hyphen was parsed as syntax; the searches were repeated with quoted keys.",
+              "| 2023-02-24 | `60e98c41f6c5fab597bbdb8d7ec41898ca4ec777` | none found | Changed `unmanageable` to misspelled `unmanagable` in three limitations lists | Editorial regression |"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.360Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 0,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

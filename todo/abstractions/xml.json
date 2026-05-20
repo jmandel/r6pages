@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.365Z",
+  "sourceActionFilesGlob": "todo/actions/xml.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "xml",
+      "actionFilePath": "todo/actions/xml.md",
+      "researchFilePath": "todo/research/xml.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings. The main risk is that the new XML `resourceDefinition` guidance does not reflect the later applied FHIR-50863 rule for resources promoted into core, and the new additional-resource XML example is not well-formed.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "xml-H-001",
+          "localId": "H-001",
+          "pageLabel": "xml",
+          "pagePath": "source/xml.html",
+          "title": "xml.html` contradicts the applied moved-to-core `resourceDefinition` rule",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/xml.html",
+              "lineRange": {
+                "start": 95,
+                "end": 99
+              }
+            },
+            {
+              "filePath": "source/resource/resource-introduction.xml",
+              "lineRange": {
+                "start": 82,
+                "end": 98
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "xml action file",
+              "filePath": "todo/actions/xml.md",
+              "confidence": "high",
+              "quote": "`source/xml.html:95-99` says the `resourceDefinition` attribute “is not present if the resource is one defined in this specification.” `source/resource/resource-introduction.xml:82-98`, added by commit `09b9a4c718f6db95ad354a42fede0090b80dfce8` for `FHIR-50863`, says once a resource moves into core the XML/JSON `resourceDefinition` is allowed to remain present, SHOULD NOT be added, and if present its version SHALL match the published core FHIR version. Confluence FHIR-I 2025-07-21 recorded the same 12-0-0 decision."
+            },
+            {
+              "type": "research-appendix",
+              "label": "xml research appendix",
+              "filePath": "todo/research/xml.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/xml.html:95-99",
+              "filePath": "source/xml.html",
+              "lineRange": {
+                "start": 95,
+                "end": 99
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/resource/resource-introduction.xml:82-98",
+              "filePath": "source/resource/resource-introduction.xml",
+              "lineRange": {
+                "start": 82,
+                "end": 98
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-50863",
+              "label": "FHIR-50863",
+              "url": "https://jira.hl7.org/browse/FHIR-50863",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "09b9a4c718f6db95ad354a42fede0090b80dfce8",
+              "label": "09b9a4c718f6db95ad354a42fede0090b80dfce8",
+              "url": "https://github.com/HL7/fhir/commit/09b9a4c718f6db95ad354a42fede0090b80dfce8",
+              "commitHash": "09b9a4c718f6db95ad354a42fede0090b80dfce8",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "Confluence FHIR-I 2025-07-21 recorded the same 12-0-0 decision.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The XML format page still states the pre-FHIR-50863 absolute rule and omits the backwards-compatibility exception.",
+            "analysis": "H-001: xml.html` contradicts the applied moved-to-core `resourceDefinition` rule\n\nEvidence: `source/xml.html:95-99` says the `resourceDefinition` attribute “is not present if the resource is one defined in this specification.” `source/resource/resource-introduction.xml:82-98`, added by commit `09b9a4c718f6db95ad354a42fede0090b80dfce8` for `FHIR-50863`, says once a resource moves into core the XML/JSON `resourceDefinition` is allowed to remain present, SHOULD NOT be added, and if present its version SHALL match the published core FHIR version. Confluence FHIR-I 2025-07-21 recorded the same 12-0-0 decision.\n\nProblem: The XML format page still states the pre-FHIR-50863 absolute rule and omits the backwards-compatibility exception.\n\nWhy it matters: Implementers/validators reading the normative XML page could reject promoted core-resource instances that FHIR-50863 intentionally allows for transition compatibility.\n\nRecommended next step: Update the XML additional-resource paragraph to mirror `resource.html#moving`; also check the parallel JSON page for the same stale sentence.\n\nIntent-vs-implementation context: - H-001: FHIR-50863/resource.html says `resourceDefinition` may remain for promoted core resources, but `xml.html` still says it is not present for resources defined in this specification.",
+            "whyItMatters": "Implementers/validators reading the normative XML page could reject promoted core-resource instances that FHIR-50863 intentionally allows for transition compatibility.",
+            "recommendedNextStep": "Update the XML additional-resource paragraph to mirror `resource.html#moving`; also check the parallel JSON page for the same stale sentence.",
+            "rawEvidenceQuotes": [
+              "is not present if the resource is one defined in this specification.",
+              "source/xml.html:95-99",
+              "resourceDefinition",
+              "source/resource/resource-introduction.xml:82-98",
+              "09b9a4c718f6db95ad354a42fede0090b80dfce8",
+              "FHIR-50863"
+            ],
+            "limitations": [
+              "- Caveats: no GitHub PR numbers were present in inspected commit metadata; no PR evidence is relied on. Zulip key searches initially failed when unquoted because FTS parsed hyphenated Jira keys; quoted reruns succeeded. Rendered publication output was not rebuilt; findings are source-level."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.365Z",
+          "status": "open"
+        },
+        {
+          "id": "xml-E-001",
+          "localId": "E-001",
+          "pageLabel": "xml",
+          "pagePath": "source/xml.html",
+          "title": "Additional-resource XML example has an invalid closing tag",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/xml.html",
+              "lineRange": {
+                "start": 87,
+                "end": 92
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "xml action file",
+              "filePath": "todo/actions/xml.md",
+              "confidence": "high",
+              "quote": "`source/xml.html:87-92`, introduced by `931df6ae329dd3d7f44df8358b5affdd2b95e757`, shows an escaped XML example ending with `&lt;ViewDefinition&gt;` instead of `&lt;/ViewDefinition&gt;`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "xml research appendix",
+              "filePath": "todo/research/xml.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/xml.html:87-92",
+              "filePath": "source/xml.html",
+              "lineRange": {
+                "start": 87,
+                "end": 92
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "931df6ae329dd3d7f44df8358b5affdd2b95e757",
+              "label": "931df6ae329dd3d7f44df8358b5affdd2b95e757",
+              "url": "https://github.com/HL7/fhir/commit/931df6ae329dd3d7f44df8358b5affdd2b95e757",
+              "commitHash": "931df6ae329dd3d7f44df8358b5affdd2b95e757",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The newly added example is not well-formed XML.",
+            "analysis": "E-001: Additional-resource XML example has an invalid closing tag\n\nEvidence: `source/xml.html:87-92`, introduced by `931df6ae329dd3d7f44df8358b5affdd2b95e757`, shows an escaped XML example ending with `&lt;ViewDefinition&gt;` instead of `&lt;/ViewDefinition&gt;`.\n\nProblem: The newly added example is not well-formed XML.\n\nWhy it matters: This is on the XML format page and is the primary example for the new additional-resource representation; copy/paste or documentation consumers would get an invalid instance.\n\nRecommended next step: Change the final example line to `&lt;/ViewDefinition&gt;`.\n\nOverlooked/newly noticed context: - E-001: The added `ViewDefinition` XML example is not well-formed due to the missing `/` in the closing tag.",
+            "whyItMatters": "This is on the XML format page and is the primary example for the new additional-resource representation; copy/paste or documentation consumers would get an invalid instance.",
+            "recommendedNextStep": "Change the final example line to `&lt;/ViewDefinition&gt;`.",
+            "rawEvidenceQuotes": [
+              "source/xml.html:87-92",
+              "931df6ae329dd3d7f44df8358b5affdd2b95e757",
+              "&lt;ViewDefinition&gt;",
+              "&lt;/ViewDefinition&gt;"
+            ],
+            "limitations": [
+              "- Caveats: no GitHub PR numbers were present in inspected commit metadata; no PR evidence is relied on. Zulip key searches initially failed when unquoted because FTS parsed hyphenated Jira keys; quoted reruns succeeded. Rendered publication output was not rebuilt; findings are source-level."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.365Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

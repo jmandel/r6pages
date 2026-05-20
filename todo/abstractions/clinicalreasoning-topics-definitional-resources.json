@@ -1,0 +1,334 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.169Z",
+  "sourceActionFilesGlob": "todo/actions/clinicalreasoning-topics-definitional-resources.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "clinicalreasoning-topics-definitional-resources",
+      "actionFilePath": "todo/actions/clinicalreasoning-topics-definitional-resources.md",
+      "researchFilePath": "todo/research/clinicalreasoning-topics-definitional-resources.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings. The main risk is that current medication/device guidance uses invalid or stale element names, so implementers may model ActivityDefinition/PlanDefinition application incorrectly.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "clinicalreasoning-topics-definitional-resources-H-001",
+          "localId": "H-001",
+          "pageLabel": "clinicalreasoning-topics-definitional-resources",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html",
+          "title": "Device guidance uses invalid `action.typeCanonical` path",
+          "kind": "H",
+          "priority": "P1",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html",
+              "lineRange": {
+                "start": 130,
+                "end": 134
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml",
+              "lineRange": {
+                "start": 1062,
+                "end": 1124
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/plandefinition/structuredefinition-PlanDefinition.xml",
+              "lineRange": {
+                "start": 1951,
+                "end": 1994
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-topics-definitional-resources action file",
+              "filePath": "todo/actions/clinicalreasoning-topics-definitional-resources.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:130-134`; commit `2d711ff3b0b74bdd990e87221db5c7ed2c305d8d`; `FHIR-37698`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml:1062-1124`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/plandefinition/structuredefinition-PlanDefinition.xml:1951-1994`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-topics-definitional-resources research appendix",
+              "filePath": "todo/research/clinicalreasoning-topics-definitional-resources.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:130-134",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html",
+              "lineRange": {
+                "start": 130,
+                "end": 134
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml:1062-1124",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml",
+              "lineRange": {
+                "start": 1062,
+                "end": 1124
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/plandefinition/structuredefinition-PlanDefinition.xml:1951-1994",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/plandefinition/structuredefinition-PlanDefinition.xml",
+              "lineRange": {
+                "start": 1951,
+                "end": 1994
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-37698",
+              "label": "FHIR-37698",
+              "url": "https://jira.hl7.org/browse/FHIR-37698",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "2d711ff3b0b74bdd990e87221db5c7ed2c305d8d",
+              "label": "2d711ff3b0b74bdd990e87221db5c7ed2c305d8d",
+              "url": "https://github.com/HL7/fhir/commit/2d711ff3b0b74bdd990e87221db5c7ed2c305d8d",
+              "commitHash": "2d711ff3b0b74bdd990e87221db5c7ed2c305d8d",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The page says to use `action.typeCanonical`, but ActivityDefinition has no `action` element, and PlanDefinition uses `action.participant.typeCanonical`, not `action.typeCanonical`. `FHIR-37698` also resolved around `typeReference`/DeviceDefinition usage, so the applied text is underqualified at best and likely uses the wrong path.",
+            "analysis": "H-001: Device guidance uses invalid `action.typeCanonical` path\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:130-134`; commit `2d711ff3b0b74bdd990e87221db5c7ed2c305d8d`; `FHIR-37698`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml:1062-1124`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/plandefinition/structuredefinition-PlanDefinition.xml:1951-1994`\n\nProblem: The page says to use `action.typeCanonical`, but ActivityDefinition has no `action` element, and PlanDefinition uses `action.participant.typeCanonical`, not `action.typeCanonical`. `FHIR-37698` also resolved around `typeReference`/DeviceDefinition usage, so the applied text is underqualified at best and likely uses the wrong path.\n\nWhy it matters: This is reader-facing implementation guidance for representing a medication administration device; the current path is not implementable as written.\n\nRecommended next step: Correct the paragraph and example to name the intended real path, likely `ActivityDefinition.participant.typeCanonical` or `PlanDefinition.action.participant.typeCanonical`, and clarify how that maps to `MedicationRequest.device`.\n\nIntent-vs-implementation context: H-001 is the only substantive mismatch found. `FHIR-37698` says the device representation can be done with `typeReference` referring to a Device or DeviceDefinition resolved during `$apply`, while the applied page text says `action.typeCanonical`; adjacent R6 structures do not contain that path. No mismatch was found for `FHIR-53082` status because the Jira resolution says Informative and the page is Informative.",
+            "whyItMatters": "This is reader-facing implementation guidance for representing a medication administration device; the current path is not implementable as written.",
+            "recommendedNextStep": "Correct the paragraph and example to name the intended real path, likely `ActivityDefinition.participant.typeCanonical` or `PlanDefinition.action.participant.typeCanonical`, and clarify how that maps to `MedicationRequest.device`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:130-134",
+              "2d711ff3b0b74bdd990e87221db5c7ed2c305d8d",
+              "FHIR-37698",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml:1062-1124",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/plandefinition/structuredefinition-PlanDefinition.xml:1951-1994"
+            ],
+            "limitations": []
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.167Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-topics-definitional-resources-H-002",
+          "localId": "H-002",
+          "pageLabel": "clinicalreasoning-topics-definitional-resources",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html",
+          "title": "Medication paragraph names non-existent ActivityDefinition `dosageInstruction",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html",
+              "lineRange": {
+                "start": 103,
+                "end": 103
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml",
+              "lineRange": {
+                "start": 1243,
+                "end": 1247
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-topics-definitional-resources action file",
+              "filePath": "todo/actions/clinicalreasoning-topics-definitional-resources.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:103`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml:1243-1247`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-topics-definitional-resources research appendix",
+              "filePath": "todo/research/clinicalreasoning-topics-definitional-resources.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:103",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html",
+              "lineRange": {
+                "start": 103,
+                "end": 103
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml:1243-1247",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml",
+              "lineRange": {
+                "start": 1243,
+                "end": 1247
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "In an ActivityDefinition paragraph, the page lists `dosageInstruction` as an ActivityDefinition element, but the R6 ActivityDefinition element is `dosage`.",
+            "analysis": "H-002: Medication paragraph names non-existent ActivityDefinition `dosageInstruction\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:103`; `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml:1243-1247`\n\nProblem: In an ActivityDefinition paragraph, the page lists `dosageInstruction` as an ActivityDefinition element, but the R6 ActivityDefinition element is `dosage`.\n\nWhy it matters: The wrong element name makes the medication example harder to translate into a conformant ActivityDefinition.\n\nRecommended next step: Change the prose to refer to `dosage`, or clarify if the sentence is intentionally comparing ActivityDefinition with MedicationRequest's `dosageInstruction`.\n\nOverlooked/newly noticed context: H-002 and E-001 are current-page problems not clearly covered by the tracked changes. No other concrete overlooked problem was strong enough to elevate from the evidence reviewed.",
+            "whyItMatters": "The wrong element name makes the medication example harder to translate into a conformant ActivityDefinition.",
+            "recommendedNextStep": "Change the prose to refer to `dosage`, or clarify if the sentence is intentionally comparing ActivityDefinition with MedicationRequest's `dosageInstruction`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:103",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/activitydefinition/structuredefinition-ActivityDefinition.xml:1243-1247"
+            ],
+            "limitations": []
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.168Z",
+          "status": "open"
+        },
+        {
+          "id": "clinicalreasoning-topics-definitional-resources-E-001",
+          "localId": "E-001",
+          "pageLabel": "clinicalreasoning-topics-definitional-resources",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html",
+          "title": "Referral example bullet says `That is should occur",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html",
+              "lineRange": {
+                "start": 94,
+                "end": 94
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-topics-definitional-resources action file",
+              "filePath": "todo/actions/clinicalreasoning-topics-definitional-resources.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:94`; commit `887bc2383fb7b429cfafd64a46bdfc0c40c5b627`; `FHIR-44047`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-topics-definitional-resources research appendix",
+              "filePath": "todo/research/clinicalreasoning-topics-definitional-resources.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:94",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html",
+              "lineRange": {
+                "start": 94,
+                "end": 94
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-44047",
+              "label": "FHIR-44047",
+              "url": "https://jira.hl7.org/browse/FHIR-44047",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "887bc2383fb7b429cfafd64a46bdfc0c40c5b627",
+              "label": "887bc2383fb7b429cfafd64a46bdfc0c40c5b627",
+              "url": "https://github.com/HL7/fhir/commit/887bc2383fb7b429cfafd64a46bdfc0c40c5b627",
+              "commitHash": "887bc2383fb7b429cfafd64a46bdfc0c40c5b627",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The explanatory bullet has a visible typo: `That is should occur`.",
+            "analysis": "E-001: Referral example bullet says `That is should occur\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:94`; commit `887bc2383fb7b429cfafd64a46bdfc0c40c5b627`; `FHIR-44047`\n\nProblem: The explanatory bullet has a visible typo: `That is should occur`.\n\nWhy it matters: Low-risk, but it is a concrete reader-facing defect in newly added explanatory text.\n\nRecommended next step: Change to `That it should occur`.\n\nOverlooked/newly noticed context: H-002 and E-001 are current-page problems not clearly covered by the tracked changes. No other concrete overlooked problem was strong enough to elevate from the evidence reviewed.",
+            "whyItMatters": "Low-risk, but it is a concrete reader-facing defect in newly added explanatory text.",
+            "recommendedNextStep": "Change to `That it should occur`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-definitional-resources.html:94",
+              "887bc2383fb7b429cfafd64a46bdfc0c40c5b627",
+              "FHIR-44047"
+            ],
+            "limitations": []
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.168Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 2,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

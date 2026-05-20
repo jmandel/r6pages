@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.263Z",
+  "sourceActionFilesGlob": "todo/actions/managing.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "managing",
+      "actionFilePath": "todo/actions/managing.md",
+      "researchFilePath": "todo/research/managing.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: the current R6 managing page links `Linkage` to a PC incubator URL that returns 404, leaving readers without a working target for a resource that was moved out of core.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "managing-E-001",
+          "localId": "E-001",
+          "pageLabel": "managing",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html",
+          "title": "Linkage incubator link is broken",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html",
+              "lineRange": {
+                "start": 179,
+                "end": 179
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "managing action file",
+              "filePath": "todo/actions/managing.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html:179`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; live check on 2026-05-20 returned `HTTP/2 404` for `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`; `FHIR-53725`; `FHIR-54090`; Zulip `#implementers > Linking to Additional Resources`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "managing research appendix",
+              "filePath": "todo/research/managing.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html:179",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html",
+              "lineRange": {
+                "start": 179,
+                "end": 179
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53725",
+              "label": "FHIR-53725",
+              "url": "https://jira.hl7.org/browse/FHIR-53725",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-54090",
+              "label": "FHIR-54090",
+              "url": "https://jira.hl7.org/browse/FHIR-54090",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "label": "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "url": "https://github.com/HL7/fhir/commit/fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "commitHash": "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`",
+              "url": "https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html:179`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; live check on 2026-05-20 returned `HTTP/2 404` for `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`; `FHIR-53725`; `FHIR-54090`; Zulip `#implementers > Linking to Additional Resources`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the page says the `Linkage` resource can be used for other shared resources, but the target URL for `Linkage` does not resolve. Related Jira evidence shows the same Linkage-incubator broken-link problem was noticed on the Patient page, while the managing page still has the same broken target.",
+            "analysis": "E-001: Linkage incubator link is broken\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html:179`; commit `fad1b9cf84ef652e88947e1a13b026c62f95334e`; live check on 2026-05-20 returned `HTTP/2 404` for `https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html`; `FHIR-53725`; `FHIR-54090`; Zulip `#implementers > Linking to Additional Resources`.\n\nProblem: the page says the `Linkage` resource can be used for other shared resources, but the target URL for `Linkage` does not resolve. Related Jira evidence shows the same Linkage-incubator broken-link problem was noticed on the Patient page, while the managing page still has the same broken target.\n\nWhy it matters: R6 readers cannot reach the referenced resource, and because Linkage moved out of core, a broken external incubator link makes it unclear whether the guidance is still usable, under development, or obsolete.\n\nRecommended next step: replace the URL with the live PC incubator Linkage URL once the PC incubator is published, or temporarily remove/caveat the Linkage example until that target exists; include `source/managing.html` in the broader Linkage broken-link cleanup tracked around `FHIR-53725`.\n\nOverlooked/newly noticed context: See E-001.",
+            "whyItMatters": "R6 readers cannot reach the referenced resource, and because Linkage moved out of core, a broken external incubator link makes it unclear whether the guidance is still usable, under development, or obsolete.",
+            "recommendedNextStep": "replace the URL with the live PC incubator Linkage URL once the PC incubator is published, or temporarily remove/caveat the Linkage example until that target exists; include `source/managing.html` in the broader Linkage broken-link cleanup tracked around `FHIR-53725`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/managing.html:179",
+              "fad1b9cf84ef652e88947e1a13b026c62f95334e",
+              "HTTP/2 404",
+              "https://build.fhir.org/ig/HL7/pc-incubator/StructureDefinition-Linkage.html",
+              "FHIR-53725",
+              "FHIR-54090",
+              "#implementers > Linking to Additional Resources"
+            ],
+            "limitations": [
+              "- Why it matters: R6 readers cannot reach the referenced resource, and because Linkage moved out of core, a broken external incubator link makes it unclear whether the guidance is still usable, under development, or obsolete.",
+              "- Recommended next step: replace the URL with the live PC incubator Linkage URL once the PC incubator is published, or temporarily remove/caveat the Linkage example until that target exists; include `source/managing.html` in the broader Linkage broken-link cleanup tracked around `FHIR-53725`.",
+              "- Caveats: no PR numbers were found in the local commit messages for this page. The live external link checks reflect status on 2026-05-20 and may change. Search was bounded to high-signal exact keys and changed phrases, not exhaustive across all additional-resource pages.",
+              "- Failed searches that affected method: unquoted hyphenated Jira-key FTS queries in Zulip failed with SQLite parse errors, so they were rerun with quoted keys."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.263Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

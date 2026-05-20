@@ -1,0 +1,293 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.225Z",
+  "sourceActionFilesGlob": "todo/actions/extensibility-examples.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "extensibility-examples",
+      "actionFilePath": "todo/actions/extensibility-examples.md",
+      "researchFilePath": "todo/research/extensibility-examples.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings. The main risk is that `FHIR-34212` is marked published, but the current examples still teach stale profile URL/cardinality patterns; the added modifier-extension example also has concrete fragment labels that disagree with the resource shown.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "extensibility-examples-H-001",
+          "localId": "H-001",
+          "pageLabel": "extensibility-examples",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/extensibility-examples.html",
+          "title": "Patient profile still points to the wrong participation-agreement canonical",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/extensibility-examples.html",
+              "lineRange": {
+                "start": 77,
+                "end": 77
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "extensibility-examples action file",
+              "filePath": "todo/actions/extensibility-examples.md",
+              "confidence": "high",
+              "quote": "current definition URL at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/extensibility-examples.html:77`; current stale profile URLs at `:260` and `:318`; `FHIR-34212`; Zulip `#conformance > Extensibility examples`; commits `6f541c9ceb4d14e1794ea8945fe609fc6e495a09` and `e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "extensibility-examples research appendix",
+              "filePath": "todo/research/extensibility-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/extensibility-examples.html:77",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/extensibility-examples.html",
+              "lineRange": {
+                "start": 77,
+                "end": 77
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-34212",
+              "label": "FHIR-34212",
+              "url": "https://jira.hl7.org/browse/FHIR-34212",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "6f541c9ceb4d14e1794ea8945fe609fc6e495a09",
+              "label": "6f541c9ceb4d14e1794ea8945fe609fc6e495a09",
+              "url": "https://github.com/HL7/fhir/commit/6f541c9ceb4d14e1794ea8945fe609fc6e495a09",
+              "commitHash": "6f541c9ceb4d14e1794ea8945fe609fc6e495a09",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "label": "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "url": "https://github.com/HL7/fhir/commit/e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "commitHash": "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://example.org/phr/documents/fhir/StructureDefinition/participation-agreement`",
+              "url": "http://example.org/phr/documents/fhir/StructureDefinition/participation-agreement`",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://example.org/fhir/StructureDefinition/participation-agreement`",
+              "url": "http://example.org/fhir/StructureDefinition/participation-agreement`",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "current definition URL at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/extensibility-examples.html:77`; current stale profile URLs at `:260` and `:318`; `FHIR-34212`; Zulip `#conformance > Extensibility examples`; commits `6f541c9ceb4d14e1794ea8945fe609fc6e495a09` and `e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6`.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-34212` resolved that the instance and referencing profile should use the same URL as the extension definition. The Patient instance was fixed, but the XML profile and later-added JSON profile still reference `http://example.org/phr/documents/fhir/StructureDefinition/participation-agreement` instead of `http://example.org/fhir/StructureDefinition/participation-agreement`.",
+            "analysis": "H-001: Patient profile still points to the wrong participation-agreement canonical\n\nEvidence: current definition URL at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/extensibility-examples.html:77`; current stale profile URLs at `:260` and `:318`; `FHIR-34212`; Zulip `#conformance > Extensibility examples`; commits `6f541c9ceb4d14e1794ea8945fe609fc6e495a09` and `e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6`.\n\nProblem: `FHIR-34212` resolved that the instance and referencing profile should use the same URL as the extension definition. The Patient instance was fixed, but the XML profile and later-added JSON profile still reference `http://example.org/phr/documents/fhir/StructureDefinition/participation-agreement` instead of `http://example.org/fhir/StructureDefinition/participation-agreement`.\n\nWhy it matters: This keeps the example inconsistent with the extension canonical URL rule and with the explicit Jira/Zulip intent.\n\nRecommended next step: Update both Patient profile examples to use the defining canonical URL, then check whether any surrounding \"registered location\" prose still implies the old URL.\n\nIntent-vs-implementation context: - `H-001` and `H-002` are the material mismatches: both trace to `FHIR-34212` being only partially applied.",
+            "whyItMatters": "This keeps the example inconsistent with the extension canonical URL rule and with the explicit Jira/Zulip intent.",
+            "recommendedNextStep": "Update both Patient profile examples to use the defining canonical URL, then check whether any surrounding \"registered location\" prose still implies the old URL.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/extensibility-examples.html:77",
+              ":260",
+              ":318",
+              "FHIR-34212",
+              "#conformance > Extensibility examples",
+              "6f541c9ceb4d14e1794ea8945fe609fc6e495a09",
+              "e9e4e5f34c8d0b40d680c26f92acfa19b5f714a6"
+            ],
+            "limitations": [
+              "- Caveat: many newly added JSON blocks are illustrative snippets with comments and omitted content, so I did not treat every JSON syntax issue as actionable. I elevated issues where the current snippet contradicts the Jira intent or has a concrete fragment/rendering label mismatch."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.224Z",
+          "status": "open"
+        },
+        {
+          "id": "extensibility-examples-H-002",
+          "localId": "H-002",
+          "pageLabel": "extensibility-examples",
+          "pagePath": "source/extensibility-examples.html",
+          "title": "FHIR-34212 cardinality move appears only half-applied",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/extensibility-examples.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "extensibility-examples action file",
+              "filePath": "todo/actions/extensibility-examples.md",
+              "confidence": "high",
+              "quote": "`FHIR-34212` resolution says to move cardinality to the extension root, not the value; current participation table/formal definition at `extensibility-examples.html:62` and `:90-113`; current name-qualifier table/formal definition at `:360` and `:423-440`; commit `c47042398891f647a92fd4feac6a06e260375892`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "extensibility-examples research appendix",
+              "filePath": "todo/research/extensibility-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-34212",
+              "label": "FHIR-34212",
+              "url": "https://jira.hl7.org/browse/FHIR-34212",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "c47042398891f647a92fd4feac6a06e260375892",
+              "label": "c47042398891f647a92fd4feac6a06e260375892",
+              "url": "https://github.com/HL7/fhir/commit/c47042398891f647a92fd4feac6a06e260375892",
+              "commitHash": "c47042398891f647a92fd4feac6a06e260375892",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The implementation removed `max=\"*\"` from the simple `Extension.value*` elements, but the formal extension definitions still do not show the table cardinalities on the `Extension` root elements.",
+            "analysis": "H-002: FHIR-34212 cardinality move appears only half-applied\n\nEvidence: `FHIR-34212` resolution says to move cardinality to the extension root, not the value; current participation table/formal definition at `extensibility-examples.html:62` and `:90-113`; current name-qualifier table/formal definition at `:360` and `:423-440`; commit `c47042398891f647a92fd4feac6a06e260375892`.\n\nProblem: The implementation removed `max=\"*\"` from the simple `Extension.value*` elements, but the formal extension definitions still do not show the table cardinalities on the `Extension` root elements.\n\nWhy it matters: The page remains misleading about where extension cardinality is expressed, which was the second explicit problem that `FHIR-34212` set out to correct.\n\nRecommended next step: Reconcile the tables and formal snippets with the Jira resolution, likely by showing root `min`/`max` where the example claims `1..*` or `0..*`, and ensure value cardinality remains appropriate for simple extensions.\n\nIntent-vs-implementation context: - `H-001` and `H-002` are the material mismatches: both trace to `FHIR-34212` being only partially applied.",
+            "whyItMatters": "The page remains misleading about where extension cardinality is expressed, which was the second explicit problem that `FHIR-34212` set out to correct.",
+            "recommendedNextStep": "Reconcile the tables and formal snippets with the Jira resolution, likely by showing root `min`/`max` where the example claims `1..*` or `0..*`, and ensure value cardinality remains appropriate for simple extensions.",
+            "rawEvidenceQuotes": [
+              "FHIR-34212",
+              "extensibility-examples.html:62",
+              ":90-113",
+              ":360",
+              ":423-440",
+              "c47042398891f647a92fd4feac6a06e260375892"
+            ],
+            "limitations": [
+              "- Caveat: many newly added JSON blocks are illustrative snippets with comments and omitted content, so I did not treat every JSON syntax issue as actionable. I elevated issues where the current snippet contradicts the Jira intent or has a concrete fragment/rendering label mismatch."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.224Z",
+          "status": "open"
+        },
+        {
+          "id": "extensibility-examples-E-001",
+          "localId": "E-001",
+          "pageLabel": "extensibility-examples",
+          "pagePath": "source/extensibility-examples.html",
+          "title": "Modifier-extension instance blocks are labelled as Patient fragments but contain Communication",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/extensibility-examples.html"
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "extensibility-examples action file",
+              "filePath": "todo/actions/extensibility-examples.md",
+              "confidence": "high",
+              "quote": "current `Communication` XML/JSON instance blocks at `extensibility-examples.html:1110-1127`; commit `d461d9831352eb489c8c77466208c8c7399c21e1`; `FHIR-37903`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "extensibility-examples research appendix",
+              "filePath": "todo/research/extensibility-examples.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-37903",
+              "label": "FHIR-37903",
+              "url": "https://jira.hl7.org/browse/FHIR-37903",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "d461d9831352eb489c8c77466208c8c7399c21e1",
+              "label": "d461d9831352eb489c8c77466208c8c7399c21e1",
+              "url": "https://github.com/HL7/fhir/commit/d461d9831352eb489c8c77466208c8c7399c21e1",
+              "commitHash": "d461d9831352eb489c8c77466208c8c7399c21e1",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Both modifier-extension instance `<pre>` blocks use `fragment=\"Patient\"` while the example content is a `Communication` resource.",
+            "analysis": "E-001: Modifier-extension instance blocks are labelled as Patient fragments but contain Communication\n\nEvidence: current `Communication` XML/JSON instance blocks at `extensibility-examples.html:1110-1127`; commit `d461d9831352eb489c8c77466208c8c7399c21e1`; `FHIR-37903`.\n\nProblem: Both modifier-extension instance `<pre>` blocks use `fragment=\"Patient\"` while the example content is a `Communication` resource.\n\nWhy it matters: Fragment labels are used by the example/tab tooling and can mislabel or mis-extract the example, even though the visible resource text says `Communication`.\n\nRecommended next step: Change both fragment attributes to `Communication` or choose a Patient example consistently.\n\nOverlooked/newly noticed context: - `E-001` is visible in the current page and appears introduced with the `FHIR-37903` modifier-extension example.",
+            "whyItMatters": "Fragment labels are used by the example/tab tooling and can mislabel or mis-extract the example, even though the visible resource text says `Communication`.",
+            "recommendedNextStep": "Change both fragment attributes to `Communication` or choose a Patient example consistently.",
+            "rawEvidenceQuotes": [
+              "Communication",
+              "extensibility-examples.html:1110-1127",
+              "d461d9831352eb489c8c77466208c8c7399c21e1",
+              "FHIR-37903"
+            ],
+            "limitations": [
+              "- Caveat: many newly added JSON blocks are illustrative snippets with comments and omitted content, so I did not treat every JSON syntax issue as actionable. I elevated issues where the current snippet contradicts the Jira intent or has a concrete fragment/rendering label mismatch."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.225Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 2,
+      "P2": 1,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 2,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

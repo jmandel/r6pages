@@ -1,0 +1,217 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.306Z",
+  "sourceActionFilesGlob": "todo/actions/resourceguide.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "resourceguide",
+      "actionFilePath": "todo/actions/resourceguide.md",
+      "researchFilePath": "todo/research/resourceguide.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings. The substantive issue is that `FHIR-43371` appears incompletely applied: the formal resolution called for Observation to be added for both Chief Complaint and Family History, but only Chief Complaint was updated.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "resourceguide-H-001",
+          "localId": "H-001",
+          "pageLabel": "resourceguide",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html",
+          "title": "FHIR-43371` missed Family History's Observation mapping",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html",
+              "lineRange": {
+                "start": 53,
+                "end": 53
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "resourceguide action file",
+              "filePath": "todo/actions/resourceguide.md",
+              "confidence": "high",
+              "quote": "`FHIR-43371` resolution says \"add Observation as a candidate resource for Chief Complaint and Family History\" (`bun run jira:search snapshot FHIR-43371`; https://jira.hl7.org/browse/FHIR-43371); commit `991a414216283bead11ce07c6173007106dca6ae` updates only Chief Complaint; current source has Chief Complaint as Condition + Observation at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html:53`, while Family History remains only FamilyMemberHistory at line `59`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "resourceguide research appendix",
+              "filePath": "todo/research/resourceguide.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html:53",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html",
+              "lineRange": {
+                "start": 53,
+                "end": 53
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-43371",
+              "label": "FHIR-43371",
+              "url": "https://jira.hl7.org/browse/FHIR-43371",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "991a414216283bead11ce07c6173007106dca6ae",
+              "label": "991a414216283bead11ce07c6173007106dca6ae",
+              "url": "https://github.com/HL7/fhir/commit/991a414216283bead11ce07c6173007106dca6ae",
+              "commitHash": "991a414216283bead11ce07c6173007106dca6ae",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-43371",
+              "url": "https://jira.hl7.org/browse/FHIR-43371",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the applied page text does not fully match the Jira/workgroup resolution.",
+            "analysis": "H-001: FHIR-43371` missed Family History's Observation mapping\n\nEvidence: `FHIR-43371` resolution says \"add Observation as a candidate resource for Chief Complaint and Family History\" (`bun run jira:search snapshot FHIR-43371`; https://jira.hl7.org/browse/FHIR-43371); commit `991a414216283bead11ce07c6173007106dca6ae` updates only Chief Complaint; current source has Chief Complaint as Condition + Observation at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html:53`, while Family History remains only FamilyMemberHistory at line `59`.\n\nProblem: the applied page text does not fully match the Jira/workgroup resolution.\n\nWhy it matters: readers using the visible common-concepts table do not see the intended Observation option for Family History, and the Jira issue is marked Applied.\n\nRecommended next step: update the Family History row to include Observation if the `FHIR-43371` intent still stands, or reopen/link a follow-up Jira if the omission was deliberate.\n\nIntent-vs-implementation context: `H-001` is the only substantive mismatch found.",
+            "whyItMatters": "readers using the visible common-concepts table do not see the intended Observation option for Family History, and the Jira issue is marked Applied.",
+            "recommendedNextStep": "update the Family History row to include Observation if the `FHIR-43371` intent still stands, or reopen/link a follow-up Jira if the omission was deliberate.",
+            "rawEvidenceQuotes": [
+              "add Observation as a candidate resource for Chief Complaint and Family History",
+              "FHIR-43371",
+              "bun run jira:search snapshot FHIR-43371",
+              "991a414216283bead11ce07c6173007106dca6ae",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html:53"
+            ],
+            "limitations": [
+              "- Jira/Zulip/Confluence searched by explicit keys and distinctive changed phrases. Important caveat: the first unquoted Zulip FTS searches for `FHIR-xxxxx` errored because FTS parsed the hyphen; rerun quoted searches found no Zulip hits for the explicit keys.",
+              "- Rendering caveat: lines `92-700` of the newer source are inside an HTML comment block. Most resource-classification table changes in the diff are source-only/commented and are not currently reader-facing. The rendered/visible portion is primarily lines `13-89` plus template includes.",
+              "- `FHIR-43371` (Applied, Persuasive with Modification, non-substantive, applied for R6): reported the Guide to Resources was out of date and unclear. Resolution:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.306Z",
+          "status": "open"
+        },
+        {
+          "id": "resourceguide-E-001",
+          "localId": "E-001",
+          "pageLabel": "resourceguide",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html",
+          "title": "Commented resource-classification source has stale/malformed text",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html",
+              "lineRange": {
+                "start": 92,
+                "end": 92
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "resourceguide action file",
+              "filePath": "todo/actions/resourceguide.md",
+              "confidence": "high",
+              "quote": "the resource-classification block is currently commented out from `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html:92` through line `700`; inside it, line `148` says `<code>ClinicalAssessment</code> (aka ClinicalAssessment)`, and line `368` has malformed markup `<code>DeviceAlert<code>`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "resourceguide research appendix",
+              "filePath": "todo/research/resourceguide.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html:92",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html",
+              "lineRange": {
+                "start": 92,
+                "end": 92
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "source-only content preserved in the page has an obvious stale rename artifact and malformed HTML.",
+            "analysis": "E-001: Commented resource-classification source has stale/malformed text\n\nEvidence: the resource-classification block is currently commented out from `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html:92` through line `700`; inside it, line `148` says `<code>ClinicalAssessment</code> (aka ClinicalAssessment)`, and line `368` has malformed markup `<code>DeviceAlert<code>`.\n\nProblem: source-only content preserved in the page has an obvious stale rename artifact and malformed HTML.\n\nWhy it matters: it is not currently rendered, but it will become a reader-facing defect if the block is restored and it signals that mechanical resource updates in the commented section were not fully cleaned up.\n\nRecommended next step: either fix/remove the stale commented text or delete the dead commented resource-classification block if it is no longer intended to be maintained.\n\nOverlooked/newly noticed context: `E-001` is source-only because the affected block is currently inside an HTML comment.",
+            "whyItMatters": "it is not currently rendered, but it will become a reader-facing defect if the block is restored and it signals that mechanical resource updates in the commented section were not fully cleaned up.",
+            "recommendedNextStep": "either fix/remove the stale commented text or delete the dead commented resource-classification block if it is no longer intended to be maintained.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/resourceguide.html:92",
+              "700",
+              "148",
+              "<code>ClinicalAssessment</code> (aka ClinicalAssessment)",
+              "368",
+              "<code>DeviceAlert<code>"
+            ],
+            "limitations": [
+              "- Jira/Zulip/Confluence searched by explicit keys and distinctive changed phrases. Important caveat: the first unquoted Zulip FTS searches for `FHIR-xxxxx` errored because FTS parsed the hyphen; rerun quoted searches found no Zulip hits for the explicit keys.",
+              "- Rendering caveat: lines `92-700` of the newer source are inside an HTML comment block. Most resource-classification table changes in the diff are source-only/commented and are not currently reader-facing. The rendered/visible portion is primarily lines `13-89` plus template includes.",
+              "- `FHIR-43371` (Applied, Persuasive with Modification, non-substantive, applied for R6): reported the Guide to Resources was out of date and unclear. Resolution:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.306Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

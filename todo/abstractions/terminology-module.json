@@ -1,0 +1,323 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.345Z",
+  "sourceActionFilesGlob": "todo/actions/terminology-module.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "terminology-module",
+      "actionFilePath": "todo/actions/terminology-module.md",
+      "researchFilePath": "todo/research/terminology-module.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings: two later R6 ballot/TI-review requests for this same page remain unapplied, and the R6 removal of `$closure`/`$find-matches` now has an incubator destination but no pointer from the core module landing page.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "terminology-module-H-001",
+          "localId": "H-001",
+          "pageLabel": "terminology-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html",
+          "title": "TI-requested page text and NamingSystem operation updates are still absent",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html",
+              "lineRange": {
+                "start": 25,
+                "end": 25
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "terminology-module action file",
+              "filePath": "todo/actions/terminology-module.md",
+              "confidence": "high",
+              "quote": "current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:25`, `:66-90`, `:130-164`; `FHIR-53785` (`https://jira.hl7.org/browse/FHIR-53785`); Confluence page `256510055` (`FHIR R6 Terminology Content Review`)"
+            },
+            {
+              "type": "research-appendix",
+              "label": "terminology-module research appendix",
+              "filePath": "todo/research/terminology-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:25",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html",
+              "lineRange": {
+                "start": 25,
+                "end": 25
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53785",
+              "label": "FHIR-53785",
+              "url": "https://jira.hl7.org/browse/FHIR-53785",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-53785`",
+              "url": "https://jira.hl7.org/browse/FHIR-53785`",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:25`, `:66-90`, `:130-164`; `FHIR-53785` (`https://jira.hl7.org/browse/FHIR-53785`); Confluence page `256510055` (`FHIR R6 Terminology Content Review`)\n- Priority: P2\n- Category: overlooked-problem\n- Evidence: current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:25`, `:66-90`, `:130-164`; `FHIR-53785` (`https://jira.hl7.org/browse/FHIR-53785`); Confluence page `256510055` (`FHIR R6 Terminology Content Review`)\n- Problem: `FHIR-53785` requests specific updates to the introduction, Operations heading, NamingSystem operation links (`$preferred-id`, `$translate-id`), common-use-case bullets, and roadmap lists.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-53785` requests specific updates to the introduction, Operations heading, NamingSystem operation links (`$preferred-id`, `$translate-id`), common-use-case bullets, and roadmap lists. The current page still has the old intro, the generic `Operations` heading, no NamingSystem operation column, and the older use-case/roadmap wording.",
+            "analysis": "H-001: TI-requested page text and NamingSystem operation updates are still absent\n\nEvidence: current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:25`, `:66-90`, `:130-164`; `FHIR-53785` (`https://jira.hl7.org/browse/FHIR-53785`); Confluence page `256510055` (`FHIR R6 Terminology Content Review`)\n\nProblem: `FHIR-53785` requests specific updates to the introduction, Operations heading, NamingSystem operation links (`$preferred-id`, `$translate-id`), common-use-case bullets, and roadmap lists. The current page still has the old intro, the generic `Operations` heading, no NamingSystem operation column, and the older use-case/roadmap wording.\n\nWhy it matters: the terminology module landing page is a navigation and orientation page; it currently omits discoverable NamingSystem operations and does not reflect TI's later page-review wording.\n\nRecommended next step: resolve/apply or formally disposition `FHIR-53785`, including the NamingSystem operation links and section text changes.\n\nIntent-vs-implementation context: - `H-001` and `E-001` are unresolved TI-review/Jira requests, not applied changes that diverged from intent.",
+            "whyItMatters": "the terminology module landing page is a navigation and orientation page; it currently omits discoverable NamingSystem operations and does not reflect TI's later page-review wording.",
+            "recommendedNextStep": "resolve/apply or formally disposition `FHIR-53785`, including the NamingSystem operation links and section text changes.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:25",
+              ":66-90",
+              ":130-164",
+              "FHIR-53785",
+              "https://jira.hl7.org/browse/FHIR-53785",
+              "256510055",
+              "FHIR R6 Terminology Content Review"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.344Z",
+          "status": "open"
+        },
+        {
+          "id": "terminology-module-E-001",
+          "localId": "E-001",
+          "pageLabel": "terminology-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html",
+          "title": "Terminology module diagram update request remains unapplied",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html",
+              "lineRange": {
+                "start": 29,
+                "end": 29
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "terminology-module action file",
+              "filePath": "todo/actions/terminology-module.md",
+              "confidence": "high",
+              "quote": "current source line `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:29`; `FHIR-53820` (`https://jira.hl7.org/browse/FHIR-53820`); Confluence page `256510055`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "terminology-module research appendix",
+              "filePath": "todo/research/terminology-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:29",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html",
+              "lineRange": {
+                "start": 29,
+                "end": 29
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53820",
+              "label": "FHIR-53820",
+              "url": "https://jira.hl7.org/browse/FHIR-53820",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-53820`",
+              "url": "https://jira.hl7.org/browse/FHIR-53820`",
+              "confidence": "medium"
+            },
+            {
+              "type": "confluence",
+              "label": "Confluence evidence mentioned in finding",
+              "quote": "current source line `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:29`; `FHIR-53820` (`https://jira.hl7.org/browse/FHIR-53820`); Confluence page `256510055`\n- Priority: P2\n- Category: editorial\n- Evidence: current source line `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:29`; `FHIR-53820` (`https://jira.hl7.org/browse/FHIR-53820`); Confluence page `256510055`\n- Problem: `FHIR-53820` asks to update the diagram labels/relationships, add TerminologyCapabilities and FHIR Terminology Service, make boxes linkable, add colors/legend, and remove outdated styling.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-53820` asks to update the diagram labels/relationships, add TerminologyCapabilities and FHIR Terminology Service, make boxes linkable, add colors/legend, and remove outdated styling. The page still points at the existing `terminology-module-relationships.png` with no source-page changes.",
+            "analysis": "E-001: Terminology module diagram update request remains unapplied\n\nEvidence: current source line `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:29`; `FHIR-53820` (`https://jira.hl7.org/browse/FHIR-53820`); Confluence page `256510055`\n\nProblem: `FHIR-53820` asks to update the diagram labels/relationships, add TerminologyCapabilities and FHIR Terminology Service, make boxes linkable, add colors/legend, and remove outdated styling. The page still points at the existing `terminology-module-relationships.png` with no source-page changes.\n\nWhy it matters: the diagram is the first conceptual model on the page and currently does not reflect the reviewed R6 terminology-module relationship model.\n\nRecommended next step: update the diagram asset/source and page linkage per `FHIR-53820`, or formally record why the diagram change is deferred.\n\nIntent-vs-implementation context: - `H-001` and `E-001` are unresolved TI-review/Jira requests, not applied changes that diverged from intent.",
+            "whyItMatters": "the diagram is the first conceptual model on the page and currently does not reflect the reviewed R6 terminology-module relationship model.",
+            "recommendedNextStep": "update the diagram asset/source and page linkage per `FHIR-53820`, or formally record why the diagram change is deferred.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:29",
+              "FHIR-53820",
+              "https://jira.hl7.org/browse/FHIR-53820",
+              "256510055"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.344Z",
+          "status": "open"
+        },
+        {
+          "id": "terminology-module-H-002",
+          "localId": "H-002",
+          "pageLabel": "terminology-module",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html",
+          "title": "Removed operations now have an incubator home but no core-page pointer",
+          "kind": "H",
+          "priority": "P2",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html",
+              "lineRange": {
+                "start": 66,
+                "end": 90
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "terminology-module action file",
+              "filePath": "todo/actions/terminology-module.md",
+              "confidence": "high",
+              "quote": "removal commit `40306e5cd9c1b1e3eb6f115de16a8da3aa13a351`; PR `https://github.com/HL7/fhir/pull/3913`; current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:66-90`; Zulip `#terminology > Where is $find-matches`; incubator package `hl7.fhir.uv.txmodule-incubator#0.1.0`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "terminology-module research appendix",
+              "filePath": "todo/research/terminology-module.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:66-90",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html",
+              "lineRange": {
+                "start": 66,
+                "end": 90
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "40306e5cd9c1b1e3eb6f115de16a8da3aa13a351",
+              "label": "40306e5cd9c1b1e3eb6f115de16a8da3aa13a351",
+              "url": "https://github.com/HL7/fhir/commit/40306e5cd9c1b1e3eb6f115de16a8da3aa13a351",
+              "commitHash": "40306e5cd9c1b1e3eb6f115de16a8da3aa13a351",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/3913`",
+              "url": "https://github.com/HL7/fhir/pull/3913`",
+              "confidence": "medium"
+            },
+            {
+              "type": "zulip",
+              "label": "Zulip evidence mentioned in finding",
+              "quote": "removal commit `40306e5cd9c1b1e3eb6f115de16a8da3aa13a351`; PR `https://github.com/HL7/fhir/pull/3913`; current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:66-90`; Zulip `#terminology > Where is $find-matches`; incubator package `hl7.fhir.uv.txmodule-incubator#0.1.0`\n- Priority: P2\n- Category: overlooked-problem\n- Evidence: removal commit `40306e5cd9c1b1e3eb6f115de16a8da3aa13a351`; PR `https://github.com/HL7/fhir/pull/3913`; current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:66-90`; Zulip `#terminology > Where is $find-matches`; incubator package `hl7.fhir.uv.txmodule-incubator#0.1.0`\n- Problem: `$closure` and `$find-matches` were removed from the core page for R6 because they were not mature enough for normative status, but readers get no pointer to the Terminology Module Incubator now that its CI build exists.",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`$closure` and `$find-matches` were removed from the core page for R6 because they were not mature enough for normative status, but readers get no pointer to the Terminology Module Incubator now that its CI build exists.",
+            "analysis": "H-002: Removed operations now have an incubator home but no core-page pointer\n\nEvidence: removal commit `40306e5cd9c1b1e3eb6f115de16a8da3aa13a351`; PR `https://github.com/HL7/fhir/pull/3913`; current source lines `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:66-90`; Zulip `#terminology > Where is $find-matches`; incubator package `hl7.fhir.uv.txmodule-incubator#0.1.0`\n\nProblem: `$closure` and `$find-matches` were removed from the core page for R6 because they were not mature enough for normative status, but readers get no pointer to the Terminology Module Incubator now that its CI build exists.\n\nWhy it matters: a later Zulip thread shows real reader confusion about where these operations went; the TI minutes also note concern that terminology material may be hard to find when scattered across IGs.\n\nRecommended next step: add or triage a short navigation note/link from the core terminology module or terminology service pages to the Terminology Module Incubator operation pages once the WG agrees on linking policy.\n\nOverlooked/newly noticed context: - `H-002`: the incubator destination exists now, but this core landing page still gives no destination or explanation for removed operations.",
+            "whyItMatters": "a later Zulip thread shows real reader confusion about where these operations went; the TI minutes also note concern that terminology material may be hard to find when scattered across IGs.",
+            "recommendedNextStep": "add or triage a short navigation note/link from the core terminology module or terminology service pages to the Terminology Module Incubator operation pages once the WG agrees on linking policy.",
+            "rawEvidenceQuotes": [
+              "40306e5cd9c1b1e3eb6f115de16a8da3aa13a351",
+              "https://github.com/HL7/fhir/pull/3913",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminology-module.html:66-90",
+              "#terminology > Where is $find-matches",
+              "hl7.fhir.uv.txmodule-incubator#0.1.0"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.345Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 3,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 2,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

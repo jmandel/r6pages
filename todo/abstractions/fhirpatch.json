@@ -1,0 +1,244 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.229Z",
+  "sourceActionFilesGlob": "todo/actions/fhirpatch.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "fhirpatch",
+      "actionFilePath": "todo/actions/fhirpatch.md",
+      "researchFilePath": "todo/research/fhirpatch.md",
+      "status": "has-findings",
+      "summary": "The page has 2 actionable findings. The main risk is that the normative R6 page includes a newly added extension example that is malformed XML and conflicts with the formal FHIRPath Patch Parameters profile.",
+      "findingCount": 2,
+      "findings": [
+        {
+          "id": "fhirpatch-H-001",
+          "localId": "H-001",
+          "pageLabel": "fhirpatch",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html",
+          "title": "Extension example is invalid and conflicts with the FHIRPath Patch profile",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html",
+              "lineRange": {
+                "start": 268,
+                "end": 310
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html",
+              "lineRange": {
+                "start": 314,
+                "end": 327
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/parameters/structuredefinition-profile-fhirpath-patch.xml",
+              "lineRange": {
+                "start": 79,
+                "end": 90
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "fhirpatch action file",
+              "filePath": "todo/actions/fhirpatch.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:268-310`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:314-327`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/parameters/structuredefinition-profile-fhirpath-patch.xml:79-90`, commit `147147842e3fd0e1fce396e212dead752d91869c`, `FHIR-33256`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "fhirpatch research appendix",
+              "filePath": "todo/research/fhirpatch.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:268-310",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html",
+              "lineRange": {
+                "start": 268,
+                "end": 310
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:314-327",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html",
+              "lineRange": {
+                "start": 314,
+                "end": 327
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/parameters/structuredefinition-profile-fhirpath-patch.xml:79-90",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/parameters/structuredefinition-profile-fhirpath-patch.xml",
+              "lineRange": {
+                "start": 79,
+                "end": 90
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-33256",
+              "label": "FHIR-33256",
+              "url": "https://jira.hl7.org/browse/FHIR-33256",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "147147842e3fd0e1fce396e212dead752d91869c",
+              "label": "147147842e3fd0e1fce396e212dead752d91869c",
+              "url": "https://github.com/HL7/fhir/commit/147147842e3fd0e1fce396e212dead752d91869c",
+              "commitHash": "147147842e3fd0e1fce396e212dead752d91869c",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the Extension Example is labeled `class=\"json\"` but contains XML; both XML blocks fail parsing because `<reference reference=\"Device/1\">` is not closed and is not valid FHIR XML. The patch example also uses `<valueString value=\"add\"/>` for the operation `type`, while the page/profile require a code (`valueCode`) bound to `ValueSet/patch-operation`.",
+            "analysis": "H-001: Extension example is invalid and conflicts with the FHIRPath Patch profile\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:268-310`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:314-327`, `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/parameters/structuredefinition-profile-fhirpath-patch.xml:79-90`, commit `147147842e3fd0e1fce396e212dead752d91869c`, `FHIR-33256`\n\nProblem: the Extension Example is labeled `class=\"json\"` but contains XML; both XML blocks fail parsing because `<reference reference=\"Device/1\">` is not closed and is not valid FHIR XML. The patch example also uses `<valueString value=\"add\"/>` for the operation `type`, while the page/profile require a code (`valueCode`) bound to `ValueSet/patch-operation`.\n\nWhy it matters: readers copying the example will get invalid FHIR XML and a patch Parameters instance that does not conform to the normative FHIRPath Patch profile.\n\nRecommended next step: correct the example to XML markup, use `<valueCode value=\"add\"/>`, and represent the Reference as valid FHIR XML, e.g. `<valueReference><reference value=\"Device/1\"/></valueReference>`.\n\nIntent-vs-implementation context: `H-001` is the only material mismatch found: `FHIR-33256` intended to clarify extension use with examples, but the applied example is invalid and conflicts with the profile added later by `FHIR-46086`.",
+            "whyItMatters": "readers copying the example will get invalid FHIR XML and a patch Parameters instance that does not conform to the normative FHIRPath Patch profile.",
+            "recommendedNextStep": "correct the example to XML markup, use `<valueCode value=\"add\"/>`, and represent the Reference as valid FHIR XML, e.g. `<valueReference><reference value=\"Device/1\"/></valueReference>`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:268-310",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:314-327",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/parameters/structuredefinition-profile-fhirpath-patch.xml:79-90",
+              "147147842e3fd0e1fce396e212dead752d91869c",
+              "FHIR-33256"
+            ],
+            "limitations": [
+              "Failed or caveated searches:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.229Z",
+          "status": "open"
+        },
+        {
+          "id": "fhirpatch-E-001",
+          "localId": "E-001",
+          "pageLabel": "fhirpatch",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html",
+          "title": "Base rule has a grammar typo already tracked by Jira",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html",
+              "lineRange": {
+                "start": 99,
+                "end": 99
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "fhirpatch action file",
+              "filePath": "todo/actions/fhirpatch.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:99`, `FHIR-53791`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "fhirpatch research appendix",
+              "filePath": "todo/research/fhirpatch.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:99",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html",
+              "lineRange": {
+                "start": 99,
+                "end": 99
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53791",
+              "label": "FHIR-53791",
+              "url": "https://jira.hl7.org/browse/FHIR-53791",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "the rule says \"Servers SHALL return an error if the outcome of the patch operation is a not a valid resource\".",
+            "analysis": "E-001: Base rule has a grammar typo already tracked by Jira\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:99`, `FHIR-53791`\n\nProblem: the rule says \"Servers SHALL return an error if the outcome of the patch operation is a not a valid resource\".\n\nWhy it matters: this is a reader-facing typo in a normative `SHALL` rule.\n\nRecommended next step: change \"is a not a valid resource\" to \"is not a valid resource\" while resolving `FHIR-53791`.\n\nOverlooked/newly noticed context: `E-001` is a current-page editorial defect tracked by open Jira `FHIR-53791`. No other high-signal overlooked problems were found.",
+            "whyItMatters": "this is a reader-facing typo in a normative `SHALL` rule.",
+            "recommendedNextStep": "change \"is a not a valid resource\" to \"is not a valid resource\" while resolving `FHIR-53791`.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/fhirpatch.html:99",
+              "FHIR-53791"
+            ],
+            "limitations": [
+              "Failed or caveated searches:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.229Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 2,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 1,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 1,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

@@ -1,0 +1,64 @@
+page	word_count	decision	reason
+ansi	78	exclude	short informational ANSI boilerplate; unlikely to merit per-page research unless changed by a specific issue
+async	288	keep	short but substantive exchange/async behavior guidance
+best-practices	203	keep	short but substantive specification-process guidance
+clinicalreasoning-topics-supporting-documentation	376	keep	short but substantive clinical reasoning guidance
+clinicalreasoning-topics-template	13	exclude	lorem ipsum/template stub
+comparison-other	329	keep	short but substantive relationship-to-other-standards page
+comparison	457	keep	short but substantive relationship-to-other-HL7-standards overview
+datatypes-definitions	254	exclude	generated/index-like datatype definitions page
+diff	250	exclude	automatic diff page explicitly says content is not worth ballot comments
+documentation	321	exclude	index/navigation page
+dosage-definitions	35	exclude	generated definitions stub
+dosage-mappings	35	exclude	generated mappings stub
+elementdefinition-definitions	24	exclude	generated definitions stub
+elementdefinition-mappings	370	keep	short but contains substantive mapping/framework prose
+extensibility-definitions	22	exclude	generated definitions stub
+fmg	23	exclude	summary/stub page
+foundation-module	356	keep	short but substantive module overview
+genomics	485	keep	short but substantive domain guidance
+glossary	214	exclude	glossary/list page, mostly generated/list content
+identifier-registry	306	keep	short but has substantive identifier-system guidance and SHALL/SHOULD language
+implsupport-module	417	keep	short but substantive module overview
+index	180	exclude	home/navigation/ballot splash page, not a research target unless explicitly requested
+mappings	108	keep	short but substantive mapping policy page
+marketingstatus-definitions	23	exclude	generated definitions stub
+marketingstatus-examples	27	exclude	generated examples stub
+marketingstatus-mappings	35	exclude	generated mappings stub
+marketingstatus	108	exclude	generated datatype landing page; source HTML mostly macro wrapper
+metadatatypes-definitions	151	exclude	generated datatype definitions/index page
+metadatatypes-examples	484	exclude	generated examples/index page
+metadatatypes-mappings	184	exclude	generated mappings/index page
+modules-fragment	178	exclude	navigation fragment
+modules-list	174	exclude	navigation/list fragment
+modules	492	keep	short but substantive getting-started guidance
+narrative-definitions	19	exclude	generated definitions stub
+nd-json	137	keep	short but normative serialization/NDJSON behavior page
+ns	21	exclude	namespace stub page
+op-example-request	206	keep	short but concrete operation example may reveal actionable example defects
+operationslist	487	keep	short but operation list/notes can carry API behavior guidance
+page	13	exclude	blank/QA stub page
+patterns	339	keep	short but substantive patterns overview
+productshelflife-definitions	23	exclude	generated definitions stub
+productshelflife-examples	27	exclude	generated examples stub
+productshelflife-mappings	35	exclude	generated mappings stub
+productshelflife	85	exclude	generated datatype landing page; source HTML mostly macro wrapper
+profilelist	117	exclude	registry/list page
+pushpull	457	keep	short but substantive exchange-pattern guidance
+qa	19	exclude	QA/report stub page
+r2maps	413	exclude	legacy generated transform-list page
+r3maps	409	exclude	legacy generated transform-list page
+references-definitions	36	exclude	generated definitions stub
+resourceguide	408	keep	short but substantive guide page
+resourcelist-examples	25	exclude	TODO/stub page
+resources-definitions	23	exclude	generated definitions stub
+resources-examples	56	exclude	generated examples/index page
+sc	147	exclude	internal QA/status-code grid page
+searchparameter-registry	97	exclude	generated registry/list page
+snomedct-usage	196	keep	short but substantive terminology/licensing guidance
+terminologies-conceptmaps	49	exclude	generated concept-map list page
+terminologies-valuesets	125	exclude	generated value-set list page
+terminology-module	370	keep	short but substantive module overview
+toc	51	exclude	table-of-contents/navigation page
+w5	44	exclude	deprecated QA/report stub
+wglist	29	exclude	workgroup list/report stub

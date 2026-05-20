@@ -1,0 +1,378 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.227Z",
+  "sourceActionFilesGlob": "todo/actions/extensibility.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "extensibility",
+      "actionFilePath": "todo/actions/extensibility.md",
+      "researchFilePath": "todo/research/extensibility.md",
+      "status": "has-findings",
+      "summary": "The page has 4 actionable findings. The main risk is that current guidance still mixes the post-R5 \"preserve unknown non-modifier extensions when possible\" rule with a stale summary telling readers to ignore unknown extensions, and one R6 normative URL exception contains a malformed canonical URL.",
+      "findingCount": 4,
+      "findings": [
+        {
+          "id": "extensibility-H-001",
+          "localId": "H-001",
+          "pageLabel": "extensibility",
+          "pagePath": "source/extensibility.html",
+          "title": "Summary still tells readers to ignore unknown non-modifier extensions",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/extensibility.html",
+              "lineRange": {
+                "start": 598,
+                "end": 599
+              }
+            },
+            {
+              "filePath": "source/extensibility.html",
+              "lineRange": {
+                "start": 617,
+                "end": 617
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "extensibility action file",
+              "filePath": "todo/actions/extensibility.md",
+              "confidence": "high",
+              "quote": "current `source/extensibility.html:598-599` says unrecognized non-modifier extensions SHOULD be preserved when possible; current `source/extensibility.html:617` says to \"ignore other extensions\"; FHIR-18362 resolution says to replace the old ignore recommendation; commit `acbede90b7f03015ad54c2a1383b13d92a6bc6ec`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "extensibility research appendix",
+              "filePath": "todo/research/extensibility.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/extensibility.html:598-599",
+              "filePath": "source/extensibility.html",
+              "lineRange": {
+                "start": 598,
+                "end": 599
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/extensibility.html:617",
+              "filePath": "source/extensibility.html",
+              "lineRange": {
+                "start": 617,
+                "end": 617
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-18362",
+              "label": "FHIR-18362",
+              "url": "https://jira.hl7.org/browse/FHIR-18362",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "acbede90b7f03015ad54c2a1383b13d92a6bc6ec",
+              "label": "acbede90b7f03015ad54c2a1383b13d92a6bc6ec",
+              "url": "https://github.com/HL7/fhir/commit/acbede90b7f03015ad54c2a1383b13d92a6bc6ec",
+              "commitHash": "acbede90b7f03015ad54c2a1383b13d92a6bc6ec",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The summary retains the exact style of guidance FHIR-18362 was meant to remove, creating a reader-facing mismatch inside the page.",
+            "analysis": "H-001: Summary still tells readers to ignore unknown non-modifier extensions\n\nEvidence: current `source/extensibility.html:598-599` says unrecognized non-modifier extensions SHOULD be preserved when possible; current `source/extensibility.html:617` says to \"ignore other extensions\"; FHIR-18362 resolution says to replace the old ignore recommendation; commit `acbede90b7f03015ad54c2a1383b13d92a6bc6ec`.\n\nProblem: The summary retains the exact style of guidance FHIR-18362 was meant to remove, creating a reader-facing mismatch inside the page.\n\nWhy it matters: Implementers may interpret \"ignore\" as permission to drop unknown non-modifier extensions, weakening round-trip preservation and interoperability.\n\nRecommended next step: Update the Summary: Handling extensions bullet to align with `source/extensibility.html:598-599`, e.g., process known extensions, preserve unknown non-modifier extensions when possible, and only ignore them when preservation is not possible.\n\nIntent-vs-implementation context: H-001 and H-002.",
+            "whyItMatters": "Implementers may interpret \"ignore\" as permission to drop unknown non-modifier extensions, weakening round-trip preservation and interoperability.",
+            "recommendedNextStep": "Update the Summary: Handling extensions bullet to align with `source/extensibility.html:598-599`, e.g., process known extensions, preserve unknown non-modifier extensions when possible, and only ignore them when preservation is not possible.",
+            "rawEvidenceQuotes": [
+              "ignore other extensions",
+              "source/extensibility.html:598-599",
+              "source/extensibility.html:617",
+              "acbede90b7f03015ad54c2a1383b13d92a6bc6ec"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.226Z",
+          "status": "open"
+        },
+        {
+          "id": "extensibility-H-002",
+          "localId": "H-002",
+          "pageLabel": "extensibility",
+          "pagePath": "source/extensibility.html",
+          "title": "Complex-extension definition text appears narrower than FHIR-23867 intent",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/extensibility.html",
+              "lineRange": {
+                "start": 57,
+                "end": 57
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "extensibility action file",
+              "filePath": "todo/actions/extensibility.md",
+              "confidence": "high",
+              "quote": "current `source/extensibility.html:57`; commit `12a292220bb95af891f160d4ec59147f262153a0`; FHIR-23867 resolution; FHIR-I minutes page 66933824 state the spec should note `value[x]` must be `0..0` and one or more child extensions are defined."
+            },
+            {
+              "type": "research-appendix",
+              "label": "extensibility research appendix",
+              "filePath": "todo/research/extensibility.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/extensibility.html:57",
+              "filePath": "source/extensibility.html",
+              "lineRange": {
+                "start": 57,
+                "end": 57
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-23867",
+              "label": "FHIR-23867",
+              "url": "https://jira.hl7.org/browse/FHIR-23867",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "12a292220bb95af891f160d4ec59147f262153a0",
+              "label": "12a292220bb95af891f160d4ec59147f262153a0",
+              "url": "https://github.com/HL7/fhir/commit/12a292220bb95af891f160d4ec59147f262153a0",
+              "commitHash": "12a292220bb95af891f160d4ec59147f262153a0",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The page says complex extensions contain nested extensions and no value, but does not give the exact StructureDefinition authoring rule that FHIR-23867/minutes called for.",
+            "analysis": "H-002: Complex-extension definition text appears narrower than FHIR-23867 intent\n\nEvidence: current `source/extensibility.html:57`; commit `12a292220bb95af891f160d4ec59147f262153a0`; FHIR-23867 resolution; FHIR-I minutes page 66933824 state the spec should note `value[x]` must be `0..0` and one or more child extensions are defined.\n\nProblem: The page says complex extensions contain nested extensions and no value, but does not give the exact StructureDefinition authoring rule that FHIR-23867/minutes called for.\n\nWhy it matters: The original issue was about IG Publisher errors when authors do not know the exact fields required to define a complex extension.\n\nRecommended next step: Add or link explicit authoring guidance: a complex extension definition constrains `Extension.value[x]` to `0..0` and defines at least one nested `Extension.extension` slice.\n\nIntent-vs-implementation context: H-001 and H-002.",
+            "whyItMatters": "The original issue was about IG Publisher errors when authors do not know the exact fields required to define a complex extension.",
+            "recommendedNextStep": "Add or link explicit authoring guidance: a complex extension definition constrains `Extension.value[x]` to `0..0` and defines at least one nested `Extension.extension` slice.",
+            "rawEvidenceQuotes": [
+              "source/extensibility.html:57",
+              "12a292220bb95af891f160d4ec59147f262153a0",
+              "value[x]",
+              "0..0"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.227Z",
+          "status": "open"
+        },
+        {
+          "id": "extensibility-E-001",
+          "localId": "E-001",
+          "pageLabel": "extensibility",
+          "pagePath": "source/extensibility.html",
+          "title": "Canonical URL in the R6 complex-extension exception has a stray apostrophe",
+          "kind": "E",
+          "priority": "P2",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/extensibility.html",
+              "lineRange": {
+                "start": 67,
+                "end": 67
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "extensibility action file",
+              "filePath": "todo/actions/extensibility.md",
+              "confidence": "high",
+              "quote": "current `source/extensibility.html:67`; FHIR-53088; commit `c9eb1465db96232b9300125b8a29ff8477acbc21`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "extensibility research appendix",
+              "filePath": "todo/research/extensibility.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/extensibility.html:67",
+              "filePath": "source/extensibility.html",
+              "lineRange": {
+                "start": 67,
+                "end": 67
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53088",
+              "label": "FHIR-53088",
+              "url": "https://jira.hl7.org/browse/FHIR-53088",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "c9eb1465db96232b9300125b8a29ff8477acbc21",
+              "label": "c9eb1465db96232b9300125b8a29ff8477acbc21",
+              "url": "https://github.com/HL7/fhir/commit/c9eb1465db96232b9300125b8a29ff8477acbc21",
+              "commitHash": "c9eb1465db96232b9300125b8a29ff8477acbc21",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://hl7.org/fhir/StructureDefinition/Extension'`",
+              "url": "http://hl7.org/fhir/StructureDefinition/Extension'`",
+              "confidence": "medium"
+            },
+            {
+              "type": "other",
+              "label": "http://hl7.org/fhir/StructureDefinition/Extension`",
+              "url": "http://hl7.org/fhir/StructureDefinition/Extension`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The code literal is `http://hl7.org/fhir/StructureDefinition/Extension'` with an apostrophe inside the URL.",
+            "analysis": "E-001: Canonical URL in the R6 complex-extension exception has a stray apostrophe\n\nEvidence: current `source/extensibility.html:67`; FHIR-53088; commit `c9eb1465db96232b9300125b8a29ff8477acbc21`.\n\nProblem: The code literal is `http://hl7.org/fhir/StructureDefinition/Extension'` with an apostrophe inside the URL.\n\nWhy it matters: This appears in a SHALL sentence and can confuse readers or be copied as an invalid canonical URL.\n\nRecommended next step: Remove the apostrophe so the code literal is `http://hl7.org/fhir/StructureDefinition/Extension`.\n\nOverlooked/newly noticed context: E-001 and E-002.",
+            "whyItMatters": "This appears in a SHALL sentence and can confuse readers or be copied as an invalid canonical URL.",
+            "recommendedNextStep": "Remove the apostrophe so the code literal is `http://hl7.org/fhir/StructureDefinition/Extension`.",
+            "rawEvidenceQuotes": [
+              "source/extensibility.html:67",
+              "c9eb1465db96232b9300125b8a29ff8477acbc21"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.227Z",
+          "status": "open"
+        },
+        {
+          "id": "extensibility-E-002",
+          "localId": "E-002",
+          "pageLabel": "extensibility",
+          "pagePath": "source/extensibility.html",
+          "title": "Primitive-extension guidance has visible typos and grammar errors",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/extensibility.html",
+              "lineRange": {
+                "start": 48,
+                "end": 48
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "extensibility action file",
+              "filePath": "todo/actions/extensibility.md",
+              "confidence": "high",
+              "quote": "current `source/extensibility.html:48`, `:294-307`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "extensibility research appendix",
+              "filePath": "todo/research/extensibility.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/extensibility.html:48",
+              "filePath": "source/extensibility.html",
+              "lineRange": {
+                "start": 48,
+                "end": 48
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-31385",
+              "label": "FHIR-31385",
+              "url": "https://jira.hl7.org/browse/FHIR-31385",
+              "confidence": "high"
+            }
+          ],
+          "narrative": {
+            "problem": "Reader-facing text includes `managable`, `mininum`, `Type use case are`, `a required binding requirements`, and `required or extensible binding requirements`.",
+            "analysis": "E-002: Primitive-extension guidance has visible typos and grammar errors\n\nEvidence: current `source/extensibility.html:48`, `:294-307`.\n\nProblem: Reader-facing text includes `managable`, `mininum`, `Type use case are`, `a required binding requirements`, and `required or extensible binding requirements`.\n\nWhy it matters: These defects are in explanatory/conformance-adjacent text about required/extensible bindings and make the guidance look less reliable.\n\nRecommended next step: Correct the typos and grammar while preserving the FHIR-31385 semantics that DataAbsentReason cannot bypass required or applicable extensible bindings.\n\nOverlooked/newly noticed context: E-001 and E-002.",
+            "whyItMatters": "These defects are in explanatory/conformance-adjacent text about required/extensible bindings and make the guidance look less reliable.",
+            "recommendedNextStep": "Correct the typos and grammar while preserving the FHIR-31385 semantics that DataAbsentReason cannot bypass required or applicable extensible bindings.",
+            "rawEvidenceQuotes": [
+              "source/extensibility.html:48",
+              ":294-307"
+            ],
+            "limitations": [
+              "- Caveats:"
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.227Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 4,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 2,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 2,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 2,
+      "overlooked-problem": 0,
+      "editorial": 2,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

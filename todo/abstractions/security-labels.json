@@ -1,0 +1,374 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.321Z",
+  "sourceActionFilesGlob": "todo/actions/security-labels.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "security-labels",
+      "actionFilePath": "todo/actions/security-labels.md",
+      "researchFilePath": "todo/research/security-labels.md",
+      "status": "has-findings",
+      "summary": "The page has 3 actionable findings. The main risk is that the R6 ballot4 page is already known to be misleading in places: Security WG post-ballot resolutions moved/rewrote major parts of the page, while one remaining NOREUSE sentence still appears semantically weakened by modal-word cleanup.",
+      "findingCount": 3,
+      "findings": [
+        {
+          "id": "security-labels-H-001",
+          "localId": "H-001",
+          "pageLabel": "security-labels",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html",
+          "title": "R6 ballot4 security-labels text is superseded by post-ballot Security WG fixes",
+          "kind": "H",
+          "priority": "P1",
+          "category": "overlooked-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html",
+              "lineRange": {
+                "start": 162,
+                "end": 162
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "security-labels action file",
+              "filePath": "todo/actions/security-labels.md",
+              "confidence": "high",
+              "quote": "R6 ballot4 source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:162`-`176`, `258`-`337`, `360`-`362`; `FHIR-53884`, `FHIR-53885`, `FHIR-53928`; PR https://github.com/HL7/fhir/pull/4066; commits `2277eb5f378a974398668a1c200713a37dc119c3`, `b7b0249d1f4cc7d8442639d6c728fc7c22359905`, `d59d16721deb82e840400f88b3a119145093983f`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "security-labels research appendix",
+              "filePath": "todo/research/security-labels.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:162",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html",
+              "lineRange": {
+                "start": 162,
+                "end": 162
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53884",
+              "label": "FHIR-53884",
+              "url": "https://jira.hl7.org/browse/FHIR-53884",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53885",
+              "label": "FHIR-53885",
+              "url": "https://jira.hl7.org/browse/FHIR-53885",
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53928",
+              "label": "FHIR-53928",
+              "url": "https://jira.hl7.org/browse/FHIR-53928",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "2277eb5f378a974398668a1c200713a37dc119c3",
+              "label": "2277eb5f378a974398668a1c200713a37dc119c3",
+              "url": "https://github.com/HL7/fhir/commit/2277eb5f378a974398668a1c200713a37dc119c3",
+              "commitHash": "2277eb5f378a974398668a1c200713a37dc119c3",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "b7b0249d1f4cc7d8442639d6c728fc7c22359905",
+              "label": "b7b0249d1f4cc7d8442639d6c728fc7c22359905",
+              "url": "https://github.com/HL7/fhir/commit/b7b0249d1f4cc7d8442639d6c728fc7c22359905",
+              "commitHash": "b7b0249d1f4cc7d8442639d6c728fc7c22359905",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "d59d16721deb82e840400f88b3a119145093983f",
+              "label": "d59d16721deb82e840400f88b3a119145093983f",
+              "url": "https://github.com/HL7/fhir/commit/d59d16721deb82e840400f88b3a119145093983f",
+              "commitHash": "d59d16721deb82e840400f88b3a119145093983f",
+              "confidence": "medium"
+            },
+            {
+              "type": "github-pr",
+              "label": "https://github.com/HL7/fhir/pull/4066",
+              "url": "https://github.com/HL7/fhir/pull/4066",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Later R6 ballot issues found the \"Core Security Labels\" section confusing, the break-the-glass examples misplaced on the security-labels page, and the HCS Confidentiality `1..1` cardinality misleading. These were fixed after the ballot4 source commit in PR 4066.",
+            "analysis": "H-001: R6 ballot4 security-labels text is superseded by post-ballot Security WG fixes\n\nEvidence: R6 ballot4 source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:162`-`176`, `258`-`337`, `360`-`362`; `FHIR-53884`, `FHIR-53885`, `FHIR-53928`; PR https://github.com/HL7/fhir/pull/4066; commits `2277eb5f378a974398668a1c200713a37dc119c3`, `b7b0249d1f4cc7d8442639d6c728fc7c22359905`, `d59d16721deb82e840400f88b3a119145093983f`\n\nProblem: Later R6 ballot issues found the \"Core Security Labels\" section confusing, the break-the-glass examples misplaced on the security-labels page, and the HCS Confidentiality `1..1` cardinality misleading. These were fixed after the ballot4 source commit in PR 4066.\n\nWhy it matters: Anyone using ballot4 text as final normative security-label guidance may preserve content that the responsible WG already moved or corrected.\n\nRecommended next step: Ensure the target publication/release branch includes PR 4066 or backport the three page-level fixes.",
+            "whyItMatters": "Anyone using ballot4 text as final normative security-label guidance may preserve content that the responsible WG already moved or corrected.",
+            "recommendedNextStep": "Ensure the target publication/release branch includes PR 4066 or backport the three page-level fixes.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:162",
+              "176",
+              "258",
+              "337",
+              "360",
+              "362",
+              "FHIR-53884",
+              "FHIR-53885",
+              "FHIR-53928",
+              "2277eb5f378a974398668a1c200713a37dc119c3",
+              "b7b0249d1f4cc7d8442639d6c728fc7c22359905",
+              "d59d16721deb82e840400f88b3a119145093983f"
+            ],
+            "limitations": [
+              "- Jira, Zulip, Confluence, direct diff, path history, pickaxe, and post-ballot source history were searched. The main limitation is that several CLI FTS searches containing hyphenated phrases failed until replaced with snapshots, SQL, or quoted/key-specific searches; those failures are noted below.",
+              "- Most are editorial or normative-keyword cleanup, but the NOREUSE line changed from \"may only use it\" in R4 (`old source:213`) to \"might only use it\" in R6 (`new source:236`). This appears to weaken or garble a handling caveat rather than just remove a modal keyword."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.320Z",
+          "status": "open"
+        },
+        {
+          "id": "security-labels-H-002",
+          "localId": "H-002",
+          "pageLabel": "security-labels",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html",
+          "title": "NOREUSE handling caveat is weakened to \"might only use\"",
+          "kind": "H",
+          "priority": "P2",
+          "category": "spec-problem",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html",
+              "lineRange": {
+                "start": 233,
+                "end": 233
+              }
+            },
+            {
+              "filePath": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/security-labels.html",
+              "lineRange": {
+                "start": 210,
+                "end": 210
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "security-labels action file",
+              "filePath": "todo/actions/security-labels.md",
+              "confidence": "high",
+              "quote": "R6 ballot4 source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:233`-`240`; R4 source `fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/security-labels.html:210`-`217`; commit `87b00c9c0de977f8559e0f99694e8664e03a06cd`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "security-labels research appendix",
+              "filePath": "todo/research/security-labels.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:233",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html",
+              "lineRange": {
+                "start": 233,
+                "end": 233
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/security-labels.html:210",
+              "filePath": "source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/security-labels.html",
+              "lineRange": {
+                "start": 210,
+                "end": 210
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "0da2a0a84dc1",
+              "label": "0da2a0a84dc1",
+              "url": "https://github.com/HL7/fhir/commit/0da2a0a84dc1",
+              "commitHash": "0da2a0a84dc1",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "87b00c9c0de977f8559e0f99694e8664e03a06cd",
+              "label": "87b00c9c0de977f8559e0f99694e8664e03a06cd",
+              "url": "https://github.com/HL7/fhir/commit/87b00c9c0de977f8559e0f99694e8664e03a06cd",
+              "commitHash": "87b00c9c0de977f8559e0f99694e8664e03a06cd",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "R4 said an application receiving a NOREUSE resource \"may only use it for the immediate purpose of use\"; the R6 QA commit changed this to \"might only use it\", which reads as uncertainty rather than a restriction.",
+            "analysis": "H-002: NOREUSE handling caveat is weakened to \"might only use\"\n\nEvidence: R6 ballot4 source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:233`-`240`; R4 source `fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/security-labels.html:210`-`217`; commit `87b00c9c0de977f8559e0f99694e8664e03a06cd`\n\nProblem: R4 said an application receiving a NOREUSE resource \"may only use it for the immediate purpose of use\"; the R6 QA commit changed this to \"might only use it\", which reads as uncertainty rather than a restriction.\n\nWhy it matters: NOREUSE is a Refrain/handling caveat. Weakening the restriction can confuse implementers about whether reuse is prohibited.\n\nRecommended next step: Reword without RFC modal ambiguity, e.g. \"is permitted to use it only for the immediate purpose of use.\"",
+            "whyItMatters": "NOREUSE is a Refrain/handling caveat. Weakening the restriction can confuse implementers about whether reuse is prohibited.",
+            "recommendedNextStep": "Reword without RFC modal ambiguity, e.g. \"is permitted to use it only for the immediate purpose of use.\"",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:233",
+              "240",
+              "fhir-spec-search/trees/source/hl7.fhir.core/4.0.1-0da2a0a84dc1/source/security-labels.html:210",
+              "217",
+              "87b00c9c0de977f8559e0f99694e8664e03a06cd"
+            ],
+            "limitations": [
+              "- Why it matters: NOREUSE is a Refrain/handling caveat. Weakening the restriction can confuse implementers about whether reuse is prohibited.",
+              "- Jira, Zulip, Confluence, direct diff, path history, pickaxe, and post-ballot source history were searched. The main limitation is that several CLI FTS searches containing hyphenated phrases failed until replaced with snapshots, SQL, or quoted/key-specific searches; those failures are noted below.",
+              "- Most are editorial or normative-keyword cleanup, but the NOREUSE line changed from \"may only use it\" in R4 (`old source:213`) to \"might only use it\" in R6 (`new source:236`). This appears to weaken or garble a handling caveat rather than just remove a modal keyword."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.321Z",
+          "status": "open"
+        },
+        {
+          "id": "security-labels-E-001",
+          "localId": "E-001",
+          "pageLabel": "security-labels",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html",
+          "title": "HCS classification subsection is missing its intended heading/link",
+          "kind": "E",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html",
+              "lineRange": {
+                "start": 339,
+                "end": 339
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "security-labels action file",
+              "filePath": "todo/actions/security-labels.md",
+              "confidence": "high",
+              "quote": "R6 ballot4 source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:339`-`367`; `FHIR-11071` snapshot lines showing supplied `<h4 ...>Security Classification</h4>`; commit `28032417e6d3166967321d4aaefc06693dd370f7`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "security-labels research appendix",
+              "filePath": "todo/research/security-labels.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:339",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html",
+              "lineRange": {
+                "start": 339,
+                "end": 339
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-11071",
+              "label": "FHIR-11071",
+              "url": "https://jira.hl7.org/browse/FHIR-11071",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "28032417e6d3166967321d4aaefc06693dd370f7",
+              "label": "28032417e6d3166967321d4aaefc06693dd370f7",
+              "url": "https://github.com/HL7/fhir/commit/28032417e6d3166967321d4aaefc06693dd370f7",
+              "commitHash": "28032417e6d3166967321d4aaefc06693dd370f7",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "`FHIR-11071` supplied HTML includes a \"Security Classification\" heading linking to `ValueSet-v3-SecurityClassificationObservationType`, but the ballot4 page starts the classification text/table without that heading, making \"Security Category\" the first visible subsection under HCS.",
+            "analysis": "E-001: HCS classification subsection is missing its intended heading/link\n\nEvidence: R6 ballot4 source `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:339`-`367`; `FHIR-11071` snapshot lines showing supplied `<h4 ...>Security Classification</h4>`; commit `28032417e6d3166967321d4aaefc06693dd370f7`\n\nProblem: `FHIR-11071` supplied HTML includes a \"Security Classification\" heading linking to `ValueSet-v3-SecurityClassificationObservationType`, but the ballot4 page starts the classification text/table without that heading, making \"Security Category\" the first visible subsection under HCS.\n\nWhy it matters: The classification row is conceptually peer to Security Category and Security Control; without a heading/link, readers can miss the taxonomy level and there is no stable in-page anchor for it.\n\nRecommended next step: Add the missing Security Classification heading/link before the classification definition/table.",
+            "whyItMatters": "The classification row is conceptually peer to Security Category and Security Control; without a heading/link, readers can miss the taxonomy level and there is no stable in-page anchor for it.",
+            "recommendedNextStep": "Add the missing Security Classification heading/link before the classification definition/table.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/security-labels.html:339",
+              "367",
+              "FHIR-11071",
+              "<h4 ...>Security Classification</h4>",
+              "28032417e6d3166967321d4aaefc06693dd370f7"
+            ],
+            "limitations": [
+              "- Jira, Zulip, Confluence, direct diff, path history, pickaxe, and post-ballot source history were searched. The main limitation is that several CLI FTS searches containing hyphenated phrases failed until replaced with snapshots, SQL, or quoted/key-specific searches; those failures are noted below.",
+              "- Most are editorial or normative-keyword cleanup, but the NOREUSE line changed from \"may only use it\" in R4 (`old source:213`) to \"might only use it\" in R6 (`new source:236`). This appears to weaken or garble a handling caveat rather than just remove a modal keyword."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.321Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 3,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 2,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 2,
+      "E": 1,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 1,
+      "intent-mismatch": 1,
+      "overlooked-problem": 1,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

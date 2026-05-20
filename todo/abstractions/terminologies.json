@@ -1,0 +1,391 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.343Z",
+  "sourceActionFilesGlob": "todo/actions/terminologies.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "terminologies",
+      "actionFilePath": "todo/actions/terminologies.md",
+      "researchFilePath": "todo/research/terminologies.md",
+      "status": "has-findings",
+      "summary": "The page has 4 actionable findings. The main risk is that two resolved binding-clarification decisions were added and then removed from `terminologies.html`, leaving current R6 text without general guidance that Jira says should be present; the rest are concrete reader-facing rendering/editorial defects.",
+      "findingCount": 4,
+      "findings": [
+        {
+          "id": "terminologies-H-001",
+          "localId": "H-001",
+          "pageLabel": "terminologies",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+          "title": "FHIR-31385 extension-bypass clarification is not retained in the binding sections",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+              "lineRange": {
+                "start": 514,
+                "end": 667
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "terminologies action file",
+              "filePath": "todo/actions/terminologies.md",
+              "confidence": "high",
+              "quote": "FHIR-31385 resolution at https://jira.hl7.org/browse/FHIR-31385; commit `3946ca05fe4e7e6dc76c35ed333f46f9fe23dece` added the required-binding paragraph; commit `ab0ada522243d1ecd280228fc660c8628115a383` removed it the next day; current R6 required/extensible sections are at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:514-667`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "terminologies research appendix",
+              "filePath": "todo/research/terminologies.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:514-667",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+              "lineRange": {
+                "start": 514,
+                "end": 667
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-31385",
+              "label": "FHIR-31385",
+              "url": "https://jira.hl7.org/browse/FHIR-31385",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "3946ca05fe4e7e6dc76c35ed333f46f9fe23dece",
+              "label": "3946ca05fe4e7e6dc76c35ed333f46f9fe23dece",
+              "url": "https://github.com/HL7/fhir/commit/3946ca05fe4e7e6dc76c35ed333f46f9fe23dece",
+              "commitHash": "3946ca05fe4e7e6dc76c35ed333f46f9fe23dece",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "ab0ada522243d1ecd280228fc660c8628115a383",
+              "label": "ab0ada522243d1ecd280228fc660c8628115a383",
+              "url": "https://github.com/HL7/fhir/commit/ab0ada522243d1ecd280228fc660c8628115a383",
+              "commitHash": "ab0ada522243d1ecd280228fc660c8628115a383",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-31385",
+              "url": "https://jira.hl7.org/browse/FHIR-31385",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Jira resolved to add explicit required and extensible binding guidance that extensions such as data-absent-reason cannot bypass binding requirements. The current page does not retain that general clarification; only a narrower legacy-data paragraph says a required-bound element cannot be sent \"not even with an extension\" when no mapping is possible.",
+            "analysis": "H-001: FHIR-31385 extension-bypass clarification is not retained in the binding sections\n\nEvidence: FHIR-31385 resolution at https://jira.hl7.org/browse/FHIR-31385; commit `3946ca05fe4e7e6dc76c35ed333f46f9fe23dece` added the required-binding paragraph; commit `ab0ada522243d1ecd280228fc660c8628115a383` removed it the next day; current R6 required/extensible sections are at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:514-667`.\n\nProblem: Jira resolved to add explicit required and extensible binding guidance that extensions such as data-absent-reason cannot bypass binding requirements. The current page does not retain that general clarification; only a narrower legacy-data paragraph says a required-bound element cannot be sent \"not even with an extension\" when no mapping is possible.\n\nWhy it matters: implementers can misread extension behavior for required/extensible bindings, especially for data-absent-reason cases where Jira explicitly wanted clarification.\n\nRecommended next step: confirm whether FHIR-I/Vocab still intend the FHIR-31385 text, then restore or replace the required and extensible binding clarification in the current binding sections.\n\nIntent-vs-implementation context: H-001 and H-002 are the relevant mismatches found. No other Jira/Zulip/Confluence intent mismatch was strong enough to elevate: FHIR-39056, FHIR-40248/FHIR-40249/FHIR-40431, FHIR-46350, FHIR-48479, and FHIR-50652 generally appear reflected in current text.",
+            "whyItMatters": "implementers can misread extension behavior for required/extensible bindings, especially for data-absent-reason cases where Jira explicitly wanted clarification.",
+            "recommendedNextStep": "confirm whether FHIR-I/Vocab still intend the FHIR-31385 text, then restore or replace the required and extensible binding clarification in the current binding sections.",
+            "rawEvidenceQuotes": [
+              "3946ca05fe4e7e6dc76c35ed333f46f9fe23dece",
+              "ab0ada522243d1ecd280228fc660c8628115a383",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:514-667"
+            ],
+            "limitations": [
+              "- Caveats: this was bounded review, not an exhaustive audit of all terminology-related Jira issues. Some early Zulip full-text searches using unquoted Jira keys failed because hyphens were parsed by SQLite FTS; the key searches were rerun quoted. Exact Confluence FTS for `\"Terminology Expectations in FHIR\"` found no result, but related TSMG pages were found by TSMG/canonical-CodeSystem terms.",
+              "- Zulip searches/snapshots: `/tmp/terminologies-zulip-searches.txt`, `/tmp/terminologies-zulip-key-redo.txt`, `/tmp/terminologies-zulip-extra-snapshots.txt`. Important failed search note: unquoted `FHIR-#####` FTS searches failed with SQLite \"no such column\" errors; quoted forms succeeded."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.341Z",
+          "status": "open"
+        },
+        {
+          "id": "terminologies-H-002",
+          "localId": "H-002",
+          "pageLabel": "terminologies",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+          "title": "FHIR-35891 multiple-type binding clarification was removed",
+          "kind": "H",
+          "priority": "P2",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+              "lineRange": {
+                "start": 76,
+                "end": 86
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "terminologies action file",
+              "filePath": "todo/actions/terminologies.md",
+              "confidence": "high",
+              "quote": "FHIR-35891 resolution at https://jira.hl7.org/browse/FHIR-35891; commit `d7b4a4ab88bf349b2676663058b2feac97292280` added the paragraph; commit `ab0ada522243d1ecd280228fc660c8628115a383` removed it; current R6 page has the bindable datatype list at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:76-86` but no multiple-type or alternate-bindings guidance."
+            },
+            {
+              "type": "research-appendix",
+              "label": "terminologies research appendix",
+              "filePath": "todo/research/terminologies.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:76-86",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+              "lineRange": {
+                "start": 76,
+                "end": 86
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-35891",
+              "label": "FHIR-35891",
+              "url": "https://jira.hl7.org/browse/FHIR-35891",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "d7b4a4ab88bf349b2676663058b2feac97292280",
+              "label": "d7b4a4ab88bf349b2676663058b2feac97292280",
+              "url": "https://github.com/HL7/fhir/commit/d7b4a4ab88bf349b2676663058b2feac97292280",
+              "commitHash": "d7b4a4ab88bf349b2676663058b2feac97292280",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "ab0ada522243d1ecd280228fc660c8628115a383",
+              "label": "ab0ada522243d1ecd280228fc660c8628115a383",
+              "url": "https://github.com/HL7/fhir/commit/ab0ada522243d1ecd280228fc660c8628115a383",
+              "commitHash": "ab0ada522243d1ecd280228fc660c8628115a383",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-35891",
+              "url": "https://jira.hl7.org/browse/FHIR-35891",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Jira resolved to say that a binding on an element with multiple types applies to all bindable types, and that type-specific bindings can use the alternate-bindings extension. That clarification is absent from the current page.",
+            "analysis": "H-002: FHIR-35891 multiple-type binding clarification was removed\n\nEvidence: FHIR-35891 resolution at https://jira.hl7.org/browse/FHIR-35891; commit `d7b4a4ab88bf349b2676663058b2feac97292280` added the paragraph; commit `ab0ada522243d1ecd280228fc660c8628115a383` removed it; current R6 page has the bindable datatype list at `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:76-86` but no multiple-type or alternate-bindings guidance.\n\nProblem: Jira resolved to say that a binding on an element with multiple types applies to all bindable types, and that type-specific bindings can use the alternate-bindings extension. That clarification is absent from the current page.\n\nWhy it matters: choice-type elements with bindings remain ambiguous for profile authors and validators, which was the exact ambiguity FHIR-35891 sought to remove.\n\nRecommended next step: restore the FHIR-35891 clarification or add equivalent guidance near the datatype list or `ElementDefinition.binding` overview.\n\nIntent-vs-implementation context: H-001 and H-002 are the relevant mismatches found. No other Jira/Zulip/Confluence intent mismatch was strong enough to elevate: FHIR-39056, FHIR-40248/FHIR-40249/FHIR-40431, FHIR-46350, FHIR-48479, and FHIR-50652 generally appear reflected in current text.",
+            "whyItMatters": "choice-type elements with bindings remain ambiguous for profile authors and validators, which was the exact ambiguity FHIR-35891 sought to remove.",
+            "recommendedNextStep": "restore the FHIR-35891 clarification or add equivalent guidance near the datatype list or `ElementDefinition.binding` overview.",
+            "rawEvidenceQuotes": [
+              "d7b4a4ab88bf349b2676663058b2feac97292280",
+              "ab0ada522243d1ecd280228fc660c8628115a383",
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:76-86"
+            ],
+            "limitations": [
+              "- Caveats: this was bounded review, not an exhaustive audit of all terminology-related Jira issues. Some early Zulip full-text searches using unquoted Jira keys failed because hyphens were parsed by SQLite FTS; the key searches were rerun quoted. Exact Confluence FTS for `\"Terminology Expectations in FHIR\"` found no result, but related TSMG pages were found by TSMG/canonical-CodeSystem terms.",
+              "- Zulip searches/snapshots: `/tmp/terminologies-zulip-searches.txt`, `/tmp/terminologies-zulip-key-redo.txt`, `/tmp/terminologies-zulip-extra-snapshots.txt`. Important failed search note: unquoted `FHIR-#####` FTS searches failed with SQLite \"no such column\" errors; quoted forms succeeded."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.342Z",
+          "status": "open"
+        },
+        {
+          "id": "terminologies-E-001",
+          "localId": "E-001",
+          "pageLabel": "terminologies",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+          "title": "#strings` link points to a commented-out section",
+          "kind": "E",
+          "priority": "P2",
+          "category": "rendering",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+              "lineRange": {
+                "start": 94,
+                "end": 94
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "terminologies action file",
+              "filePath": "todo/actions/terminologies.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:94` links to `#strings`; the `name=\"strings\"` anchor and section are inside an HTML comment at lines 790-800."
+            },
+            {
+              "type": "research-appendix",
+              "label": "terminologies research appendix",
+              "filePath": "todo/research/terminologies.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:94",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+              "lineRange": {
+                "start": 94,
+                "end": 94
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "Readers are sent to an anchor that will not render because the target section is commented out.",
+            "analysis": "E-001: #strings` link points to a commented-out section\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:94` links to `#strings`; the `name=\"strings\"` anchor and section are inside an HTML comment at lines 790-800.\n\nProblem: Readers are sent to an anchor that will not render because the target section is commented out.\n\nWhy it matters: the page explicitly promises more information about binding `string` and `uri`, but the target is unavailable.\n\nRecommended next step: either restore/render the string/URI binding section or remove/update the `#strings` link and surrounding note.\n\nOverlooked/newly noticed context: E-001 and E-002 are concrete current-page defects found during the read-through. No additional high-confidence overlooked semantic problem was found in the bounded review.",
+            "whyItMatters": "the page explicitly promises more information about binding `string` and `uri`, but the target is unavailable.",
+            "recommendedNextStep": "either restore/render the string/URI binding section or remove/update the `#strings` link and surrounding note.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:94",
+              "#strings",
+              "name=\"strings\""
+            ],
+            "limitations": [
+              "- Caveats: this was bounded review, not an exhaustive audit of all terminology-related Jira issues. Some early Zulip full-text searches using unquoted Jira keys failed because hyphens were parsed by SQLite FTS; the key searches were rerun quoted. Exact Confluence FTS for `\"Terminology Expectations in FHIR\"` found no result, but related TSMG pages were found by TSMG/canonical-CodeSystem terms.",
+              "- Zulip searches/snapshots: `/tmp/terminologies-zulip-searches.txt`, `/tmp/terminologies-zulip-key-redo.txt`, `/tmp/terminologies-zulip-extra-snapshots.txt`. Important failed search note: unquoted `FHIR-#####` FTS searches failed with SQLite \"no such column\" errors; quoted forms succeeded."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.342Z",
+          "status": "open"
+        },
+        {
+          "id": "terminologies-E-002",
+          "localId": "E-002",
+          "pageLabel": "terminologies",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+          "title": "Visible editorial defects in binding guidance",
+          "kind": "E",
+          "priority": "P3",
+          "category": "editorial",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+              "lineRange": {
+                "start": 82,
+                "end": 82
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "terminologies action file",
+              "filePath": "todo/actions/terminologies.md",
+              "confidence": "high",
+              "quote": "`fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:82`, `:246-249`, and `:618-647`."
+            },
+            {
+              "type": "research-appendix",
+              "label": "terminologies research appendix",
+              "filePath": "todo/research/terminologies.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:82",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html",
+              "lineRange": {
+                "start": 82,
+                "end": 82
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "The current page has visible text defects: \"or a to a concept\"; a missing sentence break plus \"in way or another\"; repeated \"inexpressable\"; \"Quantity.code and Quantity.system represents...\"; and a missing separator in the `uri, string` ordered list.",
+            "analysis": "E-002: Visible editorial defects in binding guidance\n\nEvidence: `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:82`, `:246-249`, and `:618-647`.\n\nProblem: The current page has visible text defects: \"or a to a concept\"; a missing sentence break plus \"in way or another\"; repeated \"inexpressable\"; \"Quantity.code and Quantity.system represents...\"; and a missing separator in the `uri, string` ordered list.\n\nWhy it matters: these defects are in normative/semantically dense guidance and reduce reader confidence in the binding rules.\n\nRecommended next step: make a small editorial cleanup pass over those lines, using \"inexpressible\" and fixing the grammar/list punctuation without changing semantics.\n\nOverlooked/newly noticed context: E-001 and E-002 are concrete current-page defects found during the read-through. No additional high-confidence overlooked semantic problem was found in the bounded review.",
+            "whyItMatters": "these defects are in normative/semantically dense guidance and reduce reader confidence in the binding rules.",
+            "recommendedNextStep": "make a small editorial cleanup pass over those lines, using \"inexpressible\" and fixing the grammar/list punctuation without changing semantics.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/terminologies.html:82",
+              ":246-249",
+              ":618-647"
+            ],
+            "limitations": [
+              "- Caveats: this was bounded review, not an exhaustive audit of all terminology-related Jira issues. Some early Zulip full-text searches using unquoted Jira keys failed because hyphens were parsed by SQLite FTS; the key searches were rerun quoted. Exact Confluence FTS for `\"Terminology Expectations in FHIR\"` found no result, but related TSMG pages were found by TSMG/canonical-CodeSystem terms.",
+              "- Zulip searches/snapshots: `/tmp/terminologies-zulip-searches.txt`, `/tmp/terminologies-zulip-key-redo.txt`, `/tmp/terminologies-zulip-extra-snapshots.txt`. Important failed search note: unquoted `FHIR-#####` FTS searches failed with SQLite \"no such column\" errors; quoted forms succeeded."
+            ]
+          },
+          "intentVsImplementationMismatch": false,
+          "overlookedOrNewlyNoticedProblem": true,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.343Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 4,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 2,
+      "P3": 1
+    },
+    "byKind": {
+      "H": 2,
+      "E": 2,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 2,
+      "overlooked-problem": 0,
+      "editorial": 1,
+      "rendering": 1,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

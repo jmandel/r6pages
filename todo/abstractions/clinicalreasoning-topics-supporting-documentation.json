@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.171Z",
+  "sourceActionFilesGlob": "todo/actions/clinicalreasoning-topics-supporting-documentation.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "clinicalreasoning-topics-supporting-documentation",
+      "actionFilePath": "todo/actions/clinicalreasoning-topics-supporting-documentation.md",
+      "researchFilePath": "todo/research/clinicalreasoning-topics-supporting-documentation.md",
+      "status": "has-findings",
+      "summary": "The page has 1 actionable finding: FHIR-53086 requested and resolved that the supporting-documentation page status be informative, but the R6 ballot4 source currently marks the page Normative.",
+      "findingCount": 1,
+      "findings": [
+        {
+          "id": "clinicalreasoning-topics-supporting-documentation-H-001",
+          "localId": "H-001",
+          "pageLabel": "clinicalreasoning-topics-supporting-documentation",
+          "pagePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-supporting-documentation.html",
+          "title": "FHIR-53086's informative-status decision is not reflected in the current page",
+          "kind": "H",
+          "priority": "P1",
+          "category": "intent-mismatch",
+          "sourceLocations": [
+            {
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-supporting-documentation.html",
+              "lineRange": {
+                "start": 13,
+                "end": 13
+              }
+            }
+          ],
+          "evidence": [
+            {
+              "type": "action-file",
+              "label": "clinicalreasoning-topics-supporting-documentation action file",
+              "filePath": "todo/actions/clinicalreasoning-topics-supporting-documentation.md",
+              "confidence": "high",
+              "quote": "current page line `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-supporting-documentation.html:13`; Jira `FHIR-53086` (`https://jira.hl7.org/browse/FHIR-53086`); implementation commit `645fedca25affaec5feb32826641b78c9a397275`; later status commit `7466cfc63cd0b162497a42c80a67480eed86c75a`"
+            },
+            {
+              "type": "research-appendix",
+              "label": "clinicalreasoning-topics-supporting-documentation research appendix",
+              "filePath": "todo/research/clinicalreasoning-topics-supporting-documentation.md",
+              "confidence": "medium"
+            },
+            {
+              "type": "source-line",
+              "label": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-supporting-documentation.html:13",
+              "filePath": "source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-supporting-documentation.html",
+              "lineRange": {
+                "start": 13,
+                "end": 13
+              },
+              "confidence": "high"
+            },
+            {
+              "type": "jira",
+              "id": "FHIR-53086",
+              "label": "FHIR-53086",
+              "url": "https://jira.hl7.org/browse/FHIR-53086",
+              "confidence": "high"
+            },
+            {
+              "type": "commit",
+              "id": "5d67a34a13a5",
+              "label": "5d67a34a13a5",
+              "url": "https://github.com/HL7/fhir/commit/5d67a34a13a5",
+              "commitHash": "5d67a34a13a5",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "645fedca25affaec5feb32826641b78c9a397275",
+              "label": "645fedca25affaec5feb32826641b78c9a397275",
+              "url": "https://github.com/HL7/fhir/commit/645fedca25affaec5feb32826641b78c9a397275",
+              "commitHash": "645fedca25affaec5feb32826641b78c9a397275",
+              "confidence": "medium"
+            },
+            {
+              "type": "commit",
+              "id": "7466cfc63cd0b162497a42c80a67480eed86c75a",
+              "label": "7466cfc63cd0b162497a42c80a67480eed86c75a",
+              "url": "https://github.com/HL7/fhir/commit/7466cfc63cd0b162497a42c80a67480eed86c75a",
+              "commitHash": "7466cfc63cd0b162497a42c80a67480eed86c75a",
+              "confidence": "medium"
+            },
+            {
+              "type": "jira",
+              "label": "https://jira.hl7.org/browse/FHIR-53086`",
+              "url": "https://jira.hl7.org/browse/FHIR-53086`",
+              "confidence": "medium"
+            }
+          ],
+          "narrative": {
+            "problem": "FHIR-53086's description and resolution both say \"Update the supporting documentation page status to informative,\" but the current R6 ballot4 page displays `Standards Status: Normative`. The FHIR-53086 implementation commit added the requested CPG/EBM references, but did not apply the informative status; a later broad status commit changed the page from `Trial Use` to `Normative`.",
+            "analysis": "H-001: FHIR-53086's informative-status decision is not reflected in the current page\n\nEvidence: current page line `fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-supporting-documentation.html:13`; Jira `FHIR-53086` (`https://jira.hl7.org/browse/FHIR-53086`); implementation commit `645fedca25affaec5feb32826641b78c9a397275`; later status commit `7466cfc63cd0b162497a42c80a67480eed86c75a`\n\nProblem: FHIR-53086's description and resolution both say \"Update the supporting documentation page status to informative,\" but the current R6 ballot4 page displays `Standards Status: Normative`. The FHIR-53086 implementation commit added the requested CPG/EBM references, but did not apply the informative status; a later broad status commit changed the page from `Trial Use` to `Normative`.\n\nWhy it matters: A page-level standards status affects how readers interpret the guidance's normative weight. If the WG intended this topic to be informative, the current header overstates conformance significance.\n\nRecommended next step: Change this page's displayed standards status to `Informative`, or explicitly re-triage/reopen FHIR-53086 if CDS intentionally superseded the informative-status decision after PR #3914.\n\nIntent-vs-implementation context: H-001 only.",
+            "whyItMatters": "A page-level standards status affects how readers interpret the guidance's normative weight. If the WG intended this topic to be informative, the current header overstates conformance significance.",
+            "recommendedNextStep": "Change this page's displayed standards status to `Informative`, or explicitly re-triage/reopen FHIR-53086 if CDS intentionally superseded the informative-status decision after PR #3914.",
+            "rawEvidenceQuotes": [
+              "fhir-spec-search/trees/source/hl7.fhir.core/6.0.0-ballot4-5d67a34a13a5/source/clinicalreasoning-topics-supporting-documentation.html:13",
+              "FHIR-53086",
+              "https://jira.hl7.org/browse/FHIR-53086",
+              "645fedca25affaec5feb32826641b78c9a397275",
+              "7466cfc63cd0b162497a42c80a67480eed86c75a"
+            ],
+            "limitations": [
+              "- Caveat: unquoted hyphenated terms such as `FHIR-53086` and `cqf-qualityOfEvidence` caused SQLite FTS parse errors in Jira/Zulip searches; those searches were rerun with phrase quoting and/or SQL `LIKE`."
+            ]
+          },
+          "intentVsImplementationMismatch": true,
+          "overlookedOrNewlyNoticedProblem": false,
+          "evidenceGapBlocksDecision": false,
+          "dateIdentified": "2026-05-20T19:24:43.171Z",
+          "status": "open"
+        }
+      ],
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 1,
+    "pagesWithNoActionableFindings": 0,
+    "findings": 1,
+    "byPriority": {
+      "P0": 0,
+      "P1": 1,
+      "P2": 0,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 1,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 1,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}

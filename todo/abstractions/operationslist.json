@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-20T19:24:43.286Z",
+  "sourceActionFilesGlob": "todo/actions/operationslist.md",
+  "sourceResearchDir": "todo/research",
+  "pageReviews": [
+    {
+      "pageLabel": "operationslist",
+      "actionFilePath": "todo/actions/operationslist.md",
+      "researchFilePath": "todo/research/operationslist.md",
+      "status": "no-actionable-findings",
+      "summary": "No actionable findings were found. The only semantic page-level change, removing the Terminology Service `Maintaining a closure table` bullet, is consistent with the R6 source-wide removal of `$closure`/`$find-matches` and PR #3913's stated move of those operations to an incubator IG; no page-local inconsistency or intent mismatch was found.",
+      "findingCount": 0,
+      "findings": [],
+      "noFindingReason": "No actionable findings were found. The only semantic page-level change, removing the Terminology Service `Maintaining a closure table` bullet, is consistent with the R6 source-wide removal of `$closure`/`$find-matches` and PR #3913's stated move of those operations to an incubator IG; no page-local inconsistency or intent mismatch was found.",
+      "parseWarnings": []
+    }
+  ],
+  "totals": {
+    "pagesReviewed": 1,
+    "pagesWithFindings": 0,
+    "pagesWithNoActionableFindings": 1,
+    "findings": 0,
+    "byPriority": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "byKind": {
+      "H": 0,
+      "E": 0,
+      "G": 0
+    },
+    "byCategory": {
+      "spec-problem": 0,
+      "intent-mismatch": 0,
+      "overlooked-problem": 0,
+      "editorial": 0,
+      "rendering": 0,
+      "evidence-gap": 0,
+      "other": 0
+    }
+  }
+}
