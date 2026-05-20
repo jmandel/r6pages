@@ -17108,7 +17108,7 @@ var import_react3 = __toESM(require_react(), 1);
 
 // data-bundle.ts
 var bundle = {
-  generatedAt: "2026-05-20T18:01:11.399Z",
+  generatedAt: "2026-05-20T18:30:33.789Z",
   sourceDir: "todo/abstractions",
   parseFailures: [],
   pageReviews: [
